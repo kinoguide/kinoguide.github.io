@@ -34,9 +34,19 @@ def lookup(title: str, year: int | None = None) -> dict | None:
     detail = requests.get(
         f"{API}/movie/{best['id']}",
         params={"api_key": _key(), "language": "de-DE",
-                "append_to_response": "external_ids,release_dates"},
+                "append_to_response": "external_ids,release_dates,videos",
+                "include_video_language": "de,en,null"},
         timeout=30,
     ).json()
+
+    # German overview is missing for smaller/documentary titles — fall back
+    # to the English one rather than showing nothing.
+    overview = (detail.get("overview") or "").strip()
+    if not overview:
+        en = requests.get(f"{API}/movie/{best['id']}",
+                          params={"api_key": _key(), "language": "en-US"},
+                          timeout=30).json()
+        overview = (en.get("overview") or "").strip()
 
     return {
         "tmdb_id": best["id"],
@@ -48,8 +58,30 @@ def lookup(title: str, year: int | None = None) -> dict | None:
         "poster": IMG + detail["poster_path"] if detail.get("poster_path") else None,
         "genres": [g["name"] for g in detail.get("genres", []) if g.get("name")],
         "age_rating": _fsk(detail),
-        "overview": (detail.get("overview") or "").strip() or None,
+        "overview": overview or None,
+        "trailer": _trailer(detail),
     }
+
+
+def _trailer(detail: dict) -> str | None:
+    """Best YouTube trailer URL: prefer official trailers, German over English."""
+    videos = [v for v in (detail.get("videos") or {}).get("results", [])
+              if v.get("site") == "YouTube" and v.get("key")]
+    if not videos:
+        return None
+
+    def score(v):
+        return (
+            v.get("type") == "Trailer",
+            bool(v.get("official")),
+            v.get("iso_639_1") == "de",
+            v.get("iso_639_1") == "en",
+        )
+
+    best = max(videos, key=score)
+    if best.get("type") not in ("Trailer", "Teaser"):
+        return None
+    return f"https://www.youtube.com/watch?v={best['key']}"
 
 
 def _fsk(detail: dict) -> int | None:

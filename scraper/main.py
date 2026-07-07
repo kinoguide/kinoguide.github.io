@@ -104,6 +104,7 @@ def main() -> None:
             "genres": (meta or {}).get("genres", []),
             "age_rating": (meta or {}).get("age_rating"),
             "overview": (meta or {}).get("overview"),
+            "trailer": (meta or {}).get("trailer"),
             "ratings": scores,
             "showtimes": sorted(entry["showtimes"], key=lambda s: s["datetime"]),
         })

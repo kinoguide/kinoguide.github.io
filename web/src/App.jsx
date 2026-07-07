@@ -65,11 +65,15 @@ function LangBadge({ lang }) {
   return <span className={`badge-lang lang-${lang.toLowerCase()}`}>{label}</span>
 }
 
-function Card({ movie, onOpen }) {
+function Card({ movie, onOpen, isFav, onToggleFav }) {
   const langs = [...new Set(movie.showtimes.map((s) => s.language))]
   const imdb = movie.ratings.imdb
   return (
-    <button className="card" onClick={() => onOpen(movie)}>
+    <div
+      className="card" role="button" tabIndex={0}
+      onClick={() => onOpen(movie)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(movie) } }}
+    >
       <div className="card-poster">
         {movie.poster
           ? <img src={movie.poster} alt="" loading="lazy" />
@@ -83,6 +87,14 @@ function Card({ movie, onOpen }) {
           {langs.includes('DE') && <LangBadge lang="DE" />}
         </div>
         {movie.age_rating != null && <span className="badge-fsk">FSK {movie.age_rating}</span>}
+        <button
+          className={`fav-btn ${isFav ? 'on' : ''}`}
+          onClick={(e) => { e.stopPropagation(); onToggleFav(movie.id) }}
+          title={isFav ? 'Aus Favoriten entfernen' : 'Als Favorit merken'}
+          aria-label="Favorit"
+        >
+          {isFav ? '♥' : '♡'}
+        </button>
       </div>
       <div className="card-body">
         <h3 title={movie.title_de}>{movie.title_de}</h3>
@@ -90,9 +102,8 @@ function Card({ movie, onOpen }) {
           {movie.year}
           {(movie.genres || []).slice(0, 2).map((g) => <span className="genre-pill" key={g}>{g}</span>)}
         </p>
-        {movie.overview && <p className="card-desc">{movie.overview}</p>}
       </div>
-    </button>
+    </div>
   )
 }
 
@@ -128,6 +139,11 @@ function Modal({ movie, shows, onClose }) {
               <span><b>{movie.ratings.metascore ?? '–'}</b> Meta</span>
               <span><b>{movie.ratings.letterboxd ?? '–'}</b> Letterboxd</span>
             </div>
+            {movie.trailer && (
+              <a className="trailer-btn" href={movie.trailer} target="_blank" rel="noreferrer">
+                ▶ Trailer ansehen
+              </a>
+            )}
           </div>
         </div>
         {movie.overview && <p className="modal-desc">{movie.overview}</p>}
@@ -175,6 +191,17 @@ export default function App() {
   const [timeFrom, setTimeFrom] = useState(0)
   const [timeTo, setTimeTo] = useState(24)
 
+  // favorites survive reloads via localStorage
+  const [favs, setFavs] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('kinoguide-favs')) || [] } catch { return [] }
+  })
+  const [favsOnly, setFavsOnly] = useState(false)
+  useEffect(() => {
+    localStorage.setItem('kinoguide-favs', JSON.stringify(favs))
+  }, [favs])
+  const toggleFav = (id) =>
+    setFavs((prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id])
+
   useEffect(() => {
     fetch('data/movies.json')
       .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
@@ -220,6 +247,7 @@ export default function App() {
     if (!data) return []
     const needle = q.trim().toLowerCase()
     return data.movies
+      .filter((m) => !favsOnly || favs.includes(m.id))
       .filter((m) => (m.ratings.imdb ?? 0) >= minImdb)
       .filter((m) => !kidsOnly || isKidsFilm(m))
       .filter((m) => genres.length === 0 || (m.genres || []).some((g) => genres.includes(g)))
@@ -232,7 +260,7 @@ export default function App() {
         if (sort === 'recent') return (b.m.year ?? 0) - (a.m.year ?? 0)
         return (b.m.ratings[sort] ?? -1) - (a.m.ratings[sort] ?? -1)
       })
-  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo])
+  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs])
 
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
@@ -278,6 +306,11 @@ export default function App() {
         {SORTS.map((s) => (
           <button key={s.id} className={`chip ${sort === s.id ? 'on' : ''}`} onClick={() => setSort(s.id)}>{s.label}</button>
         ))}
+        {favs.length > 0 && (
+          <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
+            ♥ Favoriten ({favs.length})
+          </button>
+        )}
         {data && <span className="count">{movies.length} Filme</span>}
       </div>
 
@@ -340,7 +373,10 @@ export default function App() {
         {!error && !data && <p className="empty">Lade Programm…</p>}
         {data && movies.length === 0 && <p className="empty">Keine Filme für diese Filter. Setz die Filter zurück, um alles zu sehen.</p>}
         <div className="grid">
-          {movies.map(({ m }, i) => <Card key={`${m.id}-${i}`} movie={m} onOpen={setSelected} />)}
+          {movies.map(({ m }, i) => (
+            <Card key={`${m.id}-${i}`} movie={m} onOpen={setSelected}
+              isFav={favs.includes(m.id)} onToggleFav={toggleFav} />
+          ))}
         </div>
       </main>
 
