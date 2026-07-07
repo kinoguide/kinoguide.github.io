@@ -193,8 +193,12 @@ input[type=range] {
 .modal-orig { margin: 0 0 8px; color: var(--muted); font-style: italic; }
 .modal-sub { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
 .modal-genres { margin: 0 0 12px; display: flex; gap: 6px; flex-wrap: wrap; }
-.modal-ratings { display: flex; gap: 18px; font-size: 13px; color: var(--muted); }
+.modal-ratings { display: flex; gap: 18px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .modal-ratings b { color: var(--text); font-size: 16px; }
+.rating-link { color: inherit; text-decoration: none; }
+.rating-link .ext { font-size: 10px; margin-left: 3px; opacity: .6; }
+.rating-link:hover b, .rating-link:hover { color: var(--accent); }
+.rating-link:hover .ext { opacity: 1; }
 .modal-desc { margin: 0 0 22px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .trailer-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 .trailer-btn {

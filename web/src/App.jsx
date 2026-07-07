@@ -107,12 +107,27 @@ function Card({ movie, onOpen, isFav, onToggleFav }) {
   )
 }
 
+// One rating in the modal — clickable when we can link to the review site.
+function Rating({ value, label, href, title }) {
+  const inner = <><b>{value ?? '–'}</b> {label}</>
+  if (!href) return <span>{inner}</span>
+  return (
+    <a className="rating-link" href={href} target="_blank" rel="noreferrer" title={title}>
+      {inner}<span className="ext">↗</span>
+    </a>
+  )
+}
+
 function Modal({ movie, shows, onClose }) {
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose()
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [onClose])
+
+  // movie.id is the IMDb id when TMDB could resolve one (tt…), else a title key
+  const imdbId = typeof movie.id === 'string' && movie.id.startsWith('tt') ? movie.id : null
+  const metaSearch = `https://www.metacritic.com/search/${encodeURIComponent(movie.title_original || movie.title_de)}/`
 
   const byCinema = {}
   for (const s of shows) {
@@ -135,9 +150,15 @@ function Modal({ movie, shows, onClose }) {
             </p>
             <p className="modal-genres">{(movie.genres || []).map((g) => <span className="genre-pill" key={g}>{g}</span>)}</p>
             <div className="modal-ratings">
-              <span><b>{movie.ratings.imdb ?? '–'}</b> IMDb</span>
-              <span><b>{movie.ratings.metascore ?? '–'}</b> Meta</span>
-              <span><b>{movie.ratings.letterboxd ?? '–'}</b> Letterboxd</span>
+              <Rating value={movie.ratings.imdb} label="IMDb"
+                href={imdbId && `https://www.imdb.com/title/${imdbId}/`}
+                title="Auf IMDb ansehen" />
+              <Rating value={movie.ratings.metascore} label="Meta"
+                href={movie.ratings.metascore != null ? metaSearch : null}
+                title="Auf Metacritic suchen" />
+              <Rating value={movie.ratings.letterboxd} label="Letterboxd"
+                href={imdbId && `https://letterboxd.com/imdb/${imdbId}/`}
+                title="Auf Letterboxd ansehen" />
             </div>
             {(movie.trailer_de || movie.trailer_en) && (
               <div className="trailer-row">
