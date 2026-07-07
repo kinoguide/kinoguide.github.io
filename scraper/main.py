@@ -133,6 +133,7 @@ def main() -> None:
             "overview_de": (meta or {}).get("overview_de"),
             "overview_en": (meta or {}).get("overview_en"),
             "original_language": orig_lang,
+            "countries": (meta or {}).get("countries", []),
             "directors": (meta or {}).get("directors", []),
             "tags": (meta or {}).get("tags", []),
             "trailer_de": (meta or {}).get("trailer_de"),

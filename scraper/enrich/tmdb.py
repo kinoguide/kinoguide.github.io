@@ -61,6 +61,8 @@ def lookup(title: str, year: int | None = None) -> dict | None:
         "overview_de": overview_de or None,
         "overview_en": overview_en or None,
         "original_language": detail.get("original_language") or None,
+        "countries": [c["iso_3166_1"] for c in detail.get("production_countries", [])
+                      if c.get("iso_3166_1")][:3],
         "directors": _directors(detail),
         "tags": _tags(detail),
         **dict(zip(("trailer_de", "trailer_en"), _trailers(detail))),

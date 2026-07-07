@@ -219,21 +219,19 @@ input[type=range] {
 .modal-orig { margin: 0 0 8px; color: var(--muted); font-style: italic; font-size: 16px; }
 .modal-sub { margin: 0 0 8px; color: var(--muted2); font-size: 15px; }
 .modal-genres { margin: 0 0 12px; display: flex; gap: 6px; flex-wrap: wrap; }
-.modal-ratings { display: flex; gap: 18px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
-.modal-ratings b { color: var(--text); font-size: 18px; }
-.rating-link { color: inherit; text-decoration: none; }
-.rating-link .ext { font-size: 11px; margin-left: 3px; opacity: .7; }
-.rating-link:hover b, .rating-link:hover { color: var(--accent2); }
-.rating-link:hover .ext { opacity: 1; }
-
-/* wheelchair accessibility badge next to the cinema name */
-.wheel-badge {
-  font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px;
-  margin-left: 8px; white-space: nowrap; vertical-align: 1px;
+.modal-ratings { display: flex; gap: 10px; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
+.modal-ratings b { color: var(--text); font-size: 17px; }
+.rating-plain { padding: 7px 0; }
+.rating-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  color: inherit; text-decoration: none;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 999px;
+  padding: 7px 14px;
 }
-.wheel-yes     { background: rgba(47,125,50,.25);  color: #8fdd95; }
-.wheel-partial { background: rgba(184,134,11,.25); color: #eec267; }
-.wheel-no      { background: rgba(120,40,40,.28);  color: #e39a9a; }
+.rating-link .ext { font-size: 12px; margin-left: 2px; opacity: .7; }
+.rating-link:hover { border-color: var(--accent); color: var(--accent2); }
+.rating-link:hover b { color: var(--accent2); }
+.rating-link:hover .ext { opacity: 1; }
 
 .modal-desc { margin: 0 0 22px; color: var(--muted2); font-size: 16px; line-height: 1.6; }
 .trailer-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
@@ -264,6 +262,9 @@ input[type=range] {
 /* --- misc --- */
 .empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 16px; }
 footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; line-height: 1.6; }
+footer .credits { font-size: 15px; color: var(--muted2); }
+footer a { color: var(--accent2); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
   .grid2 { grid-template-columns: 1fr; }

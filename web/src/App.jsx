@@ -48,8 +48,11 @@ const T = {
     },
     origLangLabel: 'Originalsprache',
     origLabel: 'Original',
+    countryLabel: 'Land',
     director: 'Regie',
     footer: 'Bewertungen: IMDb & Metascore via OMDb, Metadaten & FSK via TMDB. Themen- und Sprachfilter basieren auf TMDB-Daten (Originalsprache, Regie, Verschlagwortung) — sie zeigen Filme auf, sind aber nicht vollständig. OV/OmU wird aus den Kino-Angaben erkannt; einige Programmkinos kennzeichnen Originalfassungen nicht immer.',
+    thanksPre: 'Inspiriert von Steven Kocadags wunderbarem',
+    thanksPost: 'für Berlin — danke! 💙',
   },
   en: {
     locale: 'en-GB',
@@ -97,9 +100,25 @@ const T = {
     },
     origLangLabel: 'Original language',
     origLabel: 'Original',
+    countryLabel: 'Country',
     director: 'Director',
     footer: 'Ratings: IMDb & Metascore via OMDb, metadata & FSK via TMDB. Topic and language filters are based on TMDB data (original language, director, keywords) — they surface films but aren\'t exhaustive. OV/OmU is read from the cinemas\' listings; some arthouse cinemas don\'t always tag original-version screenings.',
+    thanksPre: 'Inspired by Steven Kocadag\'s wonderful',
+    thanksPost: 'for Berlin — thank you! 💙',
   },
+}
+
+// Country ISO code → flag emoji (regional indicator symbols) + localized name
+const countryFlag = (iso) =>
+  iso && iso.length === 2
+    ? String.fromCodePoint(...[...iso.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0)))
+    : ''
+const countryName = (iso, ui) => {
+  try {
+    return new Intl.DisplayNames([ui === 'en' ? 'en' : 'de'], { type: 'region' }).of(iso) || iso
+  } catch {
+    return iso
+  }
 }
 
 const TOPIC_IDS = ['women_directed', 'queer', 'international']
@@ -266,10 +285,11 @@ function Card({ movie, onOpen, isFav, onToggleFav, t, ui }) {
   )
 }
 
-// One rating in the modal — clickable when we can link to the review site.
-function Rating({ value, label, href, title }) {
-  const inner = <><b>{value ?? '–'}</b> {label}</>
-  if (!href) return <span>{inner}</span>
+// One rating in the modal — a clickable chip (with emoji + arrow) when we can
+// link to the review site, a plain unboxed value otherwise.
+function Rating({ value, label, emoji, href, title }) {
+  const inner = <>{emoji} <b>{value ?? '–'}</b> {label}</>
+  if (!href) return <span className="rating-plain">{inner}</span>
   return (
     <a className="rating-link" href={href} target="_blank" rel="noreferrer" title={title}>
       {inner}<span className="ext">↗</span>
@@ -314,18 +334,23 @@ function Modal({ movie, shows, onClose, t, ui }) {
             {movie.original_language && movie.original_language !== 'de' && (
               <p className="modal-sub">{t.origLabel}: {langFlag(movie.original_language)}{langName(movie.original_language, ui)}</p>
             )}
+            {(movie.countries || []).length > 0 && (
+              <p className="modal-sub">
+                {t.countryLabel}: {movie.countries.map((c) => `${countryFlag(c)} ${countryName(c, ui)}`).join(', ')}
+              </p>
+            )}
             <p className="modal-genres">
               {(movie.genres || []).map((g) => <span className="genre-pill" key={g}>{genreName(g, ui)}</span>)}
               {(movie.tags || []).map((tg) => <span className="topic-pill" key={tg}>{t.topics[tg]}</span>)}
             </p>
             <div className="modal-ratings">
-              <Rating value={movie.ratings.imdb} label="IMDb"
+              <Rating value={movie.ratings.imdb} label="IMDb" emoji="⭐"
                 href={imdbId && `https://www.imdb.com/title/${imdbId}/`}
                 title={t.imdbLink} />
-              <Rating value={movie.ratings.metascore} label="Meta"
+              <Rating value={movie.ratings.metascore} label="Meta" emoji="🎯"
                 href={movie.ratings.metascore != null ? metaSearch : null}
                 title={t.metaLink} />
-              <Rating value={movie.ratings.letterboxd} label="Letterboxd"
+              <Rating value={movie.ratings.letterboxd} label="Letterboxd" emoji="🎬"
                 href={imdbId && `https://letterboxd.com/imdb/${imdbId}/`}
                 title={t.lbLink} />
             </div>
@@ -504,7 +529,7 @@ export default function App() {
   return (
     <div className="page">
       <header className="topbar">
-        <div className="brand">Kinoguide <span>Bonn · Köln</span></div>
+        <div className="brand">Kinoguide <span>Köln · Bonn</span></div>
         <div className="topbar-right">
           <div className="lang-switch" role="group" aria-label="Sprache / Language">
             <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
@@ -651,6 +676,11 @@ export default function App() {
       )}
 
       <footer>
+        <p className="credits">
+          {t.thanksPre}{' '}
+          <a href="https://kinoguide.fyi" target="_blank" rel="noreferrer">kinoguide.fyi</a>{' '}
+          {t.thanksPost}
+        </p>
         <p>{t.footer}</p>
       </footer>
     </div>
