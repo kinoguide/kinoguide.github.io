@@ -42,7 +42,15 @@ const T = {
     favOff: 'Als Favorit merken',
     langBadgeDe: 'Deutsch',
     wheel: { yes: '♿ rollstuhlgerecht', partial: '♿ teilweise rollstuhlgerecht', no: 'nicht rollstuhlgerecht' },
-    footer: 'Bewertungen: IMDb & Metascore via OMDb, Metadaten & FSK via TMDB. Barrierefreiheits-Angaben ohne Gewähr — im Zweifel beim Kino anrufen.',
+    topicsLabel: 'Themen',
+    topics: {
+      women_directed: '♀ Regie: Frauen',
+      queer: '🏳️‍🌈 Queer',
+      black_stories: '✊🏿 Schwarze Perspektiven',
+      feminism: '♀ Feminismus',
+    },
+    director: 'Regie',
+    footer: 'Bewertungen: IMDb & Metascore via OMDb, Metadaten & FSK via TMDB. Themen-Filter basieren auf TMDB-Verschlagwortung und Regie-Daten — sie zeigen Filme auf, sind aber nicht vollständig. Barrierefreiheits-Angaben ohne Gewähr — im Zweifel beim Kino anrufen.',
   },
   en: {
     locale: 'en-GB',
@@ -84,9 +92,19 @@ const T = {
     favOff: 'Mark as favorite',
     langBadgeDe: 'German',
     wheel: { yes: '♿ wheelchair accessible', partial: '♿ partially wheelchair accessible', no: 'not wheelchair accessible' },
-    footer: 'Ratings: IMDb & Metascore via OMDb, metadata & FSK via TMDB. Accessibility info without guarantee — when in doubt, call the cinema.',
+    topicsLabel: 'Topics',
+    topics: {
+      women_directed: '♀ Directed by women',
+      queer: '🏳️‍🌈 Queer',
+      black_stories: '✊🏿 Black stories',
+      feminism: '♀ Feminism',
+    },
+    director: 'Director',
+    footer: 'Ratings: IMDb & Metascore via OMDb, metadata & FSK via TMDB. Topic filters are based on TMDB keywords and director data — they surface films but aren\'t exhaustive. Accessibility info without guarantee — when in doubt, call the cinema.',
   },
 }
+
+const TOPIC_IDS = ['women_directed', 'queer', 'black_stories', 'feminism']
 
 // TMDB delivers genre names in German; translate for the English UI.
 const GENRES_EN = {
@@ -259,7 +277,13 @@ function Modal({ movie, shows, cinemaInfo, onClose, t, ui }) {
               {[movie.year, movie.runtime && `${movie.runtime} min`, movie.age_rating != null && `FSK ${movie.age_rating}`]
                 .filter(Boolean).join(' · ')}
             </p>
-            <p className="modal-genres">{(movie.genres || []).map((g) => <span className="genre-pill" key={g}>{genreName(g, ui)}</span>)}</p>
+            {(movie.directors || []).length > 0 && (
+              <p className="modal-sub">{t.director}: {movie.directors.join(', ')}</p>
+            )}
+            <p className="modal-genres">
+              {(movie.genres || []).map((g) => <span className="genre-pill" key={g}>{genreName(g, ui)}</span>)}
+              {(movie.tags || []).map((tg) => <span className="topic-pill" key={tg}>{t.topics[tg]}</span>)}
+            </p>
             <div className="modal-ratings">
               <Rating value={movie.ratings.imdb} label="IMDb"
                 href={imdbId && `https://www.imdb.com/title/${imdbId}/`}
@@ -342,6 +366,7 @@ export default function App() {
   const [timeFrom, setTimeFrom] = useState(0)
   const [timeTo, setTimeTo] = useState(24)
   const [wheelchairOnly, setWheelchairOnly] = useState(false)
+  const [topics, setTopics] = useState([])       // selected topic tag ids
 
   // favorites survive reloads via localStorage
   const [favs, setFavs] = useState(() => {
@@ -409,6 +434,7 @@ export default function App() {
       .filter((m) => (m.ratings.imdb ?? 0) >= minImdb)
       .filter((m) => !kidsOnly || isKidsFilm(m))
       .filter((m) => genres.length === 0 || (m.genres || []).some((g) => genres.includes(g)))
+      .filter((m) => topics.length === 0 || topics.some((tg) => (m.tags || []).includes(tg)))
       .filter((m) => !needle
         || m.title_de.toLowerCase().includes(needle)
         || (m.title_original || '').toLowerCase().includes(needle))
@@ -418,15 +444,18 @@ export default function App() {
         if (sort === 'recent') return (b.m.year ?? 0) - (a.m.year ?? 0)
         return (b.m.ratings[sort] ?? -1) - (a.m.ratings[sort] ?? -1)
       })
-  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, wheelchairOnly])
+  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, wheelchairOnly, topics])
 
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
 
+  const toggleTopic = (tg) =>
+    setTopics((prev) => prev.includes(tg) ? prev.filter((x) => x !== tg) : [...prev, tg])
+
   const resetFilters = () => {
     setQ(''); setCity('Alle'); setLang('alle'); setMinImdb(0); setGenres([])
     setKidsOnly(false); setCinema('Alle'); setDate('Alle'); setTimeFrom(0); setTimeTo(24)
-    setWheelchairOnly(false)
+    setWheelchairOnly(false); setTopics([])
   }
 
   return (
@@ -483,6 +512,17 @@ export default function App() {
 
       {showFilters && (
         <section className="panel">
+          <div className="field">
+            <label>{t.topicsLabel}</label>
+            <div className="pills">
+              {TOPIC_IDS.map((tg) => (
+                <button key={tg} className={`pill ${topics.includes(tg) ? 'on' : ''}`} onClick={() => toggleTopic(tg)}>
+                  {t.topics[tg]}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="field">
             <label>{t.genres}</label>
             <div className="pills">

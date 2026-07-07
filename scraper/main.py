@@ -105,6 +105,8 @@ def main() -> None:
             "age_rating": (meta or {}).get("age_rating"),
             "overview_de": (meta or {}).get("overview_de"),
             "overview_en": (meta or {}).get("overview_en"),
+            "directors": (meta or {}).get("directors", []),
+            "tags": (meta or {}).get("tags", []),
             "trailer_de": (meta or {}).get("trailer_de"),
             "trailer_en": (meta or {}).get("trailer_en"),
             "ratings": scores,

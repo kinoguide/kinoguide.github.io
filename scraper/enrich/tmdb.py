@@ -6,6 +6,7 @@ as TMDB_API_KEY.
 from __future__ import annotations
 
 import os
+import re
 import requests
 
 API = "https://api.themoviedb.org/3"
@@ -34,7 +35,7 @@ def lookup(title: str, year: int | None = None) -> dict | None:
     detail = requests.get(
         f"{API}/movie/{best['id']}",
         params={"api_key": _key(), "language": "de-DE",
-                "append_to_response": "external_ids,release_dates,videos",
+                "append_to_response": "external_ids,release_dates,videos,keywords,credits",
                 "include_video_language": "de,en,null"},
         timeout=30,
     ).json()
@@ -59,8 +60,60 @@ def lookup(title: str, year: int | None = None) -> dict | None:
         "age_rating": _fsk(detail),
         "overview_de": overview_de or None,
         "overview_en": overview_en or None,
+        "directors": _directors(detail),
+        "tags": _tags(detail),
         **dict(zip(("trailer_de", "trailer_en"), _trailers(detail))),
     }
+
+
+def _directors(detail: dict) -> list[str]:
+    crew = (detail.get("credits") or {}).get("crew", [])
+    return [p["name"] for p in crew if p.get("job") == "Director" and p.get("name")]
+
+
+# Topic tags, derived from data TMDB actually has — no guessing about people:
+#  - women_directed: TMDB stores a gender field per crew member (1 = female);
+#    tagged when at least one credited director is a woman. Unknown genders
+#    (0) simply don't count either way, so absence of the tag is not a claim.
+#  - queer / feminism / black_stories: matched against TMDB's community-
+#    maintained keywords. Keyword coverage is imperfect (smaller films are
+#    under-tagged), so these filters surface films rather than define them —
+#    the frontend footer says so. Patterns use word boundaries to avoid
+#    false hits (e.g. 'gay' must be a whole word).
+TAG_PATTERNS = {
+    "queer": re.compile(
+        r"lgbt|queer|\bgay\b|lesbian|bisexual|transgender|trans woman|trans man"
+        r"|non-binary|genderqueer|drag queen|coming out|same-sex|homosexual",
+        re.IGNORECASE),
+    "feminism": re.compile(
+        r"feminis|women's rights|suffrag|patriarch|women's movement"
+        r"|women's liberation|female empowerment|sexism|misogyn"
+        r"|gender discrimination|gender equality|me too",
+        re.IGNORECASE),
+    "black_stories": re.compile(
+        r"african[- ]american|black lives matter|blaxploitation|black culture"
+        r"|black communit|black histor|afrofuturis|black cinema|black experience"
+        r"|afro[- ]descend|black lgbt|civil rights movement|racial segregation",
+        re.IGNORECASE),
+}
+
+
+def _tags(detail: dict) -> list[str]:
+    tags = []
+    keyword_blob = " | ".join(
+        k.get("name", "") for k in (detail.get("keywords") or {}).get("keywords", []))
+
+    # two signals: credited director's TMDB gender field, or the community's
+    # explicit 'woman director' keyword
+    directors = [p for p in (detail.get("credits") or {}).get("crew", [])
+                 if p.get("job") == "Director"]
+    if any(p.get("gender") == 1 for p in directors) or "woman director" in keyword_blob.lower():
+        tags.append("women_directed")
+
+    for tag, pattern in TAG_PATTERNS.items():
+        if pattern.search(keyword_blob):
+            tags.append(tag)
+    return tags
 
 
 def _trailers(detail: dict) -> tuple[str | None, str | None]:
