@@ -58,8 +58,15 @@ def _iso_with_offset(date: str, time_: str, unixdatetime) -> str:
         return local.isoformat()  # naive local time is still sortable/displayable
 
 
-def metropolis(cinema: dict) -> list[dict]:
-    url = cinema.get("url", "https://www.metropolis-koeln.de/programm")
+def cineweb(cinema: dict) -> list[dict]:
+    """Generic CineWeb scraper — works for any cinema on that platform.
+
+    Currently: Metropolis (metropolis-koeln.de) and Rex am Ring
+    (rex-koeln.de). Rex am Ring is also on kinoheld, but kinoheld drops
+    almost all of their OmU/OV markers (4 marked shows vs 128 on their own
+    site), so their own site is the truthful source.
+    """
+    url = cinema["url"]
     resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
     m = FILMS_RE.search(resp.text)
@@ -92,7 +99,49 @@ def metropolis(cinema: dict) -> list[dict]:
     return shows_out
 
 
-SCRAPERS = {"metropolis": metropolis}
+# --- Filmpalette language correction -------------------------------------
+# Filmpalette is on kinoheld (clean showtimes + booking), but kinoheld drops
+# their language markers. Their own homepage lists the program as plain text
+# with markers like "Amores Perros (OmeU)" — we parse that once per run and
+# use it to correct the language of their kinoheld showtimes by title.
+# Title chars deliberately exclude digits/colons so showtimes ("20:30") act
+# as separators — otherwise neighbouring titles bleed into the match.
+FILMPALETTE_MARK_RE = re.compile(r"([A-Za-zÄÖÜäöüß&'’.\-][A-Za-zÄÖÜäöüß&'’.\- ]{2,60}?)\s*\((OmU|OmeU|OmdU|OV|OF)\)")
+
+
+def filmpalette_language_map(url: str = "http://www.filmpalette-koeln.de/") -> dict[str, str]:
+    """Return {lowercased title: 'OmU'|'OV'} parsed from filmpalette-koeln.de."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=30)
+        resp.raise_for_status()
+        text = re.sub(r"<[^>]*>", " ", resp.text)
+        text = text.replace("&nbsp;", " ")
+        text = re.sub(r"\s+", " ", text)
+    except Exception as e:
+        print(f"  [warn] Filmpalette language page failed: {e}")
+        return {}
+    mapping = {}
+    for title, marker in FILMPALETTE_MARK_RE.findall(text):
+        mapping[title.strip().lower()] = classify(f"({marker})")
+    return mapping
+
+
+def apply_filmpalette_languages(shows: list[dict]) -> None:
+    """Correct 'language' in-place for Filmpalette shows using their site."""
+    mapping = filmpalette_language_map()
+    if not mapping:
+        return
+    for s in shows:
+        t = s["title"].strip().lower()
+        for marked_title, lang in mapping.items():
+            # exact match, or containment for reasonably long titles only
+            # (avoids a short key like 'rose' hijacking unrelated films)
+            if t == marked_title or (len(marked_title) >= 5 and (marked_title in t or t in marked_title)):
+                s["language"] = lang
+                break
+
+
+SCRAPERS = {"metropolis": cineweb, "cineweb": cineweb}
 
 
 def fetch_shows(cinema: dict) -> list[dict]:

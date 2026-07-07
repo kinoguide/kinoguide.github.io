@@ -81,16 +81,20 @@ def main() -> None:
             print(f"  [error] {cinema['name']}: {e}")
             continue
 
+        # kinoheld drops Filmpalette's language markers; their own homepage
+        # has them ("Amores Perros (OmeU)") — correct the labels from there.
+        if cinema["name"] == "Filmpalette":
+            custom.apply_filmpalette_languages(shows)
+
         for show in shows:
             key = clean_title(show["title"]).lower()
             entry = movies.setdefault(key, {"title_raw": clean_title(show["title"]),
                                             "showtimes": []})
-            # Link policy: send visitors to the cinema's own website rather
-            # than kinoheld. Non-kinoheld deeplinks (CineStar webticketing,
-            # kinotickets.express) ARE the cinema's system, so keep those.
-            url = show.get("booking_url", "")
-            if not url or "kinoheld.de" in url:
-                url = cinema.get("website", url)
+            # Link policy: exact page for that showtime. Chain deeplinks and
+            # kinotickets/CineWeb links are already exact; for kinoheld-only
+            # cinemas the kinoheld per-show page is the exact one (it's also
+            # their actual ticket shop). Cinema homepage only as last resort.
+            url = show.get("booking_url", "") or cinema.get("website", "")
             entry["showtimes"].append({
                 "cinema": cinema["name"],
                 "city": cinema["city"],
@@ -126,6 +130,7 @@ def main() -> None:
             "title_de": (meta or {}).get("title_de", entry["title_raw"]),
             "title_original": (meta or {}).get("title_original", entry["title_raw"]),
             "year": (meta or {}).get("year"),
+            "release_date": (meta or {}).get("release_date"),
             "runtime": (meta or {}).get("runtime"),
             "poster": (meta or {}).get("poster"),
             "genres": (meta or {}).get("genres", []),

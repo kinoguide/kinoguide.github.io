@@ -7,6 +7,8 @@ const T = {
     search: 'Filme suchen…',
     kids: '🧒 Kinderfilme',
     kidsTitle: 'Filme für Familien mit Kindern von 6 bis 12',
+    lastMinute: '⏰ Last Minute',
+    lastMinuteTitle: 'Filme, die jetzt oder in den nächsten 4 Stunden starten',
     filter: 'Filter',
     sortLabel: 'Sortieren:',
     sortNew: 'Neu',
@@ -59,6 +61,8 @@ const T = {
     search: 'Search movies…',
     kids: '🧒 Kids movies',
     kidsTitle: 'Movies for families with kids aged 6 to 12',
+    lastMinute: '⏰ Last minute',
+    lastMinuteTitle: 'Movies starting now or within the next 4 hours',
     filter: 'Filters',
     sortLabel: 'Sort by:',
     sortNew: 'Recent',
@@ -422,6 +426,7 @@ export default function App() {
   const [timeTo, setTimeTo] = useState(24)
   const [topics, setTopics] = useState([])       // women_directed / queer / international
   const [origLangs, setOrigLangs] = useState([]) // selected original-language ISO codes
+  const [lastMinute, setLastMinute] = useState(false) // only shows starting within 4h
 
   // favorites survive reloads via localStorage
   const [favs, setFavs] = useState(() => {
@@ -484,6 +489,10 @@ export default function App() {
     if (city !== 'Alle' && s.city !== city) return false
     if (cinema !== 'Alle' && s.cinema !== cinema) return false
     if (date !== 'Alle' && dayKey(s.datetime) !== date) return false
+    if (lastMinute) {
+      const diff = new Date(s.datetime) - Date.now()
+      if (diff < 0 || diff > 4 * 3600 * 1000) return false
+    }
     const d = new Date(s.datetime)
     const hour = d.getHours() + d.getMinutes() / 60
     if (hour < timeFrom || hour > timeTo) return false
@@ -498,7 +507,7 @@ export default function App() {
       .filter((m) => (m.ratings.imdb ?? 0) >= minImdb)
       .filter((m) => !kidsOnly || isKidsFilm(m))
       .filter((m) => genres.length === 0 || (m.genres || []).some((g) => genres.includes(g)))
-      .filter((m) => topics.length === 0 || topics.some((tg) => matchTopic(m, tg)))
+      .filter((m) => topics.every((tg) => matchTopic(m, tg)))  // AND: each selected topic must match
       .filter((m) => origLangs.length === 0 || origLangs.includes(m.original_language))
       .filter((m) => !needle
         || m.title_de.toLowerCase().includes(needle)
@@ -506,10 +515,23 @@ export default function App() {
       .map((m) => ({ m, shows: showsFor(m) }))
       .filter((x) => x.shows.length > 0)
       .sort((a, b) => {
-        if (sort === 'recent') return (b.m.year ?? 0) - (a.m.year ?? 0)
+        // in last-minute mode the soonest screening comes first
+        if (lastMinute) return a.shows[0].datetime.localeCompare(b.shows[0].datetime)
+        // 'Neu' = newest theatrical release first (full date, not just year).
+        // Far-future dates (event cinema announced for next season) sort last —
+        // they haven't "hit cinemas" yet. Two weeks of lead time still counts
+        // so preview screenings of this week's releases show up.
+        if (sort === 'recent') {
+          const horizon = new Date(Date.now() + 14 * 86400e3).toISOString().slice(0, 10)
+          const rd = (m) => {
+            const d = m.release_date || (m.year ? `${m.year}` : '')
+            return d > horizon ? '' : d
+          }
+          return rd(b.m).localeCompare(rd(a.m))
+        }
         return (b.m.ratings[sort] ?? -1) - (a.m.ratings[sort] ?? -1)
       })
-  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs])
+  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs, lastMinute])
 
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
@@ -523,7 +545,7 @@ export default function App() {
   const resetFilters = () => {
     setQ(''); setCity('Alle'); setLang('alle'); setMinImdb(0); setGenres([])
     setKidsOnly(false); setCinema('Alle'); setDate('Alle'); setTimeFrom(0); setTimeTo(24)
-    setTopics([]); setOrigLangs([])
+    setTopics([]); setOrigLangs([]); setLastMinute(false)
   }
 
   return (
@@ -544,6 +566,13 @@ export default function App() {
           <span className="search-icon">⌕</span>
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.search} />
         </div>
+        <button
+          className={`kids-btn ${lastMinute ? 'on' : ''}`}
+          onClick={() => setLastMinute((v) => !v)}
+          title={t.lastMinuteTitle}
+        >
+          {t.lastMinute}
+        </button>
         <button
           className={`kids-btn ${kidsOnly ? 'on' : ''}`}
           onClick={() => setKidsOnly((v) => !v)}

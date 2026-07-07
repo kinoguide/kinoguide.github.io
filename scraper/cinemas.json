@@ -10,9 +10,9 @@
 
     { "name": "Metropolis",          "city": "Köln", "source": "custom", "scraper": "metropolis", "url": "https://www.metropolis-koeln.de/programm", "website": "https://www.metropolis-koeln.de", "_note": "mostly-OV house. Not usably on kinoheld (id 974 there is an event venue) — scraped from their CineWeb site, tickets via kinotickets.express. Unmarked foreign-language films are corrected DE->OmU in main.py (fix_metropolis_ov)" },
     { "name": "Odeon",               "city": "Köln", "source": "kinoheld", "kinoheld_id": 1018, "website": "https://www.odeon-koeln.de" },
-    { "name": "Filmpalette",         "city": "Köln", "source": "kinoheld", "kinoheld_id": 533, "website": "http://www.filmpalette-koeln.de", "_note": "their https is broken (cert), http works" },
+    { "name": "Filmpalette",         "city": "Köln", "source": "kinoheld", "kinoheld_id": 533, "website": "http://www.filmpalette-koeln.de", "_note": "their https is broken (cert), http works. kinoheld drops their OmU/OmeU markers — corrected from their homepage text in main.py (apply_filmpalette_languages)" },
     { "name": "OFF Broadway",        "city": "Köln", "source": "kinoheld", "kinoheld_id": 1019, "website": "https://www.off-broadway.de" },
-    { "name": "Rex am Ring",         "city": "Köln", "source": "kinoheld", "kinoheld_id": 1088, "website": "https://rex-koeln.de" },
+    { "name": "Rex am Ring",         "city": "Köln", "source": "custom", "scraper": "cineweb", "url": "https://rex-koeln.de/programm", "website": "https://rex-koeln.de", "_note": "also kinoheld id 1088, but kinoheld drops nearly all their OmU/OV markers — their own CineWeb site is the truthful source (and has exact kinotickets.express links)" },
     { "name": "Weisshaus Kino",      "city": "Köln", "source": "kinoheld", "kinoheld_id": 1277, "website": "https://www.weisshaus-kino.de" },
     { "name": "Lichtspiele Kalk",    "city": "Köln", "source": "kinoheld", "kinoheld_id": 2137, "website": "https://www.lichtspiele-kalk.de", "_note": "mostly OmU program" },
     { "name": "Cinenova",            "city": "Köln", "source": "kinoheld", "kinoheld_id": 255, "website": "https://www.cinenova.de" },

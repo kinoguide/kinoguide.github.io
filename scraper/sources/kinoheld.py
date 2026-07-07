@@ -131,12 +131,20 @@ def _flag_names(flags: list | None) -> list[str]:
 
 
 def _booking_url(show: dict) -> str:
-    """Prefer the API's deeplink; it is often null, so fall back to the
-    canonical page URL (pattern verified live 2026-07-07):
+    """Prefer the API's deeplink when it points at a specific show; fall back
+    to the canonical per-show page (pattern verified live 2026-07-07):
       https://www.kinoheld.de/kino/{city}/{cinema}/vorstellung/{showId}
+
+    Some cinemas set a generic deeplink (e.g. Bonner Kinemathek points at
+    their homepage) — a URL with no path and no query identifies nothing,
+    so the exact kinoheld page wins there.
     """
-    if show.get("deeplink"):
-        return show["deeplink"]
+    deeplink = show.get("deeplink") or ""
+    if deeplink:
+        rest = deeplink.split("://", 1)[-1]
+        is_root_only = "/" not in rest.rstrip("/") and "?" not in rest
+        if not is_root_only:
+            return deeplink
     cinema = show.get("cinema") or {}
     city_slug = (cinema.get("city") or {}).get("urlSlug")
     cinema_slug = cinema.get("urlSlug")

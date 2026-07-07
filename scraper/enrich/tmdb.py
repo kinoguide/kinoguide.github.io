@@ -54,6 +54,7 @@ def lookup(title: str, year: int | None = None) -> dict | None:
         "title_de": detail.get("title") or title,
         "title_original": detail.get("original_title") or title,
         "year": int((detail.get("release_date") or "0000")[:4]) or None,
+        "release_date": detail.get("release_date") or None,
         "runtime": detail.get("runtime"),
         "poster": IMG + detail["poster_path"] if detail.get("poster_path") else None,
         "genres": [g["name"] for g in detail.get("genres", []) if g.get("name")],
