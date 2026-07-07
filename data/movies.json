@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-07T12:01:53.667277+00:00",
+ "generated_at": "2026-07-07T12:05:35.012650+00:00",
  "movies": [
   {
    "id": "tt0108052",
@@ -1749,6 +1749,32 @@
    ]
   },
   {
+   "id": "tt0209182",
+   "title_de": "Stranger Than Paradise",
+   "title_original": "Stranger Than Paradise",
+   "year": 1983,
+   "runtime": 30,
+   "poster": "https://image.tmdb.org/t/p/w342/a6UvfMk1vWiX2eQgWOlAqIqlCV8.jpg",
+   "genres": [],
+   "age_rating": null,
+   "overview": "30-minute short subject film that would become Stranger Than Paradise. This short was released as a standalone film in 1982, and shown as \"Stranger Than Paradise\" at the 1983 International Film Festival Rotterdam. When it was later expanded into a three-act feature, that name was appropriated for the feature itself, and the initial segment was renamed \"The New World\".",
+   "trailer": null,
+   "ratings": {
+    "imdb": 7.9,
+    "metascore": null,
+    "letterboxd": 3.86
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T21:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    }
+   ]
+  },
+  {
    "id": "tt0100157",
    "title_de": "Misery",
    "title_original": "Misery",
@@ -2939,6 +2965,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=40A71000023RFGKYDT"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-10T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-10T20:30:00+02:00",
@@ -2981,6 +3014,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=50A71000023RFGKYDT"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-11T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-11T20:30:00+02:00",
@@ -3014,6 +3054,13 @@
      "datetime": "2026-07-12T18:45:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67983"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T18:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Cinedom",
@@ -3051,6 +3098,13 @@
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67984"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-13T20:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T20:00:00+02:00",
@@ -3084,6 +3138,13 @@
      "datetime": "2026-07-14T18:45:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67985"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-14T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Cinedom",
@@ -3133,6 +3194,35 @@
      "datetime": "2026-07-15T20:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.odeon-koeln.de"
+    }
+   ]
+  },
+  {
+   "id": "tt0165798",
+   "title_de": "Ghost Dog - Der Weg des Samurai",
+   "title_original": "Ghost Dog: The Way of the Samurai",
+   "year": 1999,
+   "runtime": 116,
+   "poster": "https://image.tmdb.org/t/p/w342/6K4Qe5bA0QqFIH4CNU9VGG3kdNG.jpg",
+   "genres": [
+    "Krimi",
+    "Drama"
+   ],
+   "age_rating": 16,
+   "overview": "Ghost Dog lebt über der Welt – in einer selbstgebauten Hütte neben einem Taubenschlag auf dem Dach eines verlassenen Gebäudes. Er ist ein professioneller Killer und durchwandert, lautlos und ungesehen, die Stadt – wird eins mit der Nacht. Sein Leitfaden ist ein alter Verhaltenskodex der japanischen Kriegerkaste – der Samurai. Als sein Leben auf dramatische Weise von einer zerrütteten Mafiafamilie bedroht wird, die gelegentlich seine Dienste in Anspruch nimmt, reagiert er streng nach dem Kodex – dem Weg des Samurai ...",
+   "trailer": "https://www.youtube.com/watch?v=5TjI7tJd47Y",
+   "ratings": {
+    "imdb": 7.5,
+    "metascore": 68,
+    "letterboxd": 4.06
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-15T20:15:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
     }
    ]
   },
@@ -3490,6 +3580,48 @@
    ]
   },
   {
+   "id": "tt1893269",
+   "title_de": "Kusama: Infinity",
+   "title_original": "Kusama: Infinity",
+   "year": 2018,
+   "runtime": 80,
+   "poster": "https://image.tmdb.org/t/p/w342/o1gZE9QqU9F9ogNaoFO0lsa3EUP.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": null,
+   "overview": "Now one of the world’s most celebrated artists, Yayoi Kusama broke free of the rigid society in which she was raised, and overcame sexism, racism, and mental illness to bring her artistic vision to the world stage. At 88 she lives in a mental hospital and continues to create art.",
+   "trailer": "https://www.youtube.com/watch?v=x8mdIB1WxHI",
+   "ratings": {
+    "imdb": 7.3,
+    "metascore": 71,
+    "letterboxd": 3.64
+   },
+   "showtimes": [
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-09T16:30:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T13:15:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:30:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.odeon-koeln.de"
+    }
+   ]
+  },
+  {
    "id": "tt0100356",
    "title_de": "Peterchens Mondfahrt",
    "title_original": "Peterchens Mondfahrt",
@@ -3629,41 +3761,6 @@
      "datetime": "2026-07-14T21:00:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.lichtspiele-kalk.de"
-    }
-   ]
-  },
-  {
-   "id": "tt1893269",
-   "title_de": "Kusama: Infinity",
-   "title_original": "Kusama: Infinity",
-   "year": 2018,
-   "runtime": 80,
-   "poster": "https://image.tmdb.org/t/p/w342/o1gZE9QqU9F9ogNaoFO0lsa3EUP.jpg",
-   "genres": [
-    "Dokumentarfilm"
-   ],
-   "age_rating": null,
-   "overview": "Now one of the world’s most celebrated artists, Yayoi Kusama broke free of the rigid society in which she was raised, and overcame sexism, racism, and mental illness to bring her artistic vision to the world stage. At 88 she lives in a mental hospital and continues to create art.",
-   "trailer": "https://www.youtube.com/watch?v=x8mdIB1WxHI",
-   "ratings": {
-    "imdb": 7.3,
-    "metascore": 71,
-    "letterboxd": 3.64
-   },
-   "showtimes": [
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-09T16:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.odeon-koeln.de"
-    },
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-12T14:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.odeon-koeln.de"
     }
    ]
   },
@@ -5330,34 +5427,6 @@
    ]
   },
   {
-   "id": "tt0094862",
-   "title_de": "Chucky - Die Mörderpuppe",
-   "title_original": "Child's Play",
-   "year": 1988,
-   "runtime": 87,
-   "poster": "https://image.tmdb.org/t/p/w342/5kxRen2kPfvrfF2UPu8X22tLKlN.jpg",
-   "genres": [
-    "Horror"
-   ],
-   "age_rating": 16,
-   "overview": "Mit der sprechenden Puppe Chucky erfüllt Karen Barcley ihrem Sohn seinen sehnlichsten Wunsch. Sie ahnt nicht, dass sie damit einen grauenvollen Alptraum heraufbeschwört. Als kurze Zeit später Andys Babysitterin tot aufgefunden wird und danach weitere unerklärliche Morde geschehen, wird der Junge als Täter verdächtigt. Niemand glaubt ihm, dass Chucky der wahre Killer sei – bis es zu spät ist. Denn auch ohne Batterien ist Chucky putzmunter und von der Seele eines Massenmörders besessen – er entpuppt sich als das unzerstörbare Böse.",
-   "trailer": "https://www.youtube.com/watch?v=sjiyV8mtXiU",
-   "ratings": {
-    "imdb": 6.7,
-    "metascore": 58,
-    "letterboxd": 3.32
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-10-08T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/07165000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "tt36874833",
    "title_de": "Pompeji: Unter den Wolken",
    "title_original": "Sotto le nuvole",
@@ -5384,11 +5453,46 @@
      "booking_url": "https://www.odeon-koeln.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T11:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-12T15:15:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.odeon-koeln.de"
+    }
+   ]
+  },
+  {
+   "id": "tt0094862",
+   "title_de": "Chucky - Die Mörderpuppe",
+   "title_original": "Child's Play",
+   "year": 1988,
+   "runtime": 87,
+   "poster": "https://image.tmdb.org/t/p/w342/5kxRen2kPfvrfF2UPu8X22tLKlN.jpg",
+   "genres": [
+    "Horror"
+   ],
+   "age_rating": 16,
+   "overview": "Mit der sprechenden Puppe Chucky erfüllt Karen Barcley ihrem Sohn seinen sehnlichsten Wunsch. Sie ahnt nicht, dass sie damit einen grauenvollen Alptraum heraufbeschwört. Als kurze Zeit später Andys Babysitterin tot aufgefunden wird und danach weitere unerklärliche Morde geschehen, wird der Junge als Täter verdächtigt. Niemand glaubt ihm, dass Chucky der wahre Killer sei – bis es zu spät ist. Denn auch ohne Batterien ist Chucky putzmunter und von der Seele eines Massenmörders besessen – er entpuppt sich als das unzerstörbare Böse.",
+   "trailer": "https://www.youtube.com/watch?v=sjiyV8mtXiU",
+   "ratings": {
+    "imdb": 6.7,
+    "metascore": 58,
+    "letterboxd": 3.32
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-10-08T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/07165000023GNFNDWF"
     }
    ]
   },
@@ -11408,6 +11512,13 @@
      "booking_url": "https://www.odeon-koeln.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-11T14:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T16:45:00+02:00",
@@ -11476,6 +11587,13 @@
      "datetime": "2026-07-13T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-14T15:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Cinedom",
@@ -11646,6 +11764,13 @@
      "booking_url": "https://www.weisshaus-kino.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-10T16:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-10T16:30:00+02:00",
@@ -11702,6 +11827,13 @@
      "booking_url": "https://www.cinenova.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-11T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-11T18:30:00+02:00",
@@ -11721,6 +11853,13 @@
      "datetime": "2026-07-12T16:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67990"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Cinenova",
@@ -11749,6 +11888,13 @@
      "datetime": "2026-07-12T18:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-13T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Metropolis",
@@ -11786,11 +11932,25 @@
      "booking_url": "https://www.cinenova.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-14T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-14T18:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-15T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     },
     {
      "cinema": "Metropolis",
@@ -11823,99 +11983,109 @@
    ]
   },
   {
-   "id": "tt43509005",
-   "title_de": "Was haben wir gelacht",
-   "title_original": "Was haben wir gelacht",
+   "id": "tt27802226",
+   "title_de": "Virginia Woolf's Night and Day",
+   "title_original": "Virginia Woolf's Night & Day",
    "year": 2026,
-   "runtime": 96,
-   "poster": "https://image.tmdb.org/t/p/w342/oaXPsfzHtYGUM38Cyw0PEeRZmty.jpg",
+   "runtime": 95,
+   "poster": "https://image.tmdb.org/t/p/w342/pDSuVhatjn1n2Hjja5qdrP19i9K.jpg",
    "genres": [
-    "Dokumentarfilm"
-   ],
-   "age_rating": null,
-   "overview": "WAS HABEN WIR GELACHT erzählt die Geschichte des Unterhaltungsfernsehens der 90er Jahre erstmals aus Frauenperspektive. Maren Kroymann, Hella von Sinnen, Bettina Böttinger, Gaby Köster und Esther Schweins blicken zurück auf ihr Werk und eine Zeit, in der Frauen im Fernsehen vor allem Beiwerk waren, als Pointen dienten und weiblicher Humor als Quotenkiller galt. Eine ganze Generation wurde so vor allem durch männliche Unterhalter sozialisiert – durch „Wetten, dass…?”, die „Harald Schmidt Show” und später “TV total”. Wie hat uns diese Zeit geprägt? Und was hat Witzigsein mit Macht und Gleichberechtigung zu tun? Dieser Film ist eine Zeitreise zurück zu den Lachern der 90er. ‘Was haben wir gelacht’ – oder vielleicht auch nicht?",
-   "trailer": "https://www.youtube.com/watch?v=rfAPe6fERqE",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-07T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/E0A81000023FELEXJT"
-    },
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-19T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.odeon-koeln.de"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-19T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.rex-filmbuehne.de"
-    }
-   ]
-  },
-  {
-   "id": "bayreuther festspiele 2026: rienzi (wagner)",
-   "title_de": "BAYREUTHER FESTSPIELE 2026: RIENZI (WAGNER)",
-   "title_original": "BAYREUTHER FESTSPIELE 2026: RIENZI (WAGNER)",
-   "year": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview": null,
-   "trailer": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-26T17:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.rex-filmbuehne.de"
-    }
-   ]
-  },
-  {
-   "id": "tt35453057",
-   "title_de": "Hallo Betty",
-   "title_original": "Hallo Betty",
-   "year": 2025,
-   "runtime": 110,
-   "poster": "https://image.tmdb.org/t/p/w342/82vMVYGP14R6YxQN3xQVme4qiwS.jpg",
-   "genres": [
+    "Komödie",
     "Drama",
-    "Komödie"
+    "Liebesfilm"
    ],
    "age_rating": 6,
-   "overview": "«Hallo Betty» spielt in der Schweiz der 50er-Jahre und erzählt aus dem Leben der Werbetexterin EMMI CREOLA, die Produkte einer Speiseölfirma vermarkten soll und dabei die Kunstfigur Betty Bossi erfindet. Die «Köchin und Hausfrau der Nation» wird rasch populär und erhält jede Menge Fanpost und Fragen rund ums Thema Familie und Kochen",
-   "trailer": "https://www.youtube.com/watch?v=t-9xt0gvGOc",
+   "overview": "Im London des frühen 20. Jahrhunderts sucht die brillante Astronomin Katharine Hilbery nach einem Leben jenseits gesellschaftlicher Erwartungen. Zwischen arrangierter Ehe, Liebe und geistiger Unabhängigkeit entdeckt sie, dass Herz und Verstand keine Gegensätze sein müssen – eine zarte, kluge und humorvolle Erkundung von Freiheit, Nähe und Selbstbestimmung.",
+   "trailer": "https://www.youtube.com/watch?v=X6wM6lAT48k",
    "ratings": {
     "imdb": null,
     "metascore": null,
-    "letterboxd": 3.35
+    "letterboxd": 2.89
    },
    "showtimes": [
     {
-     "cinema": "Neue Filmbühne",
+     "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
-     "datetime": "2026-07-07T16:00:00+02:00",
+     "datetime": "2026-07-09T15:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-10T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-11T16:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T14:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-12T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-13T18:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-14T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.cinenova.de"
     }
    ]
   },
@@ -12030,11 +12200,169 @@
      "booking_url": "https://www.weisshaus-kino.de"
     },
     {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-15T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-15T16:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.odeon-koeln.de"
+    }
+   ]
+  },
+  {
+   "id": "pick me girls",
+   "title_de": "Sophie Passmann: Pick Me Girls",
+   "title_original": "Sophie Passmann: Pick Me Girls",
+   "year": 2026,
+   "runtime": 80,
+   "poster": "https://image.tmdb.org/t/p/w342/wq6ReVaOlBPHJvHl34ebUNDvi0B.jpg",
+   "genres": [],
+   "age_rating": null,
+   "overview": "Mit Büchern wie „Alte weiße Männer“, „Komplett Gänsehaut“, „Pick me Girls“ und jüngst „Wie kann sie nur?“ erobert Autorin, Moderatorin und Podcasterin Sophie Passmann regelmäßig die Spiegel-Bestsellerlisten und avancierte zu einer der prägendsten, feministischen Stimmen ihrer Generation. Debattenlustig und provokant, begeistert sie mit ihrem pointierten Humor, klarer Haltung und gesellschaftspolitischem Gespür ein breites Publikum über die deutschen Grenzen hinaus.  Bis Ende 2024 war sie regelmäßig im Berliner Ensemble mit der Theaterfassung ihres Buchhits Pick Me Girls zu sehen - einer Produktion in der Regie von Christina Tscharyiski. Die von der Kritik gefeierte Inszenierung markierte ihr Theaterdebüt und ist mehr als Stand-up-Comedy: Mit scharfem Witz und Ehrlichkeit erzählt Passmann von Selbstverleugnung, dem Bedürfnis nach männlicher Anerkennung – und davon, wie sie selbst mittendrin steckte.",
+   "trailer": "https://www.youtube.com/watch?v=6gBYEJHkPUQ",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-08T19:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Neue Filmbühne",
+     "city": "Bonn",
+     "datetime": "2026-07-08T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-15T18:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    },
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.odeon-koeln.de"
+    }
+   ]
+  },
+  {
+   "id": "tt43509005",
+   "title_de": "Was haben wir gelacht",
+   "title_original": "Was haben wir gelacht",
+   "year": 2026,
+   "runtime": 96,
+   "poster": "https://image.tmdb.org/t/p/w342/oaXPsfzHtYGUM38Cyw0PEeRZmty.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": null,
+   "overview": "WAS HABEN WIR GELACHT erzählt die Geschichte des Unterhaltungsfernsehens der 90er Jahre erstmals aus Frauenperspektive. Maren Kroymann, Hella von Sinnen, Bettina Böttinger, Gaby Köster und Esther Schweins blicken zurück auf ihr Werk und eine Zeit, in der Frauen im Fernsehen vor allem Beiwerk waren, als Pointen dienten und weiblicher Humor als Quotenkiller galt. Eine ganze Generation wurde so vor allem durch männliche Unterhalter sozialisiert – durch „Wetten, dass…?”, die „Harald Schmidt Show” und später “TV total”. Wie hat uns diese Zeit geprägt? Und was hat Witzigsein mit Macht und Gleichberechtigung zu tun? Dieser Film ist eine Zeitreise zurück zu den Lachern der 90er. ‘Was haben wir gelacht’ – oder vielleicht auch nicht?",
+   "trailer": "https://www.youtube.com/watch?v=rfAPe6fERqE",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-07T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E0A81000023FELEXJT"
+    },
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-19T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.odeon-koeln.de"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-19T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    }
+   ]
+  },
+  {
+   "id": "bayreuther festspiele 2026: rienzi (wagner)",
+   "title_de": "BAYREUTHER FESTSPIELE 2026: RIENZI (WAGNER)",
+   "title_original": "BAYREUTHER FESTSPIELE 2026: RIENZI (WAGNER)",
+   "year": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview": null,
+   "trailer": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-26T17:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.rex-filmbuehne.de"
+    }
+   ]
+  },
+  {
+   "id": "tt35453057",
+   "title_de": "Hallo Betty",
+   "title_original": "Hallo Betty",
+   "year": 2025,
+   "runtime": 110,
+   "poster": "https://image.tmdb.org/t/p/w342/82vMVYGP14R6YxQN3xQVme4qiwS.jpg",
+   "genres": [
+    "Drama",
+    "Komödie"
+   ],
+   "age_rating": 6,
+   "overview": "«Hallo Betty» spielt in der Schweiz der 50er-Jahre und erzählt aus dem Leben der Werbetexterin EMMI CREOLA, die Produkte einer Speiseölfirma vermarkten soll und dabei die Kunstfigur Betty Bossi erfindet. Die «Köchin und Hausfrau der Nation» wird rasch populär und erhält jede Menge Fanpost und Fragen rund ums Thema Familie und Kochen",
+   "trailer": "https://www.youtube.com/watch?v=t-9xt0gvGOc",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 3.35
+   },
+   "showtimes": [
+    {
+     "cinema": "Neue Filmbühne",
+     "city": "Bonn",
+     "datetime": "2026-07-07T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.rex-filmbuehne.de"
     }
    ]
   },
@@ -12134,53 +12462,6 @@
      "city": "Köln",
      "datetime": "2026-07-14T18:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.odeon-koeln.de"
-    }
-   ]
-  },
-  {
-   "id": "pick me girls",
-   "title_de": "Sophie Passmann: Pick Me Girls",
-   "title_original": "Sophie Passmann: Pick Me Girls",
-   "year": 2026,
-   "runtime": 80,
-   "poster": "https://image.tmdb.org/t/p/w342/wq6ReVaOlBPHJvHl34ebUNDvi0B.jpg",
-   "genres": [],
-   "age_rating": null,
-   "overview": "Mit Büchern wie „Alte weiße Männer“, „Komplett Gänsehaut“, „Pick me Girls“ und jüngst „Wie kann sie nur?“ erobert Autorin, Moderatorin und Podcasterin Sophie Passmann regelmäßig die Spiegel-Bestsellerlisten und avancierte zu einer der prägendsten, feministischen Stimmen ihrer Generation. Debattenlustig und provokant, begeistert sie mit ihrem pointierten Humor, klarer Haltung und gesellschaftspolitischem Gespür ein breites Publikum über die deutschen Grenzen hinaus.  Bis Ende 2024 war sie regelmäßig im Berliner Ensemble mit der Theaterfassung ihres Buchhits Pick Me Girls zu sehen - einer Produktion in der Regie von Christina Tscharyiski. Die von der Kritik gefeierte Inszenierung markierte ihr Theaterdebüt und ist mehr als Stand-up-Comedy: Mit scharfem Witz und Ehrlichkeit erzählt Passmann von Selbstverleugnung, dem Bedürfnis nach männlicher Anerkennung – und davon, wie sie selbst mittendrin steckte.",
-   "trailer": "https://www.youtube.com/watch?v=6gBYEJHkPUQ",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-08T19:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.odeon-koeln.de"
-    },
-    {
-     "cinema": "Neue Filmbühne",
-     "city": "Bonn",
-     "datetime": "2026-07-08T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.rex-filmbuehne.de"
-    },
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-12T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.odeon-koeln.de"
-    },
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-15T20:45:00+02:00",
-     "language": "DE",
      "booking_url": "https://www.odeon-koeln.de"
     }
    ]
@@ -16714,78 +16995,6 @@
      "datetime": "2026-07-12T13:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.lichtspiele-kalk.de"
-    }
-   ]
-  },
-  {
-   "id": "tt27802226",
-   "title_de": "Virginia Woolf's Night and Day",
-   "title_original": "Virginia Woolf's Night & Day",
-   "year": 2026,
-   "runtime": 95,
-   "poster": "https://image.tmdb.org/t/p/w342/pDSuVhatjn1n2Hjja5qdrP19i9K.jpg",
-   "genres": [
-    "Komödie",
-    "Drama",
-    "Liebesfilm"
-   ],
-   "age_rating": 6,
-   "overview": "Im London des frühen 20. Jahrhunderts sucht die brillante Astronomin Katharine Hilbery nach einem Leben jenseits gesellschaftlicher Erwartungen. Zwischen arrangierter Ehe, Liebe und geistiger Unabhängigkeit entdeckt sie, dass Herz und Verstand keine Gegensätze sein müssen – eine zarte, kluge und humorvolle Erkundung von Freiheit, Nähe und Selbstbestimmung.",
-   "trailer": "https://www.youtube.com/watch?v=X6wM6lAT48k",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": 2.89
-   },
-   "showtimes": [
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-09T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-10T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-11T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-12T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-13T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-14T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-15T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.cinenova.de"
     }
    ]
   },
