@@ -588,20 +588,22 @@ function CityMenu({ city, setCity, t }) {
   )
 }
 
-// "Next week ▾" dropdown holding all days beyond today/tomorrow
-function DayMenu({ dates, date, setDate, t }) {
+// Single date dropdown: Alle Tage · Heute · Morgen · every upcoming day.
+// (Replaces the scrollable day-chip row, which also clipped its own popover.)
+function DateMenu({ date, setDate, allDates, t }) {
   const [open, setOpen] = useState(false)
   const ref = useOutside(() => setOpen(false))
-  const activeHere = dates.includes(date)
   return (
     <div className="dropdown" ref={ref}>
-      <button className={`chip ${activeHere ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+      <button className={`chip ${date !== 'Alle' ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox" aria-expanded={open}>
-        {activeHere ? fmtDayShort(date, t) : t.nextWeek} <span className="caret">▾</span>
+        📅 {date === 'Alle' ? t.allDays : fmtDayShort(date, t)} <span className="caret">▾</span>
       </button>
       {open && (
-        <div className="dropdown-menu" role="listbox">
-          {dates.map((d) => (
+        <div className="dropdown-menu daymenu" role="listbox">
+          <button role="option" aria-selected={date === 'Alle'} className={date === 'Alle' ? 'on' : ''}
+            onClick={() => { setDate('Alle'); setOpen(false) }}>{t.allDays}</button>
+          {allDates.map((d) => (
             <button key={d} role="option" aria-selected={date === d} className={date === d ? 'on' : ''}
               onClick={() => { setDate(d); setOpen(false) }}>{fmtDayShort(d, t)}</button>
           ))}
@@ -872,12 +874,6 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  // day chips: keep Alle/Heute/Morgen inline, fold the rest into a dropdown
-  const localKey = (ms) => dayKey(new Date(ms - new Date().getTimezoneOffset() * 60000).toISOString())
-  const todayKey = localKey(Date.now())
-  const tomorrowKey = localKey(Date.now() + 864e5)
-  const laterDates = allDates.filter((d) => d !== todayKey && d !== tomorrowKey)
-
   return (
     <div className="page">
       <header className="topbar">
@@ -909,6 +905,7 @@ export default function App() {
 
       <div className="sortrow">
         <CityMenu city={city} setCity={setCity} t={t} />
+        <DateMenu date={date} setDate={setDate} allDates={allDates} t={t} />
         <SortMenu sort={sort} setSort={setSort} t={t} />
         {isDirty && (
           <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
@@ -924,19 +921,6 @@ export default function App() {
         </div>
         {data && <span className="count">{movies.length} {t.films}</span>}
       </div>
-
-      {allDates.length > 0 && (
-        <div className="dayrow" role="group" aria-label={t.dateLabel}>
-          <button className={`chip ${date === 'Alle' ? 'on' : ''}`} onClick={() => setDate('Alle')}>{t.allDays}</button>
-          {allDates.includes(todayKey) && (
-            <button className={`chip ${date === todayKey ? 'on' : ''}`} onClick={() => setDate(todayKey)}>{t.today}</button>
-          )}
-          {allDates.includes(tomorrowKey) && (
-            <button className={`chip ${date === tomorrowKey ? 'on' : ''}`} onClick={() => setDate(tomorrowKey)}>{t.tomorrow}</button>
-          )}
-          {laterDates.length > 0 && <DayMenu dates={laterDates} date={date} setDate={setDate} t={t} />}
-        </div>
-      )}
 
       {showFilters && (
         <section className="panel">

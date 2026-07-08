@@ -15,6 +15,10 @@
   --green:   #3fae63;
   --red:     #ff6b5f;
   --radius:  12px;
+  /* one committed world: the dark Deco "screening room" for every viewer,
+     regardless of OS light/dark preference — so form controls, scrollbars
+     and the browser chrome all stay consistent */
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -137,6 +141,7 @@ body {
 }
 .dropdown-menu button:hover { background: var(--bg2); }
 .dropdown-menu button.on { color: var(--accent2); font-weight: 700; }
+.daymenu { max-height: 340px; overflow-y: auto; }
 
 /* reset chip: subtle until hovered */
 .reset-chip { color: var(--muted); }
