@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-07T23:56:51.819740+00:00",
+ "generated_at": "2026-07-08T06:24:36.234115+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -842,11 +842,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=4AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3F66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=69A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1866DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -870,6 +884,20 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/FC775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1766DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71887"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T20:00:00+02:00",
@@ -882,6 +910,13 @@
      "datetime": "2026-07-09T20:00:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110521"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C566DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -933,11 +968,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=1AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-10T17:20:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=39A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7C66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -968,11 +1017,32 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110529"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-10T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/9F775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71888"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1A66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -1024,6 +1094,20 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110533"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T22:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D866DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T22:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-10T22:40:00+02:00",
@@ -1052,11 +1136,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=2AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FB66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T17:20:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=49A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7766DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -1087,11 +1185,32 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110541"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BB66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-11T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/AF775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T19:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71889"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AE66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -1136,6 +1255,20 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110545"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T22:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C076DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T22:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T22:40:00+02:00",
@@ -1171,11 +1304,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=3AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T17:20:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=59A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3666DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -1199,6 +1346,20 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/2D775000023GNFNDWF"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71890"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FD66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T19:45:00+02:00",
@@ -1211,6 +1372,13 @@
      "datetime": "2026-07-12T19:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110553"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CB66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -1255,11 +1423,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7F66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=79A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1076DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -1295,6 +1477,20 @@
      "datetime": "2026-07-13T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/CF775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71891"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AC66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -1339,6 +1535,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=6AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6866DB00023FWBXJYB"
+    },
+    {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-07-14T17:30:00+02:00",
@@ -1351,6 +1554,13 @@
      "datetime": "2026-07-14T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=89A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8D66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -1367,11 +1577,32 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4D775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/DF775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71892"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4666DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -1423,11 +1654,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=7AA71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T15:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2E66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-15T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=99A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A666DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -1451,11 +1696,32 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/5D775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/F866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-15T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/EF775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71893"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3866DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -2452,6 +2718,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E8971000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FA66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-09T16:00:00+02:00",
@@ -2473,6 +2746,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/AD775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/EF66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-10T16:00:00+02:00",
@@ -2485,6 +2765,20 @@
      "datetime": "2026-07-10T17:10:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=25A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T11:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71885"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9E66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -2515,11 +2809,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=57A71000023RFGKYDT"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T11:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71886"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T11:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/DD775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5F66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -2543,6 +2851,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99931"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-13T16:00:00+02:00",
@@ -2557,6 +2872,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=55A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-14T16:00:00+02:00",
@@ -2569,6 +2891,13 @@
      "datetime": "2026-07-14T17:10:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=65A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T15:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6766DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -3004,6 +3333,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/07775000023GNFNDWF"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71810"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T14:45:00+02:00",
@@ -3025,6 +3361,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100193"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71817"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-09T18:10:00+02:00",
@@ -3037,6 +3380,13 @@
      "datetime": "2026-07-10T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/17775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71819"
     },
     {
      "cinema": "Cinedom",
@@ -3060,11 +3410,25 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100194"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71826"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-10T18:10:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68011"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T14:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71837"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -3102,6 +3466,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112791"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71838"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-11T18:10:00+02:00",
@@ -3114,6 +3485,13 @@
      "datetime": "2026-07-12T11:40:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=3BA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T14:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71848"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -3158,6 +3536,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/47775000023GNFNDWF"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71852"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T14:45:00+02:00",
@@ -3186,6 +3571,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100197"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71859"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-13T18:10:00+02:00",
@@ -3198,6 +3590,13 @@
      "datetime": "2026-07-14T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/57775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71864"
     },
     {
      "cinema": "Cinedom",
@@ -3221,6 +3620,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100198"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71868"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-14T18:10:00+02:00",
@@ -3233,6 +3639,13 @@
      "datetime": "2026-07-15T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/67775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71870"
     },
     {
      "cinema": "Cinedom",
@@ -3254,6 +3667,13 @@
      "datetime": "2026-07-15T16:15:00+02:00",
      "language": "DE",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100199"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71877"
     },
     {
      "cinema": "Metropolis",
@@ -3354,11 +3774,25 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/126890833"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71813"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-09T18:45:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67980"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71815"
     },
     {
      "cinema": "Cinedom",
@@ -3389,6 +3823,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121025"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71822"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-10T17:45:00+02:00",
@@ -3401,6 +3842,13 @@
      "datetime": "2026-07-10T18:45:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67981"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71824"
     },
     {
      "cinema": "Cinedom",
@@ -3431,6 +3879,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121029"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71833"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-11T14:20:00+02:00",
@@ -3450,6 +3905,13 @@
      "datetime": "2026-07-11T18:45:00+02:00",
      "language": "OV",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67982"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71835"
     },
     {
      "cinema": "Cinedom",
@@ -3480,6 +3942,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121031"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T13:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71844"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-12T14:20:00+02:00",
@@ -3508,6 +3977,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/127257933"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71846"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T20:00:00+02:00",
@@ -3527,6 +4003,13 @@
      "datetime": "2026-07-12T20:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121033"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71855"
     },
     {
      "cinema": "Odeon",
@@ -3550,6 +4033,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/127257941"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71857"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T20:00:00+02:00",
@@ -3569,6 +4059,13 @@
      "datetime": "2026-07-13T21:00:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121035"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71861"
     },
     {
      "cinema": "Odeon",
@@ -3599,6 +4096,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/127257947"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71866"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T20:00:00+02:00",
@@ -3620,6 +4124,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121037"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71873"
+    },
+    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-15T18:45:00+02:00",
@@ -3632,6 +4143,13 @@
      "datetime": "2026-07-15T19:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121039"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71875"
     },
     {
      "cinema": "Cinedom",
@@ -4194,62 +4712,6 @@
      "datetime": "2026-08-02T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99544"
-    }
-   ]
-  },
-  {
-   "id": "tt1893269",
-   "title_de": "Kusama: Infinity",
-   "title_original": "Kusama: Infinity",
-   "year": 2018,
-   "release_date": "2018-09-07",
-   "runtime": 80,
-   "poster": "https://image.tmdb.org/t/p/w342/o1gZE9QqU9F9ogNaoFO0lsa3EUP.jpg",
-   "genres": [
-    "Dokumentarfilm"
-   ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "Now one of the world’s most celebrated artists, Yayoi Kusama broke free of the rigid society in which she was raised, and overcame sexism, racism, and mental illness to bring her artistic vision to the world stage. At 88 she lives in a mental hospital and continues to create art.",
-   "original_language": "en",
-   "countries": [
-    "JP",
-    "US"
-   ],
-   "directors": [
-    "Heather Lenz"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=x8mdIB1WxHI",
-   "ratings": {
-    "imdb": 7.3,
-    "metascore": 71,
-    "letterboxd": 3.64
-   },
-   "showtimes": [
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-09T16:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123859"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-12T13:15:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/127257927"
-    },
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-07-12T14:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123911"
     }
    ]
   },
@@ -5010,6 +5472,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/54775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2F66DB00023FWBXJYB"
+    },
+    {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-07-09T17:20:00+02:00",
@@ -5036,6 +5505,20 @@
      "datetime": "2026-07-09T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/C5775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71812"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D666DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -5087,6 +5570,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/64775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-10T18:30:00+02:00",
@@ -5120,6 +5610,20 @@
      "datetime": "2026-07-10T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D5775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71821"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2C66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -5157,6 +5661,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112765"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T22:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T14:00:00+02:00",
@@ -5169,6 +5680,13 @@
      "datetime": "2026-07-11T17:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/74775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0666DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -5199,11 +5717,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E5775000023GNFNDWF"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71831"
+    },
+    {
      "cinema": "Lichtspiele Kalk",
      "city": "Köln",
      "datetime": "2026-07-11T20:15:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/127121875"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0E66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -5248,6 +5780,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112771"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T12:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T14:00:00+02:00",
@@ -5260,6 +5799,13 @@
      "datetime": "2026-07-12T17:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/84775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8666DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -5281,6 +5827,13 @@
      "datetime": "2026-07-12T19:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D8A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T19:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71842"
     },
     {
      "cinema": "Odeon",
@@ -5309,6 +5862,13 @@
      "datetime": "2026-07-12T20:15:00+02:00",
      "language": "OV",
      "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/127121881"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7A66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -5346,6 +5906,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/127110555"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4F66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-13T18:30:00+02:00",
@@ -5365,6 +5932,20 @@
      "datetime": "2026-07-13T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/06775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71854"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BC66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -5402,6 +5983,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/A4775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-14T18:30:00+02:00",
@@ -5428,6 +6016,20 @@
      "datetime": "2026-07-14T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/34775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71879"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B076DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -5479,6 +6081,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/B4775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8F66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-15T18:30:00+02:00",
@@ -5498,6 +6107,20 @@
      "datetime": "2026-07-15T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/16775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71872"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A866DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -6007,8 +6630,8 @@
     "DE"
    ],
    "directors": [
-    "Ute von Münchow-Pohl",
-    "Sandor Jesse"
+    "Sandor Jesse",
+    "Ute von Münchow-Pohl"
    ],
    "tags": [
     "women_directed"
@@ -6845,6 +7468,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99968"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71816"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T14:45:00+02:00",
@@ -6857,6 +7487,13 @@
      "datetime": "2026-07-10T14:20:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9DA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71825"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -6873,11 +7510,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=ADA71000023RFGKYDT"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71829"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T11:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/6D775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T14:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71841"
     },
     {
      "cinema": "Cinedom",
@@ -6894,11 +7545,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/8D775000023GNFNDWF"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71858"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T14:45:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=DDA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71867"
     },
     {
      "cinema": "Cinedom",
@@ -6913,6 +7578,13 @@
      "datetime": "2026-07-14T18:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/9D775000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71876"
     },
     {
      "cinema": "Cinedom",
@@ -7164,8 +7836,8 @@
     "US"
    ],
    "directors": [
-    "Michael Jelenic",
-    "Aaron Horvath"
+    "Aaron Horvath",
+    "Michael Jelenic"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=Qt5NnNIAslY",
@@ -7517,8 +8189,8 @@
     "BE"
    ],
    "directors": [
-    "Rodrigo Perez-Castro",
-    "Ricardo Curtis"
+    "Ricardo Curtis",
+    "Rodrigo Perez-Castro"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=lDsIJ_Re7so",
@@ -7879,6 +8551,49 @@
    ]
   },
   {
+   "id": "tt3566834",
+   "title_de": "Ein Minecraft Film",
+   "title_original": "A Minecraft Movie",
+   "year": 2025,
+   "release_date": "2025-03-31",
+   "runtime": 101,
+   "poster": "https://image.tmdb.org/t/p/w342/wf4qB9E5g8VOYFspFH24EY6JifM.jpg",
+   "genres": [
+    "Familie",
+    "Fantasy",
+    "Komödie",
+    "Abenteuer"
+   ],
+   "age_rating": 12,
+   "overview_de": "Vier Außenseiter werden durch ein geheimnisvolles Portal gezogen – mitten in ein skurriles kubisches Wunderland, das von der Vorstellungskraft lebt. Um wieder nach Hause zu kommen, begeben sie sich mit dem Handwerker Steve auf eine magische Reise. Es wird ein Abenteuer, das von allen Mut verlangt – auch den, sich wieder mit den Eigenschaften zu verbinden, die jeden von ihnen kreativ machen.",
+   "overview_en": "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
+   "original_language": "en",
+   "countries": [
+    "SE",
+    "US"
+   ],
+   "directors": [
+    "Jared Hess"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=41q30lHZNaI",
+   "trailer_en": "https://www.youtube.com/watch?v=aSh_L6bvaCQ",
+   "ratings": {
+    "imdb": 5.6,
+    "metascore": 45,
+    "letterboxd": 2.44
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BF66DB00023FWBXJYB"
+    }
+   ]
+  },
+  {
    "id": "tt32214143",
    "title_de": "Gabby's Dollhouse: Der Film",
    "title_original": "Gabby's Dollhouse: The Movie",
@@ -8000,6 +8715,55 @@
      "datetime": "2026-08-02T10:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=B2071000023RFGKYDT"
+    }
+   ]
+  },
+  {
+   "id": "tt15548032",
+   "title_de": "Gefährliche Liebschaften",
+   "title_original": "Les liaisons dangereuses",
+   "year": 2022,
+   "release_date": "2022-07-08",
+   "runtime": 109,
+   "poster": "https://image.tmdb.org/t/p/w342/kPycqOXKCVFwsYscYdx5KL7atCr.jpg",
+   "genres": [
+    "Drama",
+    "Liebesfilm"
+   ],
+   "age_rating": 16,
+   "overview_de": "Musterschülerin Célène verliebt sich auf ihrer neuen Schule in Biarritz in den Unruhestifter Tristan. Sie weiß nicht, dass er eine Wette auf sie abgeschlossen hat.",
+   "overview_en": "The innocent Célène might be falling in love with popular surfer Tristan at her new school. But she has no idea that, in actuality, she’s the object of a cruel bet between Tristan and Instagram influencer Vanessa.",
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "Rachel Suissa"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=gUHOSIe922E",
+   "ratings": {
+    "imdb": 4.2,
+    "metascore": null,
+    "letterboxd": 1.69
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T11:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C209AB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-16T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D209AB00023FWBXJYB"
     }
    ]
   },
@@ -8450,6 +9214,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/90875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T14:30:00+02:00",
@@ -8464,11 +9235,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/1E775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E5A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D076DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -8520,6 +9305,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/01875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T17:30:00+02:00",
@@ -8567,6 +9359,13 @@
      "datetime": "2026-07-09T19:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112675"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4966DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -8625,6 +9424,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=03A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-10T14:40:00+02:00",
@@ -8637,6 +9443,20 @@
      "datetime": "2026-07-10T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/2E775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A566DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4E66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -8688,6 +9508,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/11875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9A66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-10T17:20:00+02:00",
@@ -8737,6 +9564,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112683"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-10T20:00:00+02:00",
@@ -8770,6 +9604,13 @@
      "datetime": "2026-07-10T20:40:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100279"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T22:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DF66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -8828,6 +9669,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=13A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7E66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T14:40:00+02:00",
@@ -8840,6 +9688,20 @@
      "datetime": "2026-07-11T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/3E775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9F66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9966DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -8891,6 +9753,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/21875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T17:20:00+02:00",
@@ -8940,6 +9809,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112689"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AB66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-11T20:00:00+02:00",
@@ -8975,6 +9851,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100280"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T22:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D566DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-11T22:30:00+02:00",
@@ -8996,6 +9879,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/80875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T12:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T12:00:00+02:00",
@@ -9015,6 +9905,13 @@
      "datetime": "2026-07-12T12:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/CC775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T12:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E966DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -9059,6 +9956,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=23A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T14:40:00+02:00",
@@ -9071,6 +9975,20 @@
      "datetime": "2026-07-12T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4E775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1C66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9B66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -9122,6 +10040,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/31875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BD66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T17:20:00+02:00",
@@ -9171,6 +10096,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112693"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8C66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T20:00:00+02:00",
@@ -9206,6 +10138,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D0875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T14:30:00+02:00",
@@ -9220,11 +10159,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/5E775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F5A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4C66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -9276,6 +10229,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/41875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-13T17:30:00+02:00",
@@ -9325,6 +10285,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112699"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-13T20:00:00+02:00",
@@ -9360,6 +10327,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E0875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/F666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T14:30:00+02:00",
@@ -9374,11 +10348,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/6E775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9C66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=06A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7076DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -9430,6 +10418,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/51875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8E66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T17:30:00+02:00",
@@ -9479,6 +10474,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112707"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CD66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T20:00:00+02:00",
@@ -9514,6 +10516,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F0875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-15T14:30:00+02:00",
@@ -9528,11 +10537,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/7E775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-15T15:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=16A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T15:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DE66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -9584,6 +10607,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/61875000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FE66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-15T17:30:00+02:00",
@@ -9624,6 +10654,13 @@
      "datetime": "2026-07-15T18:20:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100158"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T19:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2A66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9750,6 +10787,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100020"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71814"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T19:40:00+02:00",
@@ -9762,6 +10806,13 @@
      "datetime": "2026-07-09T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100229"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71823"
     },
     {
      "cinema": "Odeon",
@@ -9785,6 +10836,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100230"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71834"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T19:50:00+02:00",
@@ -9797,6 +10855,13 @@
      "datetime": "2026-07-11T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100231"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71845"
     },
     {
      "cinema": "Odeon",
@@ -9827,6 +10892,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100232"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71856"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T19:40:00+02:00",
@@ -9848,6 +10920,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100233"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71881"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T19:40:00+02:00",
@@ -9860,6 +10939,13 @@
      "datetime": "2026-07-14T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100234"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71874"
     },
     {
      "cinema": "Cinedom",
@@ -9994,6 +11080,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100039"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-09T16:10:00+02:00",
@@ -10013,6 +11106,13 @@
      "datetime": "2026-07-09T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112855"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D966DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -10036,11 +11136,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F6A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/FA775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1F66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -10071,6 +11185,20 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112857"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B766DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/EA66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-10T20:30:00+02:00",
@@ -10090,6 +11218,13 @@
      "datetime": "2026-07-11T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112859"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4076DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -10113,11 +11248,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=96A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-11T18:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100298"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C666DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10148,6 +11297,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112861"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6C66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-12T16:10:00+02:00",
@@ -10169,6 +11325,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=A6A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T20:00:00+02:00",
@@ -10176,11 +11339,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=07A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/2B775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7666DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -10204,6 +11381,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112863"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T17:50:00+02:00",
@@ -10218,11 +11402,25 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100299"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-13T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/3B775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E076DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -10246,6 +11444,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/49775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CE66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T17:50:00+02:00",
@@ -10267,11 +11472,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=17A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/EC66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4B775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DD66DB00023FWBXJYB"
     },
     {
      "cinema": "Rex am Ring",
@@ -10286,6 +11505,13 @@
      "datetime": "2026-07-15T16:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/59775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7B66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -10314,6 +11540,13 @@
      "datetime": "2026-07-15T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=27A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A966DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10514,6 +11747,20 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/FB775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/F766DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0A66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-09T15:00:00+02:00",
@@ -10549,6 +11796,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=88771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/F966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T17:00:00+02:00",
@@ -10570,11 +11824,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/58775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-09T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112731"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B566DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10612,6 +11880,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C6771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T21:00:00+02:00",
@@ -10638,6 +11913,20 @@
      "datetime": "2026-07-10T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/0C775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/ED66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BA66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -10668,6 +11957,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=98771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FC66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-10T16:50:00+02:00",
@@ -10694,6 +11990,13 @@
      "datetime": "2026-07-10T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112735"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9766DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10729,6 +12032,20 @@
      "datetime": "2026-07-10T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E6771000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3766DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T23:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AD66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -10773,11 +12090,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=77A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1E66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-11T14:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112739"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9666DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10801,6 +12132,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=A8771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T16:50:00+02:00",
@@ -10822,11 +12160,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/78775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2076DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-11T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112741"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DA66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10864,11 +12216,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=07771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3C66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-11T21:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/5C775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T23:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CF66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -10897,6 +12263,27 @@
      "datetime": "2026-07-12T11:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/EB775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T11:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5A66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T11:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/4A66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T12:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DC66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -10934,11 +12321,25 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=87A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-12T14:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112745"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1966DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10962,6 +12363,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=B8771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/BE66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T16:50:00+02:00",
@@ -10983,11 +12391,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/88775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/B666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-12T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112747"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C966DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -11025,6 +12447,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=27771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3B66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-12T21:00:00+02:00",
@@ -11044,6 +12473,20 @@
      "datetime": "2026-07-13T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/1C775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/F566DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5E66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -11081,6 +12524,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C8771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CA66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-13T17:00:00+02:00",
@@ -11093,6 +12543,20 @@
      "datetime": "2026-07-13T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/98775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0C66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1D66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -11137,6 +12601,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=47771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6666DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-13T21:00:00+02:00",
@@ -11156,6 +12627,20 @@
      "datetime": "2026-07-14T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/2C775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8566DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AF66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -11193,6 +12678,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D8771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9566DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T17:00:00+02:00",
@@ -11214,11 +12706,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/A8775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-07-14T17:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/127112755"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8866DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -11256,6 +12762,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=77771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3A66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T21:00:00+02:00",
@@ -11275,6 +12788,20 @@
      "datetime": "2026-07-15T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/3C775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T14:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5C66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6B66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -11312,6 +12839,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E8771000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-15T17:00:00+02:00",
@@ -11331,6 +12865,20 @@
      "datetime": "2026-07-15T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/B8775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0D66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6E66DB00023FWBXJYB"
     },
     {
      "cinema": "Woki",
@@ -11373,6 +12921,13 @@
      "datetime": "2026-07-15T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=87771000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5766DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -11847,6 +13402,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/69775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E566DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-09T20:30:00+02:00",
@@ -11866,6 +13428,13 @@
      "datetime": "2026-07-10T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/79775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6A66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -11931,6 +13500,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/99775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/EB66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-12T20:00:00+02:00",
@@ -11950,6 +13526,13 @@
      "datetime": "2026-07-13T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/A9775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/6F66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -11973,6 +13556,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/B9775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/7866DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-14T20:30:00+02:00",
@@ -11992,6 +13582,13 @@
      "datetime": "2026-07-15T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/C9775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T19:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/EE66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -12829,6 +14426,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=0EA71000023RFGKYDT"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-09T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71811"
+    },
+    {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-07-09T17:35:00+02:00",
@@ -12857,6 +14461,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=1EA71000023RFGKYDT"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-10T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71820"
+    },
+    {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-07-10T17:35:00+02:00",
@@ -12878,6 +14489,13 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123883"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T11:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71832"
+    },
+    {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-07-11T14:00:00+02:00",
@@ -12890,6 +14508,13 @@
      "datetime": "2026-07-11T16:45:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=2EA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71830"
     },
     {
      "cinema": "Cinenova",
@@ -12906,11 +14531,25 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123901"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T11:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71843"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-12T16:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123917"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T16:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71880"
     },
     {
      "cinema": "Cinedom",
@@ -12932,6 +14571,13 @@
      "datetime": "2026-07-13T16:45:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=4EA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-13T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71853"
     },
     {
      "cinema": "Weisshaus Kino",
@@ -12969,6 +14615,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5EA71000023RFGKYDT"
     },
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-14T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71862"
+    },
+    {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-07-14T18:00:00+02:00",
@@ -12995,6 +14648,13 @@
      "datetime": "2026-07-15T16:45:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=6EA71000023RFGKYDT"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-15T17:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71871"
     },
     {
      "cinema": "Weisshaus Kino",
@@ -13488,6 +15148,53 @@
      "datetime": "2026-07-15T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/127121063"
+    }
+   ]
+  },
+  {
+   "id": "kusama: infinity (2018)",
+   "title_de": "Kusama: Infinity (2018)",
+   "title_original": "Kusama: Infinity (2018)",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-09T16:30:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123859"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T13:15:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/127257927"
+    },
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-07-12T14:30:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/127123911"
     }
    ]
   },
@@ -14425,11 +16132,25 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/58675000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/3E66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T21:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/FD775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2D66DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -14439,11 +16160,46 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C0A71000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/5D66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T23:10:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D0A71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/FF66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0F66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2B66DB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/9866DB00023FWBXJYB"
     }
    ]
   },
@@ -14514,6 +16270,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=4C871000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/2966DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-09T20:45:00+02:00",
@@ -14570,6 +16333,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5C871000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/AA66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-10T20:45:00+02:00",
@@ -14589,6 +16359,13 @@
      "datetime": "2026-07-10T21:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D7775000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-10T22:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1666DB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -14633,6 +16410,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=6C871000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/E766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-11T20:45:00+02:00",
@@ -14668,6 +16452,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/AC775000023GNFNDWF"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-11T22:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CC66DB00023FWBXJYB"
+    },
+    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-11T23:00:00+02:00",
@@ -14701,6 +16492,13 @@
      "datetime": "2026-07-12T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9C871000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/DB66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -14757,6 +16555,13 @@
      "datetime": "2026-07-13T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=AC871000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/8A66DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -14822,6 +16627,13 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=BC871000023RFGKYDT"
     },
     {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C766DB00023FWBXJYB"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-14T20:45:00+02:00",
@@ -14883,6 +16695,13 @@
      "datetime": "2026-07-15T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=CC871000023RFGKYDT"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/A766DB00023FWBXJYB"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -17784,6 +19603,62 @@
    ]
   },
   {
+   "id": "tt36841139",
+   "title_de": "LOL 2.0",
+   "title_original": "LOL 2.0",
+   "year": 2026,
+   "release_date": "2026-02-11",
+   "runtime": 105,
+   "poster": "https://image.tmdb.org/t/p/w342/cyWpJnhA7AvMBpF2g2pqYeMNYWt.jpg",
+   "genres": [
+    "Komödie"
+   ],
+   "age_rating": 12,
+   "overview_de": "Anne, Mitte 50, genießt erstmals seit dem Auszug ihrer Kinder einen selbstbestimmten Alltag und kann sich auf sich, ihre Karriere und ihr Liebesleben konzentrieren. Doch die neue Ruhe währt nur kurz: Ihre 23-jährige Tochter Louise kehrt nach beruflichen Rückschlägen und einer gescheiterten Beziehung zurück ins Familienheim. Mit ihr wird das Haus wieder lebendig, alte Konflikte treten zutage, und Mutter wie Tochter müssen ihre Beziehung neu definieren. Als wäre das nicht genug, verkündet Sohn Theo die größte Überraschung: Anne wird Großmutter. Zwischen Generationenkonflikten, Selbstzweifeln und neuen Gefühlen gerät ihr Selbstbild ins Wanken. Begleitet und auf die Probe gestellt von ihrem Umfeld, darunter ihr Ex-Partner und enge Familienmitglieder, erkennt sie: Das Leben verläuft selten nach Plan, und es ist nie zu spät, zu wachsen und sich neu zu entdecken.",
+   "overview_en": "At 55, Anne is finally enjoying her freedom after her children leave home. But everything changes when her 23-year-old daughter, Louise, moves back in with her after a professional and romantic failure. And to make matters worse, her son, Théo, announces that she's going to be a grandmother! Anne realizes that life never goes as planned and that, at any age, we are still learning to grow up.",
+   "original_language": "fr",
+   "countries": [
+    "FR",
+    "BE"
+   ],
+   "directors": [
+    "Lisa Azuelos"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": "https://www.youtube.com/watch?v=4vzWimyEmtg",
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 2.56
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-08T16:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/99960"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-11T11:40:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71828"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-12T11:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71840"
+    }
+   ]
+  },
+  {
    "id": "ach, diese lücke, diese entsetzliche lücke",
    "title_de": "Ach, diese Lücke, diese entsetzliche Lücke",
    "title_original": "Ach, diese Lücke, diese entsetzliche Lücke",
@@ -18128,7 +20003,7 @@
    ]
   },
   {
-   "id": "töchter europas",
+   "id": "die töchter europas",
    "title_de": "Die Töchter Europas",
    "title_original": "Die Töchter Europas",
    "year": 2026,
@@ -18412,6 +20287,39 @@
      "datetime": "2026-07-21T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3575281459&bgswitch=false&resize=false"
+    }
+   ]
+  },
+  {
+   "id": "investment – wieder nur lieder d, keine angabe",
+   "title_de": "INVESTMENT – WIEDER NUR LIEDER D, keine Angabe",
+   "title_original": "INVESTMENT – WIEDER NUR LIEDER D, keine Angabe",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Filmpalette",
+     "city": "Köln",
+     "datetime": "2026-10-05T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3575734236&bgswitch=false&resize=false"
     }
    ]
   },
@@ -19070,48 +20978,6 @@
      "datetime": "2026-08-02T18:15:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99545"
-    }
-   ]
-  },
-  {
-   "id": "tt36841139",
-   "title_de": "LOL 2.0",
-   "title_original": "LOL 2.0",
-   "year": 2026,
-   "release_date": "2026-02-11",
-   "runtime": 105,
-   "poster": "https://image.tmdb.org/t/p/w342/cyWpJnhA7AvMBpF2g2pqYeMNYWt.jpg",
-   "genres": [
-    "Komödie"
-   ],
-   "age_rating": 12,
-   "overview_de": "Anne, Mitte 50, genießt erstmals seit dem Auszug ihrer Kinder einen selbstbestimmten Alltag und kann sich auf sich, ihre Karriere und ihr Liebesleben konzentrieren. Doch die neue Ruhe währt nur kurz: Ihre 23-jährige Tochter Louise kehrt nach beruflichen Rückschlägen und einer gescheiterten Beziehung zurück ins Familienheim. Mit ihr wird das Haus wieder lebendig, alte Konflikte treten zutage, und Mutter wie Tochter müssen ihre Beziehung neu definieren. Als wäre das nicht genug, verkündet Sohn Theo die größte Überraschung: Anne wird Großmutter. Zwischen Generationenkonflikten, Selbstzweifeln und neuen Gefühlen gerät ihr Selbstbild ins Wanken. Begleitet und auf die Probe gestellt von ihrem Umfeld, darunter ihr Ex-Partner und enge Familienmitglieder, erkennt sie: Das Leben verläuft selten nach Plan, und es ist nie zu spät, zu wachsen und sich neu zu entdecken.",
-   "overview_en": "At 55, Anne is finally enjoying her freedom after her children leave home. But everything changes when her 23-year-old daughter, Louise, moves back in with her after a professional and romantic failure. And to make matters worse, her son, Théo, announces that she's going to be a grandmother! Anne realizes that life never goes as planned and that, at any age, we are still learning to grow up.",
-   "original_language": "fr",
-   "countries": [
-    "FR",
-    "BE"
-   ],
-   "directors": [
-    "Lisa Azuelos"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": "https://www.youtube.com/watch?v=4vzWimyEmtg",
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": 2.56
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T16:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99960"
     }
    ]
   },
@@ -20051,46 +21917,6 @@
      "datetime": "2026-07-19T21:00:00+02:00",
      "language": "OV",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3575743085&bgswitch=false&resize=false"
-    }
-   ]
-  },
-  {
-   "id": "national theatre london: les liaisons dangereuses",
-   "title_de": "National Theatre London: Les Liaisons Dangereuses",
-   "title_original": "National Theatre London: Les Liaisons Dangereuses",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-12T11:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/C209AB00023FWBXJYB"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-16T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/D209AB00023FWBXJYB"
     }
    ]
   },
