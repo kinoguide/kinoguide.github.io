@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 // --- i18n ------------------------------------------------------------------
 const T = {
@@ -13,6 +13,10 @@ const T = {
     filter: 'Filter',
     sortLabel: 'Sortieren:',
     sortNew: 'Neu',
+    sortAlpha: 'A–Z',
+    reviews: 'Bewertungen',
+    resetAll: 'Zurücksetzen',
+    backHome: 'Zur Startseite',
     bothCities: 'Beide',
     favorites: 'Favoriten',
     films: 'Filme',
@@ -71,6 +75,10 @@ const T = {
     filter: 'Filters',
     sortLabel: 'Sort by:',
     sortNew: 'Recent',
+    sortAlpha: 'A–Z',
+    reviews: 'Ratings',
+    resetAll: 'Reset',
+    backHome: 'Back to home',
     bothCities: 'Both',
     favorites: 'Favorites',
     films: 'movies',
@@ -178,11 +186,16 @@ const LANGS = [
   { id: 'ovomu', label: 'OV / OmU' },
   { id: 'de', labelKey: 'germanVersion' },
 ]
-const SORTS = [
-  { id: 'imdb', label: 'IMDb' },
-  { id: 'metascore', label: 'Metascore' },
-  { id: 'letterboxd', label: 'Letterboxd' },
+// the three rating sorts live together in a "Reviews" dropdown to save space
+const REVIEW_SORTS = [
+  { id: 'imdb', label: '⭐ IMDb' },
+  { id: 'metascore', label: '🎯 Metascore' },
+  { id: 'letterboxd', label: '🎬 Letterboxd' },
+]
+// standalone sort chips shown next to the dropdown
+const OTHER_SORTS = [
   { id: 'recent', labelKey: 'sortNew' },
+  { id: 'alpha', labelKey: 'sortAlpha' },
 ]
 // German TMDB genre names that actually signal a film made for kids/families.
 // (Deliberately NOT "Abenteuer" — Adventure also tags FSK-12 blockbusters like
@@ -506,6 +519,35 @@ function DayPlan({ items, onOpen, t, ui }) {
   )
 }
 
+// "Reviews" dropdown holding the three rating sorts (saves toolbar space)
+function ReviewSort({ sort, setSort, t }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  useEffect(() => {
+    const onDoc = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [])
+  const active = REVIEW_SORTS.find((o) => o.id === sort)
+  return (
+    <div className="dropdown" ref={ref}>
+      <button className={`chip ${active ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox" aria-expanded={open}>
+        {active ? active.label : t.reviews} <span className="caret">▾</span>
+      </button>
+      {open && (
+        <div className="dropdown-menu" role="listbox">
+          {REVIEW_SORTS.map((o) => (
+            <button key={o.id} role="option" aria-selected={sort === o.id}
+              className={sort === o.id ? 'on' : ''}
+              onClick={() => { setSort(o.id); setOpen(false) }}>{o.label}</button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // --- main app --------------------------------------------------------------
 export default function App() {
   const [data, setData] = useState(null)
@@ -682,6 +724,8 @@ export default function App() {
       .sort((a, b) => {
         // in last-minute mode the soonest screening comes first
         if (lastMinute) return a.shows[0].datetime.localeCompare(b.shows[0].datetime)
+        // 'A–Z' = all films alphabetically by their displayed title
+        if (sort === 'alpha') return displayTitle(a.m, ui).localeCompare(displayTitle(b.m, ui), t.locale)
         // 'Neu' = newest theatrical release first (full date, not just year).
         // Far-future dates (event cinema announced for next season) sort last —
         // they haven't "hit cinemas" yet. Two weeks of lead time still counts
@@ -696,7 +740,7 @@ export default function App() {
         }
         return (b.m.ratings[sort] ?? -1) - (a.m.ratings[sort] ?? -1)
       })
-  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs, lastMinute])
+  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs, lastMinute, ui])
 
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
@@ -713,10 +757,20 @@ export default function App() {
     setTopics([]); setOrigLangs([]); setLastMinute(false)
   }
 
+  // full reset to the fresh-landing state (keeps language + saved favorites):
+  // used by the top "Reset" button and by clicking the logo. The URL-sync
+  // effect then clears the query string on its own.
+  const resetAll = () => {
+    resetFilters()
+    setSort('imdb'); setFavsOnly(false); setView('grid')
+    setShowFilters(false); setSelected(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="page">
       <header className="topbar">
-        <div className="brand">Kinoguide <span>Köln · Bonn</span></div>
+        <button className="brand" onClick={resetAll} title={t.backHome}>Kinoguide <span>Köln · Bonn</span></button>
         <div className="topbar-right">
           <div className="lang-switch" role="group" aria-label="Sprache / Language">
             <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
@@ -762,11 +816,13 @@ export default function App() {
           ))}
         </div>
         <span className="sortrow-label">{t.sortLabel}</span>
-        {SORTS.map((s) => (
+        <ReviewSort sort={sort} setSort={setSort} t={t} />
+        {OTHER_SORTS.map((s) => (
           <button key={s.id} className={`chip ${sort === s.id ? 'on' : ''}`} onClick={() => setSort(s.id)}>
             {s.labelKey ? t[s.labelKey] : s.label}
           </button>
         ))}
+        <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
         {favs.length > 0 && (
           <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
             ♥ {t.favorites} ({favs.length})
