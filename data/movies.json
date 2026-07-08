@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T15:24:32.939172+00:00",
+ "generated_at": "2026-07-08T15:38:14.228937+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -2105,7 +2105,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-15T20:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516434&bgswitch=false&resize=false"
     }
    ]
@@ -6226,7 +6226,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-08T18:00:00+02:00",
-     "language": "OV",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3577174175&bgswitch=false&resize=false"
     }
    ]
@@ -6618,14 +6618,14 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-10T21:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495127&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-11T21:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495138&bgswitch=false&resize=false"
     }
    ]
@@ -18351,7 +18351,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-09T18:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516304&bgswitch=false&resize=false"
     },
     {
@@ -18365,14 +18365,14 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-10T20:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516315&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-11T20:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516326&bgswitch=false&resize=false"
     },
     {
@@ -18393,21 +18393,21 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-12T18:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516337&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-13T18:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516348&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-14T18:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516359&bgswitch=false&resize=false"
     },
     {
@@ -18421,7 +18421,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-15T17:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516370&bgswitch=false&resize=false"
     },
     {
@@ -18554,7 +18554,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-13T21:15:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495170&bgswitch=false&resize=false"
     },
     {
@@ -18568,7 +18568,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-15T21:15:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495181&bgswitch=false&resize=false"
     }
    ]
@@ -19506,28 +19506,28 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-08T17:15:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3577200156&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-09T17:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516215&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-13T17:15:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495270&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-14T17:15:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583495281&bgswitch=false&resize=false"
     }
    ]
@@ -19700,7 +19700,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-09T19:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3578088060&bgswitch=false&resize=false"
     },
     {
@@ -20125,14 +20125,14 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-12T20:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516404&bgswitch=false&resize=false"
     },
     {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-13T20:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3583516419&bgswitch=false&resize=false"
     }
    ]
@@ -20174,7 +20174,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-14T21:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3575280885&bgswitch=false&resize=false"
     }
    ]
