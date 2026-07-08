@@ -18,6 +18,10 @@ const T = {
     resetAll: 'Zurücksetzen',
     backHome: 'Zur Startseite',
     bothCities: 'Beide',
+    cityAll: 'Beide Städte',
+    quickFilters: 'Schnellfilter',
+    moreFilters: 'Mehr Filter',
+    nextWeek: 'Nächste Woche',
     favorites: 'Favoriten',
     films: 'Filme',
     stand: 'Stand',
@@ -80,6 +84,10 @@ const T = {
     resetAll: 'Reset',
     backHome: 'Back to home',
     bothCities: 'Both',
+    cityAll: 'Both cities',
+    quickFilters: 'Quick filters',
+    moreFilters: 'More filters',
+    nextWeek: 'Next week',
     favorites: 'Favorites',
     films: 'movies',
     stand: 'Updated',
@@ -546,6 +554,99 @@ function SortMenu({ sort, setSort, t }) {
   )
 }
 
+// close-on-outside-click helper for the popover menus below
+function useOutside(onClose) {
+  const ref = useRef(null)
+  useEffect(() => {
+    const f = (e) => { if (ref.current && !ref.current.contains(e.target)) onClose() }
+    document.addEventListener('mousedown', f)
+    return () => document.removeEventListener('mousedown', f)
+  }, [onClose])
+  return ref
+}
+
+// City picker dropdown (Both cities · Köln · Bonn)
+function CityMenu({ city, setCity, t }) {
+  const [open, setOpen] = useState(false)
+  const ref = useOutside(() => setOpen(false))
+  const opts = [['Alle', t.cityAll], ['Köln', 'Köln'], ['Bonn', 'Bonn']]
+  return (
+    <div className="dropdown" ref={ref}>
+      <button className={`chip ${city !== 'Alle' ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox" aria-expanded={open}>
+        📍 {city === 'Alle' ? t.cityAll : city} <span className="caret">▾</span>
+      </button>
+      {open && (
+        <div className="dropdown-menu" role="listbox">
+          {opts.map(([v, l]) => (
+            <button key={v} role="option" aria-selected={city === v} className={city === v ? 'on' : ''}
+              onClick={() => { setCity(v); setOpen(false) }}>{l}</button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// "Next week ▾" dropdown holding all days beyond today/tomorrow
+function DayMenu({ dates, date, setDate, t }) {
+  const [open, setOpen] = useState(false)
+  const ref = useOutside(() => setOpen(false))
+  const activeHere = dates.includes(date)
+  return (
+    <div className="dropdown" ref={ref}>
+      <button className={`chip ${activeHere ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox" aria-expanded={open}>
+        {activeHere ? fmtDayShort(date, t) : t.nextWeek} <span className="caret">▾</span>
+      </button>
+      {open && (
+        <div className="dropdown-menu" role="listbox">
+          {dates.map((d) => (
+            <button key={d} role="option" aria-selected={date === d} className={date === d ? 'on' : ''}
+              onClick={() => { setDate(d); setOpen(false) }}>{fmtDayShort(d, t)}</button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// One "Quick filters" button holding all the toggle filters, with a link to
+// the detailed panel at the bottom.
+function QuickFilters({ lastMinute, setLastMinute, kidsOnly, setKidsOnly, topics, toggleTopic, openDetails, t }) {
+  const [open, setOpen] = useState(false)
+  const ref = useOutside(() => setOpen(false))
+  const items = [
+    { k: 'lm', label: t.lastMinute, on: lastMinute, toggle: () => setLastMinute((v) => !v) },
+    { k: 'kids', label: t.kids, on: kidsOnly, toggle: () => setKidsOnly((v) => !v) },
+    { k: 'women_directed', label: t.topics.women_directed, on: topics.includes('women_directed'), toggle: () => toggleTopic('women_directed') },
+    { k: 'international', label: t.topics.international, on: topics.includes('international'), toggle: () => toggleTopic('international') },
+    { k: 'queer', label: t.topics.queer, on: topics.includes('queer'), toggle: () => toggleTopic('queer') },
+  ]
+  const n = items.filter((i) => i.on).length
+  return (
+    <div className="dropdown" ref={ref}>
+      <button className={`qf-btn ${n ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+        aria-haspopup="true" aria-expanded={open}>
+        🎟️ {t.quickFilters}{n ? ` (${n})` : ''} <span className="caret">▾</span>
+      </button>
+      {open && (
+        <div className="dropdown-menu qf-menu">
+          {items.map((i) => (
+            <button key={i.k} className={`qf-item ${i.on ? 'on' : ''}`} onClick={i.toggle} aria-pressed={i.on}>
+              <span>{i.label}</span><span className="qf-check">{i.on ? '✓' : ''}</span>
+            </button>
+          ))}
+          <div className="qf-sep"></div>
+          <button className="qf-more" onClick={() => { openDetails(); setOpen(false) }}>
+            ⚙️ {t.moreFilters} →
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // --- main app --------------------------------------------------------------
 export default function App() {
   const [data, setData] = useState(null)
@@ -771,6 +872,12 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // day chips: keep Alle/Heute/Morgen inline, fold the rest into a dropdown
+  const localKey = (ms) => dayKey(new Date(ms - new Date().getTimezoneOffset() * 60000).toISOString())
+  const todayKey = localKey(Date.now())
+  const tomorrowKey = localKey(Date.now() + 864e5)
+  const laterDates = allDates.filter((d) => d !== todayKey && d !== tomorrowKey)
+
   return (
     <div className="page">
       <header className="topbar">
@@ -783,6 +890,7 @@ export default function App() {
           {data && <div className="stand">{t.stand} {new Date(data.generated_at).toLocaleDateString(t.locale)}</div>}
         </div>
       </header>
+      <div className="marquee-strip" aria-hidden="true"></div>
 
       <div className="toolbar">
         <div className="search">
@@ -792,33 +900,15 @@ export default function App() {
             <button className="search-clear" onClick={() => setQ('')} aria-label={t.clearSearch} title={t.clearSearch}>✕</button>
           )}
         </div>
-        <button
-          className={`kids-btn ${lastMinute ? 'on' : ''}`}
-          onClick={() => setLastMinute((v) => !v)}
-          title={t.lastMinuteTitle}
-        >
-          {t.lastMinute}
-        </button>
-        <button
-          className={`kids-btn ${kidsOnly ? 'on' : ''}`}
-          onClick={() => setKidsOnly((v) => !v)}
-          title={t.kidsTitle}
-        >
-          {t.kids}
-        </button>
-        <button className={`filters-btn ${showFilters ? 'on' : ''}`} onClick={() => setShowFilters((v) => !v)}>
-          ⚙ {t.filter} {showFilters ? '▲' : '▼'}
-        </button>
+        <QuickFilters
+          lastMinute={lastMinute} setLastMinute={setLastMinute}
+          kidsOnly={kidsOnly} setKidsOnly={setKidsOnly}
+          topics={topics} toggleTopic={toggleTopic}
+          openDetails={() => setShowFilters(true)} t={t} />
       </div>
 
       <div className="sortrow">
-        <div className="city-switch" role="group" aria-label="Stadt">
-          {CITIES.map((c) => (
-            <button key={c} className={city === c ? 'on' : ''} onClick={() => setCity(c)}>
-              {c === 'Alle' ? t.bothCities : c}
-            </button>
-          ))}
-        </div>
+        <CityMenu city={city} setCity={setCity} t={t} />
         <SortMenu sort={sort} setSort={setSort} t={t} />
         {isDirty && (
           <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
@@ -838,23 +928,21 @@ export default function App() {
       {allDates.length > 0 && (
         <div className="dayrow" role="group" aria-label={t.dateLabel}>
           <button className={`chip ${date === 'Alle' ? 'on' : ''}`} onClick={() => setDate('Alle')}>{t.allDays}</button>
-          {allDates.slice(0, 7).map((d) => (
-            <button key={d} className={`chip ${date === d ? 'on' : ''}`} onClick={() => setDate(d)}>{fmtDayShort(d, t)}</button>
-          ))}
+          {allDates.includes(todayKey) && (
+            <button className={`chip ${date === todayKey ? 'on' : ''}`} onClick={() => setDate(todayKey)}>{t.today}</button>
+          )}
+          {allDates.includes(tomorrowKey) && (
+            <button className={`chip ${date === tomorrowKey ? 'on' : ''}`} onClick={() => setDate(tomorrowKey)}>{t.tomorrow}</button>
+          )}
+          {laterDates.length > 0 && <DayMenu dates={laterDates} date={date} setDate={setDate} t={t} />}
         </div>
       )}
 
       {showFilters && (
         <section className="panel">
-          <div className="field">
-            <label>{t.topicsLabel}</label>
-            <div className="pills">
-              {TOPIC_IDS.map((tg) => (
-                <button key={tg} className={`pill ${topics.includes(tg) ? 'on' : ''}`} onClick={() => toggleTopic(tg)}>
-                  {t.topics[tg]}
-                </button>
-              ))}
-            </div>
+          <div className="panel-head">
+            <span className="panel-title">⚙️ {t.moreFilters}</span>
+            <button className="panel-close" onClick={() => setShowFilters(false)} aria-label={t.clearSearch}>✕</button>
           </div>
 
           {allLangs.length > 0 && (

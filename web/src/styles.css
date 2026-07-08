@@ -1,18 +1,19 @@
 :root {
-  --bg:      #0a1120;
-  --bg2:     #0f1a2e;
-  --panel:   #111d33;
-  --card:    #0e1930;
-  --border:  #1f2e49;
-  --border2: #2a3d5f;
-  --text:    #eef3fa;
-  --muted:   #a3b1c9;   /* brightened for contrast (WCAG AA on --bg) */
-  --muted2:  #c2cddf;   /* long-form reading text */
-  --accent:  #3d8bff;
-  --accent2: #74adff;
-  --gold:    #f5c518;
-  --green:   #21d07a;
-  --red:     #ff5f5f;
+  /* Art-Deco "Lichtspielhaus": soft midnight navy + warm burnt orange/gold */
+  --bg:      #0c1a2e;   /* deep, slightly warm navy */
+  --bg2:     #122340;
+  --panel:   #15294a;
+  --card:    #101f38;
+  --border:  #274063;
+  --border2: #3a5680;
+  --text:    #f4e9d6;   /* warm cream */
+  --muted:   #c2b299;   /* warm tan, AA on --bg */
+  --muted2:  #ddccb1;
+  --accent:  #e08636;   /* dark/burnt orange — the Deco gold */
+  --accent2: #f4a75f;   /* brighter orange for hover/active text */
+  --gold:    #f5c518;   /* IMDb star stays gold */
+  --green:   #3fae63;
+  --red:     #ff6b5f;
   --radius:  12px;
 }
 
@@ -39,12 +40,21 @@ body {
   padding: 22px 0 18px; flex-wrap: wrap; gap: 10px;
 }
 .brand {
-  font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+  font-size: 27px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
   background: none; border: none; padding: 0; cursor: pointer;
   color: var(--text); font-family: inherit; text-align: left;
+  text-shadow: 0 0 18px rgba(224,134,54,.18);
 }
 .brand:hover span { text-decoration: underline; }
 .brand span { color: var(--accent2); }
+
+/* Art-Deco marquee light strip under the header */
+.marquee-strip {
+  height: 9px; margin: 0 0 18px;
+  background: radial-gradient(circle at center, var(--accent) 0 2.4px, transparent 3px) repeat-x;
+  background-size: 21px 9px;
+  opacity: .55; filter: drop-shadow(0 0 3px rgba(224,134,54,.5));
+}
 .stand { color: var(--muted); font-size: 14px; }
 
 /* topbar right side: language switch + stand */
@@ -131,6 +141,28 @@ body {
 /* reset chip: subtle until hovered */
 .reset-chip { color: var(--muted); }
 .reset-chip:hover { border-color: var(--red); color: var(--text); }
+
+/* Quick-filters button + its popover */
+.qf-btn {
+  background: var(--bg2); border: 1px solid var(--border); color: var(--text);
+  border-radius: var(--radius); padding: 12px 18px; font-size: 15px; font-weight: 600;
+  cursor: pointer; white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px;
+}
+.qf-btn:hover { border-color: var(--accent); }
+.qf-btn.on { background: rgba(224,134,54,.16); border-color: var(--accent); color: var(--accent2); }
+.qf-menu { min-width: 236px; }
+.qf-item { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.qf-item.on { color: var(--accent2); }
+.qf-item .qf-check { color: var(--accent2); font-weight: 800; }
+.qf-sep { height: 1px; background: var(--border); margin: 6px 4px; }
+.qf-more { color: var(--muted2); font-weight: 700; }
+.qf-more:hover { color: var(--accent2); }
+
+/* detailed-panel header */
+.panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
+.panel-title { font-family: var(--mono, monospace); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: 13px; color: var(--accent2); }
+.panel-close { background: none; border: 1px solid var(--border); color: var(--text); width: 34px; height: 34px; border-radius: 8px; cursor: pointer; font-size: 15px; flex-shrink: 0; }
+.panel-close:hover { border-color: var(--red); }
 
 /* --- day quick-filter row --- */
 .dayrow {
