@@ -186,16 +186,13 @@ const LANGS = [
   { id: 'ovomu', label: 'OV / OmU' },
   { id: 'de', labelKey: 'germanVersion' },
 ]
-// the three rating sorts live together in a "Reviews" dropdown to save space
-const REVIEW_SORTS = [
-  { id: 'imdb', label: '⭐ IMDb' },
-  { id: 'metascore', label: '🎯 Metascore' },
-  { id: 'letterboxd', label: '🎬 Letterboxd' },
-]
-// standalone sort chips shown next to the dropdown
-const OTHER_SORTS = [
-  { id: 'recent', labelKey: 'sortNew' },
-  { id: 'alpha', labelKey: 'sortAlpha' },
+// every sort lives in one compact dropdown to keep the landing toolbar calm
+const SORT_OPTIONS = [
+  { id: 'imdb', icon: '⭐', label: 'IMDb' },
+  { id: 'metascore', icon: '🎯', label: 'Metascore' },
+  { id: 'letterboxd', icon: '🎬', label: 'Letterboxd' },
+  { id: 'recent', icon: '🆕', labelKey: 'sortNew' },
+  { id: 'alpha', icon: '🔤', labelKey: 'sortAlpha' },
 ]
 // German TMDB genre names that actually signal a film made for kids/families.
 // (Deliberately NOT "Abenteuer" — Adventure also tags FSK-12 blockbusters like
@@ -519,8 +516,8 @@ function DayPlan({ items, onOpen, t, ui }) {
   )
 }
 
-// "Reviews" dropdown holding the three rating sorts (saves toolbar space)
-function ReviewSort({ sort, setSort, t }) {
+// one compact dropdown for all sort options
+function SortMenu({ sort, setSort, t }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
   useEffect(() => {
@@ -528,19 +525,20 @@ function ReviewSort({ sort, setSort, t }) {
     document.addEventListener('mousedown', onDoc)
     return () => document.removeEventListener('mousedown', onDoc)
   }, [])
-  const active = REVIEW_SORTS.find((o) => o.id === sort)
+  const lbl = (o) => `${o.icon} ${o.labelKey ? t[o.labelKey] : o.label}`
+  const active = SORT_OPTIONS.find((o) => o.id === sort) || SORT_OPTIONS[0]
   return (
     <div className="dropdown" ref={ref}>
-      <button className={`chip ${active ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
-        aria-haspopup="listbox" aria-expanded={open}>
-        {active ? active.label : t.reviews} <span className="caret">▾</span>
+      <button className="chip sort-chip" onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox" aria-expanded={open} title={t.sortLabel}>
+        {lbl(active)} <span className="caret">▾</span>
       </button>
       {open && (
         <div className="dropdown-menu" role="listbox">
-          {REVIEW_SORTS.map((o) => (
+          {SORT_OPTIONS.map((o) => (
             <button key={o.id} role="option" aria-selected={sort === o.id}
               className={sort === o.id ? 'on' : ''}
-              onClick={() => { setSort(o.id); setOpen(false) }}>{o.label}</button>
+              onClick={() => { setSort(o.id); setOpen(false) }}>{lbl(o)}</button>
           ))}
         </div>
       )}
@@ -757,6 +755,12 @@ export default function App() {
     setTopics([]); setOrigLangs([]); setLastMinute(false)
   }
 
+  // anything changed from the fresh-landing defaults? drives the Reset button's
+  // visibility so the toolbar stays clean until the user actually filters.
+  const isDirty = !!(q || city !== 'Alle' || lang !== 'alle' || sort !== 'imdb' || minImdb > 0
+    || genres.length || kidsOnly || cinema !== 'Alle' || date !== 'Alle' || timeFrom > 0
+    || timeTo < 24 || topics.length || origLangs.length || lastMinute || favsOnly || view !== 'grid')
+
   // full reset to the fresh-landing state (keeps language + saved favorites):
   // used by the top "Reset" button and by clicking the logo. The URL-sync
   // effect then clears the query string on its own.
@@ -815,14 +819,10 @@ export default function App() {
             </button>
           ))}
         </div>
-        <span className="sortrow-label">{t.sortLabel}</span>
-        <ReviewSort sort={sort} setSort={setSort} t={t} />
-        {OTHER_SORTS.map((s) => (
-          <button key={s.id} className={`chip ${sort === s.id ? 'on' : ''}`} onClick={() => setSort(s.id)}>
-            {s.labelKey ? t[s.labelKey] : s.label}
-          </button>
-        ))}
-        <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
+        <SortMenu sort={sort} setSort={setSort} t={t} />
+        {isDirty && (
+          <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
+        )}
         {favs.length > 0 && (
           <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
             ♥ {t.favorites} ({favs.length})
