@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T15:53:35.467657+00:00",
+ "generated_at": "2026-07-08T16:28:14.099107+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -4270,76 +4270,6 @@
    ]
   },
   {
-   "id": "tt32273171",
-   "title_de": "The Death of Robin Hood",
-   "title_original": "The Death of Robin Hood",
-   "year": 2026,
-   "release_date": "2026-06-18",
-   "runtime": 122,
-   "poster": "https://image.tmdb.org/t/p/w342/dpcDnatuJlRUldshZkZoqdJDijg.jpg",
-   "genres": [
-    "Abenteuer",
-    "Drama",
-    "Thriller",
-    "Action"
-   ],
-   "age_rating": 16,
-   "overview_de": "Während er nach einem Leben voller Verbrechen und Mord mit seiner Vergangenheit ringt, findet sich Robin Hood schwer verwundet nach einer Schlacht wieder, die er für seine letzte hielt. In den Händen einer geheimnisvollen Frau bietet sich ihm eine Chance auf Erlösung.",
-   "overview_en": "Grappling with his past after a life of crime and murder, Robin Hood finds himself gravely injured after a battle he thought would be his last. In the hands of a mysterious woman, he is offered a chance at salvation.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Michael Sarnoski"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=vcfOZhYvwKg",
-   "trailer_en": "https://www.youtube.com/watch?v=tlSDDuWxO_0",
-   "ratings": {
-    "imdb": 7.4,
-    "metascore": null,
-    "letterboxd": 3.06
-   },
-   "showtimes": [
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:15:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67943"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-09T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100293"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-10T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100294"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-12T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100295"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-14T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100296"
-    }
-   ]
-  },
-  {
    "id": "tt4925292",
    "title_de": "Lady Bird",
    "title_original": "Lady Bird",
@@ -4426,6 +4356,69 @@
      "datetime": "2026-08-02T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99544"
+    }
+   ]
+  },
+  {
+   "id": "tt32273171",
+   "title_de": "The Death of Robin Hood",
+   "title_original": "The Death of Robin Hood",
+   "year": 2026,
+   "release_date": "2026-06-18",
+   "runtime": 122,
+   "poster": "https://image.tmdb.org/t/p/w342/dpcDnatuJlRUldshZkZoqdJDijg.jpg",
+   "genres": [
+    "Abenteuer",
+    "Drama",
+    "Thriller",
+    "Action"
+   ],
+   "age_rating": 16,
+   "overview_de": "Während er nach einem Leben voller Verbrechen und Mord mit seiner Vergangenheit ringt, findet sich Robin Hood schwer verwundet nach einer Schlacht wieder, die er für seine letzte hielt. In den Händen einer geheimnisvollen Frau bietet sich ihm eine Chance auf Erlösung.",
+   "overview_en": "Grappling with his past after a life of crime and murder, Robin Hood finds himself gravely injured after a battle he thought would be his last. In the hands of a mysterious woman, he is offered a chance at salvation.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Michael Sarnoski"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=vcfOZhYvwKg",
+   "trailer_en": "https://www.youtube.com/watch?v=tlSDDuWxO_0",
+   "ratings": {
+    "imdb": 7.4,
+    "metascore": null,
+    "letterboxd": 3.06
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100293"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100294"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-12T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100295"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-14T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100296"
     }
    ]
   },
@@ -4962,13 +4955,6 @@
      "datetime": "2026-07-08T18:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=126865653"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99984"
     },
     {
      "cinema": "Lichtspiele Kalk",
@@ -6987,20 +6973,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=FD971000023RFGKYDT"
     },
     {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67922"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:15:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99968"
-    },
-    {
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-07-09T14:40:00+02:00",
@@ -8603,20 +8575,6 @@
      "datetime": "2026-07-08T17:50:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/F282DB00023FWBXJYB"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67906"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:20:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99948"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
