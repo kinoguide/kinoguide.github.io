@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-08T16:28:14.099107+00:00",
+ "generated_at": "2026-07-08T21:02:49.342463+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -662,13 +662,6 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/0A675000023GNFNDWF"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100014"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-08T19:20:00+02:00",
@@ -716,20 +709,6 @@
      "datetime": "2026-07-08T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=99971000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:30:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67929"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99955"
     },
     {
      "cinema": "Rex Lichtspieltheater",
@@ -2095,13 +2074,6 @@
    },
    "showtimes": [
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100094"
-    },
-    {
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-15T20:45:00+02:00",
@@ -2746,13 +2718,6 @@
      "datetime": "2026-07-08T20:20:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=CB971000023RFGKYDT"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:40:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99999"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -3460,13 +3425,6 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellungen?showId=126871587"
     },
     {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-08T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127010655"
-    },
-    {
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-07-08T20:15:00+02:00",
@@ -3969,47 +3927,6 @@
      "datetime": "2026-12-13T11:00:00+01:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/14775000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "tt33071426",
-   "title_de": "Das Drama - Noch mal auf Anfang",
-   "title_original": "The Drama",
-   "year": 2026,
-   "release_date": "2026-04-01",
-   "runtime": 106,
-   "poster": "https://image.tmdb.org/t/p/w342/yojMKtExmL8a8TOyrT1im8pJF6M.jpg",
-   "genres": [
-    "Liebesfilm",
-    "Komödie",
-    "Drama"
-   ],
-   "age_rating": 12,
-   "overview_de": "Emma und Charlie sind bereit, ihre Beziehung offiziell zu machen: Ihre Hochzeit steht kurz bevor. Sie feilen an ihren Gelübden, der Termin für ein Test-Fotoshooting steht, die D-Jane ist gebucht. Alles läuft nach Plan. Bei einem letzten Probeessen mit der angehenden Trauzeugin und ihrem Ehemann lassen sie sich auf ein verhängnisvolles Spiel ein: Alle vier sollen die schlimmste Sache offenbaren, die sie in ihrem bisherigen Leben verbrochen haben. Emmas Beichte schockiert die Anwesenden – und löst eine Kette chaotischer Ereignisse aus. Obwohl Charlie versucht, Verständnis für Emmas Geständnis aufzubringen, steht die Beziehung kurz vor der Trauung plötzlich vor dem Aus. Doch was ist Emmas grosses Geheimnis?",
-   "overview_en": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week off the rails.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Kristoffer Borgli"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=9vywWpuI61E",
-   "trailer_en": "https://www.youtube.com/watch?v=0ZDzsH3XGFA",
-   "ratings": {
-    "imdb": 7.5,
-    "metascore": 59,
-    "letterboxd": 3.69
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100090"
     }
    ]
   },
@@ -4999,17 +4916,10 @@
      "booking_url": "https://tickets.cineplex.de/checkout/351/0182DB00023FWBXJYB"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:40:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/99975"
-    },
-    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-08T21:15:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F1775000023GNFNDWF"
     },
     {
@@ -5831,8 +5741,8 @@
     "US"
    ],
    "directors": [
-    "Michael Philippou",
-    "Danny Philippou"
+    "Danny Philippou",
+    "Michael Philippou"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=8dO5b2rCGhY",
@@ -6108,8 +6018,8 @@
     "DE"
    ],
    "directors": [
-    "Sandor Jesse",
-    "Ute von Münchow-Pohl"
+    "Ute von Münchow-Pohl",
+    "Sandor Jesse"
    ],
    "tags": [
     "women_directed"
@@ -6212,7 +6122,7 @@
      "cinema": "Filmpalette",
      "city": "Köln",
      "datetime": "2026-07-08T18:00:00+02:00",
-     "language": "OmU",
+     "language": "OV",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3577174175&bgswitch=false&resize=false"
     }
    ]
@@ -7503,6 +7413,62 @@
    ]
   },
   {
+   "id": "tt41592057",
+   "title_de": "Everytime",
+   "title_original": "Everytime",
+   "year": 2026,
+   "release_date": "2026-08-06",
+   "runtime": 123,
+   "poster": "https://image.tmdb.org/t/p/w342/lByDG8HfSamsJqFLcvW9dlxBxIA.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": "Das letzte Foto, das Jessie gemacht hat, zeigt die Sonne über Berlin. Sie hängt da, als wäre nichts geschehen. Aber Ella hat ihre Tochter verloren. Was ihr bleibt, ist Jessies kleine Schwester und die komplizierte Beziehung zu dem Jungen, dem alle die Schuld geben. Das merkwürdige Trio landet in einem Familienurlaub, den es so nie gab. Unter der flirrenden Sonne Teneriffas verweben sich Erinnerung und Gegenwart unauflöslich ineinander. Die Geister sind überall.",
+   "overview_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
+   "original_language": "de",
+   "countries": [
+    "AT",
+    "DE"
+   ],
+   "directors": [
+    "Sandra Wollner"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": "https://www.youtube.com/watch?v=B4FsfG-TzEw",
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.3,
+    "metascore": 82,
+    "letterboxd": 3.69
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-29T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127309231"
+    },
+    {
+     "cinema": "Kölner Filmhaus",
+     "city": "Köln",
+     "datetime": "2026-07-30T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3575283054&bgswitch=false&resize=false"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-31T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100313"
+    }
+   ]
+  },
+  {
    "id": "tt19861162",
    "title_de": "Rückkehr nach Ithaka",
    "title_original": "The Return",
@@ -7583,55 +7549,6 @@
      "datetime": "2026-07-21T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=126905651"
-    }
-   ]
-  },
-  {
-   "id": "tt41592057",
-   "title_de": "Everytime",
-   "title_original": "Everytime",
-   "year": 2026,
-   "release_date": "2026-08-06",
-   "runtime": 123,
-   "poster": "https://image.tmdb.org/t/p/w342/lByDG8HfSamsJqFLcvW9dlxBxIA.jpg",
-   "genres": [
-    "Drama"
-   ],
-   "age_rating": null,
-   "overview_de": "Das letzte Foto, das Jessie gemacht hat, zeigt die Sonne über Berlin. Sie hängt da, als wäre nichts geschehen. Aber Ella hat ihre Tochter verloren. Was ihr bleibt, ist Jessies kleine Schwester und die komplizierte Beziehung zu dem Jungen, dem alle die Schuld geben. Das merkwürdige Trio landet in einem Familienurlaub, den es so nie gab. Unter der flirrenden Sonne Teneriffas verweben sich Erinnerung und Gegenwart unauflöslich ineinander. Die Geister sind überall.",
-   "overview_en": "A tragedy brings a mother, daughter, and teenage boy together. Struggling with blame and forgiveness, the unlikely trio take a trip to Tenerife  for a family holiday that never happened. Under the glow of the sun,  past and present quietly start to overlap.",
-   "original_language": "de",
-   "countries": [
-    "AT",
-    "DE"
-   ],
-   "directors": [
-    "Sandra Wollner"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": "https://www.youtube.com/watch?v=B4FsfG-TzEw",
-   "trailer_en": null,
-   "ratings": {
-    "imdb": 6.3,
-    "metascore": 82,
-    "letterboxd": 3.69
-   },
-   "showtimes": [
-    {
-     "cinema": "Kölner Filmhaus",
-     "city": "Köln",
-     "datetime": "2026-07-30T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3575283054&bgswitch=false&resize=false"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-31T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100313"
     }
    ]
   },
@@ -8619,25 +8536,11 @@
      "booking_url": "https://tickets.cineplex.de/checkout/351/D270DB00023FWBXJYB"
     },
     {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:20:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67907"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-08T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=30971000023RFGKYDT"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:40:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100053"
     },
     {
      "cinema": "Woki",
@@ -8727,15 +8630,15 @@
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-09T16:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100166"
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100142"
     },
     {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-09T16:20:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100142"
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100166"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9840,15 +9743,15 @@
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-14T16:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100174"
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100155"
     },
     {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-14T16:20:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100155"
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100174"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10213,20 +10116,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=3C971000023RFGKYDT"
     },
     {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:40:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/67949"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100020"
-    },
-    {
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-07-09T17:00:00+02:00",
@@ -10504,13 +10393,6 @@
      "datetime": "2026-07-08T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/CE675000023GNFNDWF"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T20:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100039"
     },
     {
      "cinema": "Cineplex Köln",
@@ -12417,13 +12299,6 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F0775000023GNFNDWF"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100046"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-07-08T20:10:00+02:00",
@@ -13778,6 +13653,128 @@
    ]
   },
   {
+   "id": "tt27802226",
+   "title_de": "Virginia Woolf's Night and Day",
+   "title_original": "Virginia Woolf's Night & Day",
+   "year": 2026,
+   "release_date": "2026-06-19",
+   "runtime": 95,
+   "poster": "https://image.tmdb.org/t/p/w342/pDSuVhatjn1n2Hjja5qdrP19i9K.jpg",
+   "genres": [
+    "Komödie",
+    "Drama",
+    "Liebesfilm"
+   ],
+   "age_rating": 6,
+   "overview_de": "Im London des frühen 20. Jahrhunderts sucht die brillante Astronomin Katharine Hilbery nach einem Leben jenseits gesellschaftlicher Erwartungen. Zwischen arrangierter Ehe, Liebe und geistiger Unabhängigkeit entdeckt sie, dass Herz und Verstand keine Gegensätze sein müssen – eine zarte, kluge und humorvolle Erkundung von Freiheit, Nähe und Selbstbestimmung.",
+   "overview_en": "In 1910 London, independent-minded Katharine Hilbery defies her family's expectations of marriage to pursue a career in astronomy. But when her father pressures her into an unwanted engagement, her resolve is tested. Through new friendships—including a bold suffragette and a thoughtful editor—Katharine begins to question the limits placed on her by society, love, and tradition, ultimately searching for a path that is truly her own.",
+   "original_language": "en",
+   "countries": [
+    "GB",
+    "US",
+    "DE"
+   ],
+   "directors": [
+    "Tina Gharavi"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": "https://www.youtube.com/watch?v=7fQiszt8i4o",
+   "trailer_en": "https://www.youtube.com/watch?v=X6wM6lAT48k",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 2.89
+   },
+   "showtimes": [
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-09T15:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257909"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-09T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121051"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-10T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257913"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-10T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121053"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-11T16:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257919"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-11T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121055"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-12T14:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257929"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-12T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121057"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-07-13T18:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257939"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-13T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121059"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-14T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121061"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-07-15T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121063"
+    }
+   ]
+  },
+  {
    "id": "tt41692123",
    "title_de": "Ingeborg Bachmann – Jemand, der einmal ich war",
    "title_original": "Ingeborg Bachmann – Jemand, der einmal ich war",
@@ -13816,13 +13813,6 @@
      "datetime": "2026-07-08T15:45:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellungen?showId=126871581"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-08T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127010653"
     },
     {
      "cinema": "Cinenova",
@@ -14138,128 +14128,6 @@
      "datetime": "2026-07-15T18:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellungen?showId=127123963"
-    }
-   ]
-  },
-  {
-   "id": "tt27802226",
-   "title_de": "Virginia Woolf's Night and Day",
-   "title_original": "Virginia Woolf's Night & Day",
-   "year": 2026,
-   "release_date": "2026-06-19",
-   "runtime": 95,
-   "poster": "https://image.tmdb.org/t/p/w342/pDSuVhatjn1n2Hjja5qdrP19i9K.jpg",
-   "genres": [
-    "Komödie",
-    "Drama",
-    "Liebesfilm"
-   ],
-   "age_rating": 6,
-   "overview_de": "Im London des frühen 20. Jahrhunderts sucht die brillante Astronomin Katharine Hilbery nach einem Leben jenseits gesellschaftlicher Erwartungen. Zwischen arrangierter Ehe, Liebe und geistiger Unabhängigkeit entdeckt sie, dass Herz und Verstand keine Gegensätze sein müssen – eine zarte, kluge und humorvolle Erkundung von Freiheit, Nähe und Selbstbestimmung.",
-   "overview_en": "In 1910 London, independent-minded Katharine Hilbery defies her family's expectations of marriage to pursue a career in astronomy. But when her father pressures her into an unwanted engagement, her resolve is tested. Through new friendships—including a bold suffragette and a thoughtful editor—Katharine begins to question the limits placed on her by society, love, and tradition, ultimately searching for a path that is truly her own.",
-   "original_language": "en",
-   "countries": [
-    "GB",
-    "US",
-    "DE"
-   ],
-   "directors": [
-    "Tina Gharavi"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": "https://www.youtube.com/watch?v=7fQiszt8i4o",
-   "trailer_en": "https://www.youtube.com/watch?v=X6wM6lAT48k",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": 2.89
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-09T15:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257909"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-09T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121051"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-10T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257913"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-10T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121053"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-11T16:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257919"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-11T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121055"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-12T14:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257929"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-12T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121057"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-07-13T18:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127257939"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-13T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121059"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-14T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121061"
-    },
-    {
-     "cinema": "Cinenova",
-     "city": "Köln",
-     "datetime": "2026-07-15T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127121063"
     }
    ]
   },
@@ -18730,13 +18598,6 @@
      "datetime": "2026-07-08T17:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5E871000023RFGKYDT"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-08T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100070"
     },
     {
      "cinema": "Rex am Ring",
