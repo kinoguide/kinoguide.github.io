@@ -1,66 +1,97 @@
-# Kinoguide Bonn/Köln — project briefing
+# Kinoguide Köln/Bonn — project briefing
 
-The user is **not a coder** — explain things simply, run terminal commands for them,
-and confirm before destructive actions. They are on **Windows** (use PowerShell-
-compatible commands).
+The user is **not a coder** — explain things simply, run terminal commands for
+them, and confirm before destructive actions. They are on **Windows**; a Bash
+tool is available (Git Bash) and is used for most commands here, but PowerShell
+works too. Node lives at `C:\Program Files\nodejs` and `gh` at
+`C:\Program Files\GitHub CLI` — add to PATH in Bash when needed.
 
 ## What this project is
 
-A kinoguide.fyi clone for Bonn and Cologne: daily Python scraper collects all
-cinema showtimes with language version (OV / OmU / DE), enriches them with
-IMDb rating + Metascore (TMDB + OMDb APIs), writes `data/movies.json`; a
-Vite/React frontend in `web/` displays it with filters. GitHub Actions
-(`.github/workflows/scrape.yml`) automates daily scrape + deploy to Pages.
+A kinoguide.fyi-style guide for **Köln & Bonn**: a daily Python scraper collects
+all cinema showtimes with language version (OV / OmU / DE), enriches them with
+IMDb + Metascore + Letterboxd ratings and TMDB metadata (poster, genres, FSK,
+country, director, trailers, topic tags), writes `data/movies.json`; a
+Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
+(`.github/workflows/scrape.yml`) runs the scrape + deploy daily.
 
-## Current status (July 2026)
+## Status — LIVE and fully working
 
-DONE:
-- Frontend works with sample data (`cd web; npm install; npm run dev`)
-- Language classifier tested (`scraper/language.py`)
-- TMDB + OMDb enrichment with cache written (`scraper/enrich/`)
-- API keys are in `.env` at repo root (gitignored — NEVER commit it;
-  the deploy workflow uses GitHub Secrets instead)
-- User discovered via DevTools: kinoheld uses a **GraphQL API**, requests
-  named `graphql`, query `programByMovie`, **Woki Bonn cinema ID = 1283**
-  (already set in `scraper/cinemas.json`)
+- **Live site:** https://kinoguide.github.io/ (clean root URL).
+- **Repo:** https://github.com/kinoguide/kinoguide.github.io — owned by the
+  **kinoguide** org (GitHub account `chris-geller` is org admin). Local `origin`
+  points here. See the [[deployment]] memory for the org-permissions gotcha.
+- **17 cinemas** across Köln & Bonn, ~250 films/day. Everything below is DONE:
+  scraper, all cinema sources, enrichment, daily automation, and a polished
+  frontend (search, filters, favorites, schedule view, i18n DE/EN, calendar
+  export, shareable filter URLs). See [[cinema-coverage]] for how each cinema
+  is sourced.
 
-NOT DONE — this is where you pick up:
+## Architecture / key files
 
-## Next steps, in order
+- `scraper/main.py` — orchestrator: scrape every cinema (isolated failures) →
+  enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
+  per-cinema language corrections (Filmpalette, Kinopolis).
+- `scraper/cinemas.json` — the 17 cinemas: kinoheld IDs, `website`, `source`
+  (`kinoheld` or `custom`), and notes. Read the `_note` fields.
+- `scraper/sources/kinoheld.py` — kinoheld GraphQL client (endpoint
+  `next-live.kinoheld.de/graphql`, op `FetchProgramByMovie`). Builds exact
+  per-show booking links (`…/vorstellungen?showId=<id>`). `_title_for()` guards
+  against kinoheld mis-grouping films under a wrong entry.
+- `scraper/sources/custom.py` — non-kinoheld / correction scrapers:
+  `cineweb()` (Metropolis + Rex am Ring, which read version off their own
+  CineWeb sites), `apply_filmpalette_languages()`, and
+  `apply_kinopolis_languages()` (Kinopolis OV/OmU comes from the per-showtime
+  `data-version` attribute on their program page — NOT the "OV: Moana" caption
+  headings, which mislabel).
+- `scraper/enrich/` — `tmdb.py` (metadata, both-language overviews, trailers,
+  director gender + keyword topic tags, countries), `omdb.py` (IMDb+Metascore,
+  7-day cache in `data/ratings_cache.json`), `letterboxd.py` (polite page
+  scrape, 7-day cache).
+- `scraper/language.py` — OV/OmU/DE classifier from show text/flags.
+- `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
+  all styling (Art-Deco navy+orange theme). Frontend reads
+  `web/public/data/movies.json`.
 
-1. **Capture the real GraphQL payload.** The QUERY in
-   `scraper/sources/kinoheld.py` is a placeholder skeleton. Ask the user to:
-   open the Woki page on kinoheld.de → F12 → Network → filter `graphql` →
-   click the request whose Response contains the film program → Payload tab →
-   right-click the request → "Copy as cURL" → paste it to you.
-   Save it to `scraper/debug/woki_curl.txt`, then rewrite QUERY, ENDPOINTS
-   and `normalize()` in `kinoheld.py` to match the real schema exactly.
-   Verify with: `cd scraper; python -m sources.kinoheld 1283`
+## Run / deploy
 
-2. **Test the full pipeline:** `cd scraper; python main.py` — should write
-   `data/movies.json` with real Woki showtimes, enriched with ratings.
-   Then `copy data\movies.json web\public\data\` and check the site locally.
+- Scrape locally: `cd scraper && python main.py` (reads keys from repo-root
+  `.env`, gitignored — NEVER commit it). Then
+  `cp data/movies.json web/public/data/movies.json`.
+- Frontend dev: preview via the Browser-pane tools (launch config `web`), or
+  `cd web && npm run dev`. Build: `npm run build`.
+- Deploy = just `git push` to `origin main` (or the daily cron). The workflow
+  scrapes, commits data, builds, and deploys to Pages. Secrets `TMDB_API_KEY` /
+  `OMDB_API_KEY` are set on the repo. Watch a run:
+  `gh run watch <id> --repo kinoguide/kinoguide.github.io`.
+- In **Git Bash**, `gh api` paths must OMIT the leading slash (bash rewrites
+  `/orgs/...` into a filesystem path).
 
-3. **Find IDs for the remaining cinemas** in `scraper/cinemas.json`
-   (currently null). Same DevTools procedure per cinema, or the IDs may be
-   discoverable via a kinoheld search/city GraphQL query once the schema is
-   known. Cologne priority: Metropolis (OV-only house), Odeon, Filmpalette,
-   OFF Broadway, Rex am Ring, Weisshaus.
+## Design work in progress (as of 2026-07-08)
 
-4. **Kinopolis Bad Godesberg + Cinedom** are not on kinoheld — implement
-   `scraper/sources/custom.py` (requests + BeautifulSoup; their sites render
-   server-side).
+The frontend was restyled to an **Art-Deco "Lichtspielhaus"** look: soft
+midnight-navy background + warm burnt-orange/gold accents, marquee light-strip
+under the header, uppercase logo. Controls use progressive disclosure: one
+**Quick-filters** dropdown (Last Minute, Kinderfilme, Regie: Frauen,
+International, Queer + "Mehr Filter"), plus **city / date / sort** dropdowns.
+Committed to a single dark theme (`color-scheme: dark`).
 
-5. **Deploy:** GitHub Desktop → publish repo → Settings→Pages→Source:
-   GitHub Actions → add Secrets `TMDB_API_KEY` and `OMDB_API_KEY` (values
-   are in `.env`).
+OPEN DECISION: the user is deciding whether to push the Deco styling further.
+A "maxed Art-Deco" mockup was shown (marquee frame + sunburst, embedded period
+font, gold hairline/chevron dividers, corner-bracket cards, double gold frame).
+If they say yes, apply those to `web/src/styles.css` (and embed a real
+Futura/Broadway-style display face as a @font-face data URI — CDN fonts are not
+used). If "subtler", dial specific elements back.
 
 ## Conventions
 
 - One scraper module per source in `scraper/sources/`; a failing cinema must
-  never abort the whole run (main.py already isolates errors)
-- Ratings are cached in `data/ratings_cache.json` (7-day TTL) — keep OMDb
-  usage low
-- Scrape politely: identifying User-Agent, once daily, no hammering
-- Frontend reads `web/public/data/movies.json`; keep the JSON schema stable
-  (see sample) or update `web/src/App.jsx` together with it
+  never abort the whole run (main.py isolates errors per cinema).
+- Scrape politely: identifying User-Agent, once daily, caches to keep OMDb/
+  Letterboxd usage low.
+- Keep the `movies.json` schema stable, or update `web/src/App.jsx` with it.
+- Verify data changes against reality before shipping — kinoheld and cinema
+  sites have quirks (mis-grouped films, missing language flags, caption
+  headings that lie). When a fix could mislabel (e.g. calling a German show OV),
+  prefer under-labeling over shipping wrong data, and say so.
+- All UI strings are in the `T` i18n object (de + en) in App.jsx.
