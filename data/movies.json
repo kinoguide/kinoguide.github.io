@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-10T22:15:37.842410+00:00",
+ "generated_at": "2026-07-11T06:11:07.416992+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -1368,13 +1368,6 @@
      "datetime": "2026-08-04T19:30:00+02:00",
      "language": "OV",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71312"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-08-04T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/73A2CB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
@@ -6520,6 +6513,55 @@
    ]
   },
   {
+   "id": "tt15548032",
+   "title_de": "Gefährliche Liebschaften",
+   "title_original": "Les liaisons dangereuses",
+   "year": 2022,
+   "release_date": "2022-07-08",
+   "runtime": 109,
+   "poster": "https://image.tmdb.org/t/p/w342/kPycqOXKCVFwsYscYdx5KL7atCr.jpg",
+   "genres": [
+    "Drama",
+    "Liebesfilm"
+   ],
+   "age_rating": 16,
+   "overview_de": "Musterschülerin Célène verliebt sich auf ihrer neuen Schule in Biarritz in den Unruhestifter Tristan. Sie weiß nicht, dass er eine Wette auf sie abgeschlossen hat.",
+   "overview_en": "The innocent Célène might be falling in love with popular surfer Tristan at her new school. But she has no idea that, in actuality, she’s the object of a cruel bet between Tristan and Instagram influencer Vanessa.",
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "Rachel Suissa"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=gUHOSIe922E",
+   "ratings": {
+    "imdb": 4.2,
+    "metascore": null,
+    "letterboxd": 1.69
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-12T11:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/C209AB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-16T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/D209AB00023FWBXJYB"
+    }
+   ]
+  },
+  {
    "id": "tt27200708",
    "title_de": "Mother Mary",
    "title_original": "Mother Mary",
@@ -9883,7 +9925,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-07-17T19:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/25475000023GNFNDWF"
     },
     {
@@ -14081,7 +14123,7 @@
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=x0WnyntXUZ4",
-   "trailer_en": "https://www.youtube.com/watch?v=JRG244IfrRE",
+   "trailer_en": "https://www.youtube.com/watch?v=AvKoSR3O4NQ",
    "ratings": {
     "imdb": null,
     "metascore": null,
@@ -14373,8 +14415,8 @@
     "US"
    ],
    "directors": [
-    "Laurent Pelly",
-    "Gary Halvorson"
+    "Gary Halvorson",
+    "Laurent Pelly"
    ],
    "tags": [],
    "trailer_de": null,
@@ -18323,46 +18365,6 @@
    ]
   },
   {
-   "id": "national theatre london: les liaisons dangereuses",
-   "title_de": "National Theatre London: Les Liaisons Dangereuses",
-   "title_original": "National Theatre London: Les Liaisons Dangereuses",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-12T11:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/C209AB00023FWBXJYB"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-16T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/D209AB00023FWBXJYB"
-    }
-   ]
-  },
-  {
    "id": "twilight: breaking dawn part 1 + part 2",
    "title_de": "Twilight: Breaking Dawn Part 1 + Part 2",
    "title_original": "Twilight: Breaking Dawn Part 1 + Part 2",
@@ -18392,6 +18394,39 @@
      "datetime": "2026-07-12T11:30:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/DAA2BB00023FWBXJYB"
+    }
+   ]
+  },
+  {
+   "id": "the terminator (kurzfilm)",
+   "title_de": "The Terminator (Kurzfilm)",
+   "title_original": "The Terminator (Kurzfilm)",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-08-04T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/73A2CB00023FWBXJYB"
     }
    ]
   },
