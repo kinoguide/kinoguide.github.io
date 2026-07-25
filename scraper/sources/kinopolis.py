@@ -100,6 +100,19 @@ _ANNOTATION_RE = re.compile(
 )
 
 
+# Live relays of a stage production: an opera or ballet broadcast from a named
+# house on one named night. TMDB catalogues *recordings*, so the best it can
+# ever offer is a different house's staging of the same work — it handed the
+# MET's 2026 Macbeth the cover of a Teatro-Regio-di-Torino recording, and the
+# Paris "Roméo et Juliette" the cover of a documentary about it. No poster
+# beats someone else's poster, so these keep the title the cinema sells and
+# nothing more.
+_RELAY_RE = re.compile(
+    r"\((?:MET live im Kino|Oper[an] national de Paris|Royal Opera House)\)",
+    re.IGNORECASE,
+)
+
+
 def _year(raw) -> int | None:
     """Their productionYear arrives as a string ("2002") — or not at all."""
     try:
@@ -138,16 +151,22 @@ def normalize(program: list[dict], cinema: dict) -> list[dict]:
             # re-release is (their "Der Herr der Ringe 2" is the 2002 one, not
             # the 1978 cartoon TMDB ranks first). Its absence is meaningful
             # too: it marks a slot with no film behind it — the Sneak preview,
-            # whose whole point is not saying what's playing. Enriching that
-            # from TMDB only ever invents a wrong film.
+            # whose whole point is not saying what's playing. Enriching either
+            # that or a stage relay from TMDB only invents a wrong film.
             year = _year(film.get("productionYear"))
+            released = _year(film.get("nationwideStart"))
             shows_out.append({
                 "title": _clean(title),
                 "datetime": begin,
                 "language": classify(perf.get("releaseTypeName") or ""),
                 "booking_url": _booking_url(cinema, pid),
                 "year": year,
-                "is_film": bool(year),
+                # Both dates are worth offering TMDB: they agree for a normal
+                # film, but a shelved one is made years before it opens (Coyote
+                # vs. ACME: shot 2023, released 2026) and a re-release opens
+                # decades after it was made (Casablanca: 1942, German 1952).
+                "years": [y for y in (year, released) if y],
+                "is_film": bool(year) and not _RELAY_RE.search(title),
             })
     return shows_out
 

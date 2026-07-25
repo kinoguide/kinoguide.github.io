@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-25T02:09:53.125130+00:00",
+ "generated_at": "2026-07-25T02:37:14.459999+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -4495,44 +4495,42 @@
    ]
   },
   {
-   "id": "tt32986839",
-   "title_de": "Opéra national de Paris 2024: Schwanensee",
-   "title_original": "Le Lac des cygnes - Filmé pour IMAX",
-   "year": 2024,
-   "release_date": "2024-11-08",
-   "runtime": 145,
-   "poster": "https://image.tmdb.org/t/p/w342/u7bBB05UmRVR7MD3699X0bWOTZm.jpg",
+   "id": "tt0077745",
+   "title_de": "Die Körperfresser kommen",
+   "title_original": "Invasion of the Body Snatchers",
+   "year": 1978,
+   "release_date": "1978-12-20",
+   "runtime": 115,
+   "poster": "https://image.tmdb.org/t/p/w342/8Q0xZwVHnbD5PumVBLJSrPryQoM.jpg",
    "genres": [
-    "Musik",
-    "Fantasy",
-    "Liebesfilm"
+    "Science Fiction",
+    "Horror"
    ],
-   "age_rating": null,
-   "overview_de": "Anlässlich seiner Geburtstagsfeier soll der junge Prinz Siegfried eine Ehefrau wählen. Da er nach der idealen Liebe sucht, versucht er, der Realität zu entfliehen. Sein Hauslehrer versucht, ihn zur Vernunft zu bringen und erinnert ihn an seine Pflichten. Bei einem seiner traumhaften Ausflüge begegnet der Prinz Odette, einer Prinzessin, die durch den mächtigen Zauberer Rothbart in eine Schwanenjungfrau verwandelt wurde. Nur wahre Liebe kann diesen Fluch rückgängig machen. Siegfried ist von ihr fasziniert. Er verspricht, Odette zu retten und lädt sie zu seinem Fest ein. Um ihm eine Falle zu stellen, schickt der Zauberer seine Tochter Odile als Odette verkleidet, um ihm den Kopf zu verdrehen.",
-   "overview_en": "During his birthday’s celebration, Prince Siegfried must choose a bride. Trying to escape reality, he dreams of a perfect love. His tutor tries to bring him down to Earth and reminds him of his duties. On a dreamlike getaway, the prince meets Odette, a princess who has been transformed into a swan by the powerful sorcerer Rothbart. Only true love can break the spell. Captivated, Siegfried promises Odette to save her and invites her to his party. To trap the prince, the sorcerer sends his daughter Odile, disguised as Odette, to seduce him.",
-   "original_language": "fr",
+   "age_rating": 16,
+   "overview_de": "Die Angst kommt aus dem All! San Francisco wird von tückischen Lebewesen heimgesucht. Sie zerstören die Psyche und fressen den Körper. Ihr grausamer Terror breitet sich unaufhaltsam aus. Der Gesundheitsforscher Matthew Bennell (Donald Sutherland) erkennt als Erster: Eine tödliche Saat aus dem All bedroht alles Leben auf der Erde. Man sieht sie nicht, doch man weiß, dass sie da sind... es gibt kein Entrinnen!",
+   "overview_en": "The residents of San Francisco are becoming drone-like shadows of their former selves, and as the phenomenon spreads, two Department of Health workers uncover the horrifying truth.",
+   "original_language": "en",
    "countries": [
-    "FR",
-    "CA"
+    "US"
    ],
    "directors": [
-    "Isabelle Julien"
+    "Philip Kaufman"
    ],
    "tags": [],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=-BhyHvqYARQ",
+   "trailer_de": "https://www.youtube.com/watch?v=OOnHrjggkn8",
+   "trailer_en": "https://www.youtube.com/watch?v=e_brmjvATLc",
    "ratings": {
-    "imdb": 7.5,
-    "metascore": null,
-    "letterboxd": 3.78
+    "imdb": 7.4,
+    "metascore": 75,
+    "letterboxd": 3.94
    },
    "showtimes": [
     {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
-     "datetime": "2026-12-13T11:00:00+01:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/14775000023GNFNDWF"
+     "datetime": "2026-09-10T19:30:00+02:00",
+     "language": "OV",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F6165000023GNFNDWF"
     }
    ]
   },
@@ -5807,64 +5805,106 @@
    ]
   },
   {
-   "id": "tt35674521",
-   "title_de": "Rose of Nevada",
-   "title_original": "Rose of Nevada",
+   "id": "tt30825738",
+   "title_de": "Star Wars: The Mandalorian and Grogu",
+   "title_original": "The Mandalorian and Grogu",
    "year": 2026,
-   "release_date": "2026-04-24",
-   "runtime": 114,
-   "poster": "https://image.tmdb.org/t/p/w342/rqHgjvD5HV0ojj4CEV31ztertPK.jpg",
+   "release_date": "2026-05-20",
+   "runtime": 132,
+   "poster": "https://image.tmdb.org/t/p/w342/5QrwqFLCYVCI5emBzJkm2VhAfPR.jpg",
    "genres": [
-    "Science Fiction",
-    "Mystery",
-    "Drama"
+    "Action",
+    "Abenteuer",
+    "Science Fiction"
    ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "A mysterious boat returns to a village 30 years after vanishing. Two men join its crew hoping for better fortune. After one voyage, they find themselves transported back in time, mistaken for the original crew.",
+   "age_rating": 12,
+   "overview_de": "Das böse Imperium ist gefallen, doch imperiale Kriegsherren sind weiterhin über die Galaxis verstreut. Die junge Neue Republik arbeitet daran, alles zu schützen, wofür die Rebellion gekämpft hat, und hat sich dazu die Hilfe des legendären mandalorianischen Kopfgeldjägers Din Djarin und seines jungen Lehrlings Grogu gesichert.",
+   "overview_en": "The evil Empire has fallen, and Imperial warlords remain scattered throughout the galaxy. As the fledgling New Republic works to protect everything the Rebellion fought for, they have enlisted the help of legendary Mandalorian bounty hunter Din Djarin and his young apprentice Grogu.",
    "original_language": "en",
    "countries": [
-    "GB"
+    "US"
    ],
    "directors": [
-    "Mark Jenkin"
+    "Jon Favreau"
    ],
    "tags": [],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=bw371ui9cTk",
+   "trailer_de": "https://www.youtube.com/watch?v=TheyFxVYC_Y",
+   "trailer_en": "https://www.youtube.com/watch?v=uwild1rw7Aw",
    "ratings": {
     "imdb": 6.9,
-    "metascore": 82,
-    "letterboxd": 3.48
+    "metascore": 53,
+    "letterboxd": 3.11
    },
    "showtimes": [
     {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-07-25T14:50:00+02:00",
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-25T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571057"
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/50A75000023GNFNDWF"
     },
     {
-     "cinema": "OFF Broadway",
+     "cinema": "Cinedom",
      "city": "Köln",
-     "datetime": "2026-07-26T15:00:00+02:00",
+     "datetime": "2026-07-25T14:10:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=127571131"
-    },
-    {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-07-28T19:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571089"
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=11D71000023RFGKYDT"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
-     "datetime": "2026-09-07T19:00:00+02:00",
+     "datetime": "2026-07-26T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/60A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-26T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=21D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/70A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-27T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=41D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-28T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/80A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-28T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=51D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-29T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/90A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-29T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=61D71000023RFGKYDT"
     }
    ]
   },
@@ -7299,6 +7339,46 @@
    ]
   },
   {
+   "id": "tt0079714",
+   "title_de": "Das Böse",
+   "title_original": "Phantasm",
+   "year": 1979,
+   "release_date": "1979-03-28",
+   "runtime": 88,
+   "poster": "https://image.tmdb.org/t/p/w342/p2uAcScEN4wWGmMtXfBdNgtQa7R.jpg",
+   "genres": [
+    "Horror",
+    "Science Fiction"
+   ],
+   "age_rating": 16,
+   "overview_de": "Der Teenager Mike lebt, nachdem seine Eltern bei einem Unfall ums Leben kamen, bei seinem älteren Bruder. Mike beobachtet zufällig die seltsamen Aktivitäten des Tall Man auf dem Friedhof. Niemand glaubt ihm seine Beobachtungen, so dass er heimlich weiter nachforscht, und herausfindet, dass der Tall Man, bewacht von seinen fliegenden Kugeln, in der Leichenhalle menschliche Körper schrumpft und für den Transport in eine andere Dimension vorbereitet. Bevor er seinen Bruder informieren kann, wird Mike von dem Tall Man entdeckt und verfolgt.",
+   "overview_en": "A teenage boy and his friends face off against a mysterious grave robber, known only as the Tall Man, who employs a lethal arsenal of unearthly weapons.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Don Coscarelli"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=l58PJrWWGxg",
+   "trailer_en": "https://www.youtube.com/watch?v=xOi66melBOY",
+   "ratings": {
+    "imdb": 6.6,
+    "metascore": 72,
+    "letterboxd": 3.33
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-13T19:30:00+02:00",
+     "language": "OV",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E6165000023GNFNDWF"
+    }
+   ]
+  },
+  {
    "id": "tt8667404",
    "title_de": "The Chronology of Water",
    "title_original": "The Chronology of Water",
@@ -8543,6 +8623,70 @@
      "datetime": "2026-08-23T13:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/57575000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt39751309",
+   "title_de": "18th Rose",
+   "title_original": "18th Rose",
+   "year": 2026,
+   "release_date": "2026-04-09",
+   "runtime": 131,
+   "poster": "https://image.tmdb.org/t/p/w342/6pUwaXT6tdA6sek8o6SdFYudJDj.jpg",
+   "genres": [
+    "Drama",
+    "Liebesfilm",
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": "Eine Teenagerin, die vom perfekten Debüt träumt, schließt einen Pakt mit einem Neuling. Doch unerwartete Gefühle und Enthüllungen bedrohen ihre Pläne.",
+   "overview_en": "A spirited teen dreaming of the perfect debut makes a deal with a lonely newcomer, but unexpected feelings and revelations may shatter their plans.",
+   "original_language": "tl",
+   "countries": [
+    "PH"
+   ],
+   "directors": [
+    "Dolly Dulu"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=7ocRU1SGX7E",
+   "ratings": {
+    "imdb": 5.6,
+    "metascore": null,
+    "letterboxd": 2.87
+   },
+   "showtimes": [
+    {
+     "cinema": "Weisshaus Kino",
+     "city": "Köln",
+     "datetime": "2026-07-25T14:50:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571057"
+    },
+    {
+     "cinema": "OFF Broadway",
+     "city": "Köln",
+     "datetime": "2026-07-26T15:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=127571131"
+    },
+    {
+     "cinema": "Weisshaus Kino",
+     "city": "Köln",
+     "datetime": "2026-07-28T19:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571089"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-07T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
     }
    ]
   },
@@ -12817,102 +12961,6 @@
    ]
   },
   {
-   "id": "star wars: the mandalorian and grogu",
-   "title_de": "Star Wars: The Mandalorian and Grogu",
-   "title_original": "Star Wars: The Mandalorian and Grogu",
-   "year": 2025,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-25T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/50A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-25T14:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=11D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-26T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/60A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-26T14:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=21D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-27T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/70A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-27T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=41D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-28T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/80A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-28T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=51D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/90A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-29T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=61D71000023RFGKYDT"
-    }
-   ]
-  },
-  {
    "id": "sneak",
    "title_de": "Sneak",
    "title_original": "Sneak",
@@ -13686,17 +13734,21 @@
    "id": "el gawahergy",
    "title_de": "El Gawahergy",
    "title_original": "El Gawahergy",
-   "year": 2024,
-   "release_date": null,
-   "runtime": null,
+   "year": 2025,
+   "release_date": "2025-12-25",
+   "runtime": 120,
    "poster": null,
-   "genres": [],
+   "genres": [
+    "Komödie"
+   ],
    "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
+   "overview_de": "Ein verheiratetes Ehepaar in der Krise sucht Hilfe bei einer Therapie, nachdem der Juwelier-Ehemann durch seine Gattin in zahlreiche peinliche Situationen gekommen ist.",
+   "overview_en": "A jeweler gets into many troubles and embarrassing situations because of his wife, resulting into many comedic situations.",
+   "original_language": "en",
    "countries": [],
-   "directors": [],
+   "directors": [
+    "Islam Khairy"
+   ],
    "tags": [],
    "trailer_de": null,
    "trailer_en": null,
@@ -13712,39 +13764,6 @@
      "datetime": "2026-08-09T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/C2A75000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "das böse",
-   "title_de": "Das Böse",
-   "title_original": "Das Böse",
-   "year": 1978,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-13T19:30:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E6165000023GNFNDWF"
     }
    ]
   },
@@ -14109,39 +14128,6 @@
    ]
   },
   {
-   "id": "die körperfresser kommen",
-   "title_de": "Die Körperfresser kommen",
-   "title_original": "Die Körperfresser kommen",
-   "year": 1977,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-09-10T19:30:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F6165000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "disney channel mitmachkino zum kinofest 2026",
    "title_de": "Disney Channel Mitmachkino zum Kinofest 2026",
    "title_original": "Disney Channel Mitmachkino zum Kinofest 2026",
@@ -14354,23 +14340,31 @@
    ]
   },
   {
-   "id": "coyote vs. acme",
-   "title_de": "Coyote vs. ACME",
-   "title_original": "Coyote vs. ACME",
-   "year": 2023,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
+   "id": "tt1756855",
+   "title_de": "Coyote vs. Acme",
+   "title_original": "Coyote vs. Acme",
+   "year": 2026,
+   "release_date": "2026-08-21",
+   "runtime": 101,
+   "poster": "https://image.tmdb.org/t/p/w342/96OiidG5H9JP0zbon9AD0VFtiAG.jpg",
+   "genres": [
+    "Komödie",
+    "Abenteuer",
+    "Familie"
+   ],
    "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
+   "overview_de": "Nach all den Jahren vergeblicher Liebesmüh hat Willi Kojote es satt, dass bisher jedes einzelne Produkt der ACME Corporation eine erfolgreiche Jagd auf den Road Runner vereitelt hat. Kojote beschließt deshalb, das Unternehmen für seine mangelhafte Ware in die Verantwortung zu nehmen, und engagiert den ebenso glück- wie mittellosen Anwalt Kevin Avery, um gegen ACME vor Gericht zu ziehen. Als der herausfindet, dass die Rechtsabteilung des Konzerns von Buddy Crane geleitet wird, dem selbstgefälligen Chef seiner ehemaligen Kanzlei, gibt er alles, um den Prozess zu gewinnen.",
+   "overview_en": "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Dave Green"
+   ],
    "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
+   "trailer_de": "https://www.youtube.com/watch?v=DvY-U39fyrM",
+   "trailer_en": "https://www.youtube.com/watch?v=kMsiD1Nky5I",
    "ratings": {
     "imdb": null,
     "metascore": null,
@@ -14436,17 +14430,17 @@
   },
   {
    "id": "geburtstagsgala",
-   "title_de": "Geburtstagsgala - 20 Jahre Met live im Kino",
-   "title_original": "Twenty Years of the Met in Cinemas: An Anniversary Celebration",
+   "title_de": "Geburtstagsgala",
+   "title_original": "Geburtstagsgala",
    "year": 2026,
-   "release_date": "2026-09-19",
-   "runtime": 150,
-   "poster": "https://image.tmdb.org/t/p/w342/dm7qMSsA7XJc2eB55Zsg8YvsTby.jpg",
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
    "genres": [],
    "age_rating": null,
-   "overview_de": "Ausschnitte aus den Highlights der letzten 20 Jahre live präsentiert von Renée Fleming",
+   "overview_de": null,
    "overview_en": null,
-   "original_language": "en",
+   "original_language": null,
    "countries": [],
    "directors": [],
    "tags": [],
@@ -14551,22 +14545,18 @@
   },
   {
    "id": "verdi: macbeth",
-   "title_de": "Macbeth (Teatro Regio di Torino, 2026)",
-   "title_original": "Macbeth (Teatro Regio di Torino, 2026)",
+   "title_de": "Verdi: Macbeth",
+   "title_original": "Verdi: Macbeth",
    "year": 2026,
-   "release_date": "2026-01-01",
-   "runtime": 174,
-   "poster": "https://image.tmdb.org/t/p/w342/bK7x8CEQgBsxvm8iCSESPQttyOp.jpg",
-   "genres": [
-    "Musik"
-   ],
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
    "age_rating": null,
    "overview_de": null,
-   "overview_en": "Maestro Riccardo Muti returns to the podium of the Orchestra and Chorus of the Teatro Regio di Torino for a new production of *Macbeth* directed by Chiara Muti. Set design by Alessandro Camera and costumes by Ursula Patzak.",
-   "original_language": "en",
-   "countries": [
-    "IT"
-   ],
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
    "directors": [],
    "tags": [],
    "trailer_de": null,
@@ -14588,26 +14578,20 @@
   },
   {
    "id": "romeo et juliette",
-   "title_de": "Opéra de Paris : Roméo, Juliette, Thomas et les autres",
-   "title_original": "Opéra de Paris : Roméo, Juliette, Thomas et les autres",
-   "year": 2024,
-   "release_date": "2024-07-05",
-   "runtime": 0,
-   "poster": "https://image.tmdb.org/t/p/w342/wDbnVXtsL2xaNZHrt2ZKU63OYbH.jpg",
+   "title_de": "Romeo et Juliette",
+   "title_original": "Romeo et Juliette",
+   "year": 2026,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
    "genres": [],
    "age_rating": null,
    "overview_de": null,
    "overview_en": null,
-   "original_language": "fr",
-   "countries": [
-    "FR"
-   ],
-   "directors": [
-    "Priscilla Pizzato"
-   ],
-   "tags": [
-    "women_directed"
-   ],
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
    "trailer_de": null,
    "trailer_en": null,
    "ratings": {
@@ -14655,6 +14639,39 @@
      "datetime": "2026-12-05T18:00:00+01:00",
      "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/22275000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "schwanensee",
+   "title_de": "Schwanensee",
+   "title_original": "Schwanensee",
+   "year": 2024,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-12-13T11:00:00+01:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/14775000023GNFNDWF"
     }
    ]
   },

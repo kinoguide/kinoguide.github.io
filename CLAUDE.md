@@ -59,11 +59,22 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   director gender + keyword topic tags, countries), `omdb.py` (IMDb+Metascore,
   7-day cache in `data/ratings_cache.json`), `letterboxd.py` (polite page
   scrape, 7-day cache). A source may pass two optional hints along with each
-  show and main.py forwards them: `year` (the film's production year — TMDB
-  ranks the 1978 cartoon above "Die zwei Türme" for "Der Herr der Ringe 2", and
-  its own `year` search param does not break the tie, so `tmdb._pick()` uses
-  the hint) and `is_film: False` for a slot with no film behind it (a Sneak
-  preview), which skips TMDB entirely instead of inventing a match.
+  show and main.py forwards them:
+  - `years` — every year the film could plausibly carry (made in / released
+    in; a shelved film like Coyote vs. ACME is 2023 and 2026, a re-release like
+    Casablanca 1942 and 1952). `tmdb._pick()` takes the hit matching any of
+    them ±1. **Never pass a year to TMDB's own `year` search param** — it
+    filters on release date and silently empties the result set.
+    When no hit matches, `lookup()` returns None rather than TMDB's first
+    guess: a film of the wrong vintage is a different film, and the user's
+    rule is that no poster beats someone else's poster.
+  - `is_film: False` — a slot with no film behind it, which skips TMDB
+    entirely. Kinopolis sets it for the Sneak preview (no productionYear) and
+    for live opera/ballet relays (MET live im Kino, Opéra national de Paris,
+    Royal Opera House): TMDB only catalogues *recordings*, so the closest it
+    can offer is another house's staging of the same work. Cost of that rule:
+    the "Geburtstagsgala – 20 Jahre Met live im Kino" loses a match that was
+    actually right. Judged worth it — reverse in `_RELAY_RE` if you disagree.
 - `scraper/language.py` — OV/OmU/DE classifier from show text/flags.
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads

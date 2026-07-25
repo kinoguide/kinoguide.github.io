@@ -94,13 +94,14 @@ def main() -> None:
         for show in shows:
             key = clean_title(show["title"]).lower()
             entry = movies.setdefault(key, {"title_raw": clean_title(show["title"]),
-                                            "year": None, "is_film": False,
-                                            "showtimes": []})
+                                            "year": None, "years": set(),
+                                            "is_film": False, "showtimes": []})
             # Optional hints; only sources that really know set them (see
             # sources/kinopolis.py). A film year from any source is worth
             # having, and one source recognising a film outweighs another
             # that doesn't.
             entry["year"] = entry["year"] or show.get("year")
+            entry["years"].update(show.get("years") or ())
             entry["is_film"] = entry["is_film"] or show.get("is_film", True)
             # Link policy: exact page for that showtime. Chain deeplinks and
             # kinotickets/CineWeb links are already exact; for kinoheld-only
@@ -121,7 +122,7 @@ def main() -> None:
         meta = None
         if entry["is_film"]:
             try:
-                meta = tmdb.lookup(entry["title_raw"], entry["year"])
+                meta = tmdb.lookup(entry["title_raw"], entry["years"])
             except Exception as e:
                 print(f"  [warn] TMDB failed for '{entry['title_raw']}': {e}")
 

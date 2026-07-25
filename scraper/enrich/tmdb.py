@@ -20,24 +20,41 @@ def _key() -> str:
     return key
 
 
-def _pick(results: list[dict], year: int | None) -> dict:
+def _years(hint) -> set[int]:
+    """Normalize a year hint — one year or several — to a set of ints."""
+    values = hint if isinstance(hint, (list, tuple, set)) else [hint]
+    out = set()
+    for v in values:
+        try:
+            out.add(int(str(v)[:4]))  # sources may hand us "2002" or a date
+        except (TypeError, ValueError):
+            pass
+    return out
+
+
+def _pick(results: list[dict], hint) -> dict | None:
     """Choose which search hit is the film, preferring the right vintage.
 
     TMDB's own ranking is usually right, but it goes badly wrong on classics a
     cinema re-releases under a series name: "Der Herr der Ringe 2" ranks the
-    1978 animated film above "Die zwei Türme" (2002), and TMDB's `year` search
-    parameter does not break the tie. When the source told us the production
-    year, the hit that matches it wins — otherwise TMDB's order stands.
+    1978 animated film above "Die zwei Türme" (2002). When the source told us
+    what year(s) the film belongs to, the hit that matches wins.
+
+    If no hit matches we return nothing rather than TMDB's first guess: a film
+    of the wrong vintage is a different film, and a card with no poster is
+    better than a card with someone else's. That is what keeps the MET's live
+    opera relays from borrowing the cover of some other house's recording of
+    the same opera. Without a hint we have nothing to check, so TMDB's order
+    stands.
     """
-    try:
-        want = int(year)  # sources may hand us "2002" rather than 2002
-    except (TypeError, ValueError):
+    want = _years(hint)
+    if not want:
         return results[0]
     for r in results:
         got = (r.get("release_date") or "")[:4]
-        if got.isdigit() and abs(int(got) - want) <= 1:
+        if got.isdigit() and any(abs(int(got) - w) <= 1 for w in want):
             return r
-    return results[0]
+    return None
 
 
 def _has_latin(text: str) -> bool:
@@ -51,15 +68,18 @@ def _de_title(tmdb_title: str | None, scraped: str) -> str:
     return scraped
 
 
-def lookup(title: str, year: int | None = None) -> dict | None:
+def lookup(title: str, year=None) -> dict | None:
     """Search TMDB with a German title, return metadata dict or None.
 
-    `year` is the film's production year when the source knows it — a hint for
-    picking between same-named films, not a filter.
+    `year` is what the source knows about the film's vintage — a year, or
+    several plausible ones (made in, released in). It is a hint for picking
+    between same-named films, not a filter, and is deliberately NOT sent to
+    TMDB: their `year` parameter matches the release date, which routinely
+    differs from a production year by a year or more (the shop dates "The
+    Mandalorian and Grogu" 2025, TMDB releases it 2026), and passing it turns a
+    good search into no results at all. We ask broadly and choose in _pick().
     """
     params = {"api_key": _key(), "query": title, "language": "de-DE"}
-    if year:
-        params["year"] = year
     r = requests.get(f"{API}/search/movie", params=params, timeout=30)
     r.raise_for_status()
     results = r.json().get("results", [])
@@ -67,6 +87,8 @@ def lookup(title: str, year: int | None = None) -> dict | None:
         return None
 
     best = _pick(results, year)
+    if not best:
+        return None
     detail = requests.get(
         f"{API}/movie/{best['id']}",
         params={"api_key": _key(), "language": "de-DE",
