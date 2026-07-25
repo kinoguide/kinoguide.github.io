@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-25T00:11:33.802738+00:00",
+ "generated_at": "2026-07-25T00:35:06.154329+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -9836,6 +9836,13 @@
      "datetime": "2026-08-05T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3592407902&bgswitch=false&resize=false"
+    },
+    {
+     "cinema": "Cinenova",
+     "city": "Köln",
+     "datetime": "2026-08-13T21:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127779829"
     }
    ]
   },
