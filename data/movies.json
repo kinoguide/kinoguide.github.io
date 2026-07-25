@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-25T02:40:03.004180+00:00",
+ "generated_at": "2026-07-25T06:15:20.195447+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -5209,7 +5209,7 @@
    "ratings": {
     "imdb": 7.2,
     "metascore": 71,
-    "letterboxd": 3.94
+    "letterboxd": 3.93
    },
    "showtimes": [
     {
@@ -5748,7 +5748,7 @@
    "ratings": {
     "imdb": 7.0,
     "metascore": 80,
-    "letterboxd": 3.43
+    "letterboxd": 3.44
    },
    "showtimes": [
     {
@@ -7410,7 +7410,7 @@
    "ratings": {
     "imdb": 6.6,
     "metascore": 76,
-    "letterboxd": 3.57
+    "letterboxd": 3.58
    },
    "showtimes": [
     {
@@ -7696,7 +7696,7 @@
    "ratings": {
     "imdb": 6.5,
     "metascore": 67,
-    "letterboxd": 3.45
+    "letterboxd": 3.46
    },
    "showtimes": [
     {
@@ -7732,8 +7732,8 @@
     "US"
    ],
    "directors": [
-    "Aaron Horvath",
-    "Michael Jelenic"
+    "Michael Jelenic",
+    "Aaron Horvath"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=Qt5NnNIAslY",
@@ -8251,8 +8251,8 @@
     "BE"
    ],
    "directors": [
-    "Rodrigo Perez-Castro",
-    "Ricardo Curtis"
+    "Ricardo Curtis",
+    "Rodrigo Perez-Castro"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=lDsIJ_Re7so",
@@ -15016,7 +15016,7 @@
    "ratings": {
     "imdb": null,
     "metascore": null,
-    "letterboxd": 3.14
+    "letterboxd": 3.15
    },
    "showtimes": [
     {
@@ -16858,7 +16858,7 @@
    "ratings": {
     "imdb": null,
     "metascore": null,
-    "letterboxd": 3.11
+    "letterboxd": 3.06
    },
    "showtimes": [
     {
@@ -17290,7 +17290,7 @@
    "ratings": {
     "imdb": null,
     "metascore": null,
-    "letterboxd": 3.35
+    "letterboxd": 3.36
    },
    "showtimes": [
     {
