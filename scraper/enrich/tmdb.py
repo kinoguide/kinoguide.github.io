@@ -20,8 +20,43 @@ def _key() -> str:
     return key
 
 
+def _pick(results: list[dict], year: int | None) -> dict:
+    """Choose which search hit is the film, preferring the right vintage.
+
+    TMDB's own ranking is usually right, but it goes badly wrong on classics a
+    cinema re-releases under a series name: "Der Herr der Ringe 2" ranks the
+    1978 animated film above "Die zwei Türme" (2002), and TMDB's `year` search
+    parameter does not break the tie. When the source told us the production
+    year, the hit that matches it wins — otherwise TMDB's order stands.
+    """
+    try:
+        want = int(year)  # sources may hand us "2002" rather than 2002
+    except (TypeError, ValueError):
+        return results[0]
+    for r in results:
+        got = (r.get("release_date") or "")[:4]
+        if got.isdigit() and abs(int(got) - want) <= 1:
+            return r
+    return results[0]
+
+
+def _has_latin(text: str) -> bool:
+    return bool(re.search(r"[A-Za-zÀ-ÿ]", text or ""))
+
+
+def _de_title(tmdb_title: str | None, scraped: str) -> str:
+    """The title to show German visitors: TMDB's, unless it's unreadable here."""
+    if tmdb_title and (_has_latin(tmdb_title) or not _has_latin(scraped)):
+        return tmdb_title
+    return scraped
+
+
 def lookup(title: str, year: int | None = None) -> dict | None:
-    """Search TMDB with a German title, return metadata dict or None."""
+    """Search TMDB with a German title, return metadata dict or None.
+
+    `year` is the film's production year when the source knows it — a hint for
+    picking between same-named films, not a filter.
+    """
     params = {"api_key": _key(), "query": title, "language": "de-DE"}
     if year:
         params["year"] = year
@@ -31,7 +66,7 @@ def lookup(title: str, year: int | None = None) -> dict | None:
     if not results:
         return None
 
-    best = results[0]
+    best = _pick(results, year)
     detail = requests.get(
         f"{API}/movie/{best['id']}",
         params={"api_key": _key(), "language": "de-DE",
@@ -51,7 +86,10 @@ def lookup(title: str, year: int | None = None) -> dict | None:
     return {
         "tmdb_id": best["id"],
         "imdb_id": detail.get("external_ids", {}).get("imdb_id"),
-        "title_de": detail.get("title") or title,
+        # For films with no German release TMDB's "German" title is just the
+        # native one, which can be in a script our visitors can't read
+        # (बटवारा १९४७). The title the cinema puts on the ticket is better.
+        "title_de": _de_title(detail.get("title"), title),
         "title_original": detail.get("original_title") or title,
         "year": int((detail.get("release_date") or "0000")[:4]) or None,
         "release_date": detail.get("release_date") or None,

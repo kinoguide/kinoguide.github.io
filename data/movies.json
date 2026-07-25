@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-25T01:16:08.117648+00:00",
+ "generated_at": "2026-07-25T02:09:53.125130+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -71,6 +71,132 @@
   }
  },
  "movies": [
+  {
+   "id": "tt0167260",
+   "title_de": "Der Herr der Ringe - Die Rückkehr des Königs",
+   "title_original": "The Lord of the Rings: The Return of the King",
+   "year": 2003,
+   "release_date": "2003-12-17",
+   "runtime": 201,
+   "poster": "https://image.tmdb.org/t/p/w342/uFjlP9U9UOZAzGB25HUtmlEpXbc.jpg",
+   "genres": [
+    "Abenteuer",
+    "Fantasy",
+    "Action"
+   ],
+   "age_rating": 12,
+   "overview_de": "Saurons Heer will Minas Tirith angreifen, die in Felsen errichtete Hauptstadt von Gondor. Angesichts der Bedrohlichkeit des feindlichen Heeres wiegt es umso schwerer, dass Gondors König fehlt und nur der schwächliche Truchsess Denethor über das einst mächtige Königreich wacht. Wird Aragorn die Kraft aufbringen, jene Aufgabe zu übernehmen, für die sein Schicksal ihn bestimmt hat? Während Gandalf verzweifelt versucht, die mutlosen Kämpfer von Gondor zu motivieren, sammelt Théoden die Krieger von Rohan, um am Kampf teilzunehmen. Aber obwohl sie tapfer und leidenschaftlich Widerstand leisten, haben die Streitkräfte der Menschen dem überwältigenden Ansturm der feindlichen Legionen gegen das Königreich kaum etwas entgegenzusetzen. Jeder Sieg fordert große Opfer. Trotz der starken Verluste stellen sich die Gefährten der größten Schlacht ihres Lebens - vereint durch ein einziges Ziel: Sauron muss so lange abgelenkt werden, bis Frodo den Ring vernichtet hat...",
+   "overview_en": "As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.​",
+   "original_language": "en",
+   "countries": [
+    "NZ",
+    "US"
+   ],
+   "directors": [
+    "Peter Jackson"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=b9m5DMIPe2c",
+   "trailer_en": "https://www.youtube.com/watch?v=zckJCxYxn1g",
+   "ratings": {
+    "imdb": 9.0,
+    "metascore": 94,
+    "letterboxd": 4.55
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-11-15T11:00:00+01:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E0975000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt0120737",
+   "title_de": "Der Herr der Ringe - Die Gefährten",
+   "title_original": "The Lord of the Rings: The Fellowship of the Ring",
+   "year": 2001,
+   "release_date": "2001-12-18",
+   "runtime": 179,
+   "poster": "https://image.tmdb.org/t/p/w342/k6lw7hhaMDzJ170bfZfBbnipxcW.jpg",
+   "genres": [
+    "Abenteuer",
+    "Fantasy",
+    "Action"
+   ],
+   "age_rating": 12,
+   "overview_de": "Dem Hobbit Bilbo Beutlin fällt zufällig ein machtvoller Ring in die kleinen Hände. Dieses Schmuckstück erlaubte es dem finsteren Herrscher Sauron einst, die Welt zu unterjochen. Der Ring schien über Jahrhunderte verloren, bis Bilbo ihn an sich nahm und seinen „Schatz“ sechzig Jahre lang bewahrte. An seinem 111. Geburtstag gibt er ihn schweren Herzens an seinen Neffen Frodo weiter und verlässt seine Heimat Mittelerde. Für den jungen Hobbit Frodo wird der Ring jedoch zur schweren Bürde. Der böse Geist Saurons, der in dem „Einen“ gefangen ist, wird immer stärker. Frodo bleibt nur eine Möglichkeit: Er muss ihn vernichten. Allerdings ist das nicht gerade einfach. Nur in den ewigen Feuern des Schicksalsberges im Lande Mordor, wo der Ring geschmiedet wurde, kann er auch vernichtet werden. Doch bis dahin muss Frodo an der Seite des Zauberers Gandalf und seiner Gefährten durch Feindesland ziehen, immer verfolgt von Saurons Lakaien …",
+   "overview_en": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+   "original_language": "en",
+   "countries": [
+    "NZ",
+    "US"
+   ],
+   "directors": [
+    "Peter Jackson"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=7htFZhAwQJQ",
+   "trailer_en": "https://www.youtube.com/watch?v=_nZdmwHrcnw",
+   "ratings": {
+    "imdb": 8.9,
+    "metascore": 92,
+    "letterboxd": 4.39
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-11-01T11:00:00+01:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/C0975000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt0167261",
+   "title_de": "Der Herr der Ringe - Die zwei Türme",
+   "title_original": "The Lord of the Rings: The Two Towers",
+   "year": 2002,
+   "release_date": "2002-12-18",
+   "runtime": 179,
+   "poster": "https://image.tmdb.org/t/p/w342/tgBCeAjPwXeUaf8LsRL0LzBIcdR.jpg",
+   "genres": [
+    "Abenteuer",
+    "Fantasy",
+    "Action"
+   ],
+   "age_rating": 12,
+   "overview_de": "Der Weg der Gefährten hat sich geteilt. Ringträger Frodo und sein treuer Begleiter Sam treffen in den Bergen von Emyn Muil auf Gollum, dem einst Bilbo Beutlin den Einen Ring wegnahm. Gollums Versuch, den mächtigen Ring von Frodo zu stehlen, misslingt, doch die Hobbits bringen es nicht übers Herz, die Kreatur zu töten. Stattdessen soll Gollum die beiden nach Mordor an die Pforten von Barad-Dûr, Saurons Festung, führen, wo Frodo den Ring vernichten will. Währenddessen folgen Aragorn, Elben-Bogenschütze Legolas und Zwerg Gimli den Spuren der von Orks verschleppten Hobbits. Im Menschenkönigreich Rohan ersuchen sie Unterstützung. Doch König Theoden steht unter einem tödlichen Bann Saurons. Erst als Gandalf als wiedergeborener weißer Zauberer zurückkehrt, wendet sich das Blatt. Er befreit Theoden von dem Fluch und bringt die Menschen von Rohan hinter sich. Unterdessen rückt Saurons Verbündeter Saruman mit einer 10.000 Mann starken Armee von Uruk-hais in RIchtung der Menschenstadt vor...",
+   "overview_en": "Frodo Baggins and the other members of the Fellowship continue on their sacred quest to destroy the One Ring--but on separate paths. Their destinies lie at two towers--Orthanc Tower in Isengard, where the corrupt wizard Saruman awaits, and Sauron's fortress at Barad-dur, deep within the dark lands of Mordor. Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+   "original_language": "en",
+   "countries": [
+    "NZ",
+    "US"
+   ],
+   "directors": [
+    "Peter Jackson"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=Yn2cNbFmyvo",
+   "trailer_en": "https://www.youtube.com/watch?v=nuTU5XcZTLA",
+   "ratings": {
+    "imdb": 8.8,
+    "metascore": 87,
+    "letterboxd": 4.43
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-11-08T11:00:00+01:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D0975000023GNFNDWF"
+    }
+   ]
+  },
   {
    "id": "tt0245429",
    "title_de": "Chihiros Reise ins Zauberland",
@@ -149,7 +275,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-18T20:40:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/08575000023GNFNDWF"
     },
     {
@@ -251,47 +377,6 @@
    ]
   },
   {
-   "id": "tt1431725",
-   "title_de": "Massenet: Manon",
-   "title_original": "Massenet: Manon",
-   "year": 2007,
-   "release_date": "2007-05-09",
-   "runtime": 200,
-   "poster": "https://image.tmdb.org/t/p/w342/rKt9ADdBdrKPWSfM5cWX7FTxC5y.jpg",
-   "genres": [
-    "Musik"
-   ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "Massenet's opera centres on its charming but contrary heroine, the vivacious young Manon who longs for luxury and excitement. We first encounter her en route to a convent, where her family are sending her to be educated.  Along the way, she falls in love with the young student Des Grieux, and, impetuously, runs off with him. She soon leaves him, however, to become the mistress of a rich nobleman. Thus begins her descent into criminality and depravity, all too soon dragging the besotted Des Grieux with her, until she is imprisoned.  Despite its tragic story, the opera is full of French charm and vitality – typified by the ambiguous Manon herself. Her plight is touching because of the subtle play of innocence and calculation in her character. The score contains many sparkling arias and ensembles, moving rapidly from moods of exuberance to tenderness, with perfect dramatic timing.  Recorded live at the Staatsoper Unter den Linden, Berlin, April/May 2007.",
-   "original_language": "fr",
-   "countries": [
-    "DE"
-   ],
-   "directors": [
-    "Vincent Paterson",
-    "Bernhard Fleischer",
-    "Andreas Morell"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": 8.5,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2027-04-03T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/42275000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "tt0095327",
    "title_de": "Die letzten Glühwürmchen",
    "title_original": "火垂るの墓",
@@ -375,7 +460,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-11-12T19:30:00+01:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/17165000023GNFNDWF"
     }
    ]
@@ -1909,7 +1994,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-10-06T20:15:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/EFF65000023GNFNDWF"
     },
     {
@@ -2027,7 +2112,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-04T20:30:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/AFF65000023GNFNDWF"
     },
     {
@@ -2101,7 +2186,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-11-03T20:30:00+01:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/00075000023GNFNDWF"
     },
     {
@@ -2636,48 +2721,8 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-12-10T19:30:00+01:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/27165000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "tt5180920",
-   "title_de": "Verdi: Otello",
-   "title_original": "Verdi: Otello",
-   "year": 2015,
-   "release_date": "2015-10-16",
-   "runtime": 164,
-   "poster": "https://image.tmdb.org/t/p/w342/eMOQADNwVTThEFZ6eQdM6e9SoRk.jpg",
-   "genres": [
-    "Musik"
-   ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "Tony Award winner Bartlett Sher’s bold new production probes the psychological underpinnings of Verdi’s dynamic setting of Shakespeare’s great tragedy. At the helm of this performance is riveting conductor Yannick Nézet-Séguin, who brings out all the cascading emotions in Verdi’s turbulent score. Aleksandrs Antonenko is the Moor Otello, the triumphant general of the Venetian army who is ultimately brought down by the sly insinuations of his friend Iago (Željko Lučić). Sonya Yoncheva continues to win fans as Desdemona, Otello’s faithful and long-suffering wife. With Günther Groissböck as Lodovico and Dimitri Pittas as Cassio.",
-   "original_language": "it",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Gary Halvorson",
-    "Bartlett Sher"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=Bnk3EbBgf5s",
-   "ratings": {
-    "imdb": 7.8,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2027-04-24T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/52275000023GNFNDWF"
     }
    ]
   },
@@ -2871,14 +2916,14 @@
      "city": "Bonn",
      "datetime": "2026-08-30T11:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/kinopolis/vorstellungen?showId=127536263"
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/83775000023GNFNDWF"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-30T11:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/kinopolis/vorstellungen?showId=127536265"
+     "language": "OV",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/93775000023GNFNDWF"
     }
    ]
   },
@@ -4441,13 +4486,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=1AC71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/52A75000023GNFNDWF"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-29T19:50:00+02:00",
@@ -4495,46 +4533,6 @@
      "datetime": "2026-12-13T11:00:00+01:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/14775000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "tt0077745",
-   "title_de": "Die Körperfresser kommen",
-   "title_original": "Invasion of the Body Snatchers",
-   "year": 1978,
-   "release_date": "1978-12-20",
-   "runtime": 115,
-   "poster": "https://image.tmdb.org/t/p/w342/8Q0xZwVHnbD5PumVBLJSrPryQoM.jpg",
-   "genres": [
-    "Science Fiction",
-    "Horror"
-   ],
-   "age_rating": 16,
-   "overview_de": "Die Angst kommt aus dem All! San Francisco wird von tückischen Lebewesen heimgesucht. Sie zerstören die Psyche und fressen den Körper. Ihr grausamer Terror breitet sich unaufhaltsam aus. Der Gesundheitsforscher Matthew Bennell (Donald Sutherland) erkennt als Erster: Eine tödliche Saat aus dem All bedroht alles Leben auf der Erde. Man sieht sie nicht, doch man weiß, dass sie da sind... es gibt kein Entrinnen!",
-   "overview_en": "The residents of San Francisco are becoming drone-like shadows of their former selves, and as the phenomenon spreads, two Department of Health workers uncover the horrifying truth.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Philip Kaufman"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=OOnHrjggkn8",
-   "trailer_en": "https://www.youtube.com/watch?v=e_brmjvATLc",
-   "ratings": {
-    "imdb": 7.4,
-    "metascore": 75,
-    "letterboxd": 3.94
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-09-10T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F6165000023GNFNDWF"
     }
    ]
   },
@@ -4726,6 +4724,55 @@
      "datetime": "2026-07-26T16:15:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=56C71000023RFGKYDT"
+    }
+   ]
+  },
+  {
+   "id": "tt0317219",
+   "title_de": "Cars",
+   "title_original": "Cars",
+   "year": 2006,
+   "release_date": "2006-06-08",
+   "runtime": 117,
+   "poster": "https://image.tmdb.org/t/p/w342/lwQvh3QfODi2PMyEGYyN3Z5APFR.jpg",
+   "genres": [
+    "Animation",
+    "Abenteuer",
+    "Komödie",
+    "Familie"
+   ],
+   "age_rating": 0,
+   "overview_de": "Ausgerechnet jetzt, da er als Newcomer die etablierten Stars am Rande der Niederlage hat und nur noch ein Entscheidungsrennen aussteht, verfährt sich der etwas egomanische, aber sympathische Rennwagen Lightning McQueen in der Wüste. Er landet in dem abgelegenen Hinterwaldnest Radiator Springs, wo die Uhren eher wie in den 50ern gehen und man den ungestümen Raser nach Kollateralschäden ein paar Lektionen erteilt.",
+   "overview_en": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "John Lasseter"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=87SPeOOHSuU",
+   "trailer_en": "https://www.youtube.com/watch?v=aGFJBGz5BmE",
+   "ratings": {
+    "imdb": 7.3,
+    "metascore": 73,
+    "letterboxd": 3.92
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-05T14:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/23A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-06T11:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/33A75000023GNFNDWF"
     }
    ]
   },
@@ -5601,52 +5648,6 @@
      "datetime": "2026-07-29T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellungen?showId=127585005"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T21:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F2975000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "tt0145688",
-   "title_de": "Das Böse",
-   "title_original": "Das Böse",
-   "year": 1998,
-   "release_date": "1998-03-16",
-   "runtime": 88,
-   "poster": "https://image.tmdb.org/t/p/w342/o1M0i9NrUu8uiwUwjaH8BiNdgME.jpg",
-   "genres": [
-    "Krimi"
-   ],
-   "age_rating": null,
-   "overview_de": "Eigentlich ist das Leben in einer norddeutschen Kleinstadt recht friedvoll. Man kennt sich, so auch der Schuldirektor Bennath und der Priester Johannes Lenz. Niemand weiß, dass Bennath seit dem Tod seiner Frau ein inzestuöses Verhältnis mit seiner 18-jährigen Tochter Katja hat. Als sie ein Kind von ihm erwartet, will er sie zur Abtreibung zwingen. Katja bittet ihren Vater, bei Pfarrer Lenz eine Beichte abzulegen. Für Bennath wäre dies eine Bedrohung seiner bürgerlichen Existenz. Als zwei Morde an kleinen Jungen geschehen, überschlagen sich die Ereignisse...",
-   "overview_en": null,
-   "original_language": "de",
-   "countries": [
-    "DE"
-   ],
-   "directors": [
-    "Christian Görlitz"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": 7.0,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-13T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E6165000023GNFNDWF"
     }
    ]
   },
@@ -5694,7 +5695,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-12-01T19:45:00+01:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/10075000023GNFNDWF"
     },
     {
@@ -5806,106 +5807,64 @@
    ]
   },
   {
-   "id": "tt30825738",
-   "title_de": "Star Wars: The Mandalorian and Grogu",
-   "title_original": "The Mandalorian and Grogu",
+   "id": "tt35674521",
+   "title_de": "Rose of Nevada",
+   "title_original": "Rose of Nevada",
    "year": 2026,
-   "release_date": "2026-05-20",
-   "runtime": 132,
-   "poster": "https://image.tmdb.org/t/p/w342/5QrwqFLCYVCI5emBzJkm2VhAfPR.jpg",
+   "release_date": "2026-04-24",
+   "runtime": 114,
+   "poster": "https://image.tmdb.org/t/p/w342/rqHgjvD5HV0ojj4CEV31ztertPK.jpg",
    "genres": [
-    "Action",
-    "Abenteuer",
-    "Science Fiction"
+    "Science Fiction",
+    "Mystery",
+    "Drama"
    ],
-   "age_rating": 12,
-   "overview_de": "Das böse Imperium ist gefallen, doch imperiale Kriegsherren sind weiterhin über die Galaxis verstreut. Die junge Neue Republik arbeitet daran, alles zu schützen, wofür die Rebellion gekämpft hat, und hat sich dazu die Hilfe des legendären mandalorianischen Kopfgeldjägers Din Djarin und seines jungen Lehrlings Grogu gesichert.",
-   "overview_en": "The evil Empire has fallen, and Imperial warlords remain scattered throughout the galaxy. As the fledgling New Republic works to protect everything the Rebellion fought for, they have enlisted the help of legendary Mandalorian bounty hunter Din Djarin and his young apprentice Grogu.",
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "A mysterious boat returns to a village 30 years after vanishing. Two men join its crew hoping for better fortune. After one voyage, they find themselves transported back in time, mistaken for the original crew.",
    "original_language": "en",
    "countries": [
-    "US"
+    "GB"
    ],
    "directors": [
-    "Jon Favreau"
+    "Mark Jenkin"
    ],
    "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=TheyFxVYC_Y",
-   "trailer_en": "https://www.youtube.com/watch?v=uwild1rw7Aw",
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=bw371ui9cTk",
    "ratings": {
     "imdb": 6.9,
-    "metascore": 53,
-    "letterboxd": 3.11
+    "metascore": 82,
+    "letterboxd": 3.48
    },
    "showtimes": [
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-25T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/50A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
+     "cinema": "Weisshaus Kino",
      "city": "Köln",
-     "datetime": "2026-07-25T14:10:00+02:00",
+     "datetime": "2026-07-25T14:50:00+02:00",
      "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=11D71000023RFGKYDT"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571057"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-26T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/60A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
+     "cinema": "OFF Broadway",
      "city": "Köln",
-     "datetime": "2026-07-26T14:10:00+02:00",
+     "datetime": "2026-07-26T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=21D71000023RFGKYDT"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=127571131"
+    },
+    {
+     "cinema": "Weisshaus Kino",
+     "city": "Köln",
+     "datetime": "2026-07-28T19:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571089"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
-     "datetime": "2026-07-27T13:00:00+02:00",
+     "datetime": "2026-09-07T19:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/70A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-27T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=41D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-28T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/80A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-28T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=51D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T13:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/90A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-29T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=61D71000023RFGKYDT"
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
     }
    ]
   },
@@ -6190,7 +6149,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-09-01T20:30:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/DFF65000023GNFNDWF"
     }
    ]
@@ -6322,7 +6281,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-10-08T19:30:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/07165000023GNFNDWF"
     }
    ]
@@ -6715,18 +6674,18 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100548"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-25T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1A75000023GNFNDWF"
-    },
-    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-25T16:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68130"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-25T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1A75000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -6869,18 +6828,18 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100551"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-26T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F1A75000023GNFNDWF"
-    },
-    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-26T16:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68131"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-26T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F1A75000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -7002,18 +6961,18 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100554"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-27T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/02A75000023GNFNDWF"
-    },
-    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-27T16:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68132"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/02A75000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -7149,18 +7108,18 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100557"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-28T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/12A75000023GNFNDWF"
-    },
-    {
      "cinema": "Metropolis",
      "city": "Köln",
      "datetime": "2026-07-28T16:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68133"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-28T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/12A75000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -7596,11 +7555,25 @@
    },
    "showtimes": [
     {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-25T17:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/82A75000023GNFNDWF"
+    },
+    {
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-08-25T17:00:00+02:00",
      "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72072"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-25T19:50:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/92A75000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -7679,8 +7652,8 @@
     "US"
    ],
    "directors": [
-    "Aaron Horvath",
-    "Michael Jelenic"
+    "Michael Jelenic",
+    "Aaron Horvath"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=Qt5NnNIAslY",
@@ -8129,13 +8102,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=8AC71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-25T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D0A75000023GNFNDWF"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-26T14:30:00+02:00",
@@ -8155,13 +8121,6 @@
      "datetime": "2026-07-27T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=BAC71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-27T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F0A75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -8588,70 +8547,6 @@
    ]
   },
   {
-   "id": "tt39751309",
-   "title_de": "18th Rose",
-   "title_original": "18th Rose",
-   "year": 2026,
-   "release_date": "2026-04-09",
-   "runtime": 131,
-   "poster": "https://image.tmdb.org/t/p/w342/6pUwaXT6tdA6sek8o6SdFYudJDj.jpg",
-   "genres": [
-    "Drama",
-    "Liebesfilm",
-    "Komödie"
-   ],
-   "age_rating": null,
-   "overview_de": "Eine Teenagerin, die vom perfekten Debüt träumt, schließt einen Pakt mit einem Neuling. Doch unerwartete Gefühle und Enthüllungen bedrohen ihre Pläne.",
-   "overview_en": "A spirited teen dreaming of the perfect debut makes a deal with a lonely newcomer, but unexpected feelings and revelations may shatter their plans.",
-   "original_language": "tl",
-   "countries": [
-    "PH"
-   ],
-   "directors": [
-    "Dolly Dulu"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=7ocRU1SGX7E",
-   "ratings": {
-    "imdb": 5.6,
-    "metascore": null,
-    "letterboxd": 2.87
-   },
-   "showtimes": [
-    {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-07-25T14:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571057"
-    },
-    {
-     "cinema": "OFF Broadway",
-     "city": "Köln",
-     "datetime": "2026-07-26T15:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=127571131"
-    },
-    {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-07-28T19:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127571089"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-09-07T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "tt2186566",
    "title_de": "Das kleine Gespenst",
    "title_original": "Das kleine Gespenst",
@@ -8742,7 +8637,8 @@
    "runtime": 95,
    "poster": "https://image.tmdb.org/t/p/w342/5udDsOLWcXDt3hUTD7FpJLGDBmW.jpg",
    "genres": [
-    "Komödie"
+    "Komödie",
+    "Horror"
    ],
    "age_rating": 16,
    "overview_de": "Sechsundzwanzig Jahre nachdem sie einem verdächtig vertrauten maskierten Killer („Ghostface\") entkommen sind, geraten die Core Four erneut ins Visier des Mörders – und kein Horror-Franchise ist mehr sicher.",
@@ -9540,6 +9436,13 @@
      "datetime": "2026-07-29T19:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=08C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-29T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/03A75000023GNFNDWF"
     }
    ]
   },
@@ -10519,7 +10422,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-01T20:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/06575000023GNFNDWF"
     },
     {
@@ -10659,7 +10562,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-02T20:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/16575000023GNFNDWF"
     },
     {
@@ -10799,7 +10702,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-03T20:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/46575000023GNFNDWF"
     },
     {
@@ -10939,7 +10842,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-04T20:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/26575000023GNFNDWF"
     },
     {
@@ -11079,7 +10982,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-05T20:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/36575000023GNFNDWF"
     },
     {
@@ -11869,6 +11772,13 @@
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100639"
     },
     {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-25T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D0A75000023GNFNDWF"
+    },
+    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-07-25T16:00:00+02:00",
@@ -11923,6 +11833,13 @@
      "datetime": "2026-07-25T20:20:00+02:00",
      "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72099"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-26T11:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F2A75000023GNFNDWF"
     },
     {
      "cinema": "Cineplex Köln",
@@ -12000,6 +11917,13 @@
      "datetime": "2026-07-27T14:00:00+02:00",
      "language": "DE",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100641"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F0A75000023GNFNDWF"
     },
     {
      "cinema": "Odeon",
@@ -12893,6 +12817,415 @@
    ]
   },
   {
+   "id": "star wars: the mandalorian and grogu",
+   "title_de": "Star Wars: The Mandalorian and Grogu",
+   "title_original": "Star Wars: The Mandalorian and Grogu",
+   "year": 2025,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-25T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/50A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-25T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=11D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-26T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/60A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-26T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=21D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/70A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-27T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=41D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-28T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/80A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-28T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=51D71000023RFGKYDT"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-29T13:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/90A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-29T16:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=61D71000023RFGKYDT"
+    }
+   ]
+  },
+  {
+   "id": "sneak",
+   "title_de": "Sneak",
+   "title_original": "Sneak",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-28T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4E975000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "khali balak min nafsak",
+   "title_de": "Khali Balak Min Nafsak",
+   "title_original": "Khali Balak Min Nafsak",
+   "year": 2026,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-07-26T17:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72090"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-26T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/31975000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt41991199",
+   "title_de": "Insekten - Helden im Verborgenen",
+   "title_original": "Insekten - Helden im Verborgenen",
+   "year": 2026,
+   "release_date": "2026-07-16",
+   "runtime": 87,
+   "poster": "https://image.tmdb.org/t/p/w342/cV1xcGh5KIljaRGDJcFT6Pm9ZAN.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": 0,
+   "overview_de": "Wie ist unsere Welt entstanden? Unter unseren Füßen verbirgt sich eine Tierklasse, die weitaus größer ist als jede andere. Begeben wir uns auf eine Zeitreise, die vor 400 Millionen Jahren beginnt, und erleben wir, wie die Puzzleteile zu einem Ganzen verschmelzen.  Insekten - Helden im Verborgenen nimmt uns mit in den Mikrokosmos, in atemberaubende Bilderwelten, erzählt von Schauspielikone Katharina Thalbach, und stellt die Frage: Muss es ein \"Mensch ODER Natur\" sein?",
+   "overview_en": "How did our world come into being? Beneath our feet lies a class of animals far more numerous than any other. Let us embark on a journey through time dating back 400 million years, and witness how scattered pieces fit together to form a complete whole. Insects – Hidden Heroes takes us into the microcosm with stunning visuals. Narrated by screen icon Katharina Thalbach, the film poses a question: Must it be humanity or nature?",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Nepomuk Pfaff"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-25T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68126"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-26T14:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68127"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4A975000023GNFNDWF"
+    },
+    {
+     "cinema": "Bonner Kinemathek",
+     "city": "Bonn",
+     "datetime": "2026-07-30T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127316417"
+    },
+    {
+     "cinema": "Bonner Kinemathek",
+     "city": "Bonn",
+     "datetime": "2026-08-12T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127754047"
+    },
+    {
+     "cinema": "Bonner Kinemathek",
+     "city": "Bonn",
+     "datetime": "2026-08-18T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127754049"
+    }
+   ]
+  },
+  {
+   "id": "tt31170389",
+   "title_de": "Evil Dead Burn",
+   "title_original": "Evil Dead Burn",
+   "year": 2026,
+   "release_date": "2026-07-07",
+   "runtime": 111,
+   "poster": "https://image.tmdb.org/t/p/w342/fn0frXHFsRQ5XaHsLpQKAgOA8Dk.jpg",
+   "genres": [
+    "Horror",
+    "Thriller"
+   ],
+   "age_rating": 18,
+   "overview_de": "Nach dem Tod ihres Mannes sucht eine Frau Trost bei ihren Schwiegereltern auf deren abgelegenem Familienanwesen. Als sich jedoch einer nach dem anderen in Deadites verwandelt, wodurch das Beisammensein zu einem Familientreffen aus der Hölle wird, muss sie feststellen, dass die Versprechen, die sie zu Lebzeiten gegeben hat, selbst im Tod weiterleben.",
+   "overview_en": "After her husband's abrupt death, Alice seeks solace with his remaining family — descendants of a leading researcher on demonic possession. As her in-laws transform one by one into creatures that feed on fear, she comes to discover that the vows she took in life survive even in death.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Sébastien Vaniček"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=nI7eOoOWczY",
+   "trailer_en": "https://www.youtube.com/watch?v=RddZObTlmA8",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 3.33
+   },
+   "showtimes": [
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-25T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=19C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-25T20:45:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68142"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-25T21:00:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100674"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-25T21:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D8975000023GNFNDWF"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-07-25T22:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/CB8CDB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-25T23:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=89C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-26T20:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=29C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-26T20:45:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68143"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-26T21:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E8975000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-27T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=49C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-27T20:45:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68144"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-27T21:00:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100675"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-27T21:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F8975000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-28T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=59C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-28T20:45:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68145"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-07-28T21:00:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100676"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-07-28T21:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/09975000023GNFNDWF"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-07-29T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=69C71000023RFGKYDT"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-07-29T20:45:00+02:00",
+     "language": "OV",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68146"
+    }
+   ]
+  },
+  {
    "id": "tt38607784",
    "title_de": "Chéri, ich komme! – Die Erfindung der Lust.",
    "title_original": "Pour le plaisir",
@@ -13249,318 +13582,6 @@
    ]
   },
   {
-   "id": "tt31170389",
-   "title_de": "Evil Dead Burn",
-   "title_original": "Evil Dead Burn",
-   "year": 2026,
-   "release_date": "2026-07-07",
-   "runtime": 111,
-   "poster": "https://image.tmdb.org/t/p/w342/fn0frXHFsRQ5XaHsLpQKAgOA8Dk.jpg",
-   "genres": [
-    "Horror",
-    "Thriller"
-   ],
-   "age_rating": 18,
-   "overview_de": "Nach dem Tod ihres Mannes sucht eine Frau Trost bei ihren Schwiegereltern auf deren abgelegenem Familienanwesen. Als sich jedoch einer nach dem anderen in Deadites verwandelt, wodurch das Beisammensein zu einem Familientreffen aus der Hölle wird, muss sie feststellen, dass die Versprechen, die sie zu Lebzeiten gegeben hat, selbst im Tod weiterleben.",
-   "overview_en": "After her husband's abrupt death, Alice seeks solace with his remaining family — descendants of a leading researcher on demonic possession. As her in-laws transform one by one into creatures that feed on fear, she comes to discover that the vows she took in life survive even in death.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Sébastien Vaniček"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=nI7eOoOWczY",
-   "trailer_en": "https://www.youtube.com/watch?v=RddZObTlmA8",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": 3.33
-   },
-   "showtimes": [
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-25T20:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=19C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-25T20:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68142"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-25T21:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100674"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-25T21:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D8975000023GNFNDWF"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-07-25T22:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/CB8CDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-25T23:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=89C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-26T20:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=29C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-26T20:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68143"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-26T21:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E8975000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-27T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=49C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-27T20:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68144"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-27T21:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100675"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-27T21:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F8975000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-28T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=59C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-28T20:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68145"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-28T21:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100676"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-28T21:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/09975000023GNFNDWF"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-07-29T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=69C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-29T20:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68146"
-    }
-   ]
-  },
-  {
-   "id": "khaly balak min nafsak",
-   "title_de": "Khaly Balak Min Nafsak",
-   "title_original": "خلى بالك من نفسك",
-   "year": 2026,
-   "release_date": "2026-07-22",
-   "runtime": 107,
-   "poster": "https://image.tmdb.org/t/p/w342/qpRVKwoIi9fvd6zeF7OnwbxYNzi.jpg",
-   "genres": [
-    "Komödie"
-   ],
-   "age_rating": 12,
-   "overview_de": "Der Radiomoderator Alaa hat viele romantische Begegnungen, aber lässt sich nie länger auf eine Frau ein, weil er sich nicht binden will. Das könnte sich ändern, als eine feinfühlige Farida (Yasmin Abdelaziz) als sein Idealbild einer Frau in sein Leben tritt – die sich dann allerdings als Waffendealerin entpuppt.",
-   "overview_en": "The story revolves around a couple who face numerous recurring disagreements and problems, leading them to a series of humorous and unexpected situations.",
-   "original_language": "ar",
-   "countries": [
-    "EG"
-   ],
-   "directors": [
-    "Moataz El Tony"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-26T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/31975000023GNFNDWF"
-    }
-   ]
-  },
-  {
-   "id": "tt41991199",
-   "title_de": "Insekten - Helden im Verborgenen",
-   "title_original": "Insekten - Helden im Verborgenen",
-   "year": 2026,
-   "release_date": "2026-07-16",
-   "runtime": 87,
-   "poster": "https://image.tmdb.org/t/p/w342/cV1xcGh5KIljaRGDJcFT6Pm9ZAN.jpg",
-   "genres": [
-    "Dokumentarfilm"
-   ],
-   "age_rating": 0,
-   "overview_de": "Wie ist unsere Welt entstanden? Unter unseren Füßen verbirgt sich eine Tierklasse, die weitaus größer ist als jede andere. Begeben wir uns auf eine Zeitreise, die vor 400 Millionen Jahren beginnt, und erleben wir, wie die Puzzleteile zu einem Ganzen verschmelzen.  Insekten - Helden im Verborgenen nimmt uns mit in den Mikrokosmos, in atemberaubende Bilderwelten, erzählt von Schauspielikone Katharina Thalbach, und stellt die Frage: Muss es ein \"Mensch ODER Natur\" sein?",
-   "overview_en": "How did our world come into being? Beneath our feet lies a class of animals far more numerous than any other. Let us embark on a journey through time dating back 400 million years, and witness how scattered pieces fit together to form a complete whole. Insects – Hidden Heroes takes us into the microcosm with stunning visuals. Narrated by screen icon Katharina Thalbach, the film poses a question: Must it be humanity or nature?",
-   "original_language": "de",
-   "countries": [
-    "DE"
-   ],
-   "directors": [
-    "Nepomuk Pfaff"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-25T14:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68126"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-26T14:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68127"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-27T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4A975000023GNFNDWF"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-07-30T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127316417"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-12T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127754047"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-18T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127754049"
-    }
-   ]
-  },
-  {
-   "id": "grusel sneak",
-   "title_de": "Grusel Sneak",
-   "title_original": "Grusel Sneak",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-28T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/4E975000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "tt33379543",
    "title_de": "Jana Nayagan",
    "title_original": "ஜன நாயகன்",
@@ -13596,7 +13617,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/B2A75000023GNFNDWF"
     }
    ]
@@ -13635,7 +13656,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-06T18:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/63775000023GNFNDWF"
     },
     {
@@ -13649,7 +13670,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-08T16:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/73775000023GNFNDWF"
     },
     {
@@ -13665,21 +13686,17 @@
    "id": "el gawahergy",
    "title_de": "El Gawahergy",
    "title_original": "El Gawahergy",
-   "year": 2025,
-   "release_date": "2025-12-25",
-   "runtime": 120,
+   "year": 2024,
+   "release_date": null,
+   "runtime": null,
    "poster": null,
-   "genres": [
-    "Komödie"
-   ],
+   "genres": [],
    "age_rating": null,
-   "overview_de": "Ein verheiratetes Ehepaar in der Krise sucht Hilfe bei einer Therapie, nachdem der Juwelier-Ehemann durch seine Gattin in zahlreiche peinliche Situationen gekommen ist.",
-   "overview_en": "A jeweler gets into many troubles and embarrassing situations because of his wife, resulting into many comedic situations.",
-   "original_language": "en",
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
    "countries": [],
-   "directors": [
-    "Islam Khairy"
-   ],
+   "directors": [],
    "tags": [],
    "trailer_de": null,
    "trailer_en": null,
@@ -13693,8 +13710,123 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-09T20:45:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/C2A75000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "das böse",
+   "title_de": "Das Böse",
+   "title_original": "Das Böse",
+   "year": 1978,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-13T19:30:00+02:00",
+     "language": "OV",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E6165000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt29330744",
+   "title_de": "Batwara 1947",
+   "title_original": "बटवारा १९४७",
+   "year": 2026,
+   "release_date": "2026-08-13",
+   "runtime": 145,
+   "poster": "https://image.tmdb.org/t/p/w342/u4qctwtUwTEnA1gqQhM84MUygXp.jpg",
+   "genres": [
+    "Action",
+    "Drama",
+    "Kriegsfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "The story of an elderly Muslim woman who refuses to leave her ancestral home in Lahore, only to have a Hindu refugee family from Lucknow allotted to her house following the events of the 1947 Partition of India and Pakistan.",
+   "original_language": "hi",
+   "countries": [
+    "IN"
+   ],
+   "directors": [
+    "Rajkumar Santoshi"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-16T11:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/11975000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt36300841",
+   "title_de": "Awarapan 2",
+   "title_original": "आवारापन २",
+   "year": 2026,
+   "release_date": "2026-08-14",
+   "runtime": 0,
+   "poster": "https://image.tmdb.org/t/p/w342/cSnB0iHrneOG7Ku2RKXJq3pjRYm.jpg",
+   "genres": [
+    "Action",
+    "Drama",
+    "Liebesfilm"
+   ],
+   "age_rating": null,
+   "overview_de": "19 Jahre später ist Shivam zurück. Ein Mann, der von Trauer und Verlust geplagt wird und nach einem Sinn für sein Leben sucht.",
+   "overview_en": "19 years later, Shivam is back. A man haunted by grief and loss, searching for a purpose for his life.",
+   "original_language": "hi",
+   "countries": [
+    "IN"
+   ],
+   "directors": [
+    "Nitin Kakkar"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=IQ7HkZ-Gun8",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-08-16T19:30:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/21975000023GNFNDWF"
     }
    ]
   },
@@ -13734,7 +13866,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-17T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/01975000023GNFNDWF"
     }
    ]
@@ -13914,34 +14046,114 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-26T20:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/81975000023GNFNDWF"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-29T22:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/A1975000023GNFNDWF"
     }
    ]
   },
   {
-   "id": "disney channel mitmachkino 2024",
-   "title_de": "Disney Channel Mitmachkino 2024",
-   "title_original": "Disney Channel Mitmachkino 2024",
-   "year": 2024,
-   "release_date": "2024-09-07",
-   "runtime": 60,
-   "poster": "https://image.tmdb.org/t/p/w342/k7WEtMoRj3wYfK0MpVfHt01wEKG.jpg",
+   "id": "tt32588798",
+   "title_de": "Practical Magic 2 - Zauberhafte Schwestern",
+   "title_original": "Practical Magic 2",
+   "year": 2026,
+   "release_date": "2026-09-09",
+   "runtime": 0,
+   "poster": "https://image.tmdb.org/t/p/w342/uA8ytJv17alSiREcUthbYAdiPCX.jpg",
    "genres": [
-    "Animation",
-    "Familie"
+    "Fantasy",
+    "Drama",
+    "Komödie"
    ],
-   "age_rating": 0,
-   "overview_de": "Auf der großen Leinwand führt Micky Maus als animierter Gastgeber die Kinobesucher durch das kunterbunte Programm, das auf die kleinsten Zuschauer im Vorschulalter ausgerichtet ist und ca. 60 Minuten kindgerechtes Mitmach-Kino bietet:  Mitfiebern: Für Spannung sorgen noch nie im Fernsehen gezeigte Folgen von Spidey und seine Super-Freunde, Disney Junior Arielle, Waustelle – alle Pfoten packen an und Bluey.  Mittanzen: Musikvideos laden zum Mittanzen und Mitsingen ein und sorgen für Bewegung zwischen den Episoden.  Mitraten: Bei kleinen Ratespielen rund um die Disney Channel Vorschul-Serien können die kleinen Besucher ihr Rätseltalent unter Beweis stellen.",
-   "overview_en": "Cinema means lights out, silence and sitting still? Not at the DISNEY CHANNEL PARTICIPATION CINEMA! Here children can sing along loudly for an hour, dance, clap and do puzzles - anything but be quiet! On the big screen, Mickey Mouse, as an animated host, guides cinema-goers through the colorful program, which is aimed at the youngest preschool-age viewers and offers around 60 minutes of child-friendly participatory cinema.",
-   "original_language": "de",
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "The Owens sisters must confront the dark curse that threatens to unravel their family once and for all.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Susanne Bier"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": "https://www.youtube.com/watch?v=_X1u6NZdzvw",
+   "trailer_en": "https://www.youtube.com/watch?v=Ho10_4IX1jE",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-09T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/13A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-09-09T19:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71979"
+    }
+   ]
+  },
+  {
+   "id": "die körperfresser kommen",
+   "title_de": "Die Körperfresser kommen",
+   "title_original": "Die Körperfresser kommen",
+   "year": 1977,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-10T19:30:00+02:00",
+     "language": "OV",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F6165000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "disney channel mitmachkino zum kinofest 2026",
+   "title_de": "Disney Channel Mitmachkino zum Kinofest 2026",
+   "title_original": "Disney Channel Mitmachkino zum Kinofest 2026",
+   "year": 2024,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
    "countries": [],
    "directors": [],
    "tags": [],
@@ -13970,24 +14182,20 @@
    ]
   },
   {
-   "id": "25 jahre radioeins in der waldbühne",
-   "title_de": "25 Jahre radioeins in der Waldbühne",
-   "title_original": "25 Jahre radioeins in der Waldbühne",
-   "year": 2022,
-   "release_date": "2022-09-22",
-   "runtime": 90,
-   "poster": "https://image.tmdb.org/t/p/w342/qj0eWyPaa197OfF7NTEcVS5hew.jpg",
+   "id": "25 jahre shrek",
+   "title_de": "25 Jahre Shrek",
+   "title_original": "25 Jahre Shrek",
+   "year": 2001,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
    "genres": [],
-   "age_rating": 0,
-   "overview_de": "radioeins vom rbb gehört zu den erfolgreichsten Sendern in der Region Berlin und Brandenburg und präsentiert heute Abend zum 25. Jubiläum beste Live-Musik aus der Berliner Waldbühne. Mit dabei sind die angesagtesten Bands aus Rock und Pop: Beatsteaks, Danger Dan, Bilderbuch, Kitty, Daisy & Lewis und Cari Cari.",
-   "overview_en": "radioeins from rbb is one of the most successful broadcasters in the Berlin and Brandenburg region and is presenting the best live music from the Berlin Waldbühne tonight for its 25th anniversary. The hottest rock and pop bands will be there: Beatsteaks, Danger Dan, Bilderbuch, Kitty, Daisy & Lewis and Cari Cari.",
-   "original_language": "de",
-   "countries": [
-    "DE"
-   ],
-   "directors": [
-    "Volker Wieprecht"
-   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
    "tags": [],
    "trailer_de": null,
    "trailer_en": null,
@@ -14082,7 +14290,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-09-12T22:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1975000023GNFNDWF"
     }
    ]
@@ -14146,31 +14354,23 @@
    ]
   },
   {
-   "id": "tt1756855",
-   "title_de": "Coyote vs. Acme",
-   "title_original": "Coyote vs. Acme",
-   "year": 2026,
-   "release_date": "2026-08-21",
-   "runtime": 101,
-   "poster": "https://image.tmdb.org/t/p/w342/96OiidG5H9JP0zbon9AD0VFtiAG.jpg",
-   "genres": [
-    "Komödie",
-    "Abenteuer",
-    "Familie"
-   ],
+   "id": "coyote vs. acme",
+   "title_de": "Coyote vs. ACME",
+   "title_original": "Coyote vs. ACME",
+   "year": 2023,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
    "age_rating": null,
-   "overview_de": "Nach all den Jahren vergeblicher Liebesmüh hat Willi Kojote es satt, dass bisher jedes einzelne Produkt der ACME Corporation eine erfolgreiche Jagd auf den Road Runner vereitelt hat. Kojote beschließt deshalb, das Unternehmen für seine mangelhafte Ware in die Verantwortung zu nehmen, und engagiert den ebenso glück- wie mittellosen Anwalt Kevin Avery, um gegen ACME vor Gericht zu ziehen. Als der herausfindet, dass die Rechtsabteilung des Konzerns von Buddy Crane geleitet wird, dem selbstgefälligen Chef seiner ehemaligen Kanzlei, gibt er alles, um den Prozess zu gewinnen.",
-   "overview_en": "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Dave Green"
-   ],
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
    "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=DvY-U39fyrM",
-   "trailer_en": "https://www.youtube.com/watch?v=kMsiD1Nky5I",
+   "trailer_de": null,
+   "trailer_en": null,
    "ratings": {
     "imdb": null,
     "metascore": null,
@@ -14262,7 +14462,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-09-19T19:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/F1275000023GNFNDWF"
     }
    ]
@@ -14317,22 +14517,20 @@
    ]
   },
   {
-   "id": "la scala: cosi fan tutte",
-   "title_de": "La Scala: Cosi Fan Tutte",
-   "title_original": "La Scala: Cosi Fan Tutte",
+   "id": "mozart: cosi fan tutte",
+   "title_de": "Mozart: Cosi Fan Tutte",
+   "title_original": "Mozart: Cosi Fan Tutte",
    "year": 2026,
-   "release_date": "2026-04-13",
-   "runtime": 178,
+   "release_date": null,
+   "runtime": null,
    "poster": null,
    "genres": [],
    "age_rating": null,
    "overview_de": null,
-   "overview_en": "Opera buffa in two acts (1790) New Production! A top-flight cast features in a new staging of Mozart and Da Ponte’s comic masterpiece of love, trust and the fickleness of human behaviour from acclaimed director Robert Carsen. As part of a bet with Don Alfonso (Gerald Finley), Ferrando and Guglielmo (Giovanni Sala and Luca Micheletti) must try to seduce each other’s fiancées, Fiordiligi and Dorabella (Elsa Dreisig and Nina van Essen). When both yield, and the ruse is revealed, all four must reckon with the fallout.",
-   "original_language": "en",
+   "overview_en": null,
+   "original_language": null,
    "countries": [],
-   "directors": [
-    "Robert Carsen"
-   ],
+   "directors": [],
    "tags": [],
    "trailer_de": null,
    "trailer_en": null,
@@ -14346,25 +14544,29 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-10-03T19:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/02275000023GNFNDWF"
     }
    ]
   },
   {
-   "id": "sang blanc (macbeth)",
-   "title_de": "Sang Blanc (Macbeth)",
-   "title_original": "Sang Blanc (Macbeth)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
+   "id": "verdi: macbeth",
+   "title_de": "Macbeth (Teatro Regio di Torino, 2026)",
+   "title_original": "Macbeth (Teatro Regio di Torino, 2026)",
+   "year": 2026,
+   "release_date": "2026-01-01",
+   "runtime": 174,
+   "poster": "https://image.tmdb.org/t/p/w342/bK7x8CEQgBsxvm8iCSESPQttyOp.jpg",
+   "genres": [
+    "Musik"
+   ],
    "age_rating": null,
    "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
+   "overview_en": "Maestro Riccardo Muti returns to the podium of the Orchestra and Chorus of the Teatro Regio di Torino for a new production of *Macbeth* directed by Chiara Muti. Set design by Alessandro Camera and costumes by Ursula Patzak.",
+   "original_language": "en",
+   "countries": [
+    "IT"
+   ],
    "directors": [],
    "tags": [],
    "trailer_de": null,
@@ -14379,27 +14581,33 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-10-17T19:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/12275000023GNFNDWF"
     }
    ]
   },
   {
-   "id": "opéra national de paris 2018/19: hommage für jerome robbins",
-   "title_de": "Opéra national de Paris 2018/19: Hommage für Jerome Robbins",
-   "title_original": "Opéra national de Paris 2018/19: Hommage für Jerome Robbins",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
+   "id": "romeo et juliette",
+   "title_de": "Opéra de Paris : Roméo, Juliette, Thomas et les autres",
+   "title_original": "Opéra de Paris : Roméo, Juliette, Thomas et les autres",
+   "year": 2024,
+   "release_date": "2024-07-05",
+   "runtime": 0,
+   "poster": "https://image.tmdb.org/t/p/w342/wDbnVXtsL2xaNZHrt2ZKU63OYbH.jpg",
    "genres": [],
    "age_rating": null,
    "overview_de": null,
    "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "Priscilla Pizzato"
+   ],
+   "tags": [
+    "women_directed"
+   ],
    "trailer_de": null,
    "trailer_en": null,
    "ratings": {
@@ -14418,10 +14626,10 @@
    ]
   },
   {
-   "id": "rob 2025/26: samson et dalila",
-   "title_de": "ROB 2025/26: Samson et Dalila",
-   "title_original": "ROB 2025/26: Samson et Dalila",
-   "year": null,
+   "id": "saint-saens: samson et dalila",
+   "title_de": "Saint-Saens: Samson et Dalila",
+   "title_original": "Saint-Saens: Samson et Dalila",
+   "year": 2026,
    "release_date": null,
    "runtime": null,
    "poster": null,
@@ -14445,24 +14653,24 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-12-05T18:00:00+01:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/22275000023GNFNDWF"
     }
    ]
   },
   {
    "id": "puccini: la fanciulla del west",
-   "title_de": "La fanciulla del West - Puccini",
-   "title_original": "La fanciulla del West - Puccini",
-   "year": 2009,
-   "release_date": "2009-10-27",
-   "runtime": 0,
-   "poster": "https://image.tmdb.org/t/p/w342/yBTN0IZxZfu7qxRmOcxxxlsOKiT.jpg",
+   "title_de": "Puccini: La Fanciulla del West",
+   "title_original": "Puccini: La Fanciulla del West",
+   "year": 2027,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
    "genres": [],
    "age_rating": null,
    "overview_de": null,
    "overview_en": null,
-   "original_language": "da",
+   "original_language": null,
    "countries": [],
    "directors": [],
    "tags": [],
@@ -14478,33 +14686,92 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2027-01-23T19:00:00+01:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/32275000023GNFNDWF"
     }
    ]
   },
   {
-   "id": "tt11650376",
-   "title_de": "Wagner: Parsifal",
-   "title_original": "Wagner: Parsifal",
-   "year": 2017,
-   "release_date": "2017-01-01",
-   "runtime": 247,
-   "poster": "https://image.tmdb.org/t/p/w342/gYw5aTsiSCCoMh0ftrsnDcAPGyI.jpg",
-   "genres": [
-    "Drama",
-    "Musik",
-    "Historie",
-    "Fantasy"
-   ],
+   "id": "massenet: manon",
+   "title_de": "Massenet: Manon",
+   "title_original": "Massenet: Manon",
+   "year": 2027,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
    "age_rating": null,
    "overview_de": null,
-   "overview_en": "German composer Richard Wagner wrote Parsifal, which is a three-act opera that tells the story of the title character's quest to save the Knights of the Holy Grail by returning the Holy Spear, healing King Amfortas, and carrying out the sacred ceremony of uncovering the Holy Grail.",
-   "original_language": "en",
+   "overview_en": null,
+   "original_language": null,
    "countries": [],
-   "directors": [
-    "Michael Beyer"
-   ],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2027-04-03T18:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/42275000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "verdi: otello",
+   "title_de": "Verdi: Otello",
+   "title_original": "Verdi: Otello",
+   "year": 2027,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2027-04-24T19:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/52275000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "wagner: parsifal",
+   "title_de": "Wagner: Parsifal",
+   "title_original": "Wagner: Parsifal",
+   "year": 2027,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
    "tags": [],
    "trailer_de": null,
    "trailer_en": null,
@@ -14518,7 +14785,7 @@
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2027-06-05T18:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/62275000023GNFNDWF"
     }
    ]
@@ -15206,39 +15473,6 @@
    ]
   },
   {
-   "id": "khali balak min nafsak",
-   "title_de": "Khali Balak Min Nafsak",
-   "title_original": "Khali Balak Min Nafsak",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Stern Lichtspiele",
-     "city": "Bonn",
-     "datetime": "2026-07-26T17:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72090"
-    }
-   ]
-  },
-  {
    "id": "ach, diese lücke, diese entsetzliche lücke",
    "title_de": "Ach, diese Lücke, diese entsetzliche Lücke",
    "title_original": "Ach, diese Lücke, diese entsetzliche Lücke",
@@ -15417,49 +15651,6 @@
      "datetime": "2026-08-30T17:15:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/1E981000023FELEXJT"
-    }
-   ]
-  },
-  {
-   "id": "tt32588798",
-   "title_de": "Practical Magic 2 - Zauberhafte Schwestern",
-   "title_original": "Practical Magic 2",
-   "year": 2026,
-   "release_date": "2026-09-09",
-   "runtime": 0,
-   "poster": "https://image.tmdb.org/t/p/w342/uA8ytJv17alSiREcUthbYAdiPCX.jpg",
-   "genres": [
-    "Fantasy",
-    "Drama",
-    "Komödie"
-   ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "The Owens sisters must confront the dark curse that threatens to unravel their family once and for all.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Susanne Bier"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": "https://www.youtube.com/watch?v=_X1u6NZdzvw",
-   "trailer_en": "https://www.youtube.com/watch?v=Ho10_4IX1jE",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Stern Lichtspiele",
-     "city": "Bonn",
-     "datetime": "2026-09-09T19:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71979"
     }
    ]
   },
@@ -16063,7 +16254,7 @@
   },
   {
    "id": "tt31065370",
-   "title_de": "Сірі бджоли",
+   "title_de": "Grey Bees",
    "title_original": "Сірі бджоли",
    "year": 2025,
    "release_date": "2025-10-23",
@@ -16701,7 +16892,7 @@
    "title_original": "Amarga Navidad",
    "year": 2026,
    "release_date": "2026-03-20",
-   "runtime": 112,
+   "runtime": 111,
    "poster": "https://image.tmdb.org/t/p/w342/ei2nbzABWV0pK2Wt2DeVzRbZs3c.jpg",
    "genres": [
     "Drama",

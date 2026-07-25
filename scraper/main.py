@@ -13,7 +13,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-from sources import kinoheld, custom, kinopolis_prices
+from sources import kinoheld, custom, kinopolis, kinopolis_prices
 from enrich import tmdb, omdb, letterboxd
 from language import clean_title
 
@@ -37,7 +37,8 @@ def load_env() -> None:
 
 load_env()
 
-SOURCES = {"kinoheld": kinoheld.fetch_shows, "custom": custom.fetch_shows}
+SOURCES = {"kinoheld": kinoheld.fetch_shows, "custom": custom.fetch_shows,
+           "kinopolis": kinopolis.fetch_shows}
 
 
 def load_cinemas() -> list[dict]:
@@ -86,15 +87,21 @@ def main() -> None:
         # has them ("Amores Perros (OmeU)") — correct the labels from there.
         if cinema["name"] == "Filmpalette":
             custom.apply_filmpalette_languages(shows)
-        # kinoheld carries no language markers for Kinopolis; their own program
-        # page does (per-screening id). Correct by booking id.
-        if cinema["name"] == "Kinopolis Bad Godesberg" and cinema.get("website"):
-            custom.apply_kinopolis_languages(shows, cinema["website"].rstrip("/") + "/programm")
+        # (Kinopolis needs no correction here: sources/kinopolis.py reads the
+        # version off the shop's own releaseTypeName, and applies the program-
+        # page fallback itself if it ever has to fall back to kinoheld.)
 
         for show in shows:
             key = clean_title(show["title"]).lower()
             entry = movies.setdefault(key, {"title_raw": clean_title(show["title"]),
+                                            "year": None, "is_film": False,
                                             "showtimes": []})
+            # Optional hints; only sources that really know set them (see
+            # sources/kinopolis.py). A film year from any source is worth
+            # having, and one source recognising a film outweighs another
+            # that doesn't.
+            entry["year"] = entry["year"] or show.get("year")
+            entry["is_film"] = entry["is_film"] or show.get("is_film", True)
             # Link policy: exact page for that showtime. Chain deeplinks and
             # kinotickets/CineWeb links are already exact; for kinoheld-only
             # cinemas the kinoheld per-show page is the exact one (it's also
@@ -112,10 +119,11 @@ def main() -> None:
     result = []
     for key, entry in movies.items():
         meta = None
-        try:
-            meta = tmdb.lookup(entry["title_raw"])
-        except Exception as e:
-            print(f"  [warn] TMDB failed for '{entry['title_raw']}': {e}")
+        if entry["is_film"]:
+            try:
+                meta = tmdb.lookup(entry["title_raw"], entry["year"])
+            except Exception as e:
+                print(f"  [warn] TMDB failed for '{entry['title_raw']}': {e}")
 
         scores = {"imdb": None, "metascore": None, "letterboxd": None}
         imdb_id = (meta or {}).get("imdb_id")
@@ -134,7 +142,7 @@ def main() -> None:
             "id": imdb_id or key,
             "title_de": (meta or {}).get("title_de", entry["title_raw"]),
             "title_original": (meta or {}).get("title_original", entry["title_raw"]),
-            "year": (meta or {}).get("year"),
+            "year": (meta or {}).get("year") or entry["year"],
             "release_date": (meta or {}).get("release_date"),
             "runtime": (meta or {}).get("runtime"),
             "poster": (meta or {}).get("poster"),

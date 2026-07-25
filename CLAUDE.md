@@ -33,21 +33,37 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
   per-cinema language corrections (Filmpalette, Kinopolis).
 - `scraper/cinemas.json` — the 17 cinemas: kinoheld IDs, `website`, `source`
-  (`kinoheld` or `custom`), and notes. Read the `_note` fields.
+  (`kinoheld`, `custom` or `kinopolis`), and notes. Read the `_note` fields.
 - `scraper/sources/kinoheld.py` — kinoheld GraphQL client (endpoint
   `next-live.kinoheld.de/graphql`, op `FetchProgramByMovie`). Builds exact
   per-show booking links (`…/vorstellungen?showId=<id>`). `_title_for()` guards
   against kinoheld mis-grouping films under a wrong entry.
+- `scraper/sources/kinopolis.py` — Kinopolis showtimes from their own CineOrder
+  ticket shop (same one request as the prices, see below). Since 2026-07-25
+  this replaces kinoheld for them: kinoheld was missing 10 screenings, almost
+  all *newly announced* films already on advance sale, and filed 4 under the
+  wrong film — including two it called "Supergirl" at entry, movie and show
+  level that were really "Was haben wir gelacht", which no guard could catch.
+  The shop also carries OV/OmU per screening in `releaseTypeName` (verified a
+  strict superset of the program-page markers) and the film's `productionYear`,
+  which settles which film a re-release is. kinoheld stays configured as the
+  fallback if the shop call fails.
 - `scraper/sources/custom.py` — non-kinoheld / correction scrapers:
   `cineweb()` (Metropolis + Rex am Ring, which read version off their own
   CineWeb sites), `apply_filmpalette_languages()`, and
-  `apply_kinopolis_languages()` (Kinopolis OV/OmU comes from the per-showtime
-  `data-version` attribute on their program page — NOT the "OV: Moana" caption
-  headings, which mislabel).
+  `apply_kinopolis_languages()` — the latter now only runs on the kinoheld
+  fallback path (Kinopolis OV/OmU comes from the per-showtime `data-version`
+  attribute on their program page — NOT the "OV: Moana" caption headings,
+  which mislabel).
 - `scraper/enrich/` — `tmdb.py` (metadata, both-language overviews, trailers,
   director gender + keyword topic tags, countries), `omdb.py` (IMDb+Metascore,
   7-day cache in `data/ratings_cache.json`), `letterboxd.py` (polite page
-  scrape, 7-day cache).
+  scrape, 7-day cache). A source may pass two optional hints along with each
+  show and main.py forwards them: `year` (the film's production year — TMDB
+  ranks the 1978 cartoon above "Die zwei Türme" for "Der Herr der Ringe 2", and
+  its own `year` search param does not break the tie, so `tmdb._pick()` uses
+  the hint) and `is_film: False` for a slot with no film behind it (a Sneak
+  preview), which skips TMDB entirely instead of inventing a match.
 - `scraper/language.py` — OV/OmU/DE classifier from show text/flags.
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads
@@ -125,7 +141,9 @@ So the surcharge has to come from the cinema, and it does:
 
 ### data/prices.json — exact prices per screening
 
-`scraper/sources/kinopolis_prices.py` calls their webshop once per run:
+`scraper/sources/kinopolis.py` calls their webshop once per run — the request
+lives there because the *showtimes* come out of the same payload, and
+`kinopolis_prices.py` reads the prices from the cached response:
 
     GET iframe.ts.kinopolis.de/api/films?locale=de&include.pricecategories=true
     Header: CENTER-OID: <cineorder_center_oid from cinemas.json>
@@ -142,8 +160,9 @@ Output is `data/prices.json` → `{cinemas: {<name>: {shows: {<showId>: {adult,
 child, reduced, family?, menu_*, format?}}}}}`. `data/prices.json` is committed
 with the daily data; the workflow copies it to `web/public/data/prices.json`,
 which is gitignored like the movies copy. The join key is the
-performance id in the booking URL (`…/vorstellung/<id>`) — 99% of our Kinopolis
-showtimes match. The frontend lazy-loads the file when the price panel opens,
+performance id in the booking URL (`…/vorstellung/<id>`) — now that the
+showtimes come from the same payload, **all** Kinopolis showtimes match and the
+panel shows no estimates for them (it was 99% via kinoheld). The frontend lazy-loads the file when the price panel opens,
 uses exact figures where they exist, and falls back to the curated table with an
 "≈ geschätzt" marker otherwise. `family` is only present on screenings where the
 cinema actually grants the Familienpreis, so that rule needs no guessing.

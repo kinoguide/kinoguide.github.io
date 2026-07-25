@@ -12,10 +12,16 @@ requirement (without it every /api/… call answers 401). Their robots.txt allow
 generic agents (`Allow: /`, content signal `use=reference`) and disallows
 AI-training crawlers, which we are not; we send an identifying User-Agent.
 
+The request itself lives in sources.kinopolis, which reads the *showtimes* out
+of the same payload — so both cost one call between them, not two.
+
 Why bother: these prices are the ground truth our hand-curated table in
 web/src/prices.js can only approximate. They already include
-  * the 0,50 € online advance-sale fee,
-  * film-related surcharges (e.g. +1,50 € for an overlength film),
+  * the film-related surcharge (0 … 2,50 €) that Kinopolis charges per film
+    and that nothing we scrape could otherwise predict — measured on directly
+    comparable screenings, Toy Story 5 carries none while Die Odyssee carries
+    2,00 €. There is NO online advance-sale fee: a film without a surcharge
+    costs the printed list price in the shop too,
   * the format (a 3D D-BOX screening of a kids' film is ~15 € dearer for a
     family of five than the 2D one an hour earlier),
   * event pricing ("Normal Oper" 20–36 €, KINOFEST 5 €, Late Night, the Monday
@@ -35,13 +41,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-import requests
-
-API = "https://iframe.ts.kinopolis.de/api/films"
-HEADERS = {
-    "User-Agent": "kinoguide-koeln/1.0 (+https://kinoguide.github.io)",
-    "Accept": "application/json",
-}
+from sources.kinopolis import fetch_program
 
 # Seating areas in their price data: 1 = Komfort (the normal seat), 2 = D-BOX,
 # 3 = Premium. Komfort is the price a family actually pays.
@@ -113,11 +113,8 @@ def _prices_for(performance: dict) -> dict:
 
 def fetch_prices(center_oid: str, timeout: int = 45) -> dict[str, dict]:
     """{performance id: prices} for every screening the shop currently sells."""
-    r = requests.get(API, params={"locale": "de", "include.pricecategories": "true"},
-                     headers={**HEADERS, "CENTER-OID": center_oid}, timeout=timeout)
-    r.raise_for_status()
     shows: dict[str, dict] = {}
-    for film in r.json():
+    for film in fetch_program(center_oid, timeout=timeout):
         for perf in film.get("performances") or []:
             pid = perf.get("id")
             prices = _prices_for(perf) if pid else {}
@@ -143,7 +140,9 @@ def collect(cinemas: list[dict]) -> dict:
         print(f"  {len(shows)} screenings priced")
         out[cinema["name"]] = {
             "source": cinema.get("price_page") or cinema.get("website"),
-            "fee_included": True,   # online prices, incl. the advance-sale fee
+            # what the shop charges: list price + this film's surcharge, and
+            # no booking fee on top — these are the totals a visitor pays
+            "fee_included": True,
             "shows": shows,
         }
     return {"generated_at": datetime.now(timezone.utc).isoformat(), "cinemas": out}
