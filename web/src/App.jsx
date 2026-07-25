@@ -1,4 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  CINEMA_PRICES, TIER_LABELS, DEFAULT_PARTY, showPrice, cheapestTotal,
+  partySize, fmtEur,
+} from './prices'
 
 // --- i18n ------------------------------------------------------------------
 const T = {
@@ -67,6 +71,36 @@ const T = {
     addCal: 'Zum Kalender hinzufügen',
     viewGrid: 'Filmansicht',
     viewPlan: 'Programm nach Uhrzeit',
+    prices: 'Preise',
+    pricesTitle: 'Preise & Familienangebote',
+    pricesFor: (c) => `Preise: ${c}`,
+    pricesBtnTitle: 'Ticketpreise & günstigste Vorstellung für Familien',
+    priceFrom: (v) => `ab ${v}`,
+    partyLabel: 'Wer geht ins Kino?',
+    partyAdult: 'Erwachsene',
+    partyChild: 'Kinder unter 12',
+    partyReduced: 'Schüler:innen / Studierende',
+    partyReducedHint: 'ermäßigt — Ausweis mitnehmen',
+    threeDLabel: '3D-Zuschlag einrechnen',
+    cheapestFirst: '💶 Günstigste zuerst',
+    byTime: '🕒 Nach Zeit',
+    cheapestBadge: 'Günstigste Option',
+    perTicket: 'pro Ticket',
+    forParty: (n) => `für ${n} ${n === 1 ? 'Person' : 'Personen'}`,
+    familyHint: 'Family Ticket: alle zahlen den Kinderpreis',
+    noPriceShows: 'Keine Vorstellungen mit Preisangaben in den aktuellen Filtern.',
+    priceCinemaHint: 'Preise gibt es bisher nur für Kinopolis Bad Godesberg (Bonn) — weitere Kinos folgen.',
+    priceListLabel: 'Komplette Preisliste',
+    surchargesLabel: 'Zuschläge',
+    offersLabel: 'Angebote & Kombitickets',
+    familyRuleLabel: 'Family Ticket',
+    upTo: 'bis zu',
+    priceStand: (d) => `Stand ${d} · Angaben ohne Gewähr`,
+    priceSourceLink: 'Preisseite des Kinos ↗',
+    priceOffersLink: 'Alle Angebote ↗',
+    showMorePrices: (n) => `${n} weitere Vorstellungen zeigen`,
+    priceTip: 'Tipp: Vorstellungen vor 18 Uhr sind für Familien am günstigsten — dann zahlen auch Erwachsene den Kinderpreis.',
+    priceKidsNote: 'Mit Kindern unter 12 zeigen wir nur Filme bis FSK 12 (ab FSK 12 nur mit Begleitung der Eltern).',
   },
   en: {
     locale: 'en-GB',
@@ -133,6 +167,36 @@ const T = {
     addCal: 'Add to calendar',
     viewGrid: 'Movie grid',
     viewPlan: 'Schedule by time',
+    prices: 'Prices',
+    pricesTitle: 'Prices & family offers',
+    pricesFor: (c) => `Prices: ${c}`,
+    pricesBtnTitle: 'Ticket prices & cheapest screening for families',
+    priceFrom: (v) => `from ${v}`,
+    partyLabel: 'Who is going?',
+    partyAdult: 'Adults',
+    partyChild: 'Children under 12',
+    partyReduced: 'Pupils / students',
+    partyReducedHint: 'reduced — bring your ID',
+    threeDLabel: 'Include 3D surcharge',
+    cheapestFirst: '💶 Cheapest first',
+    byTime: '🕒 By time',
+    cheapestBadge: 'Cheapest option',
+    perTicket: 'per ticket',
+    forParty: (n) => `for ${n} ${n === 1 ? 'person' : 'people'}`,
+    familyHint: 'Family ticket: everyone pays the child price',
+    noPriceShows: 'No screenings with price data match the current filters.',
+    priceCinemaHint: 'Prices are so far only available for Kinopolis Bad Godesberg (Bonn) — more cinemas to come.',
+    priceListLabel: 'Full price list',
+    surchargesLabel: 'Surcharges',
+    offersLabel: 'Offers & combi tickets',
+    familyRuleLabel: 'Family ticket',
+    upTo: 'up to',
+    priceStand: (d) => `As of ${d} · no guarantee`,
+    priceSourceLink: "Cinema's price page ↗",
+    priceOffersLink: 'All offers ↗',
+    showMorePrices: (n) => `Show ${n} more screenings`,
+    priceTip: 'Tip: screenings before 18:00 are cheapest for families — adults pay the child price then.',
+    priceKidsNote: 'With children under 12 we only list films rated up to FSK 12 (FSK 12 only with a parent).',
   },
 }
 
@@ -372,9 +436,12 @@ function Rating({ value, label, emoji, href, title }) {
   )
 }
 
-function Modal({ movie, shows, onClose, t, ui }) {
+function Modal({ movie, shows, onClose, onPrices, party, threeD, t, ui }) {
   useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
+    // the price panel opens on top of this one — let it swallow the Escape
+    const onKey = (e) => {
+      if (e.key === 'Escape' && !document.querySelector('.price-modal')) onClose()
+    }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [onClose])
@@ -454,9 +521,18 @@ function Modal({ movie, shows, onClose, t, ui }) {
               const d = dayKey(s.datetime)
               ;(byDay[d] = byDay[d] || []).push(s)
             }
+            // cinemas we know prices for get an "ab X €" button: the cheapest
+            // total for the visitor's party across this film's screenings there
+            const cfg = CINEMA_PRICES[times[0].cinema]
+            const cheap = cfg && cheapestTotal(cfg, times, party, { fsk: movie.age_rating, threeD })
             return (
               <div className="cinema-row" key={cinema}>
                 <span className="cinema-name">{cinema}</span>
+                {cfg && (
+                  <button className="cinema-price" onClick={onPrices} title={t.pricesBtnTitle}>
+                    💶 {cheap != null ? t.priceFrom(fmtEur(cheap, t.locale)) : t.prices}
+                  </button>
+                )}
                 {Object.keys(byDay).sort().map((d) => (
                   <div className="day-times" key={d}>
                     <span className="day-label">{fmtDayShort(d, t)}</span>
@@ -486,6 +562,195 @@ function Modal({ movie, shows, onClose, t, ui }) {
             )
           })}
         </div>
+      </div>
+    </div>
+  )
+}
+
+// --- prices ----------------------------------------------------------------
+// Ticket name without its time window: "Kinder unter 12 & Family Ticket
+// (vor 18 Uhr)" → "Kinder unter 12". The family case gets its own label so a
+// parent sees *why* the adult ticket suddenly costs the child price.
+function lineLabel(l, ui) {
+  if (l.viaFamily) return ui === 'en' ? 'Family ticket' : 'Family Ticket'
+  return (ui === 'en' ? l.ticket.en : l.ticket.de).replace(/\s*\(.*\)\s*$/, '').replace(/\s*&.*$/, '')
+}
+
+// −/+ counter for one visitor category
+function PartyStep({ label, hint, value, onChange }) {
+  return (
+    <div className="party-item">
+      <span className="party-label">{label}{hint && <em>{hint}</em>}</span>
+      <span className="party-step">
+        <button onClick={() => onChange(Math.max(0, value - 1))} disabled={value === 0} aria-label="−">−</button>
+        <b>{value}</b>
+        <button onClick={() => onChange(Math.min(12, value + 1))} aria-label="+">+</button>
+      </span>
+    </div>
+  )
+}
+
+// The full price list of one cinema, plus its surcharges, family rule and offers
+function PriceReference({ cinema, cfg, t, ui }) {
+  const tiers = TIER_LABELS[ui === 'en' ? 'en' : 'de']
+  return (
+    <div className="price-ref">
+      <h3>{cinema}</h3>
+      <div className="price-table-wrap">
+        <table className="price-table">
+          <thead>
+            <tr><th></th>{tiers.map((l) => <th key={l}>{l}</th>)}</tr>
+          </thead>
+          <tbody>
+            {cfg.tickets.map((tk) => (
+              <tr key={tk.id}>
+                <td>{ui === 'en' ? tk.en : tk.de}</td>
+                {tk.price.map((p, i) => <td key={i}>{p == null ? '–' : fmtEur(p, t.locale)}</td>)}
+              </tr>
+            ))}
+            {cfg.displayOnly.map((d) => (
+              <tr key={d.de}>
+                <td>{ui === 'en' ? d.en : d.de}</td>
+                <td colSpan="4" className="flat">{fmtEur(d.flat, t.locale)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="price-note"><b>{t.familyRuleLabel}:</b> {ui === 'en' ? cfg.familyTicket.en : cfg.familyTicket.de}</p>
+      <p className="price-note"><b>{t.surchargesLabel}:</b>{' '}
+        {cfg.surcharges.map((s, i) => (
+          <span key={i}>{i > 0 && ' · '}{ui === 'en' ? s.en : s.de}: {s.upTo ? `${t.upTo} ` : ''}{fmtEur(s.amount, t.locale)}</span>
+        ))}
+      </p>
+      <p className="price-note"><b>{t.offersLabel}:</b></p>
+      <ul className="price-offers">
+        {cfg.offers.map((o, i) => (
+          <li key={i}><a href={o.url} target="_blank" rel="noreferrer">{ui === 'en' ? o.en : o.de} ↗</a></li>
+        ))}
+      </ul>
+      <p className="price-src">
+        {t.priceStand(new Date(cfg.checked).toLocaleDateString(t.locale))} ·{' '}
+        <a href={cfg.source} target="_blank" rel="noreferrer">{t.priceSourceLink}</a> ·{' '}
+        <a href={cfg.offersUrl} target="_blank" rel="noreferrer">{t.priceOffersLink}</a>
+      </p>
+    </div>
+  )
+}
+
+// Price finder: pick who's coming, get every screening we know prices for,
+// cheapest first. `movie` set = scoped to that film, otherwise all filtered
+// screenings of cinemas with price data.
+function PriceModal({ items, movie, party, setParty, threeD, setThreeD, onClose, onOpenMovie, t, ui }) {
+  const [byPrice, setByPrice] = useState(true)
+  const [limit, setLimit] = useState(15)
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose()
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  const priced = useMemo(() => {
+    const rows = []
+    for (const { m, s } of items) {
+      const cfg = CINEMA_PRICES[s.cinema]
+      if (!cfg) continue
+      // with a child in the party, films they can't get into are pointless:
+      // under 12s are only admitted up to FSK 12, and then with a parent
+      if (party.child > 0 && m.age_rating != null && m.age_rating > 12) continue
+      const p = showPrice(cfg, s.datetime, party, { fsk: m.age_rating, threeD })
+      if (p) rows.push({ m, s, p })
+    }
+    rows.sort((a, b) =>
+      byPrice
+        ? a.p.total - b.p.total || a.s.datetime.localeCompare(b.s.datetime)
+        : a.s.datetime.localeCompare(b.s.datetime))
+    // across all films, one row per film (its cheapest / next screening) —
+    // otherwise a single film's matinees fill the whole list at the same price.
+    // Scoped to one film we want every screening.
+    if (movie) return rows
+    const seen = new Set()
+    return rows.filter(({ m }) => !seen.has(m.id) && seen.add(m.id))
+  }, [items, movie, party, threeD, byPrice])
+
+  const cinemas = [...new Set(items.map(({ s }) => s.cinema))].filter((c) => CINEMA_PRICES[c])
+  const n = partySize(party)
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal price-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose} aria-label="Schließen">✕</button>
+        <h2 className="price-head">💶 {movie ? displayTitle(movie, ui) : t.pricesTitle}</h2>
+        <p className="price-tip">
+          {t.priceTip}
+          {party.child > 0 && <><br />{t.priceKidsNote}</>}
+        </p>
+
+        <div className="party">
+          <span className="party-title">{t.partyLabel}</span>
+          <div className="party-grid">
+            <PartyStep label={t.partyAdult} value={party.adult || 0}
+              onChange={(v) => setParty({ ...party, adult: v })} />
+            <PartyStep label={t.partyChild} value={party.child || 0}
+              onChange={(v) => setParty({ ...party, child: v })} />
+            <PartyStep label={t.partyReduced} hint={t.partyReducedHint} value={party.reduced || 0}
+              onChange={(v) => setParty({ ...party, reduced: v })} />
+          </div>
+          <label className="party-3d">
+            <input type="checkbox" checked={threeD} onChange={(e) => setThreeD(e.target.checked)} />
+            {t.threeDLabel}
+          </label>
+        </div>
+
+        {n > 0 && priced.length > 0 && (
+          <>
+            <div className="price-sort">
+              <button className={byPrice ? 'on' : ''} onClick={() => setByPrice(true)}>{t.cheapestFirst}</button>
+              <button className={!byPrice ? 'on' : ''} onClick={() => setByPrice(false)}>{t.byTime}</button>
+            </div>
+            <ul className="price-list">
+              {priced.slice(0, limit).map(({ m, s, p }, i) => (
+                <li className={`price-row ${byPrice && i === 0 ? 'best' : ''}`} key={`${m.id}-${s.datetime}-${i}`}>
+                  <div className="pr-main">
+                    <span className="pr-when">{fmtDayShort(dayKey(s.datetime), t)} · {fmtTime(s.datetime, t)}</span>
+                    {!movie && (
+                      <button className="pr-title" onClick={() => onOpenMovie(m)}>{displayTitle(m, ui)}</button>
+                    )}
+                    <span className={`lang-tag lang-${s.language.toLowerCase()}`}>{s.language}</span>
+                    <span className="pr-total">{fmtEur(p.total, t.locale)}</span>
+                    {s.booking_url && (
+                      <a className="pr-ticket" href={s.booking_url} target="_blank" rel="noreferrer" title="Tickets">🎟️</a>
+                    )}
+                  </div>
+                  <div className="pr-detail">
+                    {/* only worth naming when more than one cinema is in the list */}
+                    {cinemas.length > 1 && <span className="pr-cinema">{s.cinema}</span>}
+                    {p.lines.map((l, j) => (
+                      <span className="pr-line" key={j}>
+                        {l.count}× {lineLabel(l, ui)} <b>{fmtEur(l.each, t.locale)}</b>
+                      </span>
+                    ))}
+                    {p.family && <span className="pr-family" title={t.familyHint}>👨‍👩‍👧 Family Ticket</span>}
+                    {byPrice && i === 0 && <span className="pr-best">★ {t.cheapestBadge}</span>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+            {priced.length > limit && (
+              <button className="price-more" onClick={() => setLimit(limit + 25)}>
+                {t.showMorePrices(priced.length - limit)}
+              </button>
+            )}
+          </>
+        )}
+        {(n === 0 || priced.length === 0) && (
+          <p className="price-empty">{n === 0 ? t.partyLabel : t.noPriceShows}</p>
+        )}
+        {cinemas.length === 0 && <p className="price-empty">{t.priceCinemaHint}</p>}
+
+        {(cinemas.length ? cinemas : Object.keys(CINEMA_PRICES)).map((c) => (
+          <PriceReference key={c} cinema={c} cfg={CINEMA_PRICES[c]} t={t} ui={ui} />
+        ))}
       </div>
     </div>
   )
@@ -702,6 +967,16 @@ export default function App() {
     window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
   }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view])
 
+  // price panel: who's coming survives reloads, so the "ab X €" hints on the
+  // cinema rows are already personalised on the next visit
+  const [priceView, setPriceView] = useState(null) // null | { movie: Movie|null }
+  const [party, setParty] = useState(() => {
+    try { return { ...DEFAULT_PARTY, ...JSON.parse(localStorage.getItem('kinoguide-party')) } }
+    catch { return DEFAULT_PARTY }
+  })
+  const [threeD, setThreeD] = useState(false)
+  useEffect(() => { localStorage.setItem('kinoguide-party', JSON.stringify(party)) }, [party])
+
   // favorites survive reloads via localStorage
   const [favs, setFavs] = useState(() => {
     try { return JSON.parse(localStorage.getItem('kinoguide-favs')) || [] } catch { return [] }
@@ -843,6 +1118,22 @@ export default function App() {
       })
   }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs, lastMinute, ui])
 
+  // screenings the price panel works on: one film's, or every filtered
+  // screening at a cinema we have prices for
+  const priceItems = useMemo(() => {
+    if (!priceView) return []
+    if (priceView.movie) {
+      return showsFor(priceView.movie)
+        .filter((s) => CINEMA_PRICES[s.cinema])
+        .map((s) => ({ m: priceView.movie, s }))
+    }
+    const out = []
+    for (const { m, shows } of movies) {
+      for (const s of shows) if (CINEMA_PRICES[s.cinema]) out.push({ m, s })
+    }
+    return out
+  }, [priceView, movies])
+
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
 
@@ -870,7 +1161,7 @@ export default function App() {
   const resetAll = () => {
     resetFilters()
     setSort('imdb'); setFavsOnly(false); setView('grid')
-    setShowFilters(false); setSelected(null)
+    setShowFilters(false); setSelected(null); setPriceView(null)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -907,6 +1198,8 @@ export default function App() {
         <CityMenu city={city} setCity={setCity} t={t} />
         <DateMenu date={date} setDate={setDate} allDates={allDates} t={t} />
         <SortMenu sort={sort} setSort={setSort} t={t} />
+        <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
+          title={t.pricesBtnTitle}>💶 {t.prices}</button>
         {isDirty && (
           <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
         )}
@@ -1014,7 +1307,17 @@ export default function App() {
 
       {selected && (
         <Modal movie={selected} shows={showsFor(selected)}
-          onClose={() => setSelected(null)} t={t} ui={ui} />
+          onClose={() => setSelected(null)}
+          onPrices={() => setPriceView({ movie: selected })}
+          party={party} threeD={threeD} t={t} ui={ui} />
+      )}
+
+      {priceView && (
+        <PriceModal items={priceItems} movie={priceView.movie}
+          party={party} setParty={setParty} threeD={threeD} setThreeD={setThreeD}
+          onClose={() => setPriceView(null)}
+          onOpenMovie={(m) => { setPriceView(null); setSelected(m) }}
+          t={t} ui={ui} />
       )}
 
       <footer>

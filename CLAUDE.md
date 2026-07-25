@@ -52,6 +52,12 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads
   `web/public/data/movies.json`.
+- `web/src/prices.js` — **hand-curated** ticket prices + the price calculator
+  (day tiers, family ticket, surcharges, offers). No ticket back-end exposes
+  prices, so these are typed off the cinema's own price page; each entry carries
+  a `checked` date that the UI shows. Only **Kinopolis Bad Godesberg** so far
+  (checked 2026-07-25); adding a cinema = one more entry keyed by its exact
+  name in `movies.json`. See "Prices" below.
 
 ## Run / deploy
 
@@ -82,6 +88,29 @@ font, gold hairline/chevron dividers, corner-bracket cards, double gold frame).
 If they say yes, apply those to `web/src/styles.css` (and embed a real
 Futura/Broadway-style display face as a @font-face data URI — CDN fonts are not
 used). If "subtler", dial specific elements back.
+
+## Prices (family price finder, added 2026-07-25)
+
+A 💶 chip in the toolbar and a "💶 ab X €" button on each cinema row in the
+film popup open a price panel: the visitor sets how many adults / kids under 12
+/ students are coming (kept in localStorage), and gets every screening we know
+prices for, **cheapest total first**, with the per-ticket breakdown and a
+booking link. The Kinopolis **Family Ticket** (before 18:00 the whole family
+pays the child price) is applied automatically, so the panel shows a family
+directly how much an afternoon show saves over the evening.
+
+Rules baked into `prices.js`: four day tiers (Mo–Do / Fr and the working day
+before a holiday / Sa / So+Feiertage, with NRW holidays listed), Matinee,
+Happy Hour, Late Night, child + reduced fares, the Family-Ticket rule (FSK ≤ 12
+only) and an optional 3D surcharge. With kids in the party, films above FSK 12
+are left out. Every panel shows the full price table, surcharges, the combi /
+Ferienkino / Kindergeburtstag / KidsClub offers and links to the cinema's own
+price page — combi-ticket prices are only revealed in Kinopolis' booking flow,
+so we describe what's in them instead of quoting a price.
+
+When touching prices: re-read the cinema's price page, keep the column spans
+straight (their table is colspan-based — e.g. the child price still holds on
+Fridays while adult evening prices already jump), and bump `checked`.
 
 ## Conventions
 
