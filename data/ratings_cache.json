@@ -770,7 +770,7 @@
   }
  },
  "tt4975722": {
-  "ts": 1784009346.0661216,
+  "ts": 1784938270.6733203,
   "ratings": {
    "imdb": 7.4,
    "metascore": 99
@@ -1894,6 +1894,20 @@
   "ratings": {
    "imdb": 8.3,
    "metascore": 95
+  }
+ },
+ "tt27827068": {
+  "ts": 1784938261.362262,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt43598697": {
+  "ts": 1784938272.7301507,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
   }
  }
 }
