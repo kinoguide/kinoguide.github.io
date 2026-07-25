@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
-  CINEMA_PRICES, TIER_LABELS, DEFAULT_PARTY, showPrice, cheapestTotal,
+  CINEMA_PRICES, TIER_LABELS, DEFAULT_PARTY, priceFor, cheapestTotal,
   partySize, fmtEur,
 } from './prices'
 
@@ -101,9 +101,14 @@ const T = {
     showMorePrices: (n) => `${n} weitere Vorstellungen zeigen`,
     priceTip: 'Tipp: Vorstellungen vor 18 Uhr sind für Familien am günstigsten — dann zahlen auch Erwachsene den Kinderpreis.',
     priceKidsNote: 'Mit Kindern unter 12 zeigen wir nur Filme bis FSK 12 (ab FSK 12 nur mit Begleitung der Eltern).',
-    priceCaveat: 'Bei Überlänge oder Sonderformaten kann das Kino zusätzlich einen filmbezogenen Zuschlag von bis zu 2,50 € pro Ticket nehmen — der steht erst im Ticketshop.',
-    onlineLabel: 'Online kaufen (+ 0,50 € Vorverkaufsgebühr pro Ticket)',
-    priceListNote: (fee) => `Das ist die Preisliste des Kinos (Kinokasse). Online kommt pro Ticket eine Vorverkaufsgebühr von ${fee} dazu — im Ticketshop ist sie schon eingerechnet.`,
+    priceCaveat: 'Wo wir den Kinopreis nicht direkt kennen, rechnen wir mit der Preisliste — pro Film kann ein Zuschlag von bis zu 2,50 € dazukommen.',
+    exactPrices: 'Preise direkt vom Kino',
+    estimated: 'geschätzt',
+    estimateHint: 'Aus der Preisliste berechnet — ein filmbezogener Zuschlag von bis zu 2,50 € pro Ticket kann dazukommen.',
+    menuChild: 'Kinder-Menü',
+    menuHint: 'Kinder-Menü: Ticket + 0,3 l Softdrink + Kinder-Popcorn + Überraschungstüte',
+    roles: { adult: 'Erwachsene', child: 'Kind unter 12', reduced: 'Ermäßigt', family: 'Family Ticket' },
+    priceListNote: 'Das ist die allgemeine Preisliste des Kinos. Pro Film kommt teils ein Zuschlag bis 2,50 € dazu — in den Preisen oben ist er enthalten, sofern sie direkt vom Kino kommen.',
   },
   en: {
     locale: 'en-GB',
@@ -200,9 +205,14 @@ const T = {
     showMorePrices: (n) => `Show ${n} more screenings`,
     priceTip: 'Tip: screenings before 18:00 are cheapest for families — adults pay the child price then.',
     priceKidsNote: 'With children under 12 we only list films rated up to FSK 12 (FSK 12 only with a parent).',
-    priceCaveat: 'For long films or special formats the cinema may add a film-related surcharge of up to €2.50 per ticket — that only shows up in the ticket shop.',
-    onlineLabel: 'Buying online (+ €0.50 advance-sale fee per ticket)',
-    priceListNote: (fee) => `This is the cinema's list price (box office). Online, an advance-sale fee of ${fee} per ticket is added — the ticket shop already includes it.`,
+    priceCaveat: "Where we don't have the cinema's own figure we use its price list — a per-film surcharge of up to €2.50 can be added.",
+    exactPrices: "Prices straight from the cinema",
+    estimated: 'estimated',
+    estimateHint: 'Calculated from the price list — a film-related surcharge of up to €2.50 per ticket may be added.',
+    menuChild: 'Kids menu',
+    menuHint: 'Kids menu: ticket + 0.3 l soft drink + kids popcorn + surprise bag',
+    roles: { adult: 'Adults', child: 'Under 12', reduced: 'Reduced', family: 'Family ticket' },
+    priceListNote: "This is the cinema's general price list. Individual films can carry a surcharge of up to €2.50 — it is included in the prices above wherever they come straight from the cinema.",
   },
 }
 
@@ -442,7 +452,7 @@ function Rating({ value, label, emoji, href, title }) {
   )
 }
 
-function Modal({ movie, shows, onClose, onPrices, party, threeD, online, t, ui }) {
+function Modal({ movie, shows, onClose, onPrices, party, threeD, live, t, ui }) {
   useEffect(() => {
     // the price panel opens on top of this one — let it swallow the Escape
     const onKey = (e) => {
@@ -530,7 +540,7 @@ function Modal({ movie, shows, onClose, onPrices, party, threeD, online, t, ui }
             // cinemas we know prices for get an "ab X €" button: the cheapest
             // total for the visitor's party across this film's screenings there
             const cfg = CINEMA_PRICES[times[0].cinema]
-            const cheap = cfg && cheapestTotal(cfg, times, party, { fsk: movie.age_rating, threeD, online })
+            const cheap = cfg && cheapestTotal(cfg, movie, times, party, { threeD }, live)
             return (
               <div className="cinema-row" key={cinema}>
                 <span className="cinema-name">{cinema}</span>
@@ -576,17 +586,19 @@ function Modal({ movie, shows, onClose, onPrices, party, threeD, online, t, ui }
 // --- prices ----------------------------------------------------------------
 // Ticket name without its time window: "Kinder unter 12 & Family Ticket
 // (vor 18 Uhr)" → "Kinder unter 12". The family case gets its own label so a
-// parent sees *why* the adult ticket suddenly costs the child price.
-function lineLabel(l, ui) {
+// parent sees *why* the adult ticket suddenly costs the child price. Exact
+// prices carry a plain role instead of one of our ticket definitions.
+function lineLabel(l, ui, t) {
+  if (l.role) return t.roles[l.role]
   if (l.viaFamily) return ui === 'en' ? 'Family ticket' : 'Family Ticket'
   return (ui === 'en' ? l.ticket.en : l.ticket.de).replace(/\s*\(.*\)\s*$/, '').replace(/\s*&.*$/, '')
 }
 
 // adults and students both land on the Family Ticket — show that as one line
-function mergeLines(lines, ui) {
+function mergeLines(lines, ui, t) {
   const out = []
   for (const l of lines) {
-    const label = lineLabel(l, ui)
+    const label = lineLabel(l, ui, t)
     const same = out.find((o) => o.label === label && o.each === l.each)
     if (same) same.count += l.count
     else out.push({ label, each: l.each, count: l.count })
@@ -635,7 +647,7 @@ function PriceReference({ cinema, cfg, t, ui }) {
           </tbody>
         </table>
       </div>
-      <p className="price-note">{t.priceListNote(fmtEur(cfg.advanceSaleFee, t.locale))}</p>
+      <p className="price-note">{t.priceListNote}</p>
       <p className="price-note"><b>{t.familyRuleLabel}:</b> {ui === 'en' ? cfg.familyTicket.en : cfg.familyTicket.de}</p>
       <p className="price-note"><b>{t.surchargesLabel}:</b>{' '}
         {cfg.surcharges.map((s, i) => (
@@ -660,7 +672,7 @@ function PriceReference({ cinema, cfg, t, ui }) {
 // Price finder: pick who's coming, get every screening we know prices for,
 // cheapest first. `movie` set = scoped to that film, otherwise all filtered
 // screenings of cinemas with price data.
-function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, setOnline, onClose, onOpenMovie, t, ui }) {
+function PriceModal({ items, movie, party, setParty, threeD, setThreeD, live, onClose, onOpenMovie, t, ui }) {
   const [byPrice, setByPrice] = useState(true)
   const [limit, setLimit] = useState(15)
   useEffect(() => {
@@ -677,7 +689,7 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, 
       // with a child in the party, films they can't get into are pointless:
       // under 12s are only admitted up to FSK 12, and then with a parent
       if (party.child > 0 && m.age_rating != null && m.age_rating > 12) continue
-      const p = showPrice(cfg, s.datetime, party, { fsk: m.age_rating, threeD, online })
+      const p = priceFor(cfg, m, s, party, { threeD }, live)
       if (p) rows.push({ m, s, p })
     }
     rows.sort((a, b) =>
@@ -690,7 +702,7 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, 
     if (movie) return rows
     const seen = new Set()
     return rows.filter(({ m }) => !seen.has(m.id) && seen.add(m.id))
-  }, [items, movie, party, threeD, online, byPrice])
+  }, [items, movie, party, threeD, live, byPrice])
 
   const cinemas = [...new Set(items.map(({ s }) => s.cinema))].filter((c) => CINEMA_PRICES[c])
   const n = partySize(party)
@@ -717,14 +729,15 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, 
               onChange={(v) => setParty({ ...party, reduced: v })} />
           </div>
           <div className="party-opts">
-            <label>
-              <input type="checkbox" checked={online} onChange={(e) => setOnline(e.target.checked)} />
-              {t.onlineLabel}
-            </label>
-            <label>
-              <input type="checkbox" checked={threeD} onChange={(e) => setThreeD(e.target.checked)} />
-              {t.threeDLabel}
-            </label>
+            {/* the cinema's own prices already include the format, so the 3D
+                switch is only meaningful for estimated rows */}
+            {priced.some((r) => !r.p.exact) && (
+              <label>
+                <input type="checkbox" checked={threeD} onChange={(e) => setThreeD(e.target.checked)} />
+                {t.threeDLabel}
+              </label>
+            )}
+            {priced.some((r) => r.p.exact) && <span className="party-live">✓ {t.exactPrices}</span>}
           </div>
         </div>
 
@@ -743,6 +756,7 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, 
                       <button className="pr-title" onClick={() => onOpenMovie(m)}>{displayTitle(m, ui)}</button>
                     )}
                     <span className={`lang-tag lang-${s.language.toLowerCase()}`}>{s.language}</span>
+                    {p.format && <span className="pr-format">{p.format}</span>}
                     <span className="pr-total">{fmtEur(p.total, t.locale)}</span>
                     {s.booking_url && (
                       <a className="pr-ticket" href={s.booking_url} target="_blank" rel="noreferrer" title="Tickets">🎟️</a>
@@ -751,12 +765,16 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, online, 
                   <div className="pr-detail">
                     {/* only worth naming when more than one cinema is in the list */}
                     {cinemas.length > 1 && <span className="pr-cinema">{s.cinema}</span>}
-                    {mergeLines(p.lines, ui).map((l, j) => (
+                    {mergeLines(p.lines, ui, t).map((l, j) => (
                       <span className="pr-line" key={j}>
                         {l.count}× {l.label} <b>{fmtEur(l.each, t.locale)}</b>
                       </span>
                     ))}
                     {p.family && <span className="pr-family" title={t.familyHint}>👨‍👩‍👧 Family Ticket</span>}
+                    {p.menus && p.menus.child != null && (
+                      <span className="pr-menu" title={t.menuHint}>🍿 {t.menuChild} +{fmtEur(p.menus.child, t.locale)}</span>
+                    )}
+                    {!p.exact && <span className="pr-est" title={t.estimateHint}>≈ {t.estimated}</span>}
                     {byPrice && i === 0 && <span className="pr-best">★ {t.cheapestBadge}</span>}
                   </div>
                 </li>
@@ -1001,9 +1019,20 @@ export default function App() {
     catch { return DEFAULT_PARTY }
   })
   const [threeD, setThreeD] = useState(false)
-  // default to the online price: that's what the ticket links charge
-  const [online, setOnline] = useState(true)
   useEffect(() => { localStorage.setItem('kinoguide-party', JSON.stringify(party)) }, [party])
+
+  // The cinema's own per-screening prices (scraped daily). Fetched on first
+  // use, not on load — nobody pays for it who never opens the price panel, and
+  // if it's missing the curated table takes over.
+  const [livePrices, setLivePrices] = useState(null)
+  const wantPrices = !!priceView || !!selected
+  useEffect(() => {
+    if (!wantPrices || livePrices) return
+    fetch('data/prices.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setLivePrices(j))
+      .catch(() => {})
+  }, [wantPrices, livePrices])
 
   // favorites survive reloads via localStorage
   const [favs, setFavs] = useState(() => {
@@ -1337,13 +1366,13 @@ export default function App() {
         <Modal movie={selected} shows={showsFor(selected)}
           onClose={() => setSelected(null)}
           onPrices={() => setPriceView({ movie: selected })}
-          party={party} threeD={threeD} online={online} t={t} ui={ui} />
+          party={party} threeD={threeD} live={livePrices} t={t} ui={ui} />
       )}
 
       {priceView && (
         <PriceModal items={priceItems} movie={priceView.movie}
           party={party} setParty={setParty} threeD={threeD} setThreeD={setThreeD}
-          online={online} setOnline={setOnline}
+          live={livePrices}
           onClose={() => setPriceView(null)}
           onOpenMovie={(m) => { setPriceView(null); setSelected(m) }}
           t={t} ui={ui} />

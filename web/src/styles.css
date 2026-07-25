@@ -418,7 +418,8 @@ input[type=range] {
 .party-step button:hover:not(:disabled) { background: var(--accent); color: #fff; }
 .party-step button:disabled { color: var(--border2); cursor: default; }
 .party-step b { min-width: 22px; text-align: center; font-variant-numeric: tabular-nums; }
-.party-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.party-opts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 14px; }
+.party-live { font-size: 13.5px; color: var(--green); font-weight: 600; }
 .party-opts label { display: inline-flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--muted2); cursor: pointer; }
 .party-opts input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0; }
 .price-caveat { color: var(--muted); font-size: 13.5px; }
@@ -449,6 +450,13 @@ input[type=range] {
 .pr-cinema { color: var(--muted2); }
 .pr-family { color: var(--green); }
 .pr-best { color: var(--accent2); font-weight: 700; }
+.pr-menu { color: var(--muted2); }
+.pr-est { color: var(--muted); font-style: italic; }
+/* screening format straight from the cinema: 3D, D-BOX, Atmos … */
+.pr-format {
+  font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 4px; background: var(--border); color: var(--muted2);
+}
 
 .price-more {
   background: none; border: 1px solid var(--border2); color: var(--muted2);

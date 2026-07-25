@@ -52,12 +52,14 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads
   `web/public/data/movies.json`.
-- `web/src/prices.js` — **hand-curated** ticket prices + the price calculator
-  (day tiers, family ticket, surcharges, offers). No ticket back-end exposes
-  prices, so these are typed off the cinema's own price page; each entry carries
-  a `checked` date that the UI shows. Only **Kinopolis Bad Godesberg** so far
-  (checked 2026-07-25); adding a cinema = one more entry keyed by its exact
-  name in `movies.json`. See "Prices" below.
+- `web/src/prices.js` — the price model: a hand-curated price table per cinema
+  (day tiers, family ticket, surcharges, offers; each entry carries a `checked`
+  date the UI shows) **plus** the calculator that prefers the cinema's own
+  per-screening prices from `data/prices.json` and only falls back to the table.
+  Only **Kinopolis Bad Godesberg** so far; adding a cinema = one more entry keyed
+  by its exact name in `movies.json`. See "Prices" below.
+- `scraper/sources/kinopolis_prices.py` — one daily call to Kinopolis' ticket
+  shop for the exact price of every screening → `data/prices.json`.
 
 ## Run / deploy
 
@@ -99,32 +101,59 @@ booking link. The Kinopolis **Family Ticket** (before 18:00 the whole family
 pays the child price) is applied automatically, so the panel shows a family
 directly how much an afternoon show saves over the evening.
 
-Rules baked into `prices.js`: four day tiers (Mo–Do / Fr and the working day
+Prices come from the cinema itself where we have them (see below); the rules
+baked into `prices.js` are the fallback: four day tiers (Mo–Do / Fr and the working day
 before a holiday / Sa / So+Feiertage, with NRW holidays listed), Matinee,
 Happy Hour, Late Night, child + reduced fares, the Family-Ticket rule (FSK ≤ 12
 only) and an optional 3D surcharge. With kids in the party, films above FSK 12
 are left out. Every panel shows the full price table, surcharges, the combi /
 Ferienkino / Kindergeburtstag / KidsClub offers and links to the cinema's own
-price page — combi-ticket prices are only revealed in Kinopolis' booking flow,
-so we describe what's in them instead of quoting a price.
+price page; rows with exact prices also show what a kids' menu adds per ticket.
 
-**Online prices are not the printed prices.** Kinopolis' shop (CineOrder,
-`iframe.ts.kinopolis.de/api/performances/<showId>?include.pricecategories=true`
-— session-bound, 401 without the webshop's token, so we can't poll it) prices
-every ticket as
-`list price + film-related surcharge + seat surcharge + 0,50 € Vorverkaufsgebühr`.
-Verified 2026-07-25: Vaiana Mo 14:30 child 7,49 → **7,99** online; Die Odyssee
-(3h20, so +1,50 overlength) Mo 19:45 child 8,49 → **10,49**. Hence
-`advanceSaleFee: 0.5` and the "Online kaufen" checkbox (on by default, because
-our ticket links go to that shop). The per-film surcharge isn't in our data —
-the panel warns about it instead of guessing. If a total ever disagrees with the
-shop, check that surcharge first: the shop API's `priceCategories` is the
-ground truth, and the same call also reveals real combi-menu prices
-(Kinder-/Familien-Menü = +5,00 € on the ticket).
+### The printed price list is only a floor
 
-When touching prices: re-read the cinema's price page, keep the column spans
-straight (their table is colspan-based — e.g. the child price still holds on
-Fridays while adult evening prices already jump), and bump `checked`.
+Kinopolis adds a **per-film surcharge of 0 … 2,50 €** ("filmbezogener Zuschlag"
+on their price page) that nothing we scrape can predict. Measured 2026-07-25 on
+directly comparable screenings (Mo–Thu 12–18h, plain 2D, child ticket, list
+price 7,49 €): Toy Story 5 / Conni / Miss Moxy **7,49**, Vaiana / Minions
+**7,99**, Mandalorian & Grogu **8,99**, Die Odyssee **9,49**. There is **no**
+online booking fee — films without a surcharge cost the list price in the shop
+too. (An earlier version of this file blamed a 0,50 € Vorverkaufsgebühr; that
+was wrong, Minions simply carries a 0,50 € film surcharge.)
+
+So the surcharge has to come from the cinema, and it does:
+
+### data/prices.json — exact prices per screening
+
+`scraper/sources/kinopolis_prices.py` calls their webshop once per run:
+
+    GET iframe.ts.kinopolis.de/api/films?locale=de&include.pricecategories=true
+    Header: CENTER-OID: <cineorder_center_oid from cinemas.json>
+
+One request, ~300 KB gzipped, returns the whole program with **every price
+category of every screening** — surcharge, format (3D / D-BOX / Atmos), event
+pricing ("Normal Oper" 20–36 €, KINOFEST 5 €, Late Night, Best of Cinema) and
+the real combi-menu prices all included. The header is the entire auth: without
+`CENTER-OID` every `/api/…` call answers 401; with it, no session or token is
+needed. Their robots.txt allows generic agents (`use=reference`) and blocks
+AI-training crawlers, which we aren't.
+
+Output is `data/prices.json` → `{cinemas: {<name>: {shows: {<showId>: {adult,
+child, reduced, family?, menu_*, format?}}}}}`. `data/prices.json` is committed
+with the daily data; the workflow copies it to `web/public/data/prices.json`,
+which is gitignored like the movies copy. The join key is the
+performance id in the booking URL (`…/vorstellung/<id>`) — 99% of our Kinopolis
+showtimes match. The frontend lazy-loads the file when the price panel opens,
+uses exact figures where they exist, and falls back to the curated table with an
+"≈ geschätzt" marker otherwise. `family` is only present on screenings where the
+cinema actually grants the Familienpreis, so that rule needs no guessing.
+
+It's an internal API and may change without notice: `collect()` swallows its own
+errors, main.py keeps the last good file, and the frontend degrades to the table.
+
+When touching the curated table: re-read the cinema's price page, keep the column
+spans straight (their table is colspan-based — e.g. the child price still holds
+on Fridays while adult evening prices already jump), and bump `checked`.
 
 ## Conventions
 

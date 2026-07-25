@@ -15,14 +15,17 @@
 //
 // Times are minutes after midnight, `to` exclusive (1080 = 18:00, 1290 = 21:30).
 //
-// Cross-checked 2026-07-25 against Kinopolis' own ticket shop (CineOrder,
-// iframe.ts.kinopolis.de/api/performances/<showId>?include.pricecategories=true,
-// session-bound so we can't poll it). Every online price decomposes as
-//   list price + film-related surcharge + seat surcharge + 0,50 € advance-sale fee
-// e.g. Vaiana Mo 14:30 child 7,49 → 7,99 online; Die Odyssee (3h20) Mo 19:45
-// child 8,49 + 1,50 overlength → 10,49 online. So the shop is 0,50 €/ticket
-// dearer than the printed list, which is what `advanceSaleFee` covers. The
-// per-film surcharge is not in our data — flagged as a caveat in the UI.
+// These are the printed list prices and they are only the FLOOR of what a
+// screening costs: on top comes a film-related surcharge of 0 … 2,50 € that
+// Kinopolis sets per film. Measured 2026-07-25 on directly comparable
+// screenings (Mo–Thu 12–18h, plain 2D, child ticket, list price 7,49 €):
+//   Toy Story 5 / Conni / Miss Moxy 7,49 · Vaiana / Minions 7,99
+//   Mandalorian & Grogu 8,99 · Die Odyssee 9,49
+// There is no separate online booking fee — a film with no surcharge costs the
+// list price in the shop too. The surcharge isn't derivable from anything we
+// scrape, so `data/prices.json` (see scraper/sources/kinopolis_prices.py) carries
+// the cinema's own per-screening prices and this table is the fallback for
+// screenings that file doesn't cover — flagged as an estimate in the UI.
 
 // NRW public holidays — they carry Sunday prices, and the working day before
 // one carries Friday prices. Only the years the program can reach.
@@ -89,8 +92,6 @@ export const CINEMA_PRICES = {
       { de: 'Filmbezogener Zuschlag (z. B. Überlänge)', en: 'Film-related surcharge (e.g. long films)', amount: 2.5, upTo: true },
     ],
     threeD: 3.0,
-    // online tickets cost 0,50 € more per ticket than the printed list price
-    advanceSaleFee: 0.5,
     // the money-saver: before 18:00 the whole family pays the child price
     familyTicket: {
       before: 1080, childUnder: 12, maxFsk: 12,
@@ -152,12 +153,12 @@ function bestTicket(cfg, cat, minutes, tier, family) {
 // Total for the whole party for one screening.
 // → { total, tier, family, lines: [{ cat, count, each, ticket, viaFamily }] }
 // null when nothing can be priced (e.g. an empty party).
-export function showPrice(cfg, iso, party, { fsk = null, threeD = false, online = true } = {}) {
+export function showPrice(cfg, iso, party, { fsk = null, threeD = false } = {}) {
   const d = new Date(iso)
   const tier = dayTier(d)
   const minutes = d.getHours() * 60 + d.getMinutes()
   const family = familyApplies(cfg, minutes, party, fsk)
-  const extra = (threeD ? (cfg.threeD || 0) : 0) + (online ? (cfg.advanceSaleFee || 0) : 0)
+  const extra = threeD ? (cfg.threeD || 0) : 0
   const lines = []
   let total = 0
   for (const cat of PARTY_CATS) {
@@ -175,11 +176,69 @@ export function showPrice(cfg, iso, party, { fsk = null, threeD = false, online 
   return { total, tier, family, lines }
 }
 
+// --- exact prices ----------------------------------------------------------
+// data/prices.json holds what the cinema's own ticket shop charges for each
+// screening: {adult, child, reduced, family?, menu_child?, menu_family?,
+// menu_holiday?, format?}. Film surcharge and format are already in there, so
+// there is nothing left to model — just pick the cheapest ticket each visitor
+// may buy. The Familienpreis is only listed on screenings where the cinema
+// actually grants it, so its mere presence is the rule.
+const OWN_PRICE = {
+  adult: (ex) => ex.adult,
+  child: (ex) => ex.child ?? ex.family ?? ex.adult,
+  reduced: (ex) => ex.reduced ?? ex.adult,
+}
+
+export function showPriceExact(ex, party) {
+  const family = (party.child || 0) > 0 && ex.family != null
+  const lines = []
+  let total = 0
+  for (const cat of PARTY_CATS) {
+    const count = party[cat] || 0
+    if (!count) continue
+    const options = [OWN_PRICE[cat](ex), family ? ex.family : null].filter((v) => v != null)
+    if (!options.length) return null
+    const each = Math.min(...options)
+    lines.push({ cat, count, each, role: (family && each === ex.family && cat !== 'child') ? 'family' : cat })
+    total += count * each
+  }
+  if (!lines.length) return null
+  return { total, lines, family, exact: true, format: ex.format || null, menus: menuExtras(ex) }
+}
+
+// What a food bundle adds per ticket, e.g. "kids menu + 5,50 €"
+function menuExtras(ex) {
+  const base = ex.child ?? ex.family ?? ex.adult
+  const out = {}
+  if (ex.menu_child != null && base != null) out.child = round2(ex.menu_child - base)
+  if (ex.menu_family != null && base != null) out.family = round2(ex.menu_family - base)
+  return out
+}
+const round2 = (v) => Math.round(v * 100) / 100
+
+// The performance id Kinopolis puts in its booking links — our join key
+// between a showtime and data/prices.json
+export const showId = (url) => (String(url || '').match(/vorstellung\/([A-Z0-9]{16,})/) || [])[1] || null
+
+export function exactFor(live, show) {
+  const id = showId(show.booking_url)
+  return (id && live && live.cinemas && live.cinemas[show.cinema]
+    && live.cinemas[show.cinema].shows[id]) || null
+}
+
+// One price for one screening: the cinema's own figure when we have it, our
+// table otherwise. `movie` supplies the FSK the family rule needs.
+export function priceFor(cfg, movie, show, party, opts, live) {
+  const ex = exactFor(live, show)
+  if (ex) return showPriceExact(ex, party)
+  return showPrice(cfg, show.datetime, party, { ...opts, fsk: movie.age_rating })
+}
+
 // Cheapest total across a list of showtimes — used for the "ab X €" hints.
-export function cheapestTotal(cfg, shows, party, opts) {
+export function cheapestTotal(cfg, movie, shows, party, opts, live) {
   let min = null
   for (const s of shows) {
-    const p = showPrice(cfg, s.datetime, party, opts)
+    const p = priceFor(cfg, movie, s, party, opts, live)
     if (p && (min == null || p.total < min)) min = p.total
   }
   return min

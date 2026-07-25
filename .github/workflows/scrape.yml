@@ -47,6 +47,8 @@ jobs:
         run: |
           mkdir -p web/public/data
           cp data/movies.json web/public/data/movies.json
+          # prices are best-effort: keep building if the price scrape failed
+          cp data/prices.json web/public/data/prices.json || true
 
       - uses: actions/setup-node@v4
         with:

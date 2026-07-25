@@ -6,5 +6,6 @@ __pycache__/
 # local editor/assistant config
 .claude/
 
-# generated copy (canonical file lives in data/)
+# generated copies (canonical files live in data/)
 web/public/data/movies.json
+web/public/data/prices.json

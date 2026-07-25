@@ -13,12 +13,13 @@ import json
 import os
 from datetime import datetime, timezone
 
-from sources import kinoheld, custom
+from sources import kinoheld, custom, kinopolis_prices
 from enrich import tmdb, omdb, letterboxd
 from language import clean_title
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_PATH = os.path.join(HERE, "..", "data", "movies.json")
+PRICES_PATH = os.path.join(HERE, "..", "data", "prices.json")
 
 
 def load_env() -> None:
@@ -175,6 +176,15 @@ def main() -> None:
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=1, ensure_ascii=False)
     print(f"\nWrote {len(result)} films to {OUT_PATH}")
+
+    # exact ticket prices per screening, for the cinemas that expose them.
+    # Best-effort: a failure here leaves the last good prices.json in place and
+    # the frontend falls back to its curated price table.
+    prices = kinopolis_prices.collect(load_cinemas())
+    if prices["cinemas"]:
+        with open(PRICES_PATH, "w", encoding="utf-8") as f:
+            json.dump(prices, f, indent=1, ensure_ascii=False)
+        print(f"Wrote prices for {len(prices['cinemas'])} cinema(s) to {PRICES_PATH}")
 
 
 if __name__ == "__main__":
