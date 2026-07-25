@@ -418,8 +418,10 @@ input[type=range] {
 .party-step button:hover:not(:disabled) { background: var(--accent); color: #fff; }
 .party-step button:disabled { color: var(--border2); cursor: default; }
 .party-step b { min-width: 22px; text-align: center; font-variant-numeric: tabular-nums; }
-.party-3d { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 14.5px; color: var(--muted2); cursor: pointer; }
-.party-3d input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+.party-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.party-opts label { display: inline-flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--muted2); cursor: pointer; }
+.party-opts input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0; }
+.price-caveat { color: var(--muted); font-size: 13.5px; }
 
 .price-sort { display: flex; gap: 6px; margin-bottom: 12px; }
 .price-sort button {

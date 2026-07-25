@@ -108,6 +108,20 @@ Ferienkino / Kindergeburtstag / KidsClub offers and links to the cinema's own
 price page — combi-ticket prices are only revealed in Kinopolis' booking flow,
 so we describe what's in them instead of quoting a price.
 
+**Online prices are not the printed prices.** Kinopolis' shop (CineOrder,
+`iframe.ts.kinopolis.de/api/performances/<showId>?include.pricecategories=true`
+— session-bound, 401 without the webshop's token, so we can't poll it) prices
+every ticket as
+`list price + film-related surcharge + seat surcharge + 0,50 € Vorverkaufsgebühr`.
+Verified 2026-07-25: Vaiana Mo 14:30 child 7,49 → **7,99** online; Die Odyssee
+(3h20, so +1,50 overlength) Mo 19:45 child 8,49 → **10,49**. Hence
+`advanceSaleFee: 0.5` and the "Online kaufen" checkbox (on by default, because
+our ticket links go to that shop). The per-film surcharge isn't in our data —
+the panel warns about it instead of guessing. If a total ever disagrees with the
+shop, check that surcharge first: the shop API's `priceCategories` is the
+ground truth, and the same call also reveals real combi-menu prices
+(Kinder-/Familien-Menü = +5,00 € on the ticket).
+
 When touching prices: re-read the cinema's price page, keep the column spans
 straight (their table is colspan-based — e.g. the child price still holds on
 Fridays while adult evening prices already jump), and bump `checked`.

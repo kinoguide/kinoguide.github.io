@@ -14,6 +14,15 @@
 // while adult evening prices already jump on Friday. `null` = not sold that day.
 //
 // Times are minutes after midnight, `to` exclusive (1080 = 18:00, 1290 = 21:30).
+//
+// Cross-checked 2026-07-25 against Kinopolis' own ticket shop (CineOrder,
+// iframe.ts.kinopolis.de/api/performances/<showId>?include.pricecategories=true,
+// session-bound so we can't poll it). Every online price decomposes as
+//   list price + film-related surcharge + seat surcharge + 0,50 € advance-sale fee
+// e.g. Vaiana Mo 14:30 child 7,49 → 7,99 online; Die Odyssee (3h20) Mo 19:45
+// child 8,49 + 1,50 overlength → 10,49 online. So the shop is 0,50 €/ticket
+// dearer than the printed list, which is what `advanceSaleFee` covers. The
+// per-film surcharge is not in our data — flagged as a caveat in the UI.
 
 // NRW public holidays — they carry Sunday prices, and the working day before
 // one carries Friday prices. Only the years the program can reach.
@@ -80,6 +89,8 @@ export const CINEMA_PRICES = {
       { de: 'Filmbezogener Zuschlag (z. B. Überlänge)', en: 'Film-related surcharge (e.g. long films)', amount: 2.5, upTo: true },
     ],
     threeD: 3.0,
+    // online tickets cost 0,50 € more per ticket than the printed list price
+    advanceSaleFee: 0.5,
     // the money-saver: before 18:00 the whole family pays the child price
     familyTicket: {
       before: 1080, childUnder: 12, maxFsk: 12,
@@ -89,11 +100,11 @@ export const CINEMA_PRICES = {
     // family-relevant offers; Kinopolis only reveals combi prices in the
     // booking flow, so we describe what's in them and link out
     offers: [
-      { de: 'Super Deal Familien Menü — Ticket + 0,5 l Softdrink + mittleres Popcorn (im Rahmen des Familienpreises)',
-        en: 'Super Deal family menu — ticket + 0.5 l soft drink + medium popcorn (within the family price)',
+      { de: 'Super Deal Familien Menü — + 5,00 € aufs Ticket: 0,5 l Softdrink + mittleres Popcorn (im Rahmen des Familienpreises)',
+        en: 'Super Deal family menu — + €5.00 on top of the ticket: 0.5 l soft drink + medium popcorn (within the family price)',
         url: 'https://www.kinopolis.de/bn/spezial/kombiangebote' },
-      { de: 'Super Deal Kinder Menü — Ticket + 0,3 l Softdrink + Kinder-Popcorn + Überraschungstüte',
-        en: 'Super Deal kids menu — ticket + 0.3 l soft drink + kids popcorn + surprise bag',
+      { de: 'Super Deal Kinder Menü — + 5,00 € aufs Ticket (statt 7,49 €): 0,3 l Softdrink + Kinder-Popcorn + Überraschungstüte',
+        en: 'Super Deal kids menu — + €5.00 on top of the ticket (instead of €7.49): 0.3 l soft drink + kids popcorn + surprise bag',
         url: 'https://www.kinopolis.de/bn/spezial/kombiangebote' },
       { de: 'Ferienkino — Ticket + 0,75 l Softdrink + mittleres Popcorn, ab 13,49 €. In den Ferien Mo–Fr vor 18 Uhr, nur für Schüler:innen/Studierende/Azubis mit Ausweis, nicht an Feiertagen.',
         en: 'Ferienkino — ticket + 0.75 l soft drink + medium popcorn, from €13.49. During school holidays Mon–Fri before 18:00, students/apprentices with ID only, not on public holidays.',
@@ -141,12 +152,12 @@ function bestTicket(cfg, cat, minutes, tier, family) {
 // Total for the whole party for one screening.
 // → { total, tier, family, lines: [{ cat, count, each, ticket, viaFamily }] }
 // null when nothing can be priced (e.g. an empty party).
-export function showPrice(cfg, iso, party, { fsk = null, threeD = false } = {}) {
+export function showPrice(cfg, iso, party, { fsk = null, threeD = false, online = true } = {}) {
   const d = new Date(iso)
   const tier = dayTier(d)
   const minutes = d.getHours() * 60 + d.getMinutes()
   const family = familyApplies(cfg, minutes, party, fsk)
-  const extra = threeD ? (cfg.threeD || 0) : 0
+  const extra = (threeD ? (cfg.threeD || 0) : 0) + (online ? (cfg.advanceSaleFee || 0) : 0)
   const lines = []
   let total = 0
   for (const cat of PARTY_CATS) {
