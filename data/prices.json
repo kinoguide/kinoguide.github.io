@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-29T06:30:27.762706+00:00",
+ "generated_at": "2026-07-29T17:58:37.828361+00:00",
  "cinemas": {
   "Kinopolis Bad Godesberg": {
    "source": "https://www.kinopolis.de/bn/preise",
@@ -12,31 +12,6 @@
      "family": 8.49,
      "menu_child": 13.49,
      "menu_family": 13.49
-    },
-    "71A75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "90A75000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.99,
-     "reduced": 8.99,
-     "family": 8.99,
-     "menu_holiday": 14.99
-    },
-    "79975000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
     },
     "46A75000023GNFNDWF": {
      "adult": 9.49,
@@ -56,15 +31,6 @@
      "menu_family": 13.49
     },
     "66A75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "B2975000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
@@ -366,15 +332,6 @@
      "child": 8.49,
      "reduced": 8.99
     },
-    "14975000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99
-    },
     "03A75000023GNFNDWF": {
      "adult": 11.49,
      "child": 8.99,
@@ -551,48 +508,6 @@
      "menu_holiday": 13.99
     },
     "BFA75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 8.99,
-     "reduced": 9.49
-    },
-    "03975000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99,
-     "format": "D-BOX"
-    },
-    "3C975000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99,
-     "format": "Atmos"
-    },
-    "EB975000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_holiday": 13.99
-    },
-    "22A75000023GNFNDWF": {
-     "adult": 12.99,
-     "child": 10.99,
-     "reduced": 10.99,
-     "family": 10.99,
-     "menu_child": 15.99,
-     "menu_family": 15.99,
-     "menu_holiday": 16.99,
-     "format": "3D D-BOX"
-    },
-    "2C975000023GNFNDWF": {
      "adult": 11.49,
      "child": 8.99,
      "reduced": 9.49
@@ -843,55 +758,6 @@
      "reduced": 5.0,
      "format": "3D D-BOX"
     },
-    "A7975000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "CA975000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "Atmos D-BOX"
-    },
-    "A8975000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "CB975000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "D-BOX"
-    },
-    "A5975000023GNFNDWF": {
-     "adult": 13.99,
-     "child": 11.49,
-     "reduced": 11.99,
-     "format": "3D D-BOX"
-    },
-    "98975000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.49,
-     "reduced": 8.99
-    },
     "77A75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
@@ -945,8 +811,7 @@
      "family": 7.49,
      "menu_child": 12.49,
      "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "Atmos"
+     "menu_holiday": 13.49
     },
     "BBA75000023GNFNDWF": {
      "adult": 9.49,
@@ -1164,18 +1029,6 @@
      "child": 11.49,
      "reduced": 11.99,
      "format": "3D D-BOX"
-    },
-    "B5975000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 9.49,
-     "reduced": 9.49,
-     "family": 9.49,
-     "menu_holiday": 15.49
-    },
-    "C5975000023GNFNDWF": {
-     "adult": 12.99,
-     "child": 10.49,
-     "reduced": 10.99
     },
     "07975000023GNFNDWF": {
      "adult": 12.99,
@@ -1435,43 +1288,6 @@
      "child": 10.49,
      "reduced": 10.99,
      "format": "OV"
-    },
-    "51975000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.49,
-     "reduced": 13.49,
-     "family": 11.49,
-     "menu_holiday": 19.49,
-     "format": "3D"
-    },
-    "74575000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 8.49,
-     "reduced": 10.49,
-     "family": 8.49,
-     "menu_holiday": 16.49,
-     "format": "D-BOX"
-    },
-    "F0975000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.49,
-     "reduced": 13.49,
-     "family": 11.49,
-     "menu_holiday": 19.49,
-     "format": "3D/OV"
-    },
-    "44575000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.49,
-     "reduced": 13.49,
-     "family": 11.49,
-     "menu_holiday": 19.49,
-     "format": "3D Atmos D-BOX"
-    },
-    "61975000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49
     },
     "84575000023GNFNDWF": {
      "adult": 16.49,
@@ -2177,6 +1993,10 @@
      "reduced": 11.49,
      "format": "Preview"
     },
+    "31B75000023GNFNDWF": {
+     "adult": 9.49,
+     "format": "OmU Spezial"
+    },
     "57575000023GNFNDWF": {
      "adult": 3.99
     },
@@ -2186,6 +2006,10 @@
      "reduced": 12.99,
      "family": 9.99,
      "format": "Preview"
+    },
+    "41B75000023GNFNDWF": {
+     "adult": 15.99,
+     "format": "OmU Spezial"
     },
     "82A75000023GNFNDWF": {
      "adult": 15.99
@@ -2332,6 +2156,15 @@
      "adult": 10.99,
      "child": 8.49,
      "reduced": 8.99
+    },
+    "51B75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "KidsPreview"
     },
     "61175000023GNFNDWF": {
      "adult": 24.99
