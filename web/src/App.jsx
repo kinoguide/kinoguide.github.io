@@ -284,6 +284,9 @@ const LANGUAGES = {
   ka: { flag: '🇬🇪', de: 'Georgisch', en: 'Georgian' },
   tl: { flag: '🇵🇭', de: 'Philippinisch', en: 'Filipino' },
   ta: { flag: '🇮🇳', de: 'Tamil', en: 'Tamil' },
+  ml: { flag: '🇮🇳', de: 'Malayalam', en: 'Malayalam' },
+  te: { flag: '🇮🇳', de: 'Telugu', en: 'Telugu' },
+  pa: { flag: '🇮🇳', de: 'Punjabi', en: 'Punjabi' },
   fa: { flag: '🇮🇷', de: 'Persisch', en: 'Persian' },
   ca: { flag: '🇪🇸', de: 'Katalanisch', en: 'Catalan' },
   da: { flag: '🇩🇰', de: 'Dänisch', en: 'Danish' },
@@ -294,8 +297,22 @@ const LANGUAGES = {
   he: { flag: '🇮🇱', de: 'Hebräisch', en: 'Hebrew' },
   th: { flag: '🇹🇭', de: 'Thailändisch', en: 'Thai' },
 }
-const langName = (code, ui) => (LANGUAGES[code] ? LANGUAGES[code][ui] : (code || '').toUpperCase())
+// Languages we don't have a flag for still get a proper name: the browser's own
+// language table covers every ISO code, so a film in Malayalam or Georgian can
+// never again show up as a bare "ML" the way it used to.
+const langName = (code, ui) => {
+  if (LANGUAGES[code]) return LANGUAGES[code][ui]
+  try {
+    const n = new Intl.DisplayNames([ui === 'en' ? 'en' : 'de'], { type: 'language' }).of(code)
+    if (n && n.toLowerCase() !== String(code).toLowerCase()) return n[0].toUpperCase() + n.slice(1)
+  } catch { /* invalid code — fall through */ }
+  return (code || '').toUpperCase()
+}
 const langFlag = (code) => (LANGUAGES[code] ? LANGUAGES[code].flag + ' ' : '')
+
+// Always offered in the language filter, even on days when nothing is playing
+// in them — the visitor asked to be able to look for Korean films at any time.
+const PINNED_LANGS = ['ko']
 
 // TMDB delivers genre names in German; translate for the English UI.
 const GENRES_EN = {
@@ -1255,11 +1272,17 @@ export default function App() {
       if (l && l !== 'de') count[l] = (count[l] || 0) + 1
     }
     // every language actually in the program gets a button, even with a single
-    // film: a lone Korean or Ukrainian film was previously unreachable by this
-    // filter (the old cutoff was 2). Sorted by how many films carry it.
-    return Object.entries(count)
+    // film: a lone Ukrainian or Malayalam film was previously unreachable by
+    // this filter (the old cutoff was 2). Sorted by how many films carry it.
+    const list = Object.entries(count)
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .map(([code]) => code)
+      .map(([code, n]) => ({ code, n }))
+    // pinned languages stay on offer even with nothing playing; they carry
+    // their count so an empty day says so before you click
+    for (const code of PINNED_LANGS) {
+      if (!count[code]) list.push({ code, n: 0 })
+    }
+    return list
   }, [data])
 
   // option lists derived from the data
@@ -1637,9 +1660,11 @@ export default function App() {
               <div className="field">
                 <label>{t.origLangLabel}</label>
                 <div className="pills">
-                  {allLangs.map((code) => (
-                    <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''}`} onClick={() => toggleLang(code)}>
+                  {allLangs.map(({ code, n }) => (
+                    <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''} ${n === 0 ? 'empty' : ''}`}
+                      onClick={() => toggleLang(code)}>
                       {langFlag(code)}{langName(code, ui)}
+                      {n === 0 && <span className="pill-zero">0</span>}
                     </button>
                   ))}
                 </div>

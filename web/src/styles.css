@@ -131,11 +131,15 @@ body {
 }
 .active-chip:hover { background: var(--accent); color: #fff; }
 .active-chip .x { font-size: 11px; opacity: .8; }
+/* sits above the filter panel, so it needs to read as a real button rather
+   than a footnote */
 .chips-reset {
-  background: none; border: none; color: var(--muted); font-size: 14px;
-  cursor: pointer; font-family: inherit; padding: 6px 4px; text-decoration: underline;
+  background: var(--bg2); border: 1px solid var(--border2); color: var(--muted2);
+  border-radius: 999px; font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: inherit; padding: 9px 18px; margin-left: 4px;
+  display: inline-flex; align-items: center; gap: 7px;
 }
-.chips-reset:hover { color: var(--text); }
+.chips-reset:hover { color: var(--text); border-color: var(--red); }
 
 /* --- result bar: count on the left, tools on the right --- */
 .resultbar {
@@ -231,6 +235,14 @@ body {
 }
 .pill:hover { border-color: var(--border2); }
 .pill.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* a language kept on offer that has nothing playing today — still clickable,
+   but it says so rather than pretending there is something behind it */
+.pill.empty { color: var(--muted); border-style: dashed; }
+.pill.empty .pill-zero {
+  margin-left: 7px; font-size: 11px; font-weight: 700; opacity: .75;
+  border: 1px solid currentColor; border-radius: 999px; padding: 0 5px;
+}
+.pill.empty.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 select {
   width: 100%; background: var(--bg2); border: 1px solid var(--border); color: var(--text);

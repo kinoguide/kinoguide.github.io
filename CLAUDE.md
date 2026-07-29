@@ -95,7 +95,15 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     chip below the bar; the panel behind the button groups its controls under
     **Schnellfilter · Wann · Wo · Was**. Keep new filters inside that structure
     rather than adding another control to the bar — "all jumbled up" was the
-    complaint that prompted it.
+    complaint that prompted it. The bar's three menus (`Menu`) render their
+    popover `position: fixed` from the button's rect on purpose: the button row
+    scrolls sideways, and a scroll container clips an absolutely positioned
+    menu right out of existence on narrow screens.
+  - **Original-language filter.** Every language in the day's program gets a
+    pill (no minimum film count), names come from `LANGUAGES` and fall back to
+    `Intl.DisplayNames` so an unmapped code never shows raw. `PINNED_LANGS`
+    (currently `ko`) stays on offer even with nothing playing, marked with a
+    dashed border and a `0` — the user asked for a permanent Korean button.
 - `web/src/prices.js` — the price model: a hand-curated price table per cinema
   (day tiers, family ticket, surcharges, offers; each entry carries a `checked`
   date the UI shows) **plus** the calculator that prefers the cinema's own
