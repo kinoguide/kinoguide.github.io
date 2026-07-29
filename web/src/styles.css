@@ -84,7 +84,9 @@ body {
   display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
   margin-bottom: 12px;
 }
-.filterbar-btns { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* layout comes from .scrollrow-track — this class only reserves room for the
+   arrow buttons that overlay each end */
+.filterbar-btns { padding: 2px 2px 6px; }
 .search {
   flex: 1; min-width: 240px; position: relative;
   display: flex; align-items: center;
@@ -147,11 +149,16 @@ body {
 /* reviews dropdown */
 .dropdown { position: relative; display: inline-block; }
 .chip .caret { font-size: 11px; opacity: .8; }
+/* Pinned to the viewport, not to the button's box: the buttons sit in a
+   side-scrolling row, and a scroll container clips its own children — an
+   absolutely positioned menu was cut off completely on narrow screens.
+   `top`/`left` come from the trigger's rect (see Menu in App.jsx). */
 .dropdown-menu {
-  position: absolute; top: calc(100% + 6px); left: 0; z-index: 30;
+  position: fixed; z-index: 45;
   background: var(--panel); border: 1px solid var(--border2); border-radius: 12px;
-  padding: 6px; display: flex; flex-direction: column; gap: 2px; min-width: 168px;
+  padding: 6px; display: flex; flex-direction: column; gap: 2px; min-width: 178px;
   box-shadow: 0 10px 28px rgba(0,0,0,.45);
+  overflow-y: auto; overscroll-behavior: contain;
 }
 .dropdown-menu button {
   background: none; border: none; color: var(--text); text-align: left;
@@ -159,7 +166,38 @@ body {
 }
 .dropdown-menu button:hover { background: var(--bg2); }
 .dropdown-menu button.on { color: var(--accent2); font-weight: 700; }
-.daymenu { max-height: 340px; overflow-y: auto; }
+
+/* --- the bar's button row: one line, scrollable, and visibly so --- */
+.scrollrow { position: relative; flex: 1; min-width: 0; }
+.scrollrow-track {
+  display: flex; gap: 8px; align-items: center;
+  overflow-x: auto; scroll-behavior: smooth;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.scrollrow-track::-webkit-scrollbar { display: none; }
+.scrollrow-track > * { flex-shrink: 0; }
+/* a fade at whichever edge still has buttons behind it */
+.scrollrow::before, .scrollrow::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 56px;
+  pointer-events: none; opacity: 0; transition: opacity .15s ease; z-index: 2;
+}
+.scrollrow::before { left: 0; background: linear-gradient(90deg, var(--bg) 20%, transparent); }
+.scrollrow::after { right: 0; background: linear-gradient(270deg, var(--bg) 20%, transparent); }
+.scrollrow.has-left::before, .scrollrow.has-right::after { opacity: 1; }
+/* …plus a real arrow to tap, so the row doesn't just look cut off */
+.scrollrow-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 30px; height: 30px; border-radius: 999px; padding: 0;
+  background: var(--accent); border: none; color: #fff;
+  font-size: 19px; font-weight: 700; line-height: 1; font-family: inherit;
+  cursor: pointer; box-shadow: 0 3px 12px rgba(0,0,0,.5);
+  opacity: 0; pointer-events: none; transition: opacity .15s ease;
+}
+.scrollrow-arrow.left { left: 0; }
+.scrollrow-arrow.right { right: 0; }
+.scrollrow.has-left .scrollrow-arrow.left,
+.scrollrow.has-right .scrollrow-arrow.right { opacity: 1; pointer-events: auto; }
+.scrollrow-arrow:hover { filter: brightness(1.12); }
 
 /* --- filter panel: four named groups instead of one long stack --- */
 .panel {
@@ -353,10 +391,11 @@ input[type=range] {
 /* --- back to top --- */
 .top-sentinel { position: absolute; top: 0; left: 0; width: 1px; height: 460px; pointer-events: none; }
 .to-top {
-  position: fixed; right: 22px; bottom: 22px; z-index: 40;
-  width: 46px; height: 46px; border-radius: 999px;
-  background: var(--accent); border: none; color: #fff; font-size: 20px; line-height: 1;
-  cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,.45);
+  position: fixed; right: 24px; bottom: 24px; z-index: 40;
+  width: 62px; height: 62px; border-radius: 999px;
+  background: var(--accent); border: 2px solid rgba(255,255,255,.22); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 8px 26px rgba(0,0,0,.5);
   opacity: 0; transform: translateY(12px); pointer-events: none;
   transition: opacity .18s ease, transform .18s ease;
 }
@@ -586,16 +625,11 @@ footer a:hover { text-decoration: underline; }
   /* the bar wraps to two lines: search on top, the four buttons under it,
      side-scrollable so they never stack into a jumble */
   .search { min-width: 100%; }
-  .filterbar-btns {
-    width: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px;
-    scrollbar-width: none; -ms-overflow-style: none;
-  }
-  .filterbar-btns::-webkit-scrollbar { display: none; }
-  .filterbar-btns > * { flex-shrink: 0; }
+  .scrollrow { width: 100%; }
   .panel { padding: 4px 16px 16px; }
   .film-hero-in { flex-direction: column; align-items: flex-start; }
   .film-poster { width: 128px; }
   .film-head h1 { font-size: 24px; }
   .film-desc { font-size: 16px; }
-  .to-top { right: 14px; bottom: 14px; }
+  .to-top { right: 16px; bottom: 16px; width: 56px; height: 56px; }
 }

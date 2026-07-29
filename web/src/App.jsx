@@ -283,6 +283,16 @@ const LANGUAGES = {
   is: { flag: '🇮🇸', de: 'Isländisch', en: 'Icelandic' },
   ka: { flag: '🇬🇪', de: 'Georgisch', en: 'Georgian' },
   tl: { flag: '🇵🇭', de: 'Philippinisch', en: 'Filipino' },
+  ta: { flag: '🇮🇳', de: 'Tamil', en: 'Tamil' },
+  fa: { flag: '🇮🇷', de: 'Persisch', en: 'Persian' },
+  ca: { flag: '🇪🇸', de: 'Katalanisch', en: 'Catalan' },
+  da: { flag: '🇩🇰', de: 'Dänisch', en: 'Danish' },
+  pl: { flag: '🇵🇱', de: 'Polnisch', en: 'Polish' },
+  ru: { flag: '🇷🇺', de: 'Russisch', en: 'Russian' },
+  cs: { flag: '🇨🇿', de: 'Tschechisch', en: 'Czech' },
+  fi: { flag: '🇫🇮', de: 'Finnisch', en: 'Finnish' },
+  he: { flag: '🇮🇱', de: 'Hebräisch', en: 'Hebrew' },
+  th: { flag: '🇹🇭', de: 'Thailändisch', en: 'Thai' },
 }
 const langName = (code, ui) => (LANGUAGES[code] ? LANGUAGES[code][ui] : (code || '').toUpperCase())
 const langFlag = (code) => (LANGUAGES[code] ? LANGUAGES[code].flag + ' ' : '')
@@ -911,91 +921,158 @@ function DayPlan({ items, onOpen, t, ui }) {
   )
 }
 
-// one compact dropdown for all sort options
-function SortMenu({ sort, setSort, t }) {
+// One dropdown for all three bar menus.
+//
+// The menu is rendered `position: fixed` and positioned from the button's
+// rectangle rather than being laid out inside the button's own box. That is
+// deliberate: the buttons live in a side-scrolling row, and a scroll container
+// clips everything inside it — an absolutely positioned menu was being cut off
+// entirely on narrow screens, which made Datum / Stadt / Sortierung look dead.
+function Menu({ label, on, title, menuClass = '', children }) {
   const [open, setOpen] = useState(false)
-  const ref = useRef(null)
+  const [pos, setPos] = useState(null)
+  const wrapRef = useRef(null)
+  const menuRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (!open) { setPos(null); return }
+    const r = wrapRef.current.getBoundingClientRect()
+    const w = menuRef.current?.offsetWidth || 180
+    setPos({
+      top: r.bottom + 6,
+      // keep it on screen when its button sits near the right edge
+      left: Math.max(10, Math.min(r.left, window.innerWidth - w - 10)),
+      maxHeight: Math.max(160, window.innerHeight - r.bottom - 20),
+    })
+  }, [open])
+
   useEffect(() => {
-    const onDoc = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    if (!open) return
+    const onDoc = (e) => {
+      if (wrapRef.current?.contains(e.target) || menuRef.current?.contains(e.target)) return
+      setOpen(false)
+    }
+    // it is pinned to the viewport, so anything that moves the button (page
+    // scroll, the row scrolling sideways, a resize) closes it instead of
+    // leaving it floating somewhere wrong
+    const close = () => setOpen(false)
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
     document.addEventListener('mousedown', onDoc)
-    return () => document.removeEventListener('mousedown', onDoc)
-  }, [])
-  const lbl = (o) => `${o.icon} ${o.labelKey ? t[o.labelKey] : o.label}`
-  const active = SORT_OPTIONS.find((o) => o.id === sort) || SORT_OPTIONS[0]
+    document.addEventListener('keydown', onKey)
+    window.addEventListener('scroll', close, true)
+    window.addEventListener('resize', close)
+    return () => {
+      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('keydown', onKey)
+      window.removeEventListener('scroll', close, true)
+      window.removeEventListener('resize', close)
+    }
+  }, [open])
+
   return (
-    <div className="dropdown" ref={ref}>
-      <button className="chip sort-chip" onClick={() => setOpen((v) => !v)}
-        aria-haspopup="listbox" aria-expanded={open} title={t.sortLabel}>
-        {lbl(active)} <span className="caret">▾</span>
+    <div className="dropdown" ref={wrapRef}>
+      <button className={`chip ${on ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox" aria-expanded={open} title={title}>
+        {label} <span className="caret">▾</span>
       </button>
       {open && (
-        <div className="dropdown-menu" role="listbox">
-          {SORT_OPTIONS.map((o) => (
-            <button key={o.id} role="option" aria-selected={sort === o.id}
-              className={sort === o.id ? 'on' : ''}
-              onClick={() => { setSort(o.id); setOpen(false) }}>{lbl(o)}</button>
-          ))}
+        <div className={`dropdown-menu ${menuClass}`} role="listbox" ref={menuRef}
+          style={pos
+            ? { top: pos.top, left: pos.left, maxHeight: pos.maxHeight }
+            : { opacity: 0, pointerEvents: 'none' }}>
+          {children(() => setOpen(false))}
         </div>
       )}
     </div>
   )
 }
 
-// close-on-outside-click helper for the popover menus below
-function useOutside(onClose) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const f = (e) => { if (ref.current && !ref.current.contains(e.target)) onClose() }
-    document.addEventListener('mousedown', f)
-    return () => document.removeEventListener('mousedown', f)
-  }, [onClose])
-  return ref
+// one option row inside a Menu
+function MenuItem({ selected, onClick, children }) {
+  return (
+    <button role="option" aria-selected={selected} className={selected ? 'on' : ''} onClick={onClick}>
+      {children}
+    </button>
+  )
+}
+
+// one compact dropdown for all sort options
+function SortMenu({ sort, setSort, t }) {
+  const lbl = (o) => `${o.icon} ${o.labelKey ? t[o.labelKey] : o.label}`
+  const active = SORT_OPTIONS.find((o) => o.id === sort) || SORT_OPTIONS[0]
+  return (
+    <Menu label={lbl(active)} title={t.sortLabel}>
+      {(close) => SORT_OPTIONS.map((o) => (
+        <MenuItem key={o.id} selected={sort === o.id} onClick={() => { setSort(o.id); close() }}>
+          {lbl(o)}
+        </MenuItem>
+      ))}
+    </Menu>
+  )
 }
 
 // City picker dropdown (Both cities · Köln · Bonn)
 function CityMenu({ city, setCity, t }) {
-  const [open, setOpen] = useState(false)
-  const ref = useOutside(() => setOpen(false))
   const opts = [['Alle', t.cityAll], ['Köln', 'Köln'], ['Bonn', 'Bonn']]
   return (
-    <div className="dropdown" ref={ref}>
-      <button className={`chip ${city !== 'Alle' ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
-        aria-haspopup="listbox" aria-expanded={open}>
-        📍 {city === 'Alle' ? t.cityAll : city} <span className="caret">▾</span>
-      </button>
-      {open && (
-        <div className="dropdown-menu" role="listbox">
-          {opts.map(([v, l]) => (
-            <button key={v} role="option" aria-selected={city === v} className={city === v ? 'on' : ''}
-              onClick={() => { setCity(v); setOpen(false) }}>{l}</button>
-          ))}
-        </div>
-      )}
-    </div>
+    <Menu label={`📍 ${city === 'Alle' ? t.cityAll : city}`} on={city !== 'Alle'}>
+      {(close) => opts.map(([v, l]) => (
+        <MenuItem key={v} selected={city === v} onClick={() => { setCity(v); close() }}>{l}</MenuItem>
+      ))}
+    </Menu>
   )
 }
 
 // Single date dropdown: Alle Tage · Heute · Morgen · every upcoming day.
 // (Replaces the scrollable day-chip row, which also clipped its own popover.)
 function DateMenu({ date, setDate, allDates, t }) {
-  const [open, setOpen] = useState(false)
-  const ref = useOutside(() => setOpen(false))
   return (
-    <div className="dropdown" ref={ref}>
-      <button className={`chip ${date !== 'Alle' ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
-        aria-haspopup="listbox" aria-expanded={open}>
-        📅 {date === 'Alle' ? t.allDays : fmtDayShort(date, t)} <span className="caret">▾</span>
-      </button>
-      {open && (
-        <div className="dropdown-menu daymenu" role="listbox">
-          <button role="option" aria-selected={date === 'Alle'} className={date === 'Alle' ? 'on' : ''}
-            onClick={() => { setDate('Alle'); setOpen(false) }}>{t.allDays}</button>
+    <Menu label={`📅 ${date === 'Alle' ? t.allDays : fmtDayShort(date, t)}`}
+      on={date !== 'Alle'} menuClass="daymenu">
+      {(close) => (
+        <>
+          <MenuItem selected={date === 'Alle'} onClick={() => { setDate('Alle'); close() }}>
+            {t.allDays}
+          </MenuItem>
           {allDates.map((d) => (
-            <button key={d} role="option" aria-selected={date === d} className={date === d ? 'on' : ''}
-              onClick={() => { setDate(d); setOpen(false) }}>{fmtDayShort(d, t)}</button>
+            <MenuItem key={d} selected={date === d} onClick={() => { setDate(d); close() }}>
+              {fmtDayShort(d, t)}
+            </MenuItem>
           ))}
-        </div>
+        </>
       )}
+    </Menu>
+  )
+}
+
+// The bar's buttons sit on one line and scroll sideways when they don't fit.
+// On their own that is invisible — so the edge that has more behind it gets a
+// fade plus a real arrow button you can tap to scroll, and both disappear once
+// you reach that end.
+function ScrollRow({ className = '', children }) {
+  const ref = useRef(null)
+  const [edges, setEdges] = useState({ left: false, right: false })
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const update = () => {
+      const max = el.scrollWidth - el.clientWidth
+      setEdges({ left: el.scrollLeft > 4, right: el.scrollLeft < max - 4 })
+    }
+    update()
+    el.addEventListener('scroll', update, { passive: true })
+    // the buttons change width when the UI language or the picked date changes
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    for (const c of el.children) ro.observe(c)
+    return () => { el.removeEventListener('scroll', update); ro.disconnect() }
+  }, [children])
+  const nudge = (dir) => ref.current?.scrollBy({ left: dir * 200, behavior: 'smooth' })
+  return (
+    <div className={`scrollrow ${edges.left ? 'has-left' : ''} ${edges.right ? 'has-right' : ''}`}>
+      <div className={`scrollrow-track ${className}`} ref={ref}>{children}</div>
+      <button className="scrollrow-arrow left" onClick={() => nudge(-1)} tabIndex={-1} aria-hidden="true">‹</button>
+      <button className="scrollrow-arrow right" onClick={() => nudge(1)} tabIndex={-1} aria-hidden="true">›</button>
     </div>
   )
 }
@@ -1037,7 +1114,11 @@ function BackToTop({ t }) {
       <button className={`to-top ${show ? 'on' : ''}`} aria-hidden={!show} tabIndex={show ? 0 : -1}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         title={t.backToTop} aria-label={t.backToTop}>
-        ↑
+        {/* drawn, not the ↑ character: the glyph is far too thin at this size */}
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor"
+          strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 20V6M5.5 12.5L12 6l6.5 6.5" />
+        </svg>
       </button>
     </>
   )
@@ -1173,9 +1254,11 @@ export default function App() {
       const l = m.original_language
       if (l && l !== 'de') count[l] = (count[l] || 0) + 1
     }
+    // every language actually in the program gets a button, even with a single
+    // film: a lone Korean or Ukrainian film was previously unreachable by this
+    // filter (the old cutoff was 2). Sorted by how many films carry it.
     return Object.entries(count)
-      .filter(([, n]) => n >= 2)
-      .sort((a, b) => b[1] - a[1])
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
       .map(([code]) => code)
   }, [data])
 
@@ -1460,7 +1543,7 @@ export default function App() {
             <button className="search-clear" onClick={() => setQ('')} aria-label={t.clearSearch} title={t.clearSearch}>✕</button>
           )}
         </div>
-        <div className="filterbar-btns">
+        <ScrollRow className="filterbar-btns">
           <DateMenu date={date} setDate={setDate} allDates={allDates} t={t} />
           <CityMenu city={city} setCity={setCity} t={t} />
           <SortMenu sort={sort} setSort={setSort} t={t} />
@@ -1468,7 +1551,7 @@ export default function App() {
             onClick={() => setShowFilters((v) => !v)} aria-expanded={showFilters}>
             ⚙ {t.filter}{panelCount ? <span className="chip-count">{panelCount}</span> : null}
           </button>
-        </div>
+        </ScrollRow>
       </div>
 
       <ActiveChips chips={activeChips} onResetAll={resetAll} t={t} />
