@@ -1659,9 +1659,12 @@ export default function App() {
             {allLangs.length > 0 && (
               <div className="field">
                 <label>{t.origLangLabel}</label>
+                {/* the zero-film class must not be a bare "empty": that class
+                    already exists for the "no films" message and its 60px
+                    padding blew these pills up into bubbles */}
                 <div className="pills">
                   {allLangs.map(({ code, n }) => (
-                    <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''} ${n === 0 ? 'empty' : ''}`}
+                    <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''} ${n === 0 ? 'pill-none' : ''}`}
                       onClick={() => toggleLang(code)}>
                       {langFlag(code)}{langName(code, ui)}
                       {n === 0 && <span className="pill-zero">0</span>}
