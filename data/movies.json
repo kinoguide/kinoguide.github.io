@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-29T17:58:37.800732+00:00",
+ "generated_at": "2026-07-29T18:32:58.601376+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -716,13 +716,6 @@
      "datetime": "2026-07-29T19:50:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/C69CDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-07-29T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100589"
     },
     {
      "cinema": "Lichtspiele Kalk",
@@ -9460,20 +9453,6 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127578205"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T20:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/84575000023GNFNDWF"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-29T20:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68125"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-29T20:00:00+02:00",
@@ -9493,13 +9472,6 @@
      "datetime": "2026-07-29T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=09771000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/64575000023GNFNDWF"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -11796,13 +11768,6 @@
      "datetime": "2026-07-29T19:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=08C71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T20:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/03A75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -14804,13 +14769,6 @@
      "datetime": "2026-07-29T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=14D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-29T20:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/6D975000023GNFNDWF"
     },
     {
      "cinema": "Rex am Ring",

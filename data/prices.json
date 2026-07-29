@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-29T17:58:37.828361+00:00",
+ "generated_at": "2026-07-29T18:32:58.629336+00:00",
  "cinemas": {
   "Kinopolis Bad Godesberg": {
    "source": "https://www.kinopolis.de/bn/preise",
@@ -292,11 +292,6 @@
      "child": 6.99,
      "reduced": 6.99
     },
-    "6D975000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.49,
-     "reduced": 8.99
-    },
     "53A75000023GNFNDWF": {
      "adult": 10.99,
      "child": 8.49,
@@ -331,11 +326,6 @@
      "adult": 10.99,
      "child": 8.49,
      "reduced": 8.99
-    },
-    "03A75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 8.99,
-     "reduced": 9.49
     },
     "8EA75000023GNFNDWF": {
      "adult": 9.99,
@@ -1288,18 +1278,6 @@
      "child": 10.49,
      "reduced": 10.99,
      "format": "OV"
-    },
-    "84575000023GNFNDWF": {
-     "adult": 16.49,
-     "child": 12.99,
-     "reduced": 14.49,
-     "format": "3D/OV"
-    },
-    "64575000023GNFNDWF": {
-     "adult": 16.49,
-     "child": 12.99,
-     "reduced": 14.49,
-     "format": "3D Atmos D-BOX"
     },
     "C4975000023GNFNDWF": {
      "adult": 16.49,
