@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { memo, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import {
   CINEMA_PRICES, TIER_LABELS, DEFAULT_PARTY, priceFor, cheapestTotal,
   partySize, fmtEur,
@@ -21,6 +21,20 @@ const T = {
     reviews: 'Bewertungen',
     resetAll: 'Zurücksetzen',
     backHome: 'Zur Startseite',
+    backToList: '← Zurück zur Übersicht',
+    backToTop: 'Nach oben',
+    activeFilters: 'Aktive Filter',
+    clearOne: (l) => `Filter „${l}“ entfernen`,
+    filterCount: (n) => `${n} aktiv`,
+    groupWhen: 'Wann',
+    groupWhere: 'Wo',
+    groupWhat: 'Was',
+    groupRating: 'Bewertung',
+    showtimesLabel: 'Vorstellungen',
+    hiddenShows: (n) => `${n} weitere ${n === 1 ? 'Vorstellung ist' : 'Vorstellungen sind'} ausgeblendet — alle zeigen`,
+    hiddenShowsOff: 'Nur passende Vorstellungen zeigen',
+    noShowsHere: 'Für diese Filter gibt es gerade keine Vorstellung.',
+    notFound: 'Diesen Film finden wir gerade nicht im Programm.',
     bothCities: 'Beide',
     cityAll: 'Beide Städte',
     quickFilters: 'Schnellfilter',
@@ -125,6 +139,20 @@ const T = {
     reviews: 'Ratings',
     resetAll: 'Reset',
     backHome: 'Back to home',
+    backToList: '← Back to overview',
+    backToTop: 'Back to top',
+    activeFilters: 'Active filters',
+    clearOne: (l) => `Remove filter “${l}”`,
+    filterCount: (n) => `${n} active`,
+    groupWhen: 'When',
+    groupWhere: 'Where',
+    groupWhat: 'What',
+    groupRating: 'Rating',
+    showtimesLabel: 'Showtimes',
+    hiddenShows: (n) => `${n} more ${n === 1 ? 'screening is' : 'screenings are'} hidden — show all`,
+    hiddenShowsOff: 'Show only matching screenings',
+    noShowsHere: 'No screening matches these filters right now.',
+    notFound: "We can't find this film in the current program.",
     bothCities: 'Both',
     cityAll: 'Both cities',
     quickFilters: 'Quick filters',
@@ -391,7 +419,10 @@ const BADGE_METRICS = {
   letterboxd: { emoji: '🎬', fmt: (v) => v.toFixed(1) },
 }
 
-function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort }) {
+// memo: with ~250 cards on screen, re-rendering all of them on every keystroke
+// or filter click is the single biggest source of jank. All props are stable
+// (t/ui/sort are primitives or module constants, the callbacks are hoisted).
+const Card = memo(function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort }) {
   const langs = [...new Set(movie.showtimes.map((s) => s.language))]
   const metricKey = BADGE_METRICS[sort] ? sort : 'imdb'
   const metric = BADGE_METRICS[metricKey]
@@ -438,7 +469,7 @@ function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort }) {
       </div>
     </div>
   )
-}
+})
 
 // One rating in the modal — a clickable chip (with emoji + arrow) when we can
 // link to the review site, a plain unboxed value otherwise.
@@ -452,56 +483,140 @@ function Rating({ value, label, emoji, href, title }) {
   )
 }
 
-function Modal({ movie, shows, onClose, onPrices, party, threeD, live, t, ui }) {
-  useEffect(() => {
-    // the price panel opens on top of this one — let it swallow the Escape
-    const onKey = (e) => {
-      if (e.key === 'Escape' && !document.querySelector('.price-modal')) onClose()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
-
-  // movie.id is the IMDb id when TMDB could resolve one (tt…), else a title key
-  const imdbId = typeof movie.id === 'string' && movie.id.startsWith('tt') ? movie.id : null
-  const metaSearch = `https://www.metacritic.com/search/${encodeURIComponent(movie.title_original || movie.title_de)}/`
-  const overview = displayOverview(movie, ui)
-
+// The screening list of one film, grouped by cinema and then by day.
+function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
   const byCinema = {}
   for (const s of shows) {
     const key = `${s.cinema} · ${s.city}`
     ;(byCinema[key] = byCinema[key] || []).push(s)
   }
+  return (
+    <div className="film-shows">
+      {Object.entries(byCinema).map(([cinema, times]) => {
+        // one compact row per day instead of one chip per screening
+        const byDay = {}
+        for (const s of times) {
+          const d = dayKey(s.datetime)
+          ;(byDay[d] = byDay[d] || []).push(s)
+        }
+        // cinemas we know prices for get an "ab X €" button: the cheapest
+        // total for the visitor's party across this film's screenings there
+        const cfg = CINEMA_PRICES[times[0].cinema]
+        const cheap = cfg && cheapestTotal(cfg, movie, times, party, { threeD }, live)
+        return (
+          <div className="cinema-row" key={cinema}>
+            <div className="cinema-head">
+              <span className="cinema-name">{cinema}</span>
+              {cfg && (
+                <button className="cinema-price" onClick={onPrices} title={t.pricesBtnTitle}>
+                  💶 {cheap != null ? t.priceFrom(fmtEur(cheap, t.locale)) : t.prices}
+                </button>
+              )}
+            </div>
+            {Object.keys(byDay).sort().map((d) => (
+              <div className="day-times" key={d}>
+                <span className="day-label">{fmtDayShort(d, t)}</span>
+                <span className="times">
+                  {byDay[d].map((tm, i) => {
+                    const chip = (
+                      <span className={`time lang-${tm.language.toLowerCase()}`}>
+                        {fmtTime(tm.datetime, t)}
+                        <span className="lang-tag">{tm.language}</span>
+                      </span>
+                    )
+                    return (
+                      <span className="time-wrap" key={i}>
+                        {tm.booking_url
+                          ? <a href={tm.booking_url} target="_blank" rel="noreferrer">{chip}</a>
+                          : chip}
+                        <a className="cal-btn" href={icsHref(movie, tm, ui)}
+                          download={`${displayTitle(movie, ui).replace(/[^\w äöüÄÖÜß-]/g, '')}.ics`}
+                          title={t.addCal} aria-label={t.addCal}>📅</a>
+                      </span>
+                    )
+                  })}
+                </span>
+              </div>
+            ))}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+// A film gets its own page (own URL, own browser-history entry) rather than a
+// popup: it can be linked to and shared, and the back button returns to the
+// list at the exact scroll position it was left at.
+function FilmPage({ movie, shows, allShows, onBack, onPrices, party, threeD, live,
+                    isFav, onToggleFav, t, ui }) {
+  // showing every screening we have is a click away when the filters hide some
+  const [showAll, setShowAll] = useState(false)
+  const hidden = allShows.length - shows.length
+  const listed = showAll ? allShows : shows
+
+  useEffect(() => { setShowAll(false) }, [movie.id])
+
+  useEffect(() => {
+    const onKey = (e) => {
+      // the price panel opens on top of this page — let it swallow the Escape
+      if (e.key === 'Escape' && !document.querySelector('.price-modal')) onBack()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onBack])
+
+  // movie.id is the IMDb id when TMDB could resolve one (tt…), else a title key
+  const imdbId = typeof movie.id === 'string' && movie.id.startsWith('tt') ? movie.id : null
+  const metaSearch = `https://www.metacritic.com/search/${encodeURIComponent(movie.title_original || movie.title_de)}/`
+  const overview = displayOverview(movie, ui)
+  const facts = [
+    movie.year, movie.runtime && `${movie.runtime} min`,
+    movie.age_rating != null && `FSK ${movie.age_rating}`,
+  ].filter(Boolean).join(' · ')
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose} aria-label="Schließen">✕</button>
-        <div className="modal-head">
-          {movie.poster && <img className="modal-poster" src={movie.poster} alt="" />}
-          <div>
-            <h2>{displayTitle(movie, ui)}</h2>
-            {displaySubtitle(movie, ui) && <p className="modal-orig">{displaySubtitle(movie, ui)}</p>}
-            <p className="modal-sub">
-              {[movie.year, movie.runtime && `${movie.runtime} min`, movie.age_rating != null && `FSK ${movie.age_rating}`]
-                .filter(Boolean).join(' · ')}
-            </p>
-            {(movie.directors || []).length > 0 && (
-              <p className="modal-sub">{t.director}: {movie.directors.join(', ')}</p>
-            )}
-            {movie.original_language && movie.original_language !== 'de' && (
-              <p className="modal-sub">{t.origLabel}: {langFlag(movie.original_language)}{langName(movie.original_language, ui)}</p>
-            )}
-            {(movie.countries || []).length > 0 && (
-              <p className="modal-sub">
-                {t.countryLabel}: {movie.countries.map((c) => `${countryFlag(c)} ${countryName(c, ui)}`).join(', ')}
-              </p>
-            )}
-            <p className="modal-genres">
+    <article className="film">
+      <div className="film-bar">
+        <button className="film-back" onClick={onBack}>{t.backToList}</button>
+        <button className={`film-fav ${isFav ? 'on' : ''}`} onClick={() => onToggleFav(movie.id)}
+          title={isFav ? t.favOn : t.favOff}>
+          {isFav ? '♥' : '♡'} {t.favorites}
+        </button>
+      </div>
+
+      <header className="film-hero">
+        {/* the poster itself, blurred, doubles as the backdrop — we don't
+            scrape backdrop images, and this keeps the page to one download */}
+        {movie.poster && (
+          <div className="film-hero-bg" style={{ backgroundImage: `url(${movie.poster})` }} aria-hidden="true" />
+        )}
+        <div className="film-hero-in">
+          {movie.poster
+            ? <img className="film-poster" src={movie.poster} alt="" width="342" height="513" fetchpriority="high" />
+            : <div className="film-poster poster-fallback">{(movie.title_original || movie.title_de).slice(0, 2)}</div>}
+          <div className="film-head">
+            <h1>{displayTitle(movie, ui)}</h1>
+            {displaySubtitle(movie, ui) && <p className="film-orig">{displaySubtitle(movie, ui)}</p>}
+            {facts && <p className="film-facts">{facts}</p>}
+            <dl className="film-meta">
+              {(movie.directors || []).length > 0 && (
+                <><dt>{t.director}</dt><dd>{movie.directors.join(', ')}</dd></>
+              )}
+              {movie.original_language && movie.original_language !== 'de' && (
+                <><dt>{t.origLabel}</dt>
+                  <dd>{langFlag(movie.original_language)}{langName(movie.original_language, ui)}</dd></>
+              )}
+              {(movie.countries || []).length > 0 && (
+                <><dt>{t.countryLabel}</dt>
+                  <dd>{movie.countries.map((c) => `${countryFlag(c)} ${countryName(c, ui)}`).join(', ')}</dd></>
+              )}
+            </dl>
+            <p className="film-genres">
               {(movie.genres || []).map((g) => <span className="genre-pill" key={g}>{genreName(g, ui)}</span>)}
               {(movie.tags || []).map((tg) => <span className="topic-pill" key={tg}>{t.topics[tg]}</span>)}
             </p>
-            <div className="modal-ratings">
+            <div className="film-ratings">
               <Rating value={movie.ratings.imdb} label="IMDb" emoji="⭐"
                 href={imdbId && `https://www.imdb.com/title/${imdbId}/`}
                 title={t.imdbLink} />
@@ -528,58 +643,21 @@ function Modal({ movie, shows, onClose, onPrices, party, threeD, live, t, ui }) 
             )}
           </div>
         </div>
-        {overview && <p className="modal-desc">{overview}</p>}
-        <div className="modal-shows">
-          {Object.entries(byCinema).map(([cinema, times]) => {
-            // one compact row per day instead of one chip per screening
-            const byDay = {}
-            for (const s of times) {
-              const d = dayKey(s.datetime)
-              ;(byDay[d] = byDay[d] || []).push(s)
-            }
-            // cinemas we know prices for get an "ab X €" button: the cheapest
-            // total for the visitor's party across this film's screenings there
-            const cfg = CINEMA_PRICES[times[0].cinema]
-            const cheap = cfg && cheapestTotal(cfg, movie, times, party, { threeD }, live)
-            return (
-              <div className="cinema-row" key={cinema}>
-                <span className="cinema-name">{cinema}</span>
-                {cfg && (
-                  <button className="cinema-price" onClick={onPrices} title={t.pricesBtnTitle}>
-                    💶 {cheap != null ? t.priceFrom(fmtEur(cheap, t.locale)) : t.prices}
-                  </button>
-                )}
-                {Object.keys(byDay).sort().map((d) => (
-                  <div className="day-times" key={d}>
-                    <span className="day-label">{fmtDayShort(d, t)}</span>
-                    <span className="times">
-                      {byDay[d].map((tm, i) => {
-                        const chip = (
-                          <span className={`time lang-${tm.language.toLowerCase()}`}>
-                            {fmtTime(tm.datetime, t)}
-                            <span className="lang-tag">{tm.language}</span>
-                          </span>
-                        )
-                        return (
-                          <span className="time-wrap" key={i}>
-                            {tm.booking_url
-                              ? <a href={tm.booking_url} target="_blank" rel="noreferrer">{chip}</a>
-                              : chip}
-                            <a className="cal-btn" href={icsHref(movie, tm, ui)}
-                              download={`${displayTitle(movie, ui).replace(/[^\w äöüÄÖÜß-]/g, '')}.ics`}
-                              title={t.addCal} aria-label={t.addCal}>📅</a>
-                          </span>
-                        )
-                      })}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </div>
+      </header>
+
+      {overview && <p className="film-desc">{overview}</p>}
+
+      <h2 className="film-h2">{t.showtimesLabel}</h2>
+      {listed.length === 0
+        ? <p className="empty">{t.noShowsHere}</p>
+        : <Showtimes movie={movie} shows={listed} onPrices={onPrices}
+            party={party} threeD={threeD} live={live} t={t} ui={ui} />}
+      {hidden > 0 && (
+        <button className="film-allshows" onClick={() => setShowAll((v) => !v)}>
+          {showAll ? t.hiddenShowsOff : t.hiddenShows(hidden)}
+        </button>
+      )}
+    </article>
   )
 }
 
@@ -922,39 +1000,46 @@ function DateMenu({ date, setDate, allDates, t }) {
   )
 }
 
-// One "Quick filters" button holding all the toggle filters, with a link to
-// the detailed panel at the bottom.
-function QuickFilters({ lastMinute, setLastMinute, kidsOnly, setKidsOnly, topics, toggleTopic, openDetails, t }) {
-  const [open, setOpen] = useState(false)
-  const ref = useOutside(() => setOpen(false))
-  const items = [
-    { k: 'lm', label: t.lastMinute, on: lastMinute, toggle: () => setLastMinute((v) => !v) },
-    { k: 'kids', label: t.kids, on: kidsOnly, toggle: () => setKidsOnly((v) => !v) },
-    { k: 'women_directed', label: t.topics.women_directed, on: topics.includes('women_directed'), toggle: () => toggleTopic('women_directed') },
-    { k: 'international', label: t.topics.international, on: topics.includes('international'), toggle: () => toggleTopic('international') },
-    { k: 'queer', label: t.topics.queer, on: topics.includes('queer'), toggle: () => toggleTopic('queer') },
-  ]
-  const n = items.filter((i) => i.on).length
+// Everything the visitor has switched on, as one row of removable chips. This
+// is what keeps the bar itself short: the bar offers the four things people
+// reach for most, the chips show the rest without another menu to open.
+function ActiveChips({ chips, onResetAll, t }) {
+  if (chips.length === 0) return null
   return (
-    <div className="dropdown" ref={ref}>
-      <button className={`qf-btn ${n ? 'on' : ''}`} onClick={() => setOpen((v) => !v)}
-        aria-haspopup="true" aria-expanded={open}>
-        🎟️ {t.quickFilters}{n ? ` (${n})` : ''} <span className="caret">▾</span>
-      </button>
-      {open && (
-        <div className="dropdown-menu qf-menu">
-          {items.map((i) => (
-            <button key={i.k} className={`qf-item ${i.on ? 'on' : ''}`} onClick={i.toggle} aria-pressed={i.on}>
-              <span>{i.label}</span><span className="qf-check">{i.on ? '✓' : ''}</span>
-            </button>
-          ))}
-          <div className="qf-sep"></div>
-          <button className="qf-more" onClick={() => { openDetails(); setOpen(false) }}>
-            ⚙️ {t.moreFilters} →
-          </button>
-        </div>
-      )}
+    <div className="chips-row" role="group" aria-label={t.activeFilters}>
+      {chips.map((c) => (
+        <button className="active-chip" key={c.key} onClick={c.clear} title={t.clearOne(c.label)}>
+          {c.label} <span className="x">✕</span>
+        </button>
+      ))}
+      <button className="chips-reset" onClick={onResetAll}>↺ {t.resetAll}</button>
     </div>
+  )
+}
+
+// Appears once the visitor has scrolled past the first screenful. Uses a
+// sentinel + IntersectionObserver instead of a scroll listener, so scrolling
+// stays smooth (no work on the main thread per scroll event).
+function BackToTop({ t }) {
+  // seeded from the current position so a restored deep scroll shows it at once
+  const [show, setShow] = useState(() => window.scrollY > 460)
+  const ref = useRef(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const io = new IntersectionObserver(([e]) => setShow(!e.isIntersecting))
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+  return (
+    <>
+      <div ref={ref} className="top-sentinel" aria-hidden="true" />
+      <button className={`to-top ${show ? 'on' : ''}`} aria-hidden={!show} tabIndex={show ? 0 : -1}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        title={t.backToTop} aria-label={t.backToTop}>
+        ↑
+      </button>
+    </>
   )
 }
 
@@ -963,7 +1048,6 @@ export default function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [showFilters, setShowFilters] = useState(false)
-  const [selected, setSelected] = useState(null)
 
   const [ui, setUi] = useState(() => localStorage.getItem('kinoguide-lang') || 'de')
   useEffect(() => { localStorage.setItem('kinoguide-lang', ui) }, [ui])
@@ -988,8 +1072,14 @@ export default function App() {
   const [origLangs, setOrigLangs] = useState(() => csv('sprachen'))
   const [lastMinute, setLastMinute] = useState(() => p0.get('lm') === '1')
   const [view, setView] = useState(() => (p0.get('ansicht') === 'plan' ? 'plan' : 'grid'))
+  // which film's page we're on (?film=…) — null means the overview
+  const [filmId, setFilmId] = useState(() => p0.get('film') || null)
 
-  // keep the URL in sync (replaceState — no history spam), only non-defaults
+  // Keep the URL in sync. Filter changes only *replace* the entry (no history
+  // spam), but opening or leaving a film page *pushes* one — that is what makes
+  // the browser's own Back button walk from the film page back to the list.
+  const lastFilm = useRef(filmId)
+  const fromPop = useRef(false)
   useEffect(() => {
     const sp = new URLSearchParams()
     if (q) sp.set('q', q)
@@ -1007,9 +1097,27 @@ export default function App() {
     if (origLangs.length) sp.set('sprachen', origLangs.join(','))
     if (lastMinute) sp.set('lm', '1')
     if (view !== 'grid') sp.set('ansicht', view)
+    if (filmId) sp.set('film', filmId)
     const qs = sp.toString()
-    window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
-  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view])
+    const url = qs ? `?${qs}` : window.location.pathname
+    const navigated = filmId !== lastFilm.current
+    lastFilm.current = filmId
+    // …unless we got here *because* of a Back/Forward press — then the browser
+    // has already moved, and pushing would trap the visitor on the page.
+    if (navigated && !fromPop.current) window.history.pushState(null, '', url)
+    else window.history.replaceState(null, '', url)
+    fromPop.current = false
+  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view, filmId])
+
+  // Back/Forward: adopt whatever film the URL now points at
+  useEffect(() => {
+    const onPop = () => {
+      fromPop.current = true
+      setFilmId(new URLSearchParams(window.location.search).get('film') || null)
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
 
   // price panel: who's coming survives reloads, so the "ab X €" hints on the
   // cinema rows are already personalised on the next visit
@@ -1025,7 +1133,7 @@ export default function App() {
   // use, not on load — nobody pays for it who never opens the price panel, and
   // if it's missing the curated table takes over.
   const [livePrices, setLivePrices] = useState(null)
-  const wantPrices = !!priceView || !!selected
+  const wantPrices = !!priceView || !!filmId
   useEffect(() => {
     if (!wantPrices || livePrices) return
     fetch('data/prices.json')
@@ -1045,11 +1153,15 @@ export default function App() {
   const toggleFav = (id) =>
     setFavs((prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id])
 
+  // index.html kicks this fetch off before the JS bundle has even downloaded,
+  // so by the time React mounts the program is usually already on its way in.
   useEffect(() => {
-    fetch('data/movies.json')
-      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
-      .then(setData)
-      .catch((e) => setError(String(e)))
+    const req = window.__movies ||
+      fetch('data/movies.json').then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+      })
+    req.then(setData).catch((e) => setError(String(e)))
   }, [])
 
   // original languages present in the data, most common first, for the
@@ -1137,28 +1249,39 @@ export default function App() {
     return hay.split(/\s+/).some((w) => within1(word, w))
   }
 
+  // The text box stays instantly responsive while React re-filters the grid at
+  // a lower priority — no dropped keystrokes on a slow phone.
+  const qLive = useDeferredValue(q)
+  const favKey = favsOnly ? favs.join(',') : ''
+
   const movies = useMemo(() => {
     if (!data) return []
-    const words = fold(q.trim()).split(/\s+/).filter(Boolean)
-    return data.movies
-      .filter((m) => !favsOnly || favs.includes(m.id))
-      .filter((m) => (m.ratings.imdb ?? 0) >= minImdb)
-      .filter((m) => !kidsOnly || isKidsFilm(m))
-      .filter((m) => genres.length === 0 || (m.genres || []).some((g) => genres.includes(g)))
-      .filter((m) => topics.every((tg) => matchTopic(m, tg)))  // AND: each selected topic must match
-      .filter((m) => origLangs.length === 0 || origLangs.includes(m.original_language))
-      .filter((m) => {
-        if (words.length === 0) return true
+    const words = fold(qLive.trim()).split(/\s+/).filter(Boolean)
+    const favSet = favsOnly ? new Set(favs) : null
+    const collator = new Intl.Collator(t.locale)   // one, not one per comparison
+    // one pass instead of a chain of .filter()s: with ~250 films × ~1500
+    // screenings this runs on every keystroke, so the intermediate arrays add up
+    const out = []
+    for (const m of data.movies) {
+      if (favSet && !favSet.has(m.id)) continue
+      if ((m.ratings.imdb ?? 0) < minImdb) continue
+      if (kidsOnly && !isKidsFilm(m)) continue
+      if (genres.length && !(m.genres || []).some((g) => genres.includes(g))) continue
+      if (!topics.every((tg) => matchTopic(m, tg))) continue   // AND: each selected topic must match
+      if (origLangs.length && !origLangs.includes(m.original_language)) continue
+      if (words.length) {
         const hay = fold(m.title_de) + ' ' + fold(m.title_original)
-        return words.every((w) => wordMatches(w, hay))
-      })
-      .map((m) => ({ m, shows: showsFor(m) }))
-      .filter((x) => x.shows.length > 0)
+        if (!words.every((w) => wordMatches(w, hay))) continue
+      }
+      const shows = showsFor(m)
+      if (shows.length) out.push({ m, shows })
+    }
+    return out
       .sort((a, b) => {
         // in last-minute mode the soonest screening comes first
         if (lastMinute) return a.shows[0].datetime.localeCompare(b.shows[0].datetime)
         // 'A–Z' = all films alphabetically by their displayed title
-        if (sort === 'alpha') return displayTitle(a.m, ui).localeCompare(displayTitle(b.m, ui), t.locale)
+        if (sort === 'alpha') return collator.compare(displayTitle(a.m, ui), displayTitle(b.m, ui))
         // 'Neu' = newest theatrical release first (full date, not just year).
         // Far-future dates (event cinema announced for next season) sort last —
         // they haven't "hit cinemas" yet. Two weeks of lead time still counts
@@ -1173,7 +1296,9 @@ export default function App() {
         }
         return (b.m.ratings[sort] ?? -1) - (a.m.ratings[sort] ?? -1)
       })
-  }, [data, q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favs, topics, origLangs, lastMinute, ui])
+    // favKey, not favs: hearting a film must not re-filter the whole list
+    // unless the "Favoriten" filter is actually on
+  }, [data, qLive, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favKey, topics, origLangs, lastMinute, ui, t.locale])
 
   // screenings the price panel works on: one film's, or every filtered
   // screening at a cinema we have prices for
@@ -1191,6 +1316,58 @@ export default function App() {
     return out
   }, [priceView, movies])
 
+  // --- film page ------------------------------------------------------------
+  // Looked up in the *whole* program, not the filtered list, so a shared link
+  // like ?film=tt0167260 opens the film even when the recipient's filters
+  // (or ours, saved in the same link) would hide it.
+  const selected = useMemo(
+    () => (filmId && data ? data.movies.find((m) => m.id === filmId) || null : null),
+    [filmId, data])
+
+  // the scroll position has to be taken *now*: the moment React swaps the long
+  // list for the much shorter film page, the browser clamps scrollY to the new
+  // page height and the original position is gone
+  const openMovie = (m) => { listScroll.current = window.scrollY; setFilmId(m.id) }
+  const backToList = () => {
+    // prefer real history so Back/Forward stay consistent with the buttons
+    if (window.history.length > 1) window.history.back()
+    else setFilmId(null)
+  }
+
+  // Leaving the list parks the scroll position; coming back restores it, so a
+  // visitor who was 40 films deep doesn't land at the top again.
+  const listScroll = useRef(0)
+  const wasFilm = useRef(!!filmId)
+  // the browser's own restoration fires after ours and would undo it — this is
+  // a single-page app, so we take the wheel
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
+  }, [])
+  useLayoutEffect(() => {
+    const onFilm = !!filmId
+    if (onFilm === wasFilm.current) return
+    if (onFilm) {
+      window.scrollTo(0, 0)
+    } else {
+      const y = listScroll.current
+      // read scrollHeight first: it forces the browser to lay the grid back out,
+      // otherwise the page is still "short" and the jump gets clamped
+      void document.documentElement.scrollHeight
+      window.scrollTo(0, y)
+      // posters can still be settling — one more go on the next frame
+      if (Math.abs(window.scrollY - y) > 2) requestAnimationFrame(() => window.scrollTo(0, y))
+    }
+    wasFilm.current = onFilm
+  }, [filmId])
+
+  // the tab title follows the film, which is what a shared or bookmarked link
+  // should read as
+  useEffect(() => {
+    document.title = selected
+      ? `${displayTitle(selected, ui)} · Kinoguide Köln Bonn`
+      : 'Kinoguide Köln Bonn'
+  }, [selected, ui])
+
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
 
@@ -1206,21 +1383,39 @@ export default function App() {
     setTopics([]); setOrigLangs([]); setLastMinute(false)
   }
 
-  // anything changed from the fresh-landing defaults? drives the Reset button's
-  // visibility so the toolbar stays clean until the user actually filters.
-  const isDirty = !!(q || city !== 'Alle' || lang !== 'alle' || sort !== 'imdb' || minImdb > 0
-    || genres.length || kidsOnly || cinema !== 'Alle' || date !== 'Alle' || timeFrom > 0
-    || timeTo < 24 || topics.length || origLangs.length || lastMinute || favsOnly || view !== 'grid')
-
   // full reset to the fresh-landing state (keeps language + saved favorites):
   // used by the top "Reset" button and by clicking the logo. The URL-sync
   // effect then clears the query string on its own.
   const resetAll = () => {
     resetFilters()
     setSort('imdb'); setFavsOnly(false); setView('grid')
-    setShowFilters(false); setSelected(null); setPriceView(null)
+    setShowFilters(false); setFilmId(null); setPriceView(null)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // Every filter that is on, as one removable chip. The four controls in the
+  // bar (date, city, sort, filter) are left out — they show their own state.
+  const activeChips = []
+  const chip = (key, label, clear) => activeChips.push({ key, label, clear })
+  if (q) chip('q', `„${q}“`, () => setQ(''))
+  if (lastMinute) chip('lm', t.lastMinute, () => setLastMinute(false))
+  if (kidsOnly) chip('kids', t.kids, () => setKidsOnly(false))
+  for (const tg of topics) chip(`topic-${tg}`, t.topics[tg], () => toggleTopic(tg))
+  if (lang !== 'alle') chip('lang', LANGS.find((l) => l.id === lang)?.labelKey
+    ? t[LANGS.find((l) => l.id === lang).labelKey] : 'OV / OmU', () => setLang('alle'))
+  for (const g of genres) chip(`genre-${g}`, genreName(g, ui), () => toggleGenre(g))
+  for (const code of origLangs) chip(`ol-${code}`, `${langFlag(code)}${langName(code, ui)}`, () => toggleLang(code))
+  if (cinema !== 'Alle') chip('cinema', `📍 ${cinema}`, () => setCinema('Alle'))
+  if (minImdb > 0) chip('imdb', `⭐ ${minImdb.toFixed(1)}+`, () => setMinImdb(0))
+  if (timeFrom > 0 || timeTo < 24) {
+    const hh = (h) => `${String(h).padStart(2, '0')}:00`
+    chip('time', `🕒 ${hh(timeFrom)}–${timeTo === 24 ? '24:00' : hh(timeTo)}`,
+      () => { setTimeFrom(0); setTimeTo(24) })
+  }
+  if (favsOnly) chip('favs', `♥ ${t.favorites}`, () => setFavsOnly(false))
+
+  // how many filters the panel itself is holding, for the badge on its button
+  const panelCount = activeChips.filter((c) => !['q', 'favs'].includes(c.key)).length
 
   return (
     <div className="page">
@@ -1236,7 +1431,28 @@ export default function App() {
       </header>
       <div className="marquee-strip" aria-hidden="true"></div>
 
-      <div className="toolbar">
+      {filmId ? (
+        selected ? (
+          <FilmPage
+            movie={selected}
+            shows={showsFor(selected)}
+            allShows={selected.showtimes.filter((s) => new Date(s.datetime) >= Date.now() - 30 * 60000)}
+            onBack={backToList}
+            onPrices={() => setPriceView({ movie: selected })}
+            party={party} threeD={threeD} live={livePrices}
+            isFav={favs.includes(selected.id)} onToggleFav={toggleFav}
+            t={t} ui={ui} />
+        ) : (
+          <p className="empty">
+            {error ? t.loadError(error) : !data ? t.loading : t.notFound}
+            {data && <><br /><button className="film-back" onClick={backToList}>{t.backToList}</button></>}
+          </p>
+        )
+      ) : (
+      <>
+      {/* One bar, four controls: search + the three things people actually
+          reach for, and a single Filter button for everything else. */}
+      <div className="filterbar">
         <div className="search">
           <span className="search-icon">⌕</span>
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.search} />
@@ -1244,129 +1460,157 @@ export default function App() {
             <button className="search-clear" onClick={() => setQ('')} aria-label={t.clearSearch} title={t.clearSearch}>✕</button>
           )}
         </div>
-        <QuickFilters
-          lastMinute={lastMinute} setLastMinute={setLastMinute}
-          kidsOnly={kidsOnly} setKidsOnly={setKidsOnly}
-          topics={topics} toggleTopic={toggleTopic}
-          openDetails={() => setShowFilters(true)} t={t} />
+        <div className="filterbar-btns">
+          <DateMenu date={date} setDate={setDate} allDates={allDates} t={t} />
+          <CityMenu city={city} setCity={setCity} t={t} />
+          <SortMenu sort={sort} setSort={setSort} t={t} />
+          <button className={`chip filter-chip ${showFilters ? 'open' : ''} ${panelCount ? 'on' : ''}`}
+            onClick={() => setShowFilters((v) => !v)} aria-expanded={showFilters}>
+            ⚙ {t.filter}{panelCount ? <span className="chip-count">{panelCount}</span> : null}
+          </button>
+        </div>
       </div>
 
-      <div className="sortrow">
-        <CityMenu city={city} setCity={setCity} t={t} />
-        <DateMenu date={date} setDate={setDate} allDates={allDates} t={t} />
-        <SortMenu sort={sort} setSort={setSort} t={t} />
-        <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
-          title={t.pricesBtnTitle}>💶 {t.prices}</button>
-        {isDirty && (
-          <button className="chip reset-chip" onClick={resetAll} title={t.resetAll}>↺ {t.resetAll}</button>
-        )}
-        {favs.length > 0 && (
-          <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
-            ♥ {t.favorites} ({favs.length})
-          </button>
-        )}
-        <div className="view-switch" role="group" aria-label="Ansicht">
-          <button className={view === 'grid' ? 'on' : ''} onClick={() => setView('grid')} title={t.viewGrid}>▦</button>
-          <button className={view === 'plan' ? 'on' : ''} onClick={() => setView('plan')} title={t.viewPlan}>☰</button>
-        </div>
-        {data && <span className="count">{movies.length} {t.films}</span>}
-      </div>
+      <ActiveChips chips={activeChips} onResetAll={resetAll} t={t} />
 
       {showFilters && (
         <section className="panel">
-          <div className="panel-head">
-            <span className="panel-title">⚙️ {t.moreFilters}</span>
-            <button className="panel-close" onClick={() => setShowFilters(false)} aria-label={t.clearSearch}>✕</button>
-          </div>
-
-          {allLangs.length > 0 && (
-            <div className="field">
-              <label>{t.origLangLabel}</label>
-              <div className="pills">
-                {allLangs.map((code) => (
-                  <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''}`} onClick={() => toggleLang(code)}>
-                    {langFlag(code)}{langName(code, ui)}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <div className="field">
-            <label>{t.genres}</label>
+          {/* four plain-language groups instead of one long stack of controls */}
+          <div className="panel-group">
+            <h3 className="panel-title">{t.quickFilters}</h3>
             <div className="pills">
-              {allGenres.map((g) => (
-                <button key={g} className={`pill ${genres.includes(g) ? 'on' : ''}`} onClick={() => toggleGenre(g)}>{genreName(g, ui)}</button>
-              ))}
-            </div>
-          </div>
-
-          <div className="field">
-            <label>{t.version}</label>
-            <div className="pills">
-              {LANGS.map((l) => (
-                <button key={l.id} className={`pill ${lang === l.id ? 'on' : ''}`} onClick={() => setLang(l.id)}>
-                  {l.labelKey ? t[l.labelKey] : l.label}
+              <button className={`pill ${lastMinute ? 'on' : ''}`} onClick={() => setLastMinute((v) => !v)}
+                title={t.lastMinuteTitle}>{t.lastMinute}</button>
+              <button className={`pill ${kidsOnly ? 'on' : ''}`} onClick={() => setKidsOnly((v) => !v)}
+                title={t.kidsTitle}>{t.kids}</button>
+              {TOPIC_IDS.map((tg) => (
+                <button key={tg} className={`pill ${topics.includes(tg) ? 'on' : ''}`} onClick={() => toggleTopic(tg)}>
+                  {t.topics[tg]}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="grid2">
+          <div className="panel-group">
+            <h3 className="panel-title">{t.groupWhen}</h3>
+            <div className="grid2">
+              <div className="field">
+                <label>{t.dateLabel}</label>
+                <select value={date} onChange={(e) => setDate(e.target.value)}>
+                  <option value="Alle">{t.allDays}</option>
+                  {allDates.map((d) => <option key={d} value={d}>{fmtDayShort(d, t)}</option>)}
+                </select>
+              </div>
+              <div className="field">
+                <label>{t.timeLabel} <b>{String(timeFrom).padStart(2, '0')}:00 – {timeTo === 24 ? '24:00' : String(timeTo).padStart(2, '0') + ':00'}</b></label>
+                <div className="time-sliders">
+                  <input type="range" min="0" max="24" value={timeFrom} onChange={(e) => setTimeFrom(Math.min(+e.target.value, timeTo))} />
+                  <input type="range" min="0" max="24" value={timeTo} onChange={(e) => setTimeTo(Math.max(+e.target.value, timeFrom))} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-group">
+            <h3 className="panel-title">{t.groupWhere}</h3>
+            <div className="grid2">
+              <div className="field">
+                <label>{t.cinemaLabel}</label>
+                <select value={cinema} onChange={(e) => setCinema(e.target.value)}>
+                  <option value="Alle">{t.allCinemas}</option>
+                  {allCinemas.map((c) => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </div>
+              <div className="field">
+                <label>{t.cityAll}</label>
+                <select value={city} onChange={(e) => setCity(e.target.value)}>
+                  {CITIES.map((c) => <option key={c} value={c}>{c === 'Alle' ? t.cityAll : c}</option>)}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-group">
+            <h3 className="panel-title">{t.groupWhat}</h3>
             <div className="field">
-              <label>{t.cinemaLabel}</label>
-              <select value={cinema} onChange={(e) => setCinema(e.target.value)}>
-                <option value="Alle">{t.allCinemas}</option>
-                {allCinemas.map((c) => <option key={c} value={c}>{c}</option>)}
-              </select>
+              <label>{t.version}</label>
+              <div className="pills">
+                {LANGS.map((l) => (
+                  <button key={l.id} className={`pill ${lang === l.id ? 'on' : ''}`} onClick={() => setLang(l.id)}>
+                    {l.labelKey ? t[l.labelKey] : l.label}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="field">
-              <label>{t.dateLabel}</label>
-              <select value={date} onChange={(e) => setDate(e.target.value)}>
-                <option value="Alle">{t.allDays}</option>
-                {allDates.map((d) => <option key={d} value={d}>{fmtDayShort(d, t)}</option>)}
-              </select>
+              <label>{t.genres}</label>
+              <div className="pills">
+                {allGenres.map((g) => (
+                  <button key={g} className={`pill ${genres.includes(g) ? 'on' : ''}`} onClick={() => toggleGenre(g)}>{genreName(g, ui)}</button>
+                ))}
+              </div>
+            </div>
+            {allLangs.length > 0 && (
+              <div className="field">
+                <label>{t.origLangLabel}</label>
+                <div className="pills">
+                  {allLangs.map((code) => (
+                    <button key={code} className={`pill ${origLangs.includes(code) ? 'on' : ''}`} onClick={() => toggleLang(code)}>
+                      {langFlag(code)}{langName(code, ui)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div className="field">
+              <label>{t.imdbMin} <b>{minImdb === 0 ? t.anyRating : minImdb.toFixed(1)}</b></label>
+              <input type="range" min="0" max="9" step="0.5" value={minImdb} onChange={(e) => setMinImdb(+e.target.value)} />
             </div>
           </div>
 
-          <div className="field">
-            <label>{t.imdbMin} <b>{minImdb === 0 ? t.anyRating : minImdb.toFixed(1)}</b></label>
-            <input type="range" min="0" max="9" step="0.5" value={minImdb} onChange={(e) => setMinImdb(+e.target.value)} />
+          <div className="panel-foot">
+            <button className="reset" onClick={resetFilters}>{t.reset}</button>
+            <button className="panel-done" onClick={() => setShowFilters(false)}>
+              {data ? `${movies.length} ${t.films}` : t.filter} ✓
+            </button>
           </div>
-
-          <div className="field">
-            <label>{t.timeLabel} <b>{String(timeFrom).padStart(2, '0')}:00 – {timeTo === 24 ? '24:00' : String(timeTo).padStart(2, '0') + ':00'}</b></label>
-            <div className="time-sliders">
-              <input type="range" min="0" max="24" value={timeFrom} onChange={(e) => setTimeFrom(Math.min(+e.target.value, timeTo))} />
-              <input type="range" min="0" max="24" value={timeTo} onChange={(e) => setTimeTo(Math.max(+e.target.value, timeFrom))} />
-            </div>
-          </div>
-
-          <button className="reset" onClick={resetFilters}>{t.reset}</button>
         </section>
       )}
+
+      {/* what came back, and how to look at it */}
+      <div className="resultbar">
+        {data && <span className="count">{movies.length} {t.films}</span>}
+        <div className="resultbar-right">
+          <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
+            title={t.pricesBtnTitle}>💶 {t.prices}</button>
+          {favs.length > 0 && (
+            <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
+              ♥ {favs.length}
+            </button>
+          )}
+          <div className="view-switch" role="group" aria-label="Ansicht">
+            <button className={view === 'grid' ? 'on' : ''} onClick={() => setView('grid')} title={t.viewGrid}>▦</button>
+            <button className={view === 'plan' ? 'on' : ''} onClick={() => setView('plan')} title={t.viewPlan}>☰</button>
+          </div>
+        </div>
+      </div>
 
       <main>
         {error && <p className="empty">{t.loadError(error)}</p>}
         {!error && !data && <p className="empty">{t.loading}</p>}
         {data && movies.length === 0 && <p className="empty">{t.empty}</p>}
         {view === 'plan' ? (
-          <DayPlan items={movies} onOpen={setSelected} t={t} ui={ui} />
+          <DayPlan items={movies} onOpen={openMovie} t={t} ui={ui} />
         ) : (
           <div className="grid">
             {movies.map(({ m }, i) => (
-              <Card key={`${m.id}-${i}`} movie={m} onOpen={setSelected}
+              <Card key={`${m.id}-${i}`} movie={m} onOpen={openMovie}
                 isFav={favs.includes(m.id)} onToggleFav={toggleFav} t={t} ui={ui} sort={sort} />
             ))}
           </div>
         )}
       </main>
-
-      {selected && (
-        <Modal movie={selected} shows={showsFor(selected)}
-          onClose={() => setSelected(null)}
-          onPrices={() => setPriceView({ movie: selected })}
-          party={party} threeD={threeD} live={livePrices} t={t} ui={ui} />
+      </>
       )}
 
       {priceView && (
@@ -1374,9 +1618,11 @@ export default function App() {
           party={party} setParty={setParty} threeD={threeD} setThreeD={setThreeD}
           live={livePrices}
           onClose={() => setPriceView(null)}
-          onOpenMovie={(m) => { setPriceView(null); setSelected(m) }}
+          onOpenMovie={(m) => { setPriceView(null); openMovie(m) }}
           t={t} ui={ui} />
       )}
+
+      <BackToTop t={t} />
 
       <footer>
         <p className="credits">

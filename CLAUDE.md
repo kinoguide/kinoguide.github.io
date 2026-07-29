@@ -78,7 +78,24 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/language.py` — OV/OmU/DE classifier from show text/flags.
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads
-  `web/public/data/movies.json`.
+  `web/public/data/movies.json`. Two structural things live in here:
+  - **Routing.** A film is its own page at `?film=<movie.id>` (`FilmPage`), not
+    a modal — shareable, and the browser Back button returns to the list at the
+    scroll position it was left at. The URL effect *pushes* a history entry when
+    `filmId` changes and *replaces* it for filter changes; `fromPop` keeps a
+    Back press from re-pushing. Two traps if you touch this: the list's scroll
+    position must be captured in `openMovie` (once the shorter film page is
+    rendered the browser has already clamped `scrollY`), and
+    `history.scrollRestoration` must stay `'manual'` or the browser undoes the
+    restore. The film is looked up in the full `data.movies`, so a shared link
+    opens even when the recipient's filters would hide it.
+  - **Filter organisation** (chosen by the user 2026-07-29): one bar with
+    search + Datum + Stadt + Sortierung + a single `⚙ Filter` button with a
+    count badge; everything that is switched on also appears as a removable
+    chip below the bar; the panel behind the button groups its controls under
+    **Schnellfilter · Wann · Wo · Was**. Keep new filters inside that structure
+    rather than adding another control to the bar — "all jumbled up" was the
+    complaint that prompted it.
 - `web/src/prices.js` — the price model: a hand-curated price table per cinema
   (day tiers, family ticket, surcharges, offers; each entry carries a `checked`
   date the UI shows) **plus** the calculator that prefers the cinema's own
@@ -102,21 +119,35 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - In **Git Bash**, `gh api` paths must OMIT the leading slash (bash rewrites
   `/orgs/...` into a filesystem path).
 
-## Design work in progress (as of 2026-07-08)
+## Design (settled 2026-07-29)
 
-The frontend was restyled to an **Art-Deco "Lichtspielhaus"** look: soft
-midnight-navy background + warm burnt-orange/gold accents, marquee light-strip
-under the header, uppercase logo. Controls use progressive disclosure: one
-**Quick-filters** dropdown (Last Minute, Kinderfilme, Regie: Frauen,
-International, Queer + "Mehr Filter"), plus **city / date / sort** dropdowns.
-Committed to a single dark theme (`color-scheme: dark`).
+The frontend is an **Art-Deco "Lichtspielhaus"** look: soft midnight-navy
+background + warm burnt-orange/gold accents, marquee light-strip under the
+header, uppercase logo, single dark theme (`color-scheme: dark`).
 
-OPEN DECISION: the user is deciding whether to push the Deco styling further.
-A "maxed Art-Deco" mockup was shown (marquee frame + sunburst, embedded period
-font, gold hairline/chevron dividers, corner-bracket cards, double gold frame).
-If they say yes, apply those to `web/src/styles.css` (and embed a real
-Futura/Broadway-style display face as a @font-face data URI — CDN fonts are not
-used). If "subtler", dial specific elements back.
+**The styling question is closed.** Asked whether to push the Deco further,
+keep it, or strip it back, the user answered "it is okay as it is" — the
+"maxed Art-Deco" mockup (sunburst, period display font, corner brackets) is not
+wanted. Their complaint was never the palette but the *controls* being crowded,
+which the filter-bar rework above addresses. Don't reopen the theme unprompted;
+for any aesthetic choice, show options first (they asked to "gather ideas and
+present first").
+
+## Performance notes
+
+The page ships ~250 films and ~1 550 screenings in one 710 KB JSON, so the
+frontend is deliberately built to keep that cheap:
+
+- `index.html` starts `fetch('data/movies.json')` into `window.__movies` before
+  the JS bundle loads; `App` adopts that promise instead of fetching again.
+- `.card` uses `content-visibility: auto` + `contain-intrinsic-size` — the
+  browser skips layout/paint for off-screen cards. Measured on the full grid: a
+  relayout costs **7 ms instead of 93 ms**. If you change the card's height,
+  update `contain-intrinsic-size` too or the scrollbar drifts.
+- `Card` is `memo`-ised, the filter chain is a single pass, the search box feeds
+  the filter through `useDeferredValue`, and the favourites list only re-filters
+  when the Favoriten filter is actually on (`favKey`).
+- `data/prices.json` is still lazy-loaded on first use of a price panel.
 
 ## Prices (family price finder, added 2026-07-25)
 

@@ -15,6 +15,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- start loading the program immediately, in parallel with the JS bundle;
+         App picks up this promise instead of fetching a second time -->
+    <script>
+      window.__movies = fetch('data/movies.json').then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status)
+        return r.json()
+      })
+      window.__movies.catch(function () {})
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
