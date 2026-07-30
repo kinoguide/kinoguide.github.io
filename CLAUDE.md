@@ -105,7 +105,9 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     `page`, not by inventing a second mechanism.
   - **Filter organisation** (chosen by the user 2026-07-29): one bar with
     search + Datum + Stadt + Sortierung + a single `⚙ Filter` button with a
-    count badge; everything that is switched on also appears as a removable
+    count badge + the `💶 Preise` button (moved up out of the results row on
+    2026-07-30 at the user's request — it is a destination, not a filter);
+    everything that is switched on also appears as a removable
     chip below the bar; the panel behind the button groups its controls under
     **Schnellfilter · Wann · Wo · Was**. Keep new filters inside that structure
     rather than adding another control to the bar — "all jumbled up" was the

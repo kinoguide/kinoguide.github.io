@@ -79,14 +79,17 @@ body {
 .lang-switch button:hover { color: var(--text); }
 .lang-switch button.on { background: var(--accent); color: #fff; }
 
-/* the ✉ that leads to feedback + Impressum */
+/* the envelope that leads to feedback + Impressum — deliberately large and
+   heavy-stroked: it is the only way anyone reaches the contact page */
 .mail-btn {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 38px; height: 38px; border-radius: 999px;
-  background: var(--bg2); border: 1px solid var(--border); color: var(--accent2);
-  font-size: 18px; line-height: 1; cursor: pointer; font-family: inherit;
+  width: 54px; height: 54px; border-radius: 999px;
+  background: var(--bg2); border: 2px solid var(--accent); color: var(--accent2);
+  cursor: pointer; font-family: inherit; padding: 0;
+  box-shadow: 0 0 0 0 rgba(224,134,54,0); transition: box-shadow .15s, background .15s;
 }
-.mail-btn:hover { border-color: var(--accent); background: var(--panel); }
+.mail-btn svg { width: 30px; height: 30px; display: block; }
+.mail-btn:hover { background: var(--panel); color: var(--accent); box-shadow: 0 0 14px rgba(224,134,54,.35); }
 .mail-btn.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* --- filter bar: search + date + city + sort + one Filter button --- */
@@ -520,7 +523,7 @@ input[type=range] {
   border-bottom: 1px solid var(--border2);
 }
 .plan-row {
-  display: grid; grid-template-columns: 58px 1fr auto auto 30px;
+  display: grid; grid-template-columns: 58px 1fr auto auto auto;
   align-items: center; gap: 12px; padding: 7px 4px;
   border-bottom: 1px solid var(--border); font-size: 15px;
 }
@@ -534,14 +537,26 @@ input[type=range] {
 .plan-title:hover { color: var(--accent2); }
 .plan-lang { justify-self: end; }
 .plan-cinema { color: var(--muted); font-size: 14px; white-space: nowrap; }
-.plan-ticket { text-decoration: none; font-size: 15px; opacity: .7; }
-.plan-ticket:hover { opacity: 1; }
 .lang-tag.lang-de { background: #3a4a66; }
+
+/* "🎟️ Tickets" — the one thing on a row that leads out of the site and into
+   the cinema's shop, so it is a full solid button rather than a small glyph.
+   Shared by the schedule view and the price panel. */
+.plan-ticket, .pr-ticket {
+  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  background: var(--accent); border: 1px solid var(--accent); color: #fff;
+  border-radius: 999px; padding: 10px 20px;
+  font-size: 16px; font-weight: 800; letter-spacing: .02em;
+  text-decoration: none; line-height: 1;
+}
+.plan-ticket:hover, .pr-ticket:hover {
+  background: var(--accent2); border-color: var(--accent2); text-decoration: none;
+}
 
 @media (max-width: 640px) {
   .plan-row { grid-template-columns: 50px 1fr auto; }
-  .plan-cinema { grid-column: 2 / 4; grid-row: 2; }
-  .plan-ticket { display: none; }
+  .plan-cinema { grid-column: 2 / 3; grid-row: 2; }
+  .plan-ticket { grid-column: 3; grid-row: 2; justify-self: end; padding: 8px 15px; font-size: 15px; }
   .day-label { width: 74px; }
 }
 
@@ -602,8 +617,7 @@ input[type=range] {
 }
 .pr-title:hover { color: var(--accent2); }
 .pr-total { margin-left: auto; font-size: 18px; font-weight: 800; color: var(--accent2); font-variant-numeric: tabular-nums; }
-.pr-ticket { text-decoration: none; font-size: 16px; opacity: .75; }
-.pr-ticket:hover { opacity: 1; }
+/* the button itself is styled next to .plan-ticket, above */
 .pr-detail { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; margin-top: 6px; font-size: 13px; color: var(--muted); }
 .pr-detail b { color: var(--muted2); font-weight: 700; }
 .pr-cinema { color: var(--muted2); }
@@ -652,7 +666,7 @@ input[type=range] {
   .pr-main { display: grid; grid-template-columns: 1fr auto auto; gap: 4px 8px; }
   .pr-when { grid-row: 1; }
   .pr-total { grid-row: 1; font-size: 16px; }
-  .pr-ticket { grid-row: 1; }
+  .pr-ticket { grid-row: 1; padding: 8px 14px; font-size: 14.5px; }
   .pr-title { grid-row: 2; grid-column: 1; }
   .pr-main .lang-tag { grid-row: 2; grid-column: 2 / 4; justify-self: end; }
   .price-row { padding: 10px 12px; }

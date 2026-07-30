@@ -82,12 +82,14 @@ const T = {
     footer: 'Bewertungen: IMDb & Metascore via OMDb, Metadaten & FSK via TMDB. Themen- und Sprachfilter basieren auf TMDB-Daten (Originalsprache, Regie, Verschlagwortung) — sie zeigen Filme auf, sind aber nicht vollständig. OV/OmU wird aus den Kino-Angaben erkannt; einige Programmkinos kennzeichnen Originalfassungen nicht immer.',
     thanksPre: 'Inspiriert von Steven Kocadags wunderbarem',
     thanksPost: 'für Berlin — danke! 🧡',
+    tickets: 'Tickets',
+    ticketsTitle: 'Tickets beim Kino kaufen',
     contact: 'Kontakt & Impressum',
     contactBtn: 'Feedback & Impressum',
     contactIntro: 'Kinoguide Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung — schreib mir einfach eine Mail.',
-    feedbackHint: 'Hilfreich ist: Kino, Film, Datum — und was stattdessen richtig wäre.',
+    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung. Schreib mir einfach eine Mail.',
+    feedbackHint: 'Hilfreich ist: Kino, Film, Datum und was stattdessen richtig wäre.',
     mailBtn: '✉ E-Mail schreiben',
     imprintTitle: 'Impressum',
     imprintLaw: 'Angaben gemäß § 5 DDG',
@@ -218,11 +220,13 @@ const T = {
     footer: 'Ratings: IMDb & Metascore via OMDb, metadata & FSK via TMDB. Topic and language filters are based on TMDB data (original language, director, keywords) — they surface films but aren\'t exhaustive. OV/OmU is read from the cinemas\' listings; some arthouse cinemas don\'t always tag original-version screenings.',
     thanksPre: 'Inspired by Steven Kocadag\'s wonderful',
     thanksPost: 'for Berlin — thank you! 🧡',
+    tickets: 'Tickets',
+    ticketsTitle: 'Buy tickets at the cinema',
     contact: 'Contact & legal notice',
     contactBtn: 'Feedback & legal notice',
     contactIntro: 'Kinoguide Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it — just send me an email.',
+    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it. Just send me an email.',
     feedbackHint: 'Helpful to include: cinema, film, date, and what the site says versus what it should say.',
     mailBtn: '✉ Write an email',
     imprintTitle: 'Legal notice (Impressum)',
@@ -991,7 +995,8 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, live, on
                     {p.format && <span className="pr-format">{p.format}</span>}
                     <span className="pr-total">{fmtEur(p.total, t.locale)}</span>
                     {s.booking_url && (
-                      <a className="pr-ticket" href={s.booking_url} target="_blank" rel="noreferrer" title="Tickets">🎟️</a>
+                      <a className="pr-ticket" href={s.booking_url} target="_blank" rel="noreferrer"
+                        title={t.ticketsTitle}>🎟️ {t.tickets}</a>
                     )}
                   </div>
                   <div className="pr-detail">
@@ -1059,7 +1064,8 @@ function DayPlan({ items, onOpen, t, ui }) {
                 <span className={`lang-tag plan-lang lang-${s.language.toLowerCase()}`}>{s.language}</span>
                 <span className="plan-cinema">{s.cinema} · {s.city}</span>
                 {s.booking_url && (
-                  <a className="plan-ticket" href={s.booking_url} target="_blank" rel="noreferrer" title="Tickets">🎟️</a>
+                  <a className="plan-ticket" href={s.booking_url} target="_blank" rel="noreferrer"
+                    title={t.ticketsTitle}>🎟️ {t.tickets}</a>
                 )}
               </div>
             ))}
@@ -1675,10 +1681,17 @@ export default function App() {
       <header className="topbar">
         <button className="brand" onClick={resetAll} title={t.backHome}>Kinoguide <span>Köln · Bonn</span></button>
         <div className="topbar-right">
+          {/* drawn rather than the ✉ emoji: the emoji renders hairline-thin in
+              most fonts and the orange barely registered against the navy */}
           <button className={`mail-btn${page === 'kontakt' ? ' on' : ''}`}
             onClick={() => openPage('kontakt')}
             title={t.contactBtn} aria-label={t.contactBtn}>
-            <span aria-hidden="true">✉</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+              fill="none" stroke="currentColor" strokeWidth="2.6"
+              strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2.2" y="4.8" width="19.6" height="14.4" rx="2.2" />
+              <path d="M3 6.6 L12 13.4 L21 6.6" />
+            </svg>
           </button>
           <div className="lang-switch" role="group" aria-label="Sprache / Language">
             <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
@@ -1728,6 +1741,10 @@ export default function App() {
             onClick={() => setShowFilters((v) => !v)} aria-expanded={showFilters}>
             ⚙ {t.filter}{panelCount ? <span className="chip-count">{panelCount}</span> : null}
           </button>
+          {/* the price finder rides in the bar rather than the results row: it
+              is a thing people go looking for, not a property of the result set */}
+          <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
+            title={t.pricesBtnTitle}>💶 {t.prices}</button>
         </ScrollRow>
       </div>
 
@@ -1846,8 +1863,6 @@ export default function App() {
       <div className="resultbar">
         {data && <span className="count">{movies.length} {t.films}</span>}
         <div className="resultbar-right">
-          <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
-            title={t.pricesBtnTitle}>💶 {t.prices}</button>
           {favs.length > 0 && (
             <button className={`chip fav-chip ${favsOnly ? 'on' : ''}`} onClick={() => setFavsOnly((v) => !v)}>
               ♥ {favs.length}
