@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-30T14:46:50.272270+00:00",
+ "generated_at": "2026-07-30T15:15:16.715452+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -621,20 +621,6 @@
      "datetime": "2026-07-30T16:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=71E71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-07-30T16:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68172"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-30T17:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/BCA75000023GNFNDWF"
     },
     {
      "cinema": "Rex am Ring",
@@ -4084,13 +4070,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=16E71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-30T17:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/ABA75000023GNFNDWF"
-    },
-    {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-07-30T18:15:00+02:00",
@@ -6852,13 +6831,6 @@
      "datetime": "2026-07-30T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=A9D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-07-30T16:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E7A75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -15264,6 +15236,20 @@
      "datetime": "2026-07-30T18:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127316417"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-08-01T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68209"
+    },
+    {
+     "cinema": "Metropolis",
+     "city": "Köln",
+     "datetime": "2026-08-02T14:10:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68210"
     },
     {
      "cinema": "Bonner Kinemathek",
