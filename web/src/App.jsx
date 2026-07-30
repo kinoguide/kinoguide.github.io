@@ -81,7 +81,24 @@ const T = {
     director: 'Regie',
     footer: 'Bewertungen: IMDb & Metascore via OMDb, Metadaten & FSK via TMDB. Themen- und Sprachfilter basieren auf TMDB-Daten (Originalsprache, Regie, Verschlagwortung) — sie zeigen Filme auf, sind aber nicht vollständig. OV/OmU wird aus den Kino-Angaben erkannt; einige Programmkinos kennzeichnen Originalfassungen nicht immer.',
     thanksPre: 'Inspiriert von Steven Kocadags wunderbarem',
-    thanksPost: 'für Berlin — danke! 💙',
+    thanksPost: 'für Berlin — danke! 🧡',
+    contact: 'Kontakt & Impressum',
+    contactBtn: 'Feedback & Impressum',
+    contactIntro: 'Kinoguide Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
+    feedbackTitle: 'Feedback',
+    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung — schreib mir einfach eine Mail.',
+    feedbackHint: 'Hilfreich ist: Kino, Film, Datum — und was stattdessen richtig wäre.',
+    mailBtn: '✉ E-Mail schreiben',
+    imprintTitle: 'Impressum',
+    imprintLaw: 'Angaben gemäß § 5 DDG',
+    imprintResp: 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV',
+    imprintName: 'Christian Geller',
+    disclaimerTitle: 'Haftung für Inhalte & Links',
+    disclaimerText: 'Alle Programm-, Preis- und Filmangaben werden automatisch von den Seiten der Kinos sowie von TMDB, OMDb und Letterboxd übernommen und ohne Gewähr angezeigt. Verbindlich ist immer das Kino selbst. Für die Inhalte verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.',
+    privacyTitle: 'Datenschutz',
+    privacyText: 'Diese Seite setzt keine Cookies und bindet keine Analyse- oder Werbedienste ein. Favoriten, Sprache und die Angaben im Preisrechner bleiben ausschließlich in deinem Browser (localStorage) und werden nirgendwohin übertragen. Gehostet wird die Seite bei GitHub Pages (GitHub Inc.); beim Aufruf verarbeitet GitHub technisch notwendige Zugriffsdaten wie deine IP-Adresse.',
+    creditsTitle: 'Daten & Quellen',
+    creditsText: 'Filmdaten und Poster von TMDB, Bewertungen von IMDb/Metascore (via OMDb) und Letterboxd. Spielzeiten von den Kinos und ihren Ticketshops. Dieses Projekt wird weder von TMDB noch von einem der Kinos betrieben oder unterstützt.',
     addCal: 'Zum Kalender hinzufügen',
     viewGrid: 'Filmansicht',
     viewPlan: 'Programm nach Uhrzeit',
@@ -200,7 +217,24 @@ const T = {
     director: 'Director',
     footer: 'Ratings: IMDb & Metascore via OMDb, metadata & FSK via TMDB. Topic and language filters are based on TMDB data (original language, director, keywords) — they surface films but aren\'t exhaustive. OV/OmU is read from the cinemas\' listings; some arthouse cinemas don\'t always tag original-version screenings.',
     thanksPre: 'Inspired by Steven Kocadag\'s wonderful',
-    thanksPost: 'for Berlin — thank you! 💙',
+    thanksPost: 'for Berlin — thank you! 🧡',
+    contact: 'Contact & legal notice',
+    contactBtn: 'Feedback & legal notice',
+    contactIntro: 'Kinoguide Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
+    feedbackTitle: 'Feedback',
+    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it — just send me an email.',
+    feedbackHint: 'Helpful to include: cinema, film, date, and what the site says versus what it should say.',
+    mailBtn: '✉ Write an email',
+    imprintTitle: 'Legal notice (Impressum)',
+    imprintLaw: 'Information pursuant to § 5 DDG',
+    imprintResp: 'Responsible for the content under § 18 (2) MStV',
+    imprintName: 'Christian Geller',
+    disclaimerTitle: 'Liability for content & links',
+    disclaimerText: 'All programme, price and film information is collected automatically from the cinemas\' own websites and from TMDB, OMDb and Letterboxd, and is shown without warranty. The cinema itself is always authoritative. The operators of linked sites are solely responsible for their content.',
+    privacyTitle: 'Privacy',
+    privacyText: 'This site sets no cookies and embeds no analytics or advertising services. Favourites, language and the price-calculator settings stay in your browser (localStorage) and are never transmitted anywhere. The site is hosted on GitHub Pages (GitHub Inc.); when you load it, GitHub processes technically necessary access data such as your IP address.',
+    creditsTitle: 'Data & sources',
+    creditsText: 'Film data and posters from TMDB, ratings from IMDb/Metascore (via OMDb) and Letterboxd. Showtimes from the cinemas and their ticket shops. This project is neither run nor endorsed by TMDB or by any of the cinemas.',
     addCal: 'Add to calendar',
     viewGrid: 'Movie grid',
     viewPlan: 'Schedule by time',
@@ -686,6 +720,70 @@ function FilmPage({ movie, shows, allShows, onBack, onPrices, party, threeD, liv
           {showAll ? t.hiddenShowsOff : t.hiddenShows(hidden)}
         </button>
       )}
+    </article>
+  )
+}
+
+// The one contact address of the site. It is deliberately assembled at runtime
+// rather than written into the HTML as one string: an Impressum mail address is
+// the single most reliably harvested thing on a German website.
+const CONTACT_USER = 'kinokoelnbonn'
+const CONTACT_HOST = 'gmail.com'
+const CONTACT_MAIL = `${CONTACT_USER}@${CONTACT_HOST}`
+
+// Feedback + Impressum, on its own URL (?seite=kontakt) with its own history
+// entry, exactly like a film page — so the ✉ button in the header and the
+// browser's Back button behave the same way everywhere.
+function ContactPage({ onBack, t }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onBack() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onBack])
+
+  const mailto = `mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('Kinoguide Köln · Bonn')}`
+
+  return (
+    <article className="info-page">
+      <div className="film-bar">
+        <button className="film-back" onClick={onBack}>{t.backToList}</button>
+      </div>
+
+      <h1>{t.contact}</h1>
+      <p className="info-lead">{t.contactIntro}</p>
+
+      <section>
+        <h2>{t.feedbackTitle}</h2>
+        <p>{t.feedbackText}</p>
+        <p className="info-hint">{t.feedbackHint}</p>
+        <a className="info-mail" href={mailto}>{t.mailBtn}</a>
+        <p className="info-addr">{CONTACT_MAIL}</p>
+      </section>
+
+      <section>
+        <h2>{t.imprintTitle}</h2>
+        <p className="info-hint">{t.imprintLaw}</p>
+        <address>
+          {t.imprintName}<br />
+          <a href={mailto}>{CONTACT_MAIL}</a>
+        </address>
+        <p className="info-hint">{t.imprintResp}: {t.imprintName}</p>
+      </section>
+
+      <section>
+        <h2>{t.disclaimerTitle}</h2>
+        <p>{t.disclaimerText}</p>
+      </section>
+
+      <section>
+        <h2>{t.privacyTitle}</h2>
+        <p>{t.privacyText}</p>
+      </section>
+
+      <section>
+        <h2>{t.creditsTitle}</h2>
+        <p>{t.creditsText}</p>
+      </section>
     </article>
   )
 }
@@ -1205,11 +1303,16 @@ export default function App() {
   const [view, setView] = useState(() => (p0.get('ansicht') === 'plan' ? 'plan' : 'grid'))
   // which film's page we're on (?film=…) — null means the overview
   const [filmId, setFilmId] = useState(() => p0.get('film') || null)
+  // the static sub-pages (?seite=kontakt); they route exactly like a film page
+  const [page, setPage] = useState(() => (p0.get('seite') === 'kontakt' ? 'kontakt' : null))
+  // one key for "which page are we on", so the history and scroll logic below
+  // treat a film page and a static page the same way
+  const route = filmId ? `film:${filmId}` : page ? `seite:${page}` : null
 
   // Keep the URL in sync. Filter changes only *replace* the entry (no history
   // spam), but opening or leaving a film page *pushes* one — that is what makes
   // the browser's own Back button walk from the film page back to the list.
-  const lastFilm = useRef(filmId)
+  const lastFilm = useRef(route)
   const fromPop = useRef(false)
   useEffect(() => {
     const sp = new URLSearchParams()
@@ -1229,22 +1332,25 @@ export default function App() {
     if (lastMinute) sp.set('lm', '1')
     if (view !== 'grid') sp.set('ansicht', view)
     if (filmId) sp.set('film', filmId)
+    if (page) sp.set('seite', page)
     const qs = sp.toString()
     const url = qs ? `?${qs}` : window.location.pathname
-    const navigated = filmId !== lastFilm.current
-    lastFilm.current = filmId
+    const navigated = route !== lastFilm.current
+    lastFilm.current = route
     // …unless we got here *because* of a Back/Forward press — then the browser
     // has already moved, and pushing would trap the visitor on the page.
     if (navigated && !fromPop.current) window.history.pushState(null, '', url)
     else window.history.replaceState(null, '', url)
     fromPop.current = false
-  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view, filmId])
+  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view, filmId, page, route])
 
-  // Back/Forward: adopt whatever film the URL now points at
+  // Back/Forward: adopt whatever page the URL now points at
   useEffect(() => {
     const onPop = () => {
       fromPop.current = true
-      setFilmId(new URLSearchParams(window.location.search).get('film') || null)
+      const sp = new URLSearchParams(window.location.search)
+      setFilmId(sp.get('film') || null)
+      setPage(sp.get('seite') === 'kontakt' ? 'kontakt' : null)
     }
     window.addEventListener('popstate', onPop)
     return () => window.removeEventListener('popstate', onPop)
@@ -1467,24 +1573,30 @@ export default function App() {
   // list for the much shorter film page, the browser clamps scrollY to the new
   // page height and the original position is gone
   const openMovie = (m) => { listScroll.current = window.scrollY; setFilmId(m.id) }
+  const openPage = (p) => {
+    // only the list has a scroll position worth keeping — the header button is
+    // reachable from a film page too, and that must not clobber it
+    if (!route) listScroll.current = window.scrollY
+    setFilmId(null); setPriceView(null); setPage(p)
+  }
   const backToList = () => {
     // prefer real history so Back/Forward stay consistent with the buttons
     if (window.history.length > 1) window.history.back()
-    else setFilmId(null)
+    else { setFilmId(null); setPage(null) }
   }
 
   // Leaving the list parks the scroll position; coming back restores it, so a
   // visitor who was 40 films deep doesn't land at the top again.
   const listScroll = useRef(0)
-  const wasFilm = useRef(!!filmId)
+  const wasFilm = useRef(route)
   // the browser's own restoration fires after ours and would undo it — this is
   // a single-page app, so we take the wheel
   useEffect(() => {
     if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
   }, [])
   useLayoutEffect(() => {
-    const onFilm = !!filmId
-    if (onFilm === wasFilm.current) return
+    const onFilm = !!route
+    if (route === wasFilm.current) return
     if (onFilm) {
       window.scrollTo(0, 0)
     } else {
@@ -1496,16 +1608,18 @@ export default function App() {
       // posters can still be settling — one more go on the next frame
       if (Math.abs(window.scrollY - y) > 2) requestAnimationFrame(() => window.scrollTo(0, y))
     }
-    wasFilm.current = onFilm
-  }, [filmId])
+    wasFilm.current = route
+  }, [route])
 
   // the tab title follows the film, which is what a shared or bookmarked link
   // should read as
   useEffect(() => {
     document.title = selected
       ? `${displayTitle(selected, ui)} · Kinoguide Köln Bonn`
+      : page === 'kontakt'
+      ? `${t.contact} · Kinoguide Köln Bonn`
       : 'Kinoguide Köln Bonn'
-  }, [selected, ui])
+  }, [selected, page, ui, t])
 
   const toggleGenre = (g) =>
     setGenres((prev) => prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g])
@@ -1528,7 +1642,7 @@ export default function App() {
   const resetAll = () => {
     resetFilters()
     setSort('imdb'); setFavsOnly(false); setView('grid')
-    setShowFilters(false); setFilmId(null); setPriceView(null)
+    setShowFilters(false); setFilmId(null); setPage(null); setPriceView(null)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -1561,6 +1675,11 @@ export default function App() {
       <header className="topbar">
         <button className="brand" onClick={resetAll} title={t.backHome}>Kinoguide <span>Köln · Bonn</span></button>
         <div className="topbar-right">
+          <button className={`mail-btn${page === 'kontakt' ? ' on' : ''}`}
+            onClick={() => openPage('kontakt')}
+            title={t.contactBtn} aria-label={t.contactBtn}>
+            <span aria-hidden="true">✉</span>
+          </button>
           <div className="lang-switch" role="group" aria-label="Sprache / Language">
             <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
             <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
@@ -1570,7 +1689,9 @@ export default function App() {
       </header>
       <div className="marquee-strip" aria-hidden="true"></div>
 
-      {filmId ? (
+      {page === 'kontakt' ? (
+        <ContactPage onBack={backToList} t={t} />
+      ) : filmId ? (
         selected ? (
           <FilmPage
             movie={selected}
@@ -1775,6 +1896,9 @@ export default function App() {
           {t.thanksPost}
         </p>
         <p>{t.footer}</p>
+        <p>
+          <button className="footer-link" onClick={() => openPage('kontakt')}>{t.contact}</button>
+        </p>
       </footer>
     </div>
   )

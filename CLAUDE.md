@@ -97,7 +97,12 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     rendered the browser has already clamped `scrollY`), and
     `history.scrollRestoration` must stay `'manual'` or the browser undoes the
     restore. The film is looked up in the full `data.movies`, so a shared link
-    opens even when the recipient's filters would hide it.
+    opens even when the recipient's filters would hide it. Static sub-pages ride
+    the same machinery under `?seite=<name>` — currently only `?seite=kontakt`
+    (`ContactPage`: feedback + Impressum, reached by the ✉ button in the header
+    and a footer link). Both are folded into one `route` string, and that is what
+    the push/replace and scroll-restore logic keys on; add a page by extending
+    `page`, not by inventing a second mechanism.
   - **Filter organisation** (chosen by the user 2026-07-29): one bar with
     search + Datum + Stadt + Sortierung + a single `⚙ Filter` button with a
     count badge; everything that is switched on also appears as a removable
