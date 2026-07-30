@@ -1,6 +1,6 @@
 import { memo, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import {
-  CINEMA_PRICES, TIER_LABELS, DEFAULT_PARTY, priceFor, cheapestTotal,
+  CINEMA_PRICES, tierLabels, DEFAULT_PARTY, priceFor, cheapestTotal,
   partySize, fmtEur,
 } from './prices'
 
@@ -103,26 +103,27 @@ const T = {
     forParty: (n) => `für ${n} ${n === 1 ? 'Person' : 'Personen'}`,
     familyHint: 'Family Ticket: alle zahlen den Kinderpreis',
     noPriceShows: 'Keine Vorstellungen mit Preisangaben in den aktuellen Filtern.',
-    priceCinemaHint: 'Preise gibt es bisher nur für Kinopolis Bad Godesberg (Bonn) — weitere Kinos folgen.',
+    priceCinemaHint: 'Preise gibt es für alle 17 Kinos. Bei Kinopolis Bad Godesberg und dem Cinedom kommen sie pro Vorstellung direkt aus der Kinokasse, sonst aus der Preisliste des Kinos.',
     priceListLabel: 'Komplette Preisliste',
     surchargesLabel: 'Zuschläge',
     offersLabel: 'Angebote & Kombitickets',
     familyRuleLabel: 'Family Ticket',
     upTo: 'bis zu',
+    atLeast: 'mindestens',
     priceStand: (d) => `Stand ${d} · Angaben ohne Gewähr`,
     priceSourceLink: 'Preisseite des Kinos ↗',
     priceOffersLink: 'Alle Angebote ↗',
     showMorePrices: (n) => `${n} weitere Vorstellungen zeigen`,
-    priceTip: 'Tipp: Vorstellungen vor 18 Uhr sind für Familien am günstigsten — dann zahlen auch Erwachsene den Kinderpreis.',
+    priceTip: 'Tipp: Nachmittagsvorstellungen sind für Familien am günstigsten — in vielen Kinos zahlen dann auch die Erwachsenen den Kinderpreis.',
     priceKidsNote: 'Mit Kindern unter 12 zeigen wir nur Filme bis FSK 12 (ab FSK 12 nur mit Begleitung der Eltern).',
-    priceCaveat: 'Wo wir den Kinopreis nicht direkt kennen, rechnen wir mit der Preisliste — pro Film kann ein Zuschlag von bis zu 2,50 € dazukommen.',
+    priceCaveat: 'Wo wir den Kinopreis nicht direkt kennen, rechnen wir mit der Preisliste des Kinos — pro Film kann noch ein Zuschlag dazukommen.',
     exactPrices: 'Preise direkt vom Kino',
     estimated: 'geschätzt',
-    estimateHint: 'Aus der Preisliste berechnet — ein filmbezogener Zuschlag von bis zu 2,50 € pro Ticket kann dazukommen.',
+    estimateHint: 'Aus der Preisliste des Kinos berechnet — ein filmbezogener Zuschlag pro Ticket kann dazukommen.',
     menuChild: 'Kinder-Menü',
     menuHint: 'Kinder-Menü: Ticket + 0,3 l Softdrink + Kinder-Popcorn + Überraschungstüte',
     roles: { adult: 'Erwachsene', child: 'Kind unter 12', reduced: 'Ermäßigt', family: 'Family Ticket' },
-    priceListNote: 'Das ist die allgemeine Preisliste des Kinos. Pro Film kommt teils ein Zuschlag bis 2,50 € dazu — in den Preisen oben ist er enthalten, sofern sie direkt vom Kino kommen.',
+    priceListNote: 'Das ist die allgemeine Preisliste des Kinos. Pro Film kommt teils ein Zuschlag dazu — in den Preisen oben ist er enthalten, sofern sie direkt vom Kino kommen.',
   },
   en: {
     locale: 'en-GB',
@@ -221,26 +222,27 @@ const T = {
     forParty: (n) => `for ${n} ${n === 1 ? 'person' : 'people'}`,
     familyHint: 'Family ticket: everyone pays the child price',
     noPriceShows: 'No screenings with price data match the current filters.',
-    priceCinemaHint: 'Prices are so far only available for Kinopolis Bad Godesberg (Bonn) — more cinemas to come.',
+    priceCinemaHint: 'Prices are available for all 17 cinemas. For Kinopolis Bad Godesberg and the Cinedom they come per screening straight from the box office; elsewhere from the cinema’s price list.',
     priceListLabel: 'Full price list',
     surchargesLabel: 'Surcharges',
     offersLabel: 'Offers & combi tickets',
     familyRuleLabel: 'Family ticket',
     upTo: 'up to',
+    atLeast: 'at least',
     priceStand: (d) => `As of ${d} · no guarantee`,
     priceSourceLink: "Cinema's price page ↗",
     priceOffersLink: 'All offers ↗',
     showMorePrices: (n) => `Show ${n} more screenings`,
-    priceTip: 'Tip: screenings before 18:00 are cheapest for families — adults pay the child price then.',
+    priceTip: 'Tip: afternoon screenings are cheapest for families — at many cinemas the adults pay the child price then.',
     priceKidsNote: 'With children under 12 we only list films rated up to FSK 12 (FSK 12 only with a parent).',
-    priceCaveat: "Where we don't have the cinema's own figure we use its price list — a per-film surcharge of up to €2.50 can be added.",
+    priceCaveat: "Where we don't have the cinema's own figure we use its price list — a per-film surcharge may still be added.",
     exactPrices: "Prices straight from the cinema",
     estimated: 'estimated',
-    estimateHint: 'Calculated from the price list — a film-related surcharge of up to €2.50 per ticket may be added.',
+    estimateHint: "Calculated from the cinema's price list — a film-related surcharge per ticket may be added.",
     menuChild: 'Kids menu',
     menuHint: 'Kids menu: ticket + 0.3 l soft drink + kids popcorn + surprise bag',
     roles: { adult: 'Adults', child: 'Under 12', reduced: 'Reduced', family: 'Family ticket' },
-    priceListNote: "This is the cinema's general price list. Individual films can carry a surcharge of up to €2.50 — it is included in the prices above wherever they come straight from the cinema.",
+    priceListNote: "This is the cinema's general price list. Individual films can carry a surcharge — it is included in the prices above wherever they come straight from the cinema.",
   },
 }
 
@@ -725,9 +727,24 @@ function PartyStep({ label, hint, value, onChange }) {
   )
 }
 
-// The full price list of one cinema, plus its surcharges, family rule and offers
+// One surcharge, which may be a range ("1,00 – 5,00 €") or an upper bound
+function surchargeText(s, t, ui) {
+  const label = ui === 'en' ? s.en : s.de
+  if (s.pct) return `${label}: ${s.pct} %`
+  const amount = s.to
+    ? `${fmtEur(s.amount, t.locale)} – ${fmtEur(s.to, t.locale)}`
+    : `${s.upTo ? `${t.upTo} ` : ''}${s.atLeast ? `${t.atLeast} ` : ''}${fmtEur(s.amount, t.locale)}`
+  return `${label}: ${amount}`
+}
+
+// The full price list of one cinema, plus its surcharges, family rule and offers.
+// Every cinema brings its own day tiers, so the table's columns come from the
+// entry rather than from one shared set of labels.
 function PriceReference({ cinema, cfg, t, ui }) {
-  const tiers = TIER_LABELS[ui === 'en' ? 'en' : 'de']
+  const tiers = tierLabels(cfg, ui)
+  const displayOnly = cfg.displayOnly || []
+  const surcharges = cfg.surcharges || []
+  const offers = cfg.offers || []
   return (
     <div className="price-ref">
       <h3>{cinema}</h3>
@@ -743,32 +760,44 @@ function PriceReference({ cinema, cfg, t, ui }) {
                 {tk.price.map((p, i) => <td key={i}>{p == null ? '–' : fmtEur(p, t.locale)}</td>)}
               </tr>
             ))}
-            {cfg.displayOnly.map((d) => (
+            {displayOnly.map((d) => (
               <tr key={d.de}>
                 <td>{ui === 'en' ? d.en : d.de}</td>
-                <td colSpan="4" className="flat">{fmtEur(d.flat, t.locale)}</td>
+                <td colSpan={tiers.length} className="flat">
+                  {d.flat == null ? '–' : fmtEur(d.flat, t.locale)}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <p className="price-note">{t.priceListNote}</p>
-      <p className="price-note"><b>{t.familyRuleLabel}:</b> {ui === 'en' ? cfg.familyTicket.en : cfg.familyTicket.de}</p>
-      <p className="price-note"><b>{t.surchargesLabel}:</b>{' '}
-        {cfg.surcharges.map((s, i) => (
-          <span key={i}>{i > 0 && ' · '}{ui === 'en' ? s.en : s.de}: {s.upTo ? `${t.upTo} ` : ''}{fmtEur(s.amount, t.locale)}</span>
-        ))}
-      </p>
-      <p className="price-note"><b>{t.offersLabel}:</b></p>
-      <ul className="price-offers">
-        {cfg.offers.map((o, i) => (
-          <li key={i}><a href={o.url} target="_blank" rel="noreferrer">{ui === 'en' ? o.en : o.de} ↗</a></li>
-        ))}
-      </ul>
+      {cfg.note && <p className="price-note">{ui === 'en' ? cfg.note.en : cfg.note.de}</p>}
+      {cfg.familyTicket && (
+        <p className="price-note"><b>{t.familyRuleLabel}:</b>{' '}
+          {ui === 'en' ? cfg.familyTicket.en : cfg.familyTicket.de}</p>
+      )}
+      {surcharges.length > 0 && (
+        <p className="price-note"><b>{t.surchargesLabel}:</b>{' '}
+          {surcharges.map((s, i) => (
+            <span key={i}>{i > 0 && ' · '}{surchargeText(s, t, ui)}</span>
+          ))}
+        </p>
+      )}
+      {offers.length > 0 && <>
+        <p className="price-note"><b>{t.offersLabel}:</b></p>
+        <ul className="price-offers">
+          {offers.map((o, i) => (
+            <li key={i}>{o.url
+              ? <a href={o.url} target="_blank" rel="noreferrer">{ui === 'en' ? o.en : o.de} ↗</a>
+              : (ui === 'en' ? o.en : o.de)}</li>
+          ))}
+        </ul>
+      </>}
       <p className="price-src">
         {t.priceStand(new Date(cfg.checked).toLocaleDateString(t.locale))} ·{' '}
-        <a href={cfg.source} target="_blank" rel="noreferrer">{t.priceSourceLink}</a> ·{' '}
-        <a href={cfg.offersUrl} target="_blank" rel="noreferrer">{t.priceOffersLink}</a>
+        <a href={cfg.source} target="_blank" rel="noreferrer">{t.priceSourceLink}</a>
+        {cfg.offersUrl && <> · <a href={cfg.offersUrl} target="_blank" rel="noreferrer">{t.priceOffersLink}</a></>}
       </p>
     </div>
   )
@@ -875,7 +904,11 @@ function PriceModal({ items, movie, party, setParty, threeD, setThreeD, live, on
                         {l.count}× {l.label} <b>{fmtEur(l.each, t.locale)}</b>
                       </span>
                     ))}
-                    {p.family && <span className="pr-family" title={t.familyHint}>👨‍👩‍👧 Family Ticket</span>}
+                    {/* only badge it when the family fare actually changed a
+                        line — at the Woki the whole Tuesday is cheap for
+                        everyone, which is not a family ticket */}
+                    {p.family && p.lines.some((l) => l.viaFamily || l.role === 'family') &&
+                      <span className="pr-family" title={t.familyHint}>👨‍👩‍👧 Family Ticket</span>}
                     {p.menus && p.menus.child != null && (
                       <span className="pr-menu" title={t.menuHint}>🍿 {t.menuChild} +{fmtEur(p.menus.child, t.locale)}</span>
                     )}

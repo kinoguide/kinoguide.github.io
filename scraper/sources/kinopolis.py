@@ -18,9 +18,9 @@ few places, wrong. Measured against the cinema's own shop on 2026-07-25:
 
 The shop has none of these problems — it *is* the till the tickets are sold
 from — and we already download it once a day for prices, so this costs no
-extra request: fetch_program() caches the response and sources.kinopolis_prices
-reads prices out of the very same payload. See that module for the endpoint,
-the CENTER-OID header that authorizes it, and the robots.txt situation.
+extra request: sources.cineorder caches the response and reads the prices out
+of the very same payload. See that module for the endpoint, the CENTER-OID
+header that authorizes it, and the robots.txt situation.
 
 Per screening the shop gives us:
     id                    the performance id our booking links already use,
@@ -48,37 +48,9 @@ import json
 import re
 import sys
 
-import requests
-
 from language import classify
 from sources import kinoheld, custom
-
-API = "https://iframe.ts.kinopolis.de/api/films"
-HEADERS = {
-    "User-Agent": "kinoguide-koeln/1.0 (+https://kinoguide.github.io)",
-    "Accept": "application/json",
-}
-
-# one response per cinema per run, shared with sources.kinopolis_prices
-_program_cache: dict[str, list[dict]] = {}
-
-
-def fetch_program(center_oid: str, timeout: int = 45) -> list[dict]:
-    """The cinema's whole program: one entry per film, each with performances.
-
-    ~300 KB gzipped. Cached, so asking for showtimes and prices in the same
-    run is still a single request.
-    """
-    if center_oid not in _program_cache:
-        resp = requests.get(
-            API,
-            params={"locale": "de", "include.pricecategories": "true"},
-            headers={**HEADERS, "CENTER-OID": center_oid},
-            timeout=timeout,
-        )
-        resp.raise_for_status()
-        _program_cache[center_oid] = resp.json()
-    return _program_cache[center_oid]
+from sources.cineorder import DEFAULT_API, fetch_program
 
 
 # Bracketed notes Kinopolis hangs off a title. Every one of them describes the
@@ -175,7 +147,8 @@ def fetch_shows(cinema: dict) -> list[dict]:
     oid = cinema.get("cineorder_center_oid")
     if oid:
         try:
-            shows = normalize(fetch_program(oid), cinema)
+            shows = normalize(
+                fetch_program(oid, api=cinema.get("cineorder_api") or DEFAULT_API), cinema)
             if shows:
                 return shows
             print(f"  [warn] {cinema['name']}: ticket shop returned an empty program")

@@ -13,7 +13,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-from sources import kinoheld, custom, kinopolis, kinopolis_prices
+from sources import kinoheld, custom, kinopolis, cineorder
 from enrich import tmdb, omdb, letterboxd
 from language import clean_title
 
@@ -189,7 +189,7 @@ def main() -> None:
     # exact ticket prices per screening, for the cinemas that expose them.
     # Best-effort: a failure here leaves the last good prices.json in place and
     # the frontend falls back to its curated price table.
-    prices = kinopolis_prices.collect(load_cinemas())
+    prices = cineorder.collect(load_cinemas())
     if prices["cinemas"]:
         with open(PRICES_PATH, "w", encoding="utf-8") as f:
             json.dump(prices, f, indent=1, ensure_ascii=False)

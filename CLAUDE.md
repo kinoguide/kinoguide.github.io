@@ -32,8 +32,10 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/main.py` — orchestrator: scrape every cinema (isolated failures) →
   enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
   per-cinema language corrections (Filmpalette, Kinopolis).
-- `scraper/cinemas.json` — the 17 cinemas: kinoheld IDs, `website`, `source`
-  (`kinoheld`, `custom` or `kinopolis`), and notes. Read the `_note` fields.
+- `scraper/cinemas.json` — the 17 cinemas: kinoheld IDs, `website`, `price_page`,
+  `source` (`kinoheld`, `custom` or `kinopolis`), the CineOrder shop coordinates
+  where there is one (`cineorder_api`, `cineorder_center_oid`,
+  `family_max_adults`), and notes. Read the `_note` fields.
 - `scraper/sources/kinoheld.py` — kinoheld GraphQL client (endpoint
   `next-live.kinoheld.de/graphql`, op `FetchProgramByMovie`). Builds exact
   per-show booking links (`…/vorstellungen?showId=<id>`). `_title_for()` guards
@@ -104,14 +106,16 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     `Intl.DisplayNames` so an unmapped code never shows raw. `PINNED_LANGS`
     (currently `ko`) stays on offer even with nothing playing, marked with a
     dashed border and a `0` — the user asked for a permanent Korean button.
-- `web/src/prices.js` — the price model: a hand-curated price table per cinema
-  (day tiers, family ticket, surcharges, offers; each entry carries a `checked`
-  date the UI shows) **plus** the calculator that prefers the cinema's own
-  per-screening prices from `data/prices.json` and only falls back to the table.
-  Only **Kinopolis Bad Godesberg** so far; adding a cinema = one more entry keyed
-  by its exact name in `movies.json`. See "Prices" below.
-- `scraper/sources/kinopolis_prices.py` — one daily call to Kinopolis' ticket
-  shop for the exact price of every screening → `data/prices.json`.
+- `web/src/prices.js` — the price model: a hand-curated price table for **all 17
+  cinemas** (each with its own day tiers, tickets, family rule, surcharges,
+  offers and a `checked` date the UI shows) **plus** the calculator that prefers
+  the cinema's own per-screening prices from `data/prices.json` and falls back to
+  the table. Adding a cinema = one more entry keyed by its exact name in
+  `movies.json`. See "Prices" below.
+- `scraper/sources/cineorder.py` — the CineOrder ticket-shop client: one daily
+  call per cinema that yields both the program and the exact price of every
+  screening → `data/prices.json`. Used by Kinopolis (showtimes + prices) and
+  Cinedom (prices only).
 
 ## Run / deploy
 
@@ -157,72 +161,128 @@ frontend is deliberately built to keep that cheap:
   when the Favoriten filter is actually on (`favKey`).
 - `data/prices.json` is still lazy-loaded on first use of a price panel.
 
-## Prices (family price finder, added 2026-07-25)
+## Prices (family price finder — all 17 cinemas since 2026-07-30)
 
 A 💶 chip in the toolbar and a "💶 ab X €" button on each cinema row in the
-film popup open a price panel: the visitor sets how many adults / kids under 12
+film page open a price panel: the visitor sets how many adults / kids under 12
 / students are coming (kept in localStorage), and gets every screening we know
 prices for, **cheapest total first**, with the per-ticket breakdown and a
-booking link. The Kinopolis **Family Ticket** (before 18:00 the whole family
-pays the child price) is applied automatically, so the panel shows a family
-directly how much an afternoon show saves over the evening.
+booking link. Family fares are applied automatically, so the panel shows a
+family directly how much an afternoon show saves over the evening.
 
-Prices come from the cinema itself where we have them (see below); the rules
-baked into `prices.js` are the fallback: four day tiers (Mo–Do / Fr and the working day
-before a holiday / Sa / So+Feiertage, with NRW holidays listed), Matinee,
-Happy Hour, Late Night, child + reduced fares, the Family-Ticket rule (FSK ≤ 12
-only) and an optional 3D surcharge. With kids in the party, films above FSK 12
-are left out. Every panel shows the full price table, surcharges, the combi /
-Ferienkino / Kindergeburtstag / KidsClub offers and links to the cinema's own
-price page; rows with exact prices also show what a kids' menu adds per ticket.
+Two sources feed it, and they are not equal:
+
+| | cinemas | what it is |
+|---|---|---|
+| exact | Kinopolis Bad Godesberg, Cinedom | the cinema's own till, per screening (`data/prices.json`) |
+| table | the other 15 | the printed price list, typed by hand into `web/src/prices.js` |
+
+Coverage on 2026-07-30: every cinema prices 100 % of its screenings, except the
+Woki (13 %, on purpose — see below). Of Cinedom's 337 screenings 318 are exact,
+Kinopolis 318 of 318; the rest fall back to the table with an "≈ geschätzt" mark.
+`npm run check:coverage` in `web/` prints that table from the live data, and
+`npm run check:prices` asserts the model against the figures on the price pages
+— run both after touching prices.
 
 ### The printed price list is only a floor
 
-Kinopolis adds a **per-film surcharge of 0 … 2,50 €** ("filmbezogener Zuschlag"
-on their price page) that nothing we scrape can predict. Measured 2026-07-25 on
-directly comparable screenings (Mo–Thu 12–18h, plain 2D, child ticket, list
-price 7,49 €): Toy Story 5 / Conni / Miss Moxy **7,49**, Vaiana / Minions
-**7,99**, Mandalorian & Grogu **8,99**, Die Odyssee **9,49**. There is **no**
-online booking fee — films without a surcharge cost the list price in the shop
-too. (An earlier version of this file blamed a 0,50 € Vorverkaufsgebühr; that
-was wrong, Minions simply carries a 0,50 € film surcharge.)
+Kinopolis adds a **per-film surcharge of 0 … 2,50 €** ("filmbezogener Zuschlag"),
+Cinedom a "Blockbusterzuschlag" of 1,50–2,00 €, and almost every house an
+overlength surcharge. Measured at Kinopolis 2026-07-25 on directly comparable
+screenings (Mo–Thu 12–18h, plain 2D, child ticket, list price 7,49 €): Toy Story
+5 / Conni / Miss Moxy **7,49**, Vaiana / Minions **7,99**, Mandalorian & Grogu
+**8,99**, Die Odyssee **9,49**. There is **no** online booking fee at either
+house — films without a surcharge cost the list price in the shop too. (Cinenova
+is the exception among the table cinemas: they add 10 % VVK online, which
+`onlineFeePct` includes.)
 
-So the surcharge has to come from the cinema, and it does:
+So the surcharge has to come from the cinema, and for two of them it does:
 
-### data/prices.json — exact prices per screening
+### data/prices.json — exact prices per screening (CineOrder)
 
-`scraper/sources/kinopolis.py` calls their webshop once per run — the request
-lives there because the *showtimes* come out of the same payload, and
-`kinopolis_prices.py` reads the prices from the cached response:
+`scraper/sources/cineorder.py` calls each shop once per run. Kinopolis' *showtimes*
+come out of the same payload, so the two cost one request between them:
 
-    GET iframe.ts.kinopolis.de/api/films?locale=de&include.pricecategories=true
+    GET <cineorder_api>?locale=de&include.pricecategories=true
     Header: CENTER-OID: <cineorder_center_oid from cinemas.json>
 
-One request, ~300 KB gzipped, returns the whole program with **every price
-category of every screening** — surcharge, format (3D / D-BOX / Atmos), event
-pricing ("Normal Oper" 20–36 €, KINOFEST 5 €, Late Night, Best of Cinema) and
-the real combi-menu prices all included. The header is the entire auth: without
-`CENTER-OID` every `/api/…` call answers 401; with it, no session or token is
-needed. Their robots.txt allows generic agents (`use=reference`) and blocks
-AI-training crawlers, which we aren't.
+    Kinopolis Bad Godesberg   iframe.ts.kinopolis.de   20000000014VEGOZTB
+    Cinedom                   shop.cinedom.de          9DD10000014AKQLNRG
+
+One request each, a few hundred KB gzipped, returns the whole program with
+**every price category of every screening** — surcharge, format (3D / D-BOX /
+Atmos), event pricing ("Normal Oper" 20–36 €, KINOFEST 5 €, Late Night, Best of
+Cinema) and the real combi-menu prices all included. The header is the entire
+auth: without `CENTER-OID` every `/api/…` call answers 401; with it, no session
+or token is needed. Their robots.txt allows generic agents (`use=reference`) and
+blocks AI-training crawlers, which we aren't.
 
 Output is `data/prices.json` → `{cinemas: {<name>: {shows: {<showId>: {adult,
-child, reduced, family?, menu_*, format?}}}}}`. `data/prices.json` is committed
-with the daily data; the workflow copies it to `web/public/data/prices.json`,
-which is gitignored like the movies copy. The join key is the
-performance id in the booking URL (`…/vorstellung/<id>`) — now that the
-showtimes come from the same payload, **all** Kinopolis showtimes match and the
-panel shows no estimates for them (it was 99% via kinoheld). The frontend lazy-loads the file when the price panel opens,
-uses exact figures where they exist, and falls back to the curated table with an
-"≈ geschätzt" marker otherwise. `family` is only present on screenings where the
-cinema actually grants the Familienpreis, so that rule needs no guessing.
+child, reduced, family?, menu_*, format?}}, family_max_adults?}}}`. It is
+committed with the daily data; the workflow copies it to
+`web/public/data/prices.json`, which is gitignored like the movies copy.
+
+The join key is the performance id the booking URL already carries — Kinopolis
+puts it in the path (`…/vorstellung/<id>`), Cinedom in a query parameter
+(`…?performance=<id>`, which arrives via kinoheld's deeplink). `showId()` in
+prices.js matches both. Verified against the real Cinedom shop on 2026-07-30:
+Toy Story 5 (Atmos) Fr 31.07. 13:40 rang up Erwachsener 10,00 € / Kind & Fam
+8,00 €, Die Odyssee Fr 31.07. 20:15 Erwachsener 13,50 € / Kind 10,50 € — exactly
+what the collector derives, with no fee added.
+
+Seating area 1 is the standard seat at both shops (Kinopolis Komfort, Cinedom
+Parkett; 2 = Loge, 3 = VIP), confirmed against the rendered seat plan.
 
 It's an internal API and may change without notice: `collect()` swallows its own
 errors, main.py keeps the last good file, and the frontend degrades to the table.
 
-When touching the curated table: re-read the cinema's price page, keep the column
-spans straight (their table is colspan-based — e.g. the child price still holds
-on Fridays while adult evening prices already jump), and bump `checked`.
+### The curated tables (web/src/prices.js)
+
+Each cinema declares **its own day tiers** — there is no shared set, because
+Thursday is the cheap day at Odeon / OFF Broadway / Weisshaus / Kalk / Rex am
+Ring / Metropolis, Tuesday at the Woki, and Kinopolis splits Mo–Do / Fr / Sa /
+So. A tier matches on weekday, whether the date is a public holiday, and whether
+it is the day *before* one; first match wins, last entry is the catch-all. The
+file's header comment documents the full entry shape.
+
+Two things are computed rather than listed where the cinema publishes exact
+steps: `lengthSurcharge` (from `movie.runtime`) and `onlineFeePct`.
+
+Three traps that produced wrong prices during the build, all now guarded by
+`check_prices.mjs`:
+
+- **A missing rating is not a qualifying rating.** `familyApplies` used to treat
+  an unknown FSK as eligible, which quoted a family the child price for
+  *Vaterland* and a horror sequel. It now requires a known FSK within range.
+- **A low rating is not a children's film.** Where the cinema's own wording asks
+  for one ("Kinder- und Familienfilme", "Filme mit Kennzeichnung KiFi"), the
+  entry sets `familyTicket.familyFilmOnly` and we also require an
+  Animation/Familie genre — *Liebe braucht keine Ferien* is FSK 0 and still not a
+  kids film. Cinedom and Cineplex word their offers purely by rating, so the flag
+  stays off there.
+- **A ticket row that nobody may buy makes the whole screening disappear.** If no
+  row fits a visitor, `showPrice` returns null and the panel silently drops the
+  screening. The check brute-forces every cinema × day × hour × visitor.
+
+Programme strands we cannot identify from our data (Kinemathek Kids-Veranstaltungen,
+Weisshaus KidsKino, Kalk's Kinder- & Jugendprogramm, Cinenova Kinderfilme) are
+listed under `displayOnly` and never auto-picked — showing the regular price is
+only ever too high, which the "≈ geschätzt" mark already covers.
+
+**The Woki publishes no standard price at all** ("Klicke auf die Vorstellungszeit
+und suche Dir einen Sitzplatz aus. So kannst Du sehen, was Deine Karte kostet.").
+Only their Kino-Dienstag (2D 6,99 € / 3D 9,99 €) is stated unambiguously, so that
+is the only thing we calculate; the rest of their week deliberately shows no
+price rather than a guess.
+
+**Cineplex Köln blocks scripted access** — cineplex.de answers 403 to every
+non-browser agent, so their table was read by hand in a browser and can only be
+refreshed that way.
+
+When touching a curated table: re-read the cinema's price page, keep the column
+spans straight (several are colspan-based — e.g. Kinopolis' child price still
+holds on Fridays while adult evening prices already jump), take the LOWER end of
+any printed range (the UI says "ab X €"), bump `checked`, and run both checks.
 
 ## Conventions
 

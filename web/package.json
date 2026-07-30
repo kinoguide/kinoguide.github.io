@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:prices": "node check_prices.mjs",
+    "check:coverage": "node check_coverage.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
