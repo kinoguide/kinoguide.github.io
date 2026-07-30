@@ -584,24 +584,27 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
               <div className="day-times" key={d}>
                 <span className="day-label">{fmtDayShort(d, t)}</span>
                 <span className="times">
-                  {byDay[d].map((tm, i) => {
-                    const chip = (
-                      <span className={`time lang-${tm.language.toLowerCase()}`}>
-                        {fmtTime(tm.datetime, t)}
+                  {byDay[d].map((tm, i) => (
+                    // one self-contained box per screening: time + version on
+                    // top, the two things you can *do* with it underneath. The
+                    // booking link can't wrap the whole box because the calendar
+                    // download is a link too, and links don't nest.
+                    <div className={`showbox lang-${tm.language.toLowerCase()}`} key={i}>
+                      <div className="showbox-head">
+                        <span className="show-time">{fmtTime(tm.datetime, t)}</span>
                         <span className="lang-tag">{tm.language}</span>
-                      </span>
-                    )
-                    return (
-                      <span className="time-wrap" key={i}>
-                        {tm.booking_url
-                          ? <a href={tm.booking_url} target="_blank" rel="noreferrer">{chip}</a>
-                          : chip}
+                      </div>
+                      <div className="showbox-acts">
+                        {tm.booking_url && (
+                          <a className="show-tix" href={tm.booking_url} target="_blank" rel="noreferrer"
+                            title={t.ticketsTitle}>🎟️ {t.tickets}</a>
+                        )}
                         <a className="cal-btn" href={icsHref(movie, tm, ui)}
                           download={`${displayTitle(movie, ui).replace(/[^\w äöüÄÖÜß-]/g, '')}.ics`}
                           title={t.addCal} aria-label={t.addCal}>📅</a>
-                      </span>
-                    )
-                  })}
+                      </div>
+                    </div>
+                  ))}
                 </span>
               </div>
             ))}
@@ -1681,6 +1684,11 @@ export default function App() {
       <header className="topbar">
         <button className="brand" onClick={resetAll} title={t.backHome}>Kinoguide <span>Köln · Bonn</span></button>
         <div className="topbar-right">
+          <div className="lang-switch" role="group" aria-label="Sprache / Language">
+            <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
+            <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
+          </div>
+          {data && <div className="stand">{t.stand} {new Date(data.generated_at).toLocaleDateString(t.locale)}</div>}
           {/* drawn rather than the ✉ emoji: the emoji renders hairline-thin in
               most fonts and the orange barely registered against the navy */}
           <button className={`mail-btn${page === 'kontakt' ? ' on' : ''}`}
@@ -1693,11 +1701,6 @@ export default function App() {
               <path d="M3 6.6 L12 13.4 L21 6.6" />
             </svg>
           </button>
-          <div className="lang-switch" role="group" aria-label="Sprache / Language">
-            <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
-            <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
-          </div>
-          {data && <div className="stand">{t.stand} {new Date(data.generated_at).toLocaleDateString(t.locale)}</div>}
         </div>
       </header>
       <div className="marquee-strip" aria-hidden="true"></div>

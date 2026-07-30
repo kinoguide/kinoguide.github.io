@@ -115,6 +115,16 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     popover `position: fixed` from the button's rect on purpose: the button row
     scrolls sideways, and a scroll container clips an absolutely positioned
     menu right out of existence on narrow screens.
+  - **The screening box** (`.showbox`, film page, reworked 2026-07-31). One box
+    per screening: time + OV/OmU tag on top, `🎟️ Tickets` + 📅 underneath. The
+    booking link cannot wrap the whole box — the calendar download is a link too
+    and links don't nest — so the box is a plain `div` with two links inside.
+    Desktop lays ~4 boxes per row; **below 640px it turns into a full-width
+    horizontal strip** with the day label stacked above, because a column of
+    boxes beside a 74px day label left half the width empty. Watch the width:
+    at 320px the strip is within a few px of its box, so `.showbox` carries
+    `flex-flow: row wrap` as a safety net and a ≤370px rule trims the paddings.
+    Content spilling over the border is the bug this replaced.
   - **Original-language filter.** Every language in the day's program gets a
     pill (no minimum film count), names come from `LANGUAGES` and fall back to
     `Intl.DisplayNames` so an unmapped code never shows raw. `PINNED_LANGS`
