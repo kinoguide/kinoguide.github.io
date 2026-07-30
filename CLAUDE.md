@@ -77,7 +77,14 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     can offer is another house's staging of the same work. Cost of that rule:
     the "Geburtstagsgala – 20 Jahre Met live im Kino" loses a match that was
     actually right. Judged worth it — reverse in `_RELAY_RE` if you disagree.
-- `scraper/language.py` — OV/OmU/DE classifier from show text/flags.
+- `scraper/language.py` — OV/OmU/DE classifier from show text/flags. **Careful
+  with the OV markers: they are short and they collide with ordinary words.** A
+  bare `\bOF\b` (Originalfassung) matched the English "of" in every single case
+  it fired across all 17 feeds — "BEST OF CINEMA - Rocky", "Insidious: Out of
+  the Further", and twice on a screening the cinema had itself labelled "D".
+  It now only counts in brackets or behind a language abbreviation. Measure any
+  new marker against the real feeds before adding it; a false OV is exactly the
+  mislabel the conventions below tell you to avoid.
 - `web/src/App.jsx` — the whole React app (single file). `web/src/styles.css` —
   all styling (Art-Deco navy+orange theme). Frontend reads
   `web/public/data/movies.json`. Two structural things live in here:
@@ -113,9 +120,12 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   the table. Adding a cinema = one more entry keyed by its exact name in
   `movies.json`. See "Prices" below.
 - `scraper/sources/cineorder.py` — the CineOrder ticket-shop client: one daily
-  call per cinema that yields both the program and the exact price of every
-  screening → `data/prices.json`. Used by Kinopolis (showtimes + prices) and
-  Cinedom (prices only).
+  call per cinema that yields the program, the exact price of every screening
+  (→ `data/prices.json`) and its OV/OmU version. Kinopolis takes all three from
+  it; Cinedom keeps kinoheld's showtimes (kinoheld has *more* of them — it still
+  lists today's after the shop drops them from sale) but takes prices and
+  languages from the shop via `apply_languages()`, joined on the performance id
+  in the booking link.
 
 ## Run / deploy
 

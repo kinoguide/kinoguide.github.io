@@ -87,6 +87,17 @@ def main() -> None:
         # has them ("Amores Perros (OmeU)") — correct the labels from there.
         if cinema["name"] == "Filmpalette":
             custom.apply_filmpalette_languages(shows)
+        # Cinedom's showtimes come from kinoheld (which has *more* of them than
+        # the shop, including today's once the sale closes), but kinoheld
+        # carries almost none of their OV/OmU markers. The shop's booking links
+        # are already in our data, so its per-screening version can be joined
+        # straight on — 48 screenings on 2026-07-30.
+        if cinema.get("cineorder_center_oid") and cinema.get("source") != "kinopolis":
+            try:
+                n = cineorder.apply_languages(shows, cinema)
+                print(f"  {n} screenings relabelled OV/OmU from the {cinema['name']} shop")
+            except Exception as e:
+                print(f"  [warn] {cinema['name']}: shop languages unavailable ({e})")
         # (Kinopolis needs no correction here: sources/kinopolis.py reads the
         # version off the shop's own releaseTypeName, and applies the program-
         # page fallback itself if it ever has to fall back to kinoheld.)

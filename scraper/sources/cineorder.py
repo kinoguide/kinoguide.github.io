@@ -45,9 +45,12 @@ the frontend falls back to the curated price table.
 """
 from __future__ import annotations
 
+import re
 from datetime import datetime, timezone
 
 import requests
+
+from language import classify
 
 DEFAULT_API = "https://iframe.ts.kinopolis.de/api/films"
 HEADERS = {
@@ -166,6 +169,49 @@ def fetch_prices(center_oid: str, api: str = DEFAULT_API, timeout: int = 45) -> 
             if pid and any(k in prices for k in ROLE_NAMES):
                 shows[pid] = prices
     return shows
+
+
+_PERFORMANCE_RE = re.compile(r"[?&]performance=([A-Z0-9]{16,})")
+
+
+def apply_languages(shows: list[dict], cinema: dict) -> int:
+    """Relabel OV/OmU from the shop's own per-screening `releaseTypeName`.
+
+    For a cinema whose *showtimes* come from elsewhere but whose booking links
+    already point at its CineOrder shop (Cinedom: kinoheld hands out
+    `…?performance=<id>` deeplinks), the shop still knows the version of every
+    screening it sells — and kinoheld mostly doesn't.
+
+    Measured on Cinedom, 2026-07-30, over the 313 screenings both describe:
+    the shop marks 48 as OV or OmU that reach us from kinoheld unmarked, with
+    no flag of any kind to reveal them — Die Odyssee OV, the nightly
+    Spider-Man OV and 3D/OV, Obsession OV, Toy Story 5 OV. In the other
+    direction the shop contradicts nothing once the "BEST OF CINEMA" false
+    positives are out of the classifier (see language.OV_PATTERNS), so this is
+    a strict superset, exactly as the same field proved for Kinopolis.
+
+    Screenings the shop no longer sells (today's, once the sale closes) simply
+    keep their existing label. Mutates in place; returns how many changed.
+    """
+    oid = cinema.get("cineorder_center_oid")
+    if not oid:
+        return 0
+    by_id = {}
+    for film in fetch_program(oid, api=cinema.get("cineorder_api") or DEFAULT_API):
+        for perf in film.get("performances") or []:
+            if perf.get("id"):
+                by_id[perf["id"]] = perf.get("releaseTypeName") or ""
+
+    changed = 0
+    for show in shows:
+        m = _PERFORMANCE_RE.search(show.get("booking_url") or "")
+        if not m or m.group(1) not in by_id:
+            continue
+        lang = classify(by_id[m.group(1)])
+        if lang != show.get("language"):
+            show["language"] = lang
+            changed += 1
+    return changed
 
 
 def collect(cinemas: list[dict]) -> dict:

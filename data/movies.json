@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-30T15:15:16.715452+00:00",
+ "generated_at": "2026-07-30T15:21:49.922597+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -654,7 +654,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-30T19:20:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=44E71000023RFGKYDT"
     },
     {
@@ -752,7 +752,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T13:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=74E71000023RFGKYDT"
     },
     {
@@ -899,7 +899,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=8ED71000023RFGKYDT"
     },
     {
@@ -1011,7 +1011,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=84E71000023RFGKYDT"
     },
     {
@@ -1151,7 +1151,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9ED71000023RFGKYDT"
     },
     {
@@ -1277,7 +1277,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T13:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=94E71000023RFGKYDT"
     },
     {
@@ -1424,14 +1424,14 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=AED71000023RFGKYDT"
     },
     {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T19:30:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=54E71000023RFGKYDT"
     },
     {
@@ -1515,7 +1515,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T13:10:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=B4E71000023RFGKYDT"
     },
     {
@@ -1641,7 +1641,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=BED71000023RFGKYDT"
     },
     {
@@ -1739,7 +1739,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T13:10:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C4E71000023RFGKYDT"
     },
     {
@@ -1865,7 +1865,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=CED71000023RFGKYDT"
     },
     {
@@ -1949,7 +1949,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T13:10:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D4E71000023RFGKYDT"
     },
     {
@@ -2061,7 +2061,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T19:20:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=64E71000023RFGKYDT"
     },
     {
@@ -2089,7 +2089,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T19:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=DED71000023RFGKYDT"
     },
     {
@@ -2251,21 +2251,21 @@
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-10-06T19:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71314"
     },
     {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-10-06T19:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/14A2CB00023FWBXJYB"
     },
     {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-10-06T20:00:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=7B371000023RFGKYDT"
     },
     {
@@ -2443,7 +2443,7 @@
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-08-04T19:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71312"
     },
     {
@@ -2457,7 +2457,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T20:00:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5B371000023RFGKYDT"
     },
     {
@@ -2517,7 +2517,7 @@
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-11-03T19:30:00+01:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71315"
     },
     {
@@ -2531,7 +2531,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-11-03T20:00:00+01:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=8B371000023RFGKYDT"
     },
     {
@@ -2593,7 +2593,7 @@
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-08T21:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=126827367"
     },
     {
@@ -2726,7 +2726,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T23:10:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E4E71000023RFGKYDT"
     },
     {
@@ -2775,7 +2775,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T23:10:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F4E71000023RFGKYDT"
     },
     {
@@ -4374,7 +4374,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T12:45:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=78D71000023RFGKYDT"
     },
     {
@@ -5492,7 +5492,7 @@
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-27T20:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870747"
     },
     {
@@ -6112,7 +6112,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-12-01T20:00:00+01:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9B371000023RFGKYDT"
     },
     {
@@ -6401,7 +6401,7 @@
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-09-01T19:30:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71313"
     },
     {
@@ -6415,7 +6415,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-09-01T20:00:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=6B371000023RFGKYDT"
     },
     {
@@ -8893,7 +8893,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-30T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=89771000023RFGKYDT"
     },
     {
@@ -9005,7 +9005,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9AD71000023RFGKYDT"
     },
     {
@@ -9089,7 +9089,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=29771000023RFGKYDT"
     },
     {
@@ -9103,7 +9103,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=0FD71000023RFGKYDT"
     },
     {
@@ -9194,7 +9194,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-07-31T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=99771000023RFGKYDT"
     },
     {
@@ -9313,7 +9313,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=AAD71000023RFGKYDT"
     },
     {
@@ -9397,7 +9397,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=39771000023RFGKYDT"
     },
     {
@@ -9411,7 +9411,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=1FD71000023RFGKYDT"
     },
     {
@@ -9495,7 +9495,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=A9771000023RFGKYDT"
     },
     {
@@ -9642,7 +9642,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=BAD71000023RFGKYDT"
     },
     {
@@ -9726,7 +9726,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=49771000023RFGKYDT"
     },
     {
@@ -9740,7 +9740,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=2FD71000023RFGKYDT"
     },
     {
@@ -9824,7 +9824,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-02T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=B9771000023RFGKYDT"
     },
     {
@@ -9915,7 +9915,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=CAD71000023RFGKYDT"
     },
     {
@@ -9992,7 +9992,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=59771000023RFGKYDT"
     },
     {
@@ -10013,7 +10013,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=3FD71000023RFGKYDT"
     },
     {
@@ -10097,7 +10097,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-03T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C9771000023RFGKYDT"
     },
     {
@@ -10195,7 +10195,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=DAD71000023RFGKYDT"
     },
     {
@@ -10272,7 +10272,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=69771000023RFGKYDT"
     },
     {
@@ -10293,7 +10293,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=4FD71000023RFGKYDT"
     },
     {
@@ -10363,7 +10363,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-04T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D9771000023RFGKYDT"
     },
     {
@@ -10461,7 +10461,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T13:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=EAD71000023RFGKYDT"
     },
     {
@@ -10538,7 +10538,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T16:50:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=79771000023RFGKYDT"
     },
     {
@@ -10559,7 +10559,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T17:00:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5FD71000023RFGKYDT"
     },
     {
@@ -10643,7 +10643,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-05T20:15:00+02:00",
-     "language": "DE",
+     "language": "OV",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E9771000023RFGKYDT"
     },
     {
@@ -14341,7 +14341,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-26T18:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=D6D71000023RFGKYDT"
     },
     {
@@ -14355,28 +14355,28 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-26T20:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E6D71000023RFGKYDT"
     },
     {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-27T18:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F6D71000023RFGKYDT"
     },
     {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-27T20:30:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=07D71000023RFGKYDT"
     },
     {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-29T15:00:00+02:00",
-     "language": "DE",
+     "language": "OmU",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=17D71000023RFGKYDT"
     },
     {
