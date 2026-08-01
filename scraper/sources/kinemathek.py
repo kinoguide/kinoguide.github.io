@@ -68,6 +68,8 @@ _SERIES = re.compile(r"^(?:filmnächte|open[- ]?air|kurzfilmprogramm)[^:]*:\s*",
 _RELEASE_NOTE = re.compile(r"\s*\([^()]*(?:premiere|kino-?start)[^()]*\)\s*$", re.I)
 # a compilation of shorts is not a film TMDB could ever hold
 _NOT_A_FILM = re.compile(r"kurzfilmprogramm|kurze filme", re.I)
+# the "Tickets kaufen" button on an event page
+_CINETIXX = re.compile(r"https://booking\.cinetixx\.de/[^\"'\s<>]+")
 
 
 def _last_sunday(year: int, month: int) -> datetime:
@@ -95,22 +97,141 @@ def _text(chunk: str, pattern: re.Pattern) -> str:
     return html.unescape(_TAG.sub("", m.group(1))).strip() if m else ""
 
 
-def fetch_shows(cinema: dict) -> list[dict]:
-    """Screenings at one Kinemathek venue, selected by its `venue_match`."""
-    want = cinema.get("venue_match") or cinema["name"]
-    html = requests.get(cinema.get("url") or PROGRAM_URL,
-                        headers=HEADERS, timeout=30).text
+_PAGE_CACHE: dict[str, str] = {}
 
+
+def _page(url: str) -> str:
+    """The programme page, fetched once per run — four venues and the ticket
+    join all read the same page."""
+    if url not in _PAGE_CACHE:
+        _PAGE_CACHE[url] = requests.get(url, headers=HEADERS, timeout=30).text
+    return _PAGE_CACHE[url]
+
+
+def _events(url: str, want: str) -> list[tuple[str, str, str]]:
+    """(chunk, detail_url, venue) for every event at the wanted venue.
+
+    `want` may be an empty string to get every venue.
+    """
+    html = _page(url)
     # cut the page into one chunk per event: everything from an event's opening
     # div up to the next one
     starts = [(m.start(), m.group(1)) for m in _EVENT.finditer(html)]
-    shows = []
+    out = []
     for i, (pos, detail_url) in enumerate(starts):
         end = starts[i + 1][0] if i + 1 < len(starts) else len(html)
         chunk = html[pos:end]
+        venue = _text(chunk, _LOCATION)
+        if want.lower() in venue.lower():
+            out.append((chunk, detail_url, venue))
+    return out
 
-        if want.lower() not in _text(chunk, _LOCATION).lower():
+
+def _show_datetime(chunk: str) -> str | None:
+    date, time_ = _text(chunk, _DATE), _text(chunk, _TIME)
+    if not (date and time_):
+        return None
+    day, month, year = (int(x) for x in date.split("."))
+    hour, minute = (int(x) for x in time_.split(":"))
+    local = datetime(year, month, day, hour, minute)
+    return local.replace(tzinfo=_berlin_offset(local)).isoformat()
+
+
+def drop_other_venues(shows: list[dict], cinema: dict) -> int:
+    """Remove screenings that belong to a venue we list separately.
+
+    kinoheld files the Kinemathek as one cinema, so its feed for the Brotfabrik
+    also carries the open-air nights on the Bundeskunsthalle roof and at the
+    Friesdorfer Freibad — which we list as their own venues, with their own
+    ticket notes. Left alone that shows every open-air screening twice, once
+    under each name (13 of them on 2026-08-02). The separate venue wins: it
+    names the place you actually have to go.
+    """
+    drop = set()
+    for venue in cinema.get("exclude_venues") or ():
+        for chunk, _url, _v in _events(cinema.get("program_url") or PROGRAM_URL, venue):
+            when = _show_datetime(chunk)
+            if when:
+                drop.add(when)
+    before = len(shows)
+    shows[:] = [s for s in shows if s["datetime"] not in drop]
+    return before - len(shows)
+
+
+def _key(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+
+
+def ticket_links(venue_match: str, url: str = PROGRAM_URL) -> tuple[dict, dict]:
+    """Two maps of where a screening can actually be bought: by exact showtime,
+    and by film title.
+
+    For the Brotfabrik, kinoheld lists the programme but sells nothing: every
+    one of its shows carries the cinema's *homepage* as its deeplink, and the
+    per-show kinoheld route 404s because this cinema is on the Cinepass
+    back-end. The Kinemathek's own event pages carry a "Tickets kaufen" button
+    (cinetixx), so that is where a ticket link belongs.
+
+    Their page lists a film once for its whole run, not one entry per
+    screening, so an exact-time match only catches the screenings whose time
+    the entry happens to name — 18 of 51 on 2026-08-02. Everything else falls
+    back to the film's own page on the cinema's site, which names the film,
+    lists its dates and carries the same button. The cinetixx link is only used
+    on an exact time match: it books one specific screening, so handing it to a
+    different date would sell the wrong ticket.
+
+    One request per event, once a day, with an identifying agent.
+    """
+    by_time: dict[str, str] = {}
+    by_title: dict[str, str] = {}
+    for chunk, detail_url, _venue in _events(url, venue_match):
+        title = _RELEASE_NOTE.sub("", _SERIES.sub("", _text(chunk, _TITLE))).strip()
+        if title:
+            by_title.setdefault(_key(title), detail_url)
+        when = _show_datetime(chunk)
+        if not when:
             continue
+        try:
+            page = requests.get(detail_url, headers=HEADERS, timeout=30).text
+        except Exception:
+            by_time[when] = detail_url
+            continue
+        buy = _CINETIXX.search(page)
+        by_time[when] = buy.group(0) if buy else detail_url
+    return by_time, by_title
+
+
+def apply_ticket_links(shows: list[dict], cinema: dict) -> tuple[int, int]:
+    """Point a kinoheld-sourced cinema's shows at the cinema's own buy pages.
+
+    Returns (exact screening links, film-page links).
+    """
+    by_time, by_title = ticket_links(cinema.get("venue_match") or cinema["name"],
+                                     cinema.get("program_url") or PROGRAM_URL)
+    exact = films = 0
+    for show in shows:
+        buy = by_time.get(show["datetime"])
+        if buy:
+            show["booking_url"] = buy
+            exact += 1
+            continue
+        page = by_title.get(_key(show.get("title")))
+        if page:
+            show["booking_url"] = page
+            show["info"] = True   # the film's page, not a checkout
+            films += 1
+        else:
+            # nothing to point at but the programme — say so rather than
+            # calling it a ticket link
+            show["info"] = True
+    return exact, films
+
+
+def fetch_shows(cinema: dict) -> list[dict]:
+    """Screenings at one Kinemathek venue, selected by its `venue_match`."""
+    want = cinema.get("venue_match") or cinema["name"]
+    shows = []
+    for chunk, detail_url, _venue in _events(cinema.get("url") or PROGRAM_URL, want):
         title = _text(chunk, _TITLE)
         date, time_ = _text(chunk, _DATE), _text(chunk, _TIME)
         if not (title and date and time_):

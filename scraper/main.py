@@ -90,6 +90,25 @@ def main() -> None:
         # has them ("Amores Perros (OmeU)") — correct the labels from there.
         if cinema["name"] == "Filmpalette":
             custom.apply_filmpalette_languages(shows)
+        # kinoheld lists the Brotfabrik but cannot sell it (Cinepass back-end,
+        # so no booking route and only a homepage deeplink). Its own event
+        # pages carry the cinetixx "Tickets kaufen" button — join those on by
+        # showtime so the ticket link leads somewhere you can actually buy.
+        # kinoheld files the Kinemathek as one cinema, open-airs included, and
+        # we list those as venues of their own — drop the copies.
+        if cinema.get("exclude_venues"):
+            try:
+                n = kinemathek.drop_other_venues(shows, cinema)
+                print(f"  {n} screenings dropped as duplicates of a venue listed separately")
+            except Exception as e:
+                print(f"  [warn] {cinema['name']}: venue de-duplication failed ({e})")
+        if cinema.get("own_ticket_links"):
+            try:
+                exact, films = kinemathek.apply_ticket_links(shows, cinema)
+                print(f"  {exact} exact + {films} film-page ticket links of "
+                      f"{len(shows)} from {cinema['name']}'s own site")
+            except Exception as e:
+                print(f"  [warn] {cinema['name']}: own ticket links unavailable ({e})")
         # Cinedom's showtimes come from kinoheld (which has *more* of them than
         # the shop, including today's once the sale closes), but kinoheld
         # carries almost none of their OV/OmU markers. The shop's booking links
@@ -122,13 +141,18 @@ def main() -> None:
             # cinemas the kinoheld per-show page is the exact one (it's also
             # their actual ticket shop). Cinema homepage only as last resort.
             url = show.get("booking_url", "") or cinema.get("website", "")
-            entry["showtimes"].append({
+            slot = {
                 "cinema": cinema["name"],
                 "city": cinema["city"],
                 "datetime": show["datetime"],
                 "language": show["language"],
                 "booking_url": url,
-            })
+            }
+            # a link that informs rather than sells — the frontend labels it
+            # "Infos" instead of promising a checkout that isn't there
+            if show.get("info"):
+                slot["info"] = True
+            entry["showtimes"].append(slot)
 
     print(f"\nEnriching {len(movies)} unique films…")
     result = []

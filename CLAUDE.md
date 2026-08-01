@@ -44,7 +44,28 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   `/vorstellung/<id>` 500s, which in July 2026 was misread as the page being
   broken; the fallback we then used (`…/vorstellungen?showId=<id>`) ignores the
   parameter entirely and drops the visitor at the top of the cinema's whole
-  programme to hunt for their screening. Fixed 2026-08-02 after a user noticed. `_title_for()` guards
+  programme to hunt for their screening. Fixed 2026-08-02 after a user noticed.
+  **`?mode=widget` is part of the link, not decoration:** without it kinoheld
+  serves a wrapper that loads exactly that URL in an iframe, and when the frame
+  fails the visitor gets the cinema's greeting and nothing else — reported as "a
+  blank page" for Lichtspiele Kalk. The widget URL *is* the booking page (film,
+  date, seat plan, "Zur Kasse"); the other embed parameters kinoheld adds are
+  cosmetics we leave off.
+  **Cinepass cinemas cannot be booked on kinoheld at all** (`Show.source`).
+  The Bonner Kinemathek and Filmforum NRW are listed there but every show's
+  deeplink is the cinema's homepage and the per-show route 404s, so
+  `_booking_url()` returns nothing for them and main.py falls back to the
+  cinema's own site. For the Kinemathek the real per-show cinetixx links are
+  then joined on from its own programme (`own_ticket_links`).
+- `scraper/check_links.py` — fetches a sample of ticket links per cinema and
+  asserts the page is a booking step, because both link bugs above looked
+  perfectly fine in the data. Run it after touching anything that builds a
+  booking URL: `python check_links.py --per 4`, or `--cinema Woki` for one house
+  in full. Two traps it already encodes: these pages embed their whole i18n
+  string table as JSON, so "keine Vorstellungen" appears on working pages too
+  (scripts are stripped before scanning), and Cineplex 403s every non-browser
+  agent while the SPA shops return empty HTML — those are listed as
+  unverifiable rather than silently passing. `_title_for()` guards
   against kinoheld mis-grouping films under a wrong entry.
 - `scraper/sources/kinopolis.py` — Kinopolis showtimes from their own CineOrder
   ticket shop (same one request as the prices, see below). Since 2026-07-25
@@ -372,7 +393,7 @@ spans straight (several are colspan-based — e.g. Kinopolis' child price still
 holds on Fridays while adult evening prices already jump), take the LOWER end of
 any printed range (the UI says "ab X €"), bump `checked`, and run both checks.
 
-### Venues you cannot book online (`ticketing: "info"`)
+### Venues you cannot book online (`ticketing: "info"`, or per screening)
 
 Three venues have no ticket shop we can deep-link into: the Kinemathek's two
 open-airs sell through their own event page (cinetixx), and the Stummfilmtage
@@ -382,7 +403,12 @@ the user's call 2026-08-01 — they carry `"ticketing": "info"` plus a researche
 the top-level `cinemas` map. The frontend then swaps the orange `🎟️ Tickets`
 button for an outlined `ℹ️ Infos` link of **exactly the same size** (a `min-width`
 on `.show-tix`/`.plan-ticket` keeps the shorter word from shrinking the box) and
-prints the note on the cinema's row. Deliberately *not* a separate section: the
+prints the note on the cinema's row. A **single screening** can carry the same
+flag (`"info": true` on the showtime): the Kinemathek sells on its own site and
+we only find part of its programme there, so 22 of its 38 screenings link to a
+checkout or the film's page and the rest only to the programme. Its kinoheld
+feed also carries the open-air nights, which we list as venues of their own —
+`exclude_venues` drops those copies (13 on 2026-08-02, briefly double-listed). Deliberately *not* a separate section: the
 point is that someone filtering for OmU on a Saturday finds these screenings
 among the rest. Solid orange keeps meaning "you can buy this here".
 

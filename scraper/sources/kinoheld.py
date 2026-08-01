@@ -65,6 +65,7 @@ query FetchProgramByMovie($cinemaIds: [ID!]!, $first: Int, $page: Int) {
           data {
             id
             urlSlug
+            source
             name
             beginning
             deeplink
@@ -167,7 +168,7 @@ def _title_for(show_name: str | None, movie_title: str) -> str:
 def _booking_url(show: dict) -> str:
     """Prefer the API's deeplink when it points at a specific show; fall back
     to the site's own per-show ticket page:
-      https://www.kinoheld.de/kino/{city}/{cinema}/vorstellung/{urlSlug}
+      https://www.kinoheld.de/kino/{city}/{cinema}/vorstellung/{urlSlug}?mode=widget
 
     Some cinemas set a generic deeplink (e.g. Bonner Kinemathek points at
     their homepage) — a URL with no path and no query identifies nothing,
@@ -190,10 +191,26 @@ def _booking_url(show: dict) -> str:
     # cinema's whole program to hunt for their screening. With the slug the
     # link opens that one screening's ticket page (verified 2026-08-02: the
     # Woki's /vorstellung/50892 server-renders Spider-Man 13:00).
+    # Cinepass cinemas (Bonner Kinemathek, Filmforum NRW) are *listed* on
+    # kinoheld but not sold there: every show's deeplink is the cinema's own
+    # homepage — which the check above rejects — and the per-show route 404s
+    # for them, whichever id you use. Returning nothing lets main.py fall back
+    # to the cinema's website, and the Kinemathek's real per-show buy links are
+    # joined on afterwards from its own programme (sources/kinemathek.py).
+    if show.get("source") == "Cinepass":
+        return ""
     slug = show.get("urlSlug")
     if city_slug and cinema_slug and slug:
+        # ?mode=widget is the booking page itself — film, date, seat plan, "Zur
+        # Kasse". Without it kinoheld serves a wrapper that loads exactly this
+        # URL in an iframe, and that wrapper is what a user hit as a "blank page
+        # of the cinema" (Lichtspiele Kalk, 27.09., reported 2026-08-02): the
+        # frame silently fails and the page is left showing the cinema's
+        # greeting and nothing else. Linking straight at the widget skips the
+        # frame that can fail. Verified minimal — layout/design/ref/hide* are
+        # kinoheld's own embed cosmetics and are not needed.
         return (f"https://www.kinoheld.de/kino/{city_slug}/{cinema_slug}"
-                f"/vorstellung/{slug}")
+                f"/vorstellung/{slug}?mode=widget")
     # no slug: the program listing is still better than nothing
     if city_slug and cinema_slug and show.get("id"):
         return (f"https://www.kinoheld.de/kino/{city_slug}/{cinema_slug}"

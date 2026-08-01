@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-01T22:11:18.309251+00:00",
+ "generated_at": "2026-08-01T22:41:50.417294+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -19,7 +19,11 @@
   },
   "Bonner Kinemathek": {
    "city": "Bonn",
-   "website": "https://www.bonnerkinemathek.de"
+   "website": "https://www.bonnerkinemathek.de/programm/",
+   "ticket_note": {
+    "de": "Karten verkauft die Kinemathek über ihre eigene Seite. Wo wir die Vorstellung dort wiederfinden, führt der Link direkt zum Ticketkauf — sonst zum Programm.",
+    "en": "The Kinemathek sells tickets on its own site. Where we can find the screening there the link goes straight to the checkout, otherwise to the programme."
+   }
   },
   "Stern Lichtspiele": {
    "city": "Bonn",
@@ -102,7 +106,12 @@
   },
   "Filmforum NRW": {
    "city": "Köln",
-   "website": "https://www.filmforumnrw.de"
+   "website": "https://www.filmforumnrw.de",
+   "ticketing": "info",
+   "ticket_note": {
+    "de": "Karten laufen über rausgegangen.de — die Seite des Kinos verlinkt die Tickets zur jeweiligen Reihe.",
+    "en": "Tickets are sold through rausgegangen.de — the cinema's own page links the tickets for each series."
+   }
   },
   "SION Sommerkino": {
    "city": "Köln",
@@ -151,7 +160,7 @@
      "city": "Köln",
      "datetime": "2026-10-05T17:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3606902994"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3606902994?mode=widget"
     }
    ]
   },
@@ -374,7 +383,7 @@
      "city": "Köln",
      "datetime": "2026-08-18T19:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/38F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/38F71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -388,7 +397,7 @@
      "city": "Köln",
      "datetime": "2026-08-18T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600171760"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600171760?mode=widget"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -437,7 +446,7 @@
      "city": "Köln",
      "datetime": "2026-08-23T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/2A070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/2A070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -458,14 +467,14 @@
      "city": "Köln",
      "datetime": "2026-08-29T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/3A070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/3A070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Lichtspiele Kalk",
      "city": "Köln",
      "datetime": "2026-08-30T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604733812"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604733812?mode=widget"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -602,7 +611,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T16:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051195"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051195?mode=widget"
     }
    ]
   },
@@ -643,7 +652,7 @@
      "city": "Köln",
      "datetime": "2026-08-16T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e36157c5488075fb620bc"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -725,13 +734,6 @@
      "datetime": "2026-08-09T19:00:00+02:00",
      "language": "DE",
      "booking_url": "https://t.rausgegangen.de/tickets/verflucht-normal-omu"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-03T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690791a5a0ae003ded258d"
     },
     {
      "cinema": "Open Air Bundeskunsthalle",
@@ -850,7 +852,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T15:20:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/CDF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/CDF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -864,7 +866,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50913"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50913?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -878,7 +880,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461329"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461329?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -927,7 +929,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T17:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603054385"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603054385?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -955,7 +957,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T19:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/FCF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/FCF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -969,7 +971,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T19:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50916"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50916?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -1025,7 +1027,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T19:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461328"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461328?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1053,7 +1055,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T20:15:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055694"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055694?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -1179,7 +1181,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461338"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461338?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -1193,7 +1195,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T16:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50906"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50906?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -1235,14 +1237,14 @@
      "city": "Köln",
      "datetime": "2026-08-03T19:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/0DF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/0DF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-03T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50914"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50914?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -1326,7 +1328,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055762"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055762?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -1347,7 +1349,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T20:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461337"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461337?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1438,7 +1440,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50915"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50915?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1452,7 +1454,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T16:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461421"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461421?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -1508,21 +1510,21 @@
      "city": "Köln",
      "datetime": "2026-08-04T18:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055782"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055782?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-04T19:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/1DF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/1DF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-04T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50907"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50907?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -1571,7 +1573,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T19:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461404"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461404?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1690,7 +1692,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T16:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50917"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50917?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1718,7 +1720,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461433"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461433?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -1774,7 +1776,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T19:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/2DF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/2DF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -1788,7 +1790,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50908"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50908?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -1872,7 +1874,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T20:15:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055814"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055814?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -1893,7 +1895,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T20:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461444"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461444?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -1915,13 +1917,6 @@
      "datetime": "2026-08-14T19:00:00+02:00",
      "language": "DE",
      "booking_url": "https://t.rausgegangen.de/tickets/die-odyssee-1"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-28T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690717a5a0ae003ded2585"
     },
     {
      "cinema": "Open Air Bundeskunsthalle",
@@ -1970,7 +1965,7 @@
      "city": "Bonn",
      "datetime": "2026-11-08T13:00:00+01:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/49852"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/49852?mode=widget"
     }
    ]
   },
@@ -2057,13 +2052,6 @@
    },
    "showtimes": [
     {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-05T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690717a5a0ae003ded2584"
-    },
-    {
      "cinema": "Open Air Bundeskunsthalle",
      "city": "Bonn",
      "datetime": "2026-09-05T20:30:00+02:00",
@@ -2108,7 +2096,7 @@
      "city": "Köln",
      "datetime": "2026-08-30T15:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3605524670"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3605524670?mode=widget"
     }
    ]
   },
@@ -2149,7 +2137,7 @@
      "city": "Köln",
      "datetime": "2026-09-27T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604708091"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604708091?mode=widget"
     }
    ]
   },
@@ -2351,13 +2339,6 @@
    },
    "showtimes": [
     {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-08T21:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a3f04035f721325af6eec83"
-    },
-    {
      "cinema": "Open Air Friesdorfer Freibad",
      "city": "Bonn",
      "datetime": "2026-08-08T21:30:00+02:00",
@@ -2369,14 +2350,15 @@
      "city": "Köln",
      "datetime": "2026-08-12T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e35db7c5488075fb620b6"
+     "booking_url": "https://www.filmforumnrw.de"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-16T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605282db885708eabd1fde"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     }
    ]
   },
@@ -2497,7 +2479,7 @@
      "city": "Köln",
      "datetime": "2026-08-15T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e35dc7c5488075fb620b9"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -2552,7 +2534,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50950"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50950?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -2594,7 +2576,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T23:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50951"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50951?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -2608,7 +2590,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50952"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50952?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -2622,7 +2604,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T21:15:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603064191"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603064191?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -2636,14 +2618,14 @@
      "city": "Bonn",
      "datetime": "2026-08-04T23:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50953"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50953?mode=widget"
     },
     {
      "cinema": "Lichtspiele Kalk",
      "city": "Köln",
      "datetime": "2026-08-05T18:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603064741"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603064741?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -2905,14 +2887,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461332"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461332?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-02T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379859"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379859?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -2926,21 +2908,21 @@
      "city": "Bonn",
      "datetime": "2026-08-02T17:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488543"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488543?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-02T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/40081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/40081000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125358"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125358?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -2968,14 +2950,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T19:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/0EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/0EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-02T19:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/EFF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/EFF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -2989,7 +2971,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125370"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125370?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3010,14 +2992,14 @@
      "city": "Bonn",
      "datetime": "2026-08-02T20:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379927"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379927?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-02T20:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461326"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461326?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3031,14 +3013,14 @@
      "city": "Bonn",
      "datetime": "2026-08-03T15:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379876"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379876?mode=widget"
     },
     {
      "cinema": "Neue Filmbühne",
      "city": "Bonn",
      "datetime": "2026-08-03T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488560"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488560?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -3052,7 +3034,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T16:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461341"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461341?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -3066,7 +3048,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125382"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125382?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3094,28 +3076,28 @@
      "city": "Köln",
      "datetime": "2026-08-03T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125394"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125394?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-03T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/0FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/0FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-03T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379961"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379961?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-03T20:15:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/8EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/8EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3143,7 +3125,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T21:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461335"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461335?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3157,21 +3139,21 @@
      "city": "Köln",
      "datetime": "2026-08-04T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461350"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461350?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-04T16:40:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/BEF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/BEF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-04T17:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/6FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/6FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -3185,7 +3167,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125406"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125406?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3199,7 +3181,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T18:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488470"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488470?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -3220,14 +3202,14 @@
      "city": "Köln",
      "datetime": "2026-08-04T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125418"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602125418?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-04T20:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379893"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379893?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3255,7 +3237,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T20:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461419"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461419?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3283,14 +3265,14 @@
      "city": "Köln",
      "datetime": "2026-08-05T17:40:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/4EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/4EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-05T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169758"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169758?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3304,7 +3286,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379910"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379910?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3325,14 +3307,14 @@
      "city": "Köln",
      "datetime": "2026-08-05T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/2FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/2FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Neue Filmbühne",
      "city": "Bonn",
      "datetime": "2026-08-05T20:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488578"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488578?mode=widget"
     },
     {
      "cinema": "Residenz Astor Film Lounge",
@@ -3360,7 +3342,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T21:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461439"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461439?mode=widget"
     }
    ]
   },
@@ -3435,13 +3417,6 @@
    },
    "showtimes": [
     {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-31T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690708a5a0ae003ded2581"
-    },
-    {
      "cinema": "Open Air Bundeskunsthalle",
      "city": "Bonn",
      "datetime": "2026-08-31T20:30:00+02:00",
@@ -3504,7 +3479,7 @@
      "city": "Köln",
      "datetime": "2026-08-19T19:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/08F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/08F71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -3631,7 +3606,7 @@
      "city": "Köln",
      "datetime": "2026-08-15T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e35dc7c5488075fb620b8"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -3737,13 +3712,6 @@
    },
    "showtimes": [
     {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-29T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a69078aa5a0ae003ded258b"
-    },
-    {
      "cinema": "Open Air Bundeskunsthalle",
      "city": "Bonn",
      "datetime": "2026-08-29T20:30:00+02:00",
@@ -3790,7 +3758,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T14:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603066743"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603066743?mode=widget"
     }
    ]
   },
@@ -3831,7 +3799,7 @@
      "city": "Köln",
      "datetime": "2026-08-10T21:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461203"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461203?mode=widget"
     }
    ]
   },
@@ -3911,7 +3879,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/50081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/50081000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -3951,7 +3919,7 @@
      "city": "Köln",
      "datetime": "2026-08-15T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e35dd7c5488075fb620ba"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -3992,7 +3960,7 @@
      "city": "Köln",
      "datetime": "2026-08-16T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e36197c5488075fb620be"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -4076,7 +4044,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50966"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50966?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -4125,7 +4093,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/15070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/15070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -4146,7 +4114,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T15:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50967"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50967?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -4223,7 +4191,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T12:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50968"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50968?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -4279,7 +4247,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50969"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50969?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -4300,7 +4268,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/20081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/20081000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -4363,7 +4331,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T12:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50970"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50970?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -4419,14 +4387,14 @@
      "city": "Köln",
      "datetime": "2026-08-04T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/7FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/7FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-04T15:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50971"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50971?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -4552,7 +4520,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T15:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50972"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50972?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -4573,7 +4541,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/BFF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/BFF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -4636,28 +4604,28 @@
      "city": "Köln",
      "datetime": "2026-08-08T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/25070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/25070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-09T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/35070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/35070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-15T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/E9070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/E9070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-16T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/F9070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/F9070000023FBCFQYG?mode=widget"
     }
    ]
   },
@@ -4730,13 +4698,6 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/66A75000023GNFNDWF"
     },
     {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-07T21:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a3f04075f721325af6eec84"
-    },
-    {
      "cinema": "Open Air Friesdorfer Freibad",
      "city": "Bonn",
      "datetime": "2026-08-07T21:30:00+02:00",
@@ -4790,7 +4751,7 @@
      "city": "Köln",
      "datetime": "2026-08-18T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/19E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/19E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -4975,7 +4936,7 @@
      "city": "Köln",
      "datetime": "2026-08-10T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/7DC71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/7DC71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -5058,7 +5019,7 @@
      "city": "Köln",
      "datetime": "2026-08-12T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461247"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461247?mode=widget"
     }
    ]
   },
@@ -5200,7 +5161,7 @@
      "city": "Köln",
      "datetime": "2026-08-14T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e36187c5488075fb620bd"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -5374,7 +5335,7 @@
      "city": "Köln",
      "datetime": "2026-08-17T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/48F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/48F71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -5382,13 +5343,6 @@
      "datetime": "2026-08-21T18:30:00+02:00",
      "language": "DE",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/100508"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-27T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690797a5a0ae003ded258e"
     },
     {
      "cinema": "Open Air Bundeskunsthalle",
@@ -5402,7 +5356,7 @@
      "city": "Köln",
      "datetime": "2026-09-01T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/58F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/58F71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "SION Sommerkino",
@@ -5553,7 +5507,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T19:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602147101"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602147101?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -5574,14 +5528,14 @@
      "city": "Köln",
      "datetime": "2026-08-03T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169710"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169710?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-03T21:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461568"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461568?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -5602,14 +5556,15 @@
      "city": "Bonn",
      "datetime": "2026-08-05T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498690"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498690?mode=widget"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-14T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1fef"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Arthaus-Kino im LandesMuseum",
@@ -5623,7 +5578,8 @@
      "city": "Bonn",
      "datetime": "2026-08-22T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690780a5a0ae003ded258a"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     }
    ]
   },
@@ -5664,7 +5620,7 @@
      "city": "Köln",
      "datetime": "2026-08-11T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/79E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/79E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -5748,7 +5704,7 @@
      "city": "Köln",
      "datetime": "2026-08-11T21:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604758191"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604758191?mode=widget"
     }
    ]
   },
@@ -5788,7 +5744,7 @@
      "city": "Köln",
      "datetime": "2026-08-12T17:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3605509982"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3605509982?mode=widget"
     }
    ]
   },
@@ -5830,7 +5786,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460708"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460708?mode=widget"
     }
    ]
   },
@@ -6239,7 +6195,7 @@
      "city": "Köln",
      "datetime": "2026-08-11T21:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460424"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460424?mode=widget"
     }
    ]
   },
@@ -6283,7 +6239,7 @@
      "city": "Bonn",
      "datetime": "2026-09-27T13:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/48256"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/48256?mode=widget"
     }
    ]
   },
@@ -6324,7 +6280,7 @@
      "city": "Bonn",
      "datetime": "2026-08-06T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605278db885708eabd1fdc"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704472"
     }
    ]
   },
@@ -6369,7 +6325,7 @@
      "city": "Köln",
      "datetime": "2026-09-14T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/E2D71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/E2D71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -6617,7 +6573,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T16:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603068463"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603068463?mode=widget"
     }
    ]
   },
@@ -6703,14 +6659,16 @@
      "city": "Bonn",
      "datetime": "2026-08-15T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a60527adb885708eabd1fdd"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-23T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690754a5a0ae003ded2587"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     }
    ]
   },
@@ -6749,7 +6707,7 @@
      "city": "Köln",
      "datetime": "2026-08-08T22:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604758331"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604758331?mode=widget"
     }
    ]
   },
@@ -6842,7 +6800,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50925"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50925?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -6891,7 +6849,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50926"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50926?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -6996,7 +6954,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T14:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50927"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50927?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -7080,7 +7038,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50928"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50928?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -7157,7 +7115,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T12:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50973"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50973?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -7412,7 +7370,7 @@
      "city": "Köln",
      "datetime": "2026-08-18T21:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460428"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460428?mode=widget"
     }
    ]
   },
@@ -7454,7 +7412,7 @@
      "city": "Köln",
      "datetime": "2026-08-31T21:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461211"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461211?mode=widget"
     }
    ]
   },
@@ -7572,7 +7530,7 @@
      "city": "Köln",
      "datetime": "2026-08-25T20:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461598"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461598?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -7641,7 +7599,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T14:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051105"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051105?mode=widget"
     }
    ]
   },
@@ -7685,7 +7643,7 @@
      "city": "Köln",
      "datetime": "2026-08-25T21:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460411"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460411?mode=widget"
     }
    ]
   },
@@ -7805,7 +7763,7 @@
      "city": "Köln",
      "datetime": "2026-08-14T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e36147c5488075fb620bb"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -7857,14 +7815,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T12:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051335"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603051335?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-03T12:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50929"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50929?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -8012,14 +7970,14 @@
      "city": "Köln",
      "datetime": "2026-08-03T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603305498"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603305498?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-05T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602173284"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602173284?mode=widget"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -8409,7 +8367,7 @@
      "city": "Köln",
      "datetime": "2026-08-16T15:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604737103"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604737103?mode=widget"
     }
    ]
   },
@@ -8532,7 +8490,7 @@
      "city": "Köln",
      "datetime": "2026-08-16T22:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604738324"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604738324?mode=widget"
     }
    ]
   },
@@ -8573,7 +8531,7 @@
      "city": "Köln",
      "datetime": "2026-08-29T22:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604756690"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604756690?mode=widget"
     }
    ]
   },
@@ -8614,7 +8572,7 @@
      "city": "Köln",
      "datetime": "2026-08-13T19:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellung/6a2e35dc7c5488075fb620b7"
+     "booking_url": "https://www.filmforumnrw.de"
     }
    ]
   },
@@ -8656,7 +8614,7 @@
      "city": "Köln",
      "datetime": "2026-08-14T21:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604736455"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604736455?mode=widget"
     }
    ]
   },
@@ -8739,7 +8697,7 @@
      "city": "Köln",
      "datetime": "2026-08-15T22:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604749484"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604749484?mode=widget"
     }
    ]
   },
@@ -8815,7 +8773,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50892"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50892?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -8906,7 +8864,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50893"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50893?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9004,7 +8962,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50935"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50935?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9123,7 +9081,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50894"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50894?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -9207,7 +9165,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50895"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50895?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9298,7 +9256,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50936"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50936?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9410,14 +9368,14 @@
      "city": "Bonn",
      "datetime": "2026-08-03T23:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50896"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50896?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-04T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50897"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50897?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9494,7 +9452,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50898"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50898?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9592,7 +9550,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50937"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50937?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9697,14 +9655,14 @@
      "city": "Bonn",
      "datetime": "2026-08-04T23:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50899"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50899?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-05T13:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50900"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50900?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9788,7 +9746,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50901"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50901?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9886,7 +9844,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50938"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50938?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10005,14 +9963,14 @@
      "city": "Bonn",
      "datetime": "2026-08-05T23:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50984"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50984?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-05T23:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50902"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50902?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10159,7 +10117,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50943"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50943?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -10187,7 +10145,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T12:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50940"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50940?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10237,7 +10195,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T11:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50921"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50921?mode=widget"
     }
    ]
   },
@@ -10277,7 +10235,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T12:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50942"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50942?mode=widget"
     }
    ]
   },
@@ -10382,7 +10340,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50977"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50977?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10424,7 +10382,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T17:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50978"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50978?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10494,7 +10452,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50979"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50979?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10543,7 +10501,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50980"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50980?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10590,7 +10548,7 @@
      "city": "Bonn",
      "datetime": "2026-08-03T20:30:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50930"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50930?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -10604,14 +10562,14 @@
      "city": "Bonn",
      "datetime": "2026-08-03T23:15:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50931"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50931?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-05T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50981"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50981?mode=widget"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -10625,7 +10583,7 @@
      "city": "Köln",
      "datetime": "2026-08-11T21:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461594"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461594?mode=widget"
     }
    ]
   },
@@ -10658,14 +10616,14 @@
      "city": "Bonn",
      "datetime": "2026-08-04T23:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50956"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50956?mode=widget"
     },
     {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-05T23:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50957"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50957?mode=widget"
     }
    ]
   },
@@ -10709,7 +10667,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T12:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50958"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50958?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10730,7 +10688,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50959"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50959?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -10833,7 +10791,7 @@
      "city": "Bonn",
      "datetime": "2026-08-16T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50776"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50776?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -10873,7 +10831,7 @@
      "city": "Bonn",
      "datetime": "2026-09-20T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50777"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50777?mode=widget"
     }
    ]
   },
@@ -10913,7 +10871,7 @@
      "city": "Bonn",
      "datetime": "2026-12-13T13:30:00+01:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/48257"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/48257?mode=widget"
     }
    ]
   },
@@ -10946,14 +10904,14 @@
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379774"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379774?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-05T14:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379791"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379791?mode=widget"
     }
    ]
   },
@@ -10986,14 +10944,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T12:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185285"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185285?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-02T12:40:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380182"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380182?mode=widget"
     }
    ]
   },
@@ -11035,21 +10993,21 @@
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498622"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498622?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T13:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184273"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184273?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-02T14:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380165"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380165?mode=widget"
     },
     {
      "cinema": "Filmpalette",
@@ -11063,7 +11021,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183403"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183403?mode=widget"
     }
    ]
   },
@@ -11103,7 +11061,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/AC070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/AC070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11117,14 +11075,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124578"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124578?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-02T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461333"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461333?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11138,14 +11096,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T17:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/1EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/1EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-02T18:20:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380029"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380029?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -11166,7 +11124,7 @@
      "city": "Bonn",
      "datetime": "2026-08-02T19:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488401"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488401?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11180,14 +11138,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461327"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461327?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T20:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124554"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124554?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11222,14 +11180,14 @@
      "city": "Köln",
      "datetime": "2026-08-03T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168885"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168885?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-03T16:25:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461342"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461342?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11243,21 +11201,21 @@
      "city": "Köln",
      "datetime": "2026-08-03T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/10081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/10081000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-03T17:50:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/9EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/9EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-03T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380046"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380046?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -11271,7 +11229,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T18:50:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461407"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461407?mode=widget"
     },
     {
      "cinema": "Filmpalette",
@@ -11292,14 +11250,14 @@
      "city": "Bonn",
      "datetime": "2026-08-03T20:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488384"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488384?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-03T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168909"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168909?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11327,14 +11285,14 @@
      "city": "Köln",
      "datetime": "2026-08-04T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168921"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168921?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-04T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461453"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461453?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11348,14 +11306,14 @@
      "city": "Köln",
      "datetime": "2026-08-04T17:30:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/AEF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/AEF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex Lichtspieltheater",
      "city": "Bonn",
      "datetime": "2026-08-04T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380063"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380063?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -11383,28 +11341,28 @@
      "city": "Köln",
      "datetime": "2026-08-04T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/5FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/5FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Neue Filmbühne",
      "city": "Bonn",
      "datetime": "2026-08-04T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488366"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604488366?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-04T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461345"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461345?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-04T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168945"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168945?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11432,7 +11390,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461436"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461436?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11446,7 +11404,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T18:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168873"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168873?mode=widget"
     },
     {
      "cinema": "Metropolis",
@@ -11467,21 +11425,21 @@
      "city": "Köln",
      "datetime": "2026-08-05T18:50:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461437"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461437?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-05T19:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/9FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/9FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-05T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/3EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/3EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11495,7 +11453,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T20:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380080"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380080?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11572,21 +11530,21 @@
      "city": "Bonn",
      "datetime": "2026-08-02T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498548"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498548?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-02T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/2EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/2EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T15:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184261"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184261?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11614,21 +11572,21 @@
      "city": "Köln",
      "datetime": "2026-08-02T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/FEF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/FEF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124566"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602124566?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-02T18:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461330"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461330?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11649,7 +11607,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T16:50:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/7EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/7EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -11677,14 +11635,14 @@
      "city": "Bonn",
      "datetime": "2026-08-03T18:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498565"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498565?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-03T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168897"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168897?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11698,14 +11656,14 @@
      "city": "Köln",
      "datetime": "2026-08-03T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461339"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461339?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-03T19:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/00081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/00081000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -11726,7 +11684,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380148"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380148?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -11747,7 +11705,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168933"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602168933?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11761,7 +11719,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T18:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461348"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461348?mode=widget"
     },
     {
      "cinema": "Cineplex Köln",
@@ -11775,7 +11733,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/1FF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/1FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11789,7 +11747,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T16:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498582"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498582?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -11803,7 +11761,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T16:50:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/5EF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/5EF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -11824,7 +11782,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T17:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/CFF71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/CFF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Rex am Ring",
@@ -11838,21 +11796,22 @@
      "city": "Köln",
      "datetime": "2026-08-05T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461435"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461435?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-05T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602172154"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602172154?mode=widget"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-20T18:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6907b2a5a0ae003ded258f"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Arthaus-Kino im LandesMuseum",
@@ -11866,7 +11825,7 @@
      "city": "Köln",
      "datetime": "2026-09-20T11:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/61081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/61081000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -11916,7 +11875,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T17:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184911"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602184911?mode=widget"
     },
     {
      "cinema": "Cinedom",
@@ -11930,7 +11889,7 @@
      "city": "Köln",
      "datetime": "2026-08-03T17:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169698"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602169698?mode=widget"
     },
     {
      "cinema": "Filmpalette",
@@ -11951,21 +11910,21 @@
      "city": "Bonn",
      "datetime": "2026-08-05T15:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380199"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380199?mode=widget"
     },
     {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-05T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461458"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461458?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-12T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3585785094"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3585785094?mode=widget"
     }
    ]
   },
@@ -12004,21 +11963,21 @@
      "city": "Bonn",
      "datetime": "2026-08-02T13:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498599"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498599?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-02T14:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185667"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185667?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-05T19:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183359"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183359?mode=widget"
     }
    ]
   },
@@ -12060,21 +12019,21 @@
      "city": "Bonn",
      "datetime": "2026-08-02T19:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502dafdcbb494dee6e6797"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534458"
     },
     {
      "cinema": "Neue Filmbühne",
      "city": "Bonn",
      "datetime": "2026-08-04T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498639"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498639?mode=widget"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-07T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052cddb885708eabd1ff0"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704563"
     }
    ]
   },
@@ -12114,7 +12073,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T16:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498656"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498656?mode=widget"
     }
    ]
   },
@@ -12155,21 +12114,21 @@
      "city": "Köln",
      "datetime": "2026-08-02T12:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183383"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183383?mode=widget"
     },
     {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-04T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183371"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183371?mode=widget"
     },
     {
      "cinema": "Neue Filmbühne",
      "city": "Bonn",
      "datetime": "2026-08-05T13:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498673"
+     "booking_url": "https://www.kinoheld.de/kino/bonn/neue-filmbuehne-bonn/vorstellung/3604498673?mode=widget"
     }
    ]
   },
@@ -12304,7 +12263,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T18:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461331"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461331?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -12367,7 +12326,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T18:20:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461349"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461349?mode=widget"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -12381,7 +12340,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502d89dcbb494dee6e6791"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534491"
     },
     {
      "cinema": "Cinedom",
@@ -12416,7 +12375,7 @@
      "city": "Bonn",
      "datetime": "2026-08-11T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605275db885708eabd1fd9"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704623"
     }
    ]
   },
@@ -13005,14 +12964,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T17:20:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/8FF71000023MHWBOTF"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-01T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690791a5a0ae003ded258c"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/8FF71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "Open Air Bundeskunsthalle",
@@ -13879,14 +13831,14 @@
      "city": "Köln",
      "datetime": "2026-08-02T12:15:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185679"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185679?mode=widget"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-02T17:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502d89dcbb494dee6e6792"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534441"
     },
     {
      "cinema": "Arthaus-Kino im LandesMuseum",
@@ -13900,14 +13852,15 @@
      "city": "Bonn",
      "datetime": "2026-08-11T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605276db885708eabd1fda"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704608"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-19T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605276db885708eabd1fdb"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/das-sommerbuch/",
+     "info": true
     }
    ]
   },
@@ -13946,7 +13899,7 @@
      "city": "Bonn",
      "datetime": "2026-08-04T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502d8adcbb494dee6e6793"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534475"
     }
    ]
   },
@@ -13985,7 +13938,7 @@
      "city": "Bonn",
      "datetime": "2026-08-05T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502d87dcbb494dee6e678f"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534506"
     }
    ]
   },
@@ -14025,21 +13978,22 @@
      "city": "Bonn",
      "datetime": "2026-08-05T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a502d92dcbb494dee6e6796"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3586534521"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-08T20:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605285db885708eabd1fe8"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704578"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-18T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605286db885708eabd1fe9"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/sommer-auf-asphalt-4/",
+     "info": true
     }
    ]
   },
@@ -14079,14 +14033,14 @@
      "city": "Köln",
      "datetime": "2026-08-05T21:45:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461570"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461570?mode=widget"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-09T16:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605282db885708eabd1fdf"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704593"
     }
    ]
   },
@@ -14135,14 +14089,14 @@
      "city": "Bonn",
      "datetime": "2026-08-06T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605283db885708eabd1fe2"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704487"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-07T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605283db885708eabd1fe3"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704503"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14156,7 +14110,7 @@
      "city": "Bonn",
      "datetime": "2026-08-08T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605284db885708eabd1fe4"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704518"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14170,7 +14124,7 @@
      "city": "Bonn",
      "datetime": "2026-08-09T18:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605284db885708eabd1fe5"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704533"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14205,7 +14159,7 @@
      "city": "Bonn",
      "datetime": "2026-08-12T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605284db885708eabd1fe6"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704548"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14219,7 +14173,8 @@
      "city": "Bonn",
      "datetime": "2026-08-13T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605284db885708eabd1fe7"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/lebensansichten-eines-huhns/",
+     "info": true
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14293,14 +14248,15 @@
      "city": "Bonn",
      "datetime": "2026-08-12T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605283db885708eabd1fe0"
+     "booking_url": "https://booking.cinetixx.de/frontend/#/show/2275696596/3597704642"
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-18T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a605283db885708eabd1fe1"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/insekten-helden-im-verborgenen-5/",
+     "info": true
     }
    ]
   },
@@ -14340,42 +14296,48 @@
      "city": "Bonn",
      "datetime": "2026-08-13T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1fea"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-14T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1feb"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-15T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1fec"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-16T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1fed"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-19T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a6052c2db885708eabd1fee"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Bonner Kinemathek",
      "city": "Bonn",
      "datetime": "2026-08-21T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690780a5a0ae003ded2589"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     }
    ]
   },
@@ -14418,7 +14380,8 @@
      "city": "Bonn",
      "datetime": "2026-08-20T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690705a5a0ae003ded257d"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14432,7 +14395,8 @@
      "city": "Bonn",
      "datetime": "2026-08-21T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690705a5a0ae003ded257e"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14446,7 +14410,8 @@
      "city": "Bonn",
      "datetime": "2026-08-22T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690705a5a0ae003ded257f"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14460,7 +14425,8 @@
      "city": "Bonn",
      "datetime": "2026-08-23T17:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690706a5a0ae003ded2580"
+     "booking_url": "https://www.bonnerkinemathek.de/programm/",
+     "info": true
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -14517,165 +14483,6 @@
      "datetime": "2026-08-31T20:45:00+02:00",
      "language": "DE",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3600033169&bgswitch=false&resize=false"
-    }
-   ]
-  },
-  {
-   "id": "ach, diese lücke, diese entsetzliche lücke",
-   "title_de": "Ach, diese Lücke, diese entsetzliche Lücke",
-   "title_original": "Ach, diese Lücke, diese entsetzliche Lücke",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-08-30T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a69070aa5a0ae003ded2582"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-11-10T14:30:00+01:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/1798AB00023FWBXJYB"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-11-10T15:30:00+01:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/0798AB00023FWBXJYB"
-    }
-   ]
-  },
-  {
-   "id": "tt36580119",
-   "title_de": "Ein Kuchen für den Präsidenten",
-   "title_original": "The President's Cake",
-   "year": 2026,
-   "release_date": "2026-01-22",
-   "runtime": 102,
-   "poster": "https://image.tmdb.org/t/p/w342/sIVCfgcVxsyu8qXw1GDfYL4NzKQ.jpg",
-   "genres": [
-    "Drama"
-   ],
-   "age_rating": 6,
-   "overview_de": "Der Irak in den 90er-Jahren. Während Saddam Hussein trotz Not und Mangel seinen Geburtstag landesweit feiern lässt, zieht die 9-jährige Lamia in ihrer Schule ein gefürchtetes Los: Sie muss den Kuchen für die örtlichen Feierlichkeiten backen. Eine fast unlösbare Aufgabe, denn im Land herrscht Lebensmittelknappheit. Mit nur zwei Tagen Zeit, der Hilfe ihres Klassenkameraden Saeed und begleitet von ihrem Hahn Hindi begibt sie sich auf die Suche nach Zutaten. Eine abenteuerliche Reise durch Entbehrung und Ungewissheit, in der Lamia zugleich kleine Wunder, Freundschaft, Humor und Hoffnung entdeckt.",
-   "overview_en": "While people across 1990s Iraq struggle to survive the war and food shortages, Saddam Hussein requires each school in the country to prepare a cake to celebrate his birthday. Despite her efforts to avoid getting picked, 9-year-old Lamia is chosen among her classmates. The young girl must now use her wits and imagination to gather ingredients for the mandatory cake or face the consequences.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Hasan Hadi"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=G5HTEzrJ3pY",
-   "trailer_en": "https://www.youtube.com/watch?v=8i3idbVnC6I",
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": 4.0
-   },
-   "showtimes": [
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-02T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a690733a5a0ae003ded2586"
-    },
-    {
-     "cinema": "Open Air Bundeskunsthalle",
-     "city": "Bonn",
-     "datetime": "2026-09-02T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.bonnerkinemathek.de/programm/ein-kuchen-fuer-den-praesidenten-15/"
-    }
-   ]
-  },
-  {
-   "id": "kurzfilmprogramm: kurze filme für hohe dächer",
-   "title_de": "KURZFILMPROGRAMM: KURZE FILME FÜR HOHE DÄCHER",
-   "title_original": "KURZFILMPROGRAMM: KURZE FILME FÜR HOHE DÄCHER",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-04T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a69077fa5a0ae003ded2588"
-    }
-   ]
-  },
-  {
-   "id": "ausser atem (wa:2020)",
-   "title_de": "AUSSER ATEM (WA:2020)",
-   "title_original": "AUSSER ATEM (WA:2020)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-06T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellung/6a69070ea5a0ae003ded2583"
     }
    ]
   },
@@ -14961,6 +14768,45 @@
      "datetime": "2026-08-30T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.bonnerkinemathek.de/programm/ach-diese-luecke-diese-entsetzliche-luecke-11/"
+    }
+   ]
+  },
+  {
+   "id": "tt36580119",
+   "title_de": "Ein Kuchen für den Präsidenten",
+   "title_original": "The President's Cake",
+   "year": 2026,
+   "release_date": "2026-01-22",
+   "runtime": 102,
+   "poster": "https://image.tmdb.org/t/p/w342/sIVCfgcVxsyu8qXw1GDfYL4NzKQ.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": 6,
+   "overview_de": "Der Irak in den 90er-Jahren. Während Saddam Hussein trotz Not und Mangel seinen Geburtstag landesweit feiern lässt, zieht die 9-jährige Lamia in ihrer Schule ein gefürchtetes Los: Sie muss den Kuchen für die örtlichen Feierlichkeiten backen. Eine fast unlösbare Aufgabe, denn im Land herrscht Lebensmittelknappheit. Mit nur zwei Tagen Zeit, der Hilfe ihres Klassenkameraden Saeed und begleitet von ihrem Hahn Hindi begibt sie sich auf die Suche nach Zutaten. Eine abenteuerliche Reise durch Entbehrung und Ungewissheit, in der Lamia zugleich kleine Wunder, Freundschaft, Humor und Hoffnung entdeckt.",
+   "overview_en": "While people across 1990s Iraq struggle to survive the war and food shortages, Saddam Hussein requires each school in the country to prepare a cake to celebrate his birthday. Despite her efforts to avoid getting picked, 9-year-old Lamia is chosen among her classmates. The young girl must now use her wits and imagination to gather ingredients for the mandatory cake or face the consequences.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Hasan Hadi"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=G5HTEzrJ3pY",
+   "trailer_en": "https://www.youtube.com/watch?v=8i3idbVnC6I",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 4.0
+   },
+   "showtimes": [
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-02T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/ein-kuchen-fuer-den-praesidenten-15/"
     }
    ]
   },
@@ -15471,7 +15317,7 @@
      "city": "Köln",
      "datetime": "2026-08-02T15:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602194082"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602194082?mode=widget"
     },
     {
      "cinema": "Filmpalette",
@@ -15531,7 +15377,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T19:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183347"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602183347?mode=widget"
     }
    ]
   },
@@ -15568,7 +15414,7 @@
      "city": "Köln",
      "datetime": "2026-08-16T19:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600174320"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600174320?mode=widget"
     }
    ]
   },
@@ -15609,7 +15455,7 @@
      "city": "Köln",
      "datetime": "2026-08-17T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602746034"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602746034?mode=widget"
     }
    ]
   },
@@ -15651,7 +15497,7 @@
      "city": "Köln",
      "datetime": "2026-09-03T18:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3606905266"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3606905266?mode=widget"
     }
    ]
   },
@@ -15692,7 +15538,7 @@
      "city": "Köln",
      "datetime": "2026-09-20T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600175813"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3600175813?mode=widget"
     }
    ]
   },
@@ -16216,7 +16062,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/09E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/09E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16249,21 +16095,21 @@
      "city": "Köln",
      "datetime": "2026-08-15T20:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604751741"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3604751741?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-20T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/18F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/18F71000023MHWBOTF?mode=widget"
     },
     {
      "cinema": "OFF Broadway",
      "city": "Köln",
      "datetime": "2026-08-24T20:00:00+02:00",
      "language": "OV",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/28F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/28F71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16304,7 +16150,7 @@
      "city": "Köln",
      "datetime": "2026-08-25T20:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/29E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/29E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16344,7 +16190,7 @@
      "city": "Köln",
      "datetime": "2026-09-01T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/89E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/89E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16386,7 +16232,7 @@
      "city": "Köln",
      "datetime": "2026-09-08T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/39E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/39E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16425,7 +16271,7 @@
      "city": "Köln",
      "datetime": "2026-09-13T15:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/96A71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/96A71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16458,7 +16304,7 @@
      "city": "Köln",
      "datetime": "2026-09-15T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/A9E71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/A9E71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16605,7 +16451,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/A3F71000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/A3F71000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16638,14 +16484,14 @@
      "city": "Köln",
      "datetime": "2026-08-22T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/1A070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/1A070000023FBCFQYG?mode=widget"
     },
     {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-30T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/4A070000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/4A070000023FBCFQYG?mode=widget"
     }
    ]
   },
@@ -16682,7 +16528,7 @@
      "city": "Köln",
      "datetime": "2026-09-27T11:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/51081000023MHWBOTF"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/51081000023MHWBOTF?mode=widget"
     }
    ]
   },
@@ -16721,7 +16567,7 @@
      "city": "Köln",
      "datetime": "2026-10-18T11:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/81F60000023FBCFQYG"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellung/81F60000023FBCFQYG?mode=widget"
     }
    ]
   },
@@ -16764,7 +16610,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T14:00:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055947"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellung/3603055947?mode=widget"
     }
    ]
   },
@@ -16797,7 +16643,7 @@
      "city": "Köln",
      "datetime": "2026-08-13T21:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461259"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461259?mode=widget"
     }
    ]
   },
@@ -16838,7 +16684,7 @@
      "city": "Köln",
      "datetime": "2026-08-04T21:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460417"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460417?mode=widget"
     }
    ]
   },
@@ -16871,7 +16717,7 @@
      "city": "Köln",
      "datetime": "2026-08-17T21:15:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461207"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461207?mode=widget"
     }
    ]
   },
@@ -16904,7 +16750,7 @@
      "city": "Köln",
      "datetime": "2026-08-24T20:45:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460768"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/460768?mode=widget"
     }
    ]
   },
@@ -16937,7 +16783,7 @@
      "city": "Köln",
      "datetime": "2026-08-05T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461243"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461243?mode=widget"
     }
    ]
   },
@@ -16970,7 +16816,7 @@
      "city": "Köln",
      "datetime": "2026-08-19T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461250"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461250?mode=widget"
     }
    ]
   },
@@ -17003,7 +16849,7 @@
      "city": "Köln",
      "datetime": "2026-08-26T20:00:00+02:00",
      "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461253"
+     "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellung/461253?mode=widget"
     }
    ]
   },
@@ -17940,6 +17786,46 @@
      "datetime": "2026-09-19T14:30:00+02:00",
      "language": "OV",
      "booking_url": "https://tickets.cineplex.de/checkout/351/4A30EB00023FWBXJYB"
+    }
+   ]
+  },
+  {
+   "id": "ach, diese lücke, diese entsetzliche lücke",
+   "title_de": "Ach, diese Lücke, diese entsetzliche Lücke",
+   "title_original": "Ach, diese Lücke, diese entsetzliche Lücke",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-11-10T14:30:00+01:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/1798AB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-11-10T15:30:00+01:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/0798AB00023FWBXJYB"
     }
    ]
   },

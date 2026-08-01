@@ -601,7 +601,11 @@ let CINEMA_META = {}
 // Stummfilmtage sell nothing at all because entry is free. Their screenings get
 // an "Infos" link of exactly the same size as the Tickets button — the same
 // affordance, without claiming you can buy there.
-const isInfoOnly = (cinema) => CINEMA_META[cinema]?.ticketing === 'info'
+// A screening can also be flagged one by one: the Bonner Kinemathek sells on
+// its own site, and we only find part of its programme there, so some of its
+// screenings link to a checkout and the rest only to the film or the programme.
+const isInfoOnly = (show) =>
+  show.info === true || CINEMA_META[show.cinema]?.ticketing === 'info'
 const ticketNote = (cinema, ui) => CINEMA_META[cinema]?.ticket_note?.[ui]
 
 // The screening list of one film, grouped by cinema and then by day.
@@ -653,7 +657,7 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
                       </div>
                       <div className="showbox-acts">
                         {tm.booking_url && (
-                          isInfoOnly(tm.cinema) ? (
+                          isInfoOnly(tm) ? (
                             <a className="show-tix show-info" href={tm.booking_url}
                               target="_blank" rel="noreferrer" title={t.infoTitle}>ℹ️ {t.info}</a>
                           ) : (
@@ -1236,7 +1240,7 @@ function DayPlan({ items, onOpen, t, ui }) {
                 <span className={`lang-tag plan-lang lang-${s.language.toLowerCase()}`}>{s.language}</span>
                 <span className="plan-cinema">{s.cinema} · {s.city}</span>
                 {s.booking_url && (
-                  isInfoOnly(s.cinema) ? (
+                  isInfoOnly(s) ? (
                     <a className="plan-ticket plan-info" href={s.booking_url} target="_blank"
                       rel="noreferrer" title={t.infoTitle}>ℹ️ {t.info}</a>
                   ) : (
