@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-01T06:26:43.406319+00:00",
+ "generated_at": "2026-08-01T16:50:05.484658+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -327,6 +327,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/08575000023GNFNDWF"
     },
     {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-21T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100846"
+    },
+    {
      "cinema": "Kölner Filmhaus",
      "city": "Köln",
      "datetime": "2026-08-22T15:00:00+02:00",
@@ -334,11 +341,25 @@
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2434537641&showId=3600009136&bgswitch=false&resize=false"
     },
     {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-22T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100845"
+    },
+    {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-23T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127624635"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-23T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100844"
     },
     {
      "cinema": "Kölner Filmhaus",
@@ -625,7 +646,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:00:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=84E71000023RFGKYDT"
     },
     {
@@ -641,20 +662,6 @@
      "datetime": "2026-08-01T13:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=33E71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/CDA75000023GNFNDWF"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100718"
     },
     {
      "cinema": "Cineplex Köln",
@@ -699,13 +706,6 @@
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72141"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100706"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T16:30:00+02:00",
@@ -713,46 +713,11 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=91E71000023RFGKYDT"
     },
     {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:45:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68174"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-01T16:45:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/690FDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T17:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/DCA75000023GNFNDWF"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T17:40:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100739"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T18:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/0AA75000023GNFNDWF"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/2EA75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -2691,13 +2656,6 @@
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127809619"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100781"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T16:45:00+02:00",
@@ -3620,13 +3578,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=98D71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T13:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/97A75000023GNFNDWF"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:45:00+02:00",
@@ -3634,39 +3585,11 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=37D71000023RFGKYDT"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T13:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100816"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68153"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100753"
-    },
-    {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-08-01T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127794031"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:40:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/5BA75000023GNFNDWF"
     },
     {
      "cinema": "Cineplex Köln",
@@ -3683,20 +3606,6 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127807145"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100817"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:10:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68154"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T16:30:00+02:00",
@@ -3704,32 +3613,11 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F5E71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T17:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/CBA75000023GNFNDWF"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-01T17:10:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/190FDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T18:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100818"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T18:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68155"
     },
     {
      "cinema": "Cinedom",
@@ -5587,8 +5475,8 @@
     "DE"
    ],
    "directors": [
-    "Ute von Münchow-Pohl",
-    "Sandor Jesse"
+    "Sandor Jesse",
+    "Ute von Münchow-Pohl"
    ],
    "tags": [
     "women_directed"
@@ -5710,7 +5598,7 @@
    "year": 2026,
    "release_date": "2026-05-20",
    "runtime": 132,
-   "poster": "https://image.tmdb.org/t/p/w342/aRPqQhgUEPSPtoWu41k6ZGRSWlx.jpg",
+   "poster": "https://image.tmdb.org/t/p/w342/53otYN4IM56URriIxwaErKKRYQu.jpg",
    "genres": [
     "Action",
     "Abenteuer",
@@ -6171,32 +6059,11 @@
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72140"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T13:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100727"
-    },
-    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-01T14:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127807065"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/17A75000023GNFNDWF"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/FAA75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -6206,39 +6073,11 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=89D71000023RFGKYDT"
     },
     {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:30:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68179"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-01T14:50:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/1B0FDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T15:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100728"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/8AA75000023GNFNDWF"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T16:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/08A75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -6808,6 +6647,13 @@
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72072"
     },
     {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-25T18:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100838"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-25T19:50:00+02:00",
@@ -6958,13 +6804,6 @@
     "letterboxd": 2.9
    },
    "showtimes": [
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T13:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/3CA75000023GNFNDWF"
-    },
     {
      "cinema": "Cinedom",
      "city": "Köln",
@@ -7978,13 +7817,6 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127807107"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T13:00:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/A4A75000023GNFNDWF"
-    },
-    {
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:00:00+02:00",
@@ -8009,15 +7841,8 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T13:50:00+02:00",
-     "language": "OV",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=AAD71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:30:00+02:00",
      "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/95575000023GNFNDWF"
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=AAD71000023RFGKYDT"
     },
     {
      "cinema": "Cineplex Köln",
@@ -8025,27 +7850,6 @@
      "datetime": "2026-08-01T14:40:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/2D0FDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100767"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T15:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/70B75000023GNFNDWF"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T15:50:00+02:00",
-     "language": "OV",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68199"
     },
     {
      "cinema": "Stern Lichtspiele",
@@ -8062,25 +7866,11 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127807109"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T16:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D4575000023GNFNDWF"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-01T16:15:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/490FDB00023FWBXJYB"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T16:30:00+02:00",
-     "language": "OV",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/06A75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -8107,7 +7897,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T16:50:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=39771000023RFGKYDT"
     },
     {
@@ -8121,29 +7911,8 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T17:00:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=1FD71000023RFGKYDT"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T17:50:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100131"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T17:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100122"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/D3A75000023GNFNDWF"
     },
     {
      "cinema": "Cineplex Köln",
@@ -8247,15 +8016,15 @@
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-08-01T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100132"
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100116"
     },
     {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-08-01T20:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100116"
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100132"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9388,15 +9157,15 @@
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-08-05T17:50:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100126"
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100139"
     },
     {
      "cinema": "Rex am Ring",
      "city": "Köln",
      "datetime": "2026-08-05T17:50:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100139"
+     "language": "DE",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100126"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -9729,13 +9498,6 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellungen?showId=127807055"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T13:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/75A75000023GNFNDWF"
-    },
-    {
      "cinema": "Woki",
      "city": "Bonn",
      "datetime": "2026-08-02T11:00:00+02:00",
@@ -9827,13 +9589,6 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=5DD71000023RFGKYDT"
     },
     {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T14:45:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/AEA75000023GNFNDWF"
-    },
-    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-01T15:00:00+02:00",
@@ -9846,13 +9601,6 @@
      "datetime": "2026-08-01T16:50:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=9DD71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T17:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/7CA75000023GNFNDWF"
     },
     {
      "cinema": "Cineplex Köln",
@@ -10361,7 +10109,7 @@
    "title_de": "Steckerlfischfiasko",
    "title_original": "Steckerlfischfiasko",
    "year": 2026,
-   "release_date": "2026-08-13",
+   "release_date": "2026-08-12",
    "runtime": 99,
    "poster": "https://image.tmdb.org/t/p/w342/uOYnVDF8tfLBmGURJg0j17kgbaI.jpg",
    "genres": [
@@ -10557,13 +10305,6 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellungen?showId=127852341"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100760"
-    },
-    {
      "cinema": "Odeon",
      "city": "Köln",
      "datetime": "2026-08-01T16:15:00+02:00",
@@ -10583,13 +10324,6 @@
      "datetime": "2026-08-01T16:45:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=A7D71000023RFGKYDT"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
-     "datetime": "2026-08-01T18:35:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68185"
     },
     {
      "cinema": "OFF Broadway",
@@ -11131,20 +10865,6 @@
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=72186"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100786"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T16:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/B9A75000023GNFNDWF"
-    },
-    {
      "cinema": "Stern Lichtspiele",
      "city": "Bonn",
      "datetime": "2026-08-01T17:00:00+02:00",
@@ -11171,13 +10891,6 @@
      "datetime": "2026-08-01T18:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellungen?showId=127805613"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100801"
     },
     {
      "cinema": "Cinenova",
@@ -12145,25 +11858,11 @@
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=85E71000023RFGKYDT"
     },
     {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T14:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100696"
-    },
-    {
      "cinema": "Cinenova",
      "city": "Köln",
      "datetime": "2026-08-01T18:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127809599"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T18:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/73A75000023GNFNDWF"
     },
     {
      "cinema": "Bonner Kinemathek",
@@ -12970,8 +12669,8 @@
     "AU"
    ],
    "directors": [
-    "Jon Lucas",
-    "Scott Moore"
+    "Scott Moore",
+    "Jon Lucas"
    ],
    "tags": [],
    "trailer_de": null,
@@ -14020,13 +13719,6 @@
     {
      "cinema": "Metropolis",
      "city": "Köln",
-     "datetime": "2026-08-01T14:10:00+02:00",
-     "language": "DE",
-     "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68209"
-    },
-    {
-     "cinema": "Metropolis",
-     "city": "Köln",
      "datetime": "2026-08-02T14:10:00+02:00",
      "language": "DE",
      "booking_url": "https://kinotickets.express/metropolis-koeln/booking/68210"
@@ -14761,22 +14453,26 @@
    ]
   },
   {
-   "id": "salz und wasser (display movie only)",
-   "title_de": "Salz und Wasser (Display Movie Only)",
-   "title_original": "Salz und Wasser (Display Movie Only)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
+   "id": "salz und wasser",
+   "title_de": "Salz und Wasser",
+   "title_original": "Salz und Wasser",
+   "year": 2026,
+   "release_date": "2026-08-20",
+   "runtime": 106,
+   "poster": "https://image.tmdb.org/t/p/w342/kRyIt99P05TAykZ5Yn8NpO8JYtR.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
    "age_rating": null,
-   "overview_de": null,
+   "overview_de": "Meter um Meter beißt sich der Forschungseisbrecher Polarstern durch das massive Eis der Ostantarktis. An Bord befinden sich die Schiffsbesatzung und die Wissenschaftler:innen, die hier in dieser schon fast unwirklichen Welt der Antarktis ihrer Arbeit nachgehen. Sie untersuchen die Zukunft des mächtigen Antarktischen Zirkumpolarstroms. Denn sollte sich dieser aufgrund der globalen Erwärmung südwärts verlagern, bringt er warmes Wasser an die Küste der Ostantarktis. Sollte die Ostantarktis komplett schmelzen, wäre ein globaler Meeresspiegelanstieg von bis zu 52 Metern die Folge. Der Schlüssel der wissenschaftlichen Arbeit liegt aber auch in der Erfahrung und dem Fachwissen der Schiffsbesatzung. Ohne sie wäre Forschung unter diesen extremen Bedingungen nicht möglich.",
    "overview_en": null,
-   "original_language": null,
+   "original_language": "de",
    "countries": [],
-   "directors": [],
+   "directors": [
+    "Ines Reinisch"
+   ],
    "tags": [],
-   "trailer_de": null,
+   "trailer_de": "https://www.youtube.com/watch?v=ylsshDb9wB4",
    "trailer_en": null,
    "ratings": {
     "imdb": null,
@@ -15714,13 +15410,6 @@
     "letterboxd": null
    },
    "showtimes": [
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-01T18:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100775"
-    },
     {
      "cinema": "Rex am Ring",
      "city": "Köln",
