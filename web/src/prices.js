@@ -204,6 +204,36 @@ export const CINEMA_PRICES = {
     ],
   },
 
+  // The Kinemathek's second screen in the Rheinisches LandesMuseum. Their price
+  // page states one list for both houses ("Kino in der Brotfabrik und
+  // LVR-LandesMuseum"), with the Artcard added to the reduced fare at this one.
+  'Arthaus-Kino im LandesMuseum': {
+    checked: '2026-08-01',
+    source: 'https://neu.bonnerkinemathek.de/service/',
+    days: [{ de: 'Alle Tage', en: 'All days' }],
+    tickets: [
+      { id: 'adult', who: 'adult', from: 0, to: 1440, price: [10.0],
+        de: 'Normalpreis', en: 'Standard' },
+      { id: 'reduced', who: ['reduced', 'child'], from: 0, to: 1440, price: [8.0],
+        de: 'Ermäßigt (Gildepass, Schüler-, Studenten-, Schwerbehinderten- und Bonnausweis, KulturCard, Artcard)',
+        en: 'Reduced (Gildepass, pupil / student / disability / Bonn ID, KulturCard, Artcard)' },
+    ],
+    displayOnly: [
+      { de: 'Kids-Veranstaltung: Kinder + begleitende Erwachsene', en: 'Kids event: children + accompanying adults', flat: 6.0 },
+      { de: 'Kids-Veranstaltung: Erwachsene ohne Begleitung eines Kindes', en: 'Kids event: adults not accompanying a child', flat: 8.0 },
+    ],
+    surcharges: [],
+    note: {
+      de: 'Gleiche Preisliste wie die Bonner Kinemathek. Zuschläge bei Überlänge, Gästen und Vorträgen nennt das Kino ohne Beträge — die sind hier nicht eingerechnet.',
+      en: 'Same price list as the Bonner Kinemathek. The cinema charges surcharges for overlength films, guests and talks but names no amounts — those are not included here.',
+    },
+    offers: [
+      { de: 'Gutscheine für Kino in der Brotfabrik und LVR-LandesMuseum, Restbeträge bleiben nutzbar',
+        en: 'Vouchers for Kino in der Brotfabrik and the LVR-LandesMuseum; remaining balance stays usable',
+        url: 'https://neu.bonnerkinemathek.de/service/' },
+    ],
+  },
+
   'Stern Lichtspiele': {
     checked: '2026-07-30',
     source: 'https://www.cinestar.de/kino-bonn-sternlichtspiele/info/preise',

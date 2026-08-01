@@ -21,7 +21,7 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - **Repo:** https://github.com/kinoguide/kinoguide.github.io — owned by the
   **kinoguide** org (GitHub account `chris-geller` is org admin). Local `origin`
   points here. See the [[deployment]] memory for the org-permissions gotcha.
-- **17 cinemas** across Köln & Bonn, ~250 films/day. Everything below is DONE:
+- **21 cinemas** across Köln & Bonn, ~280 films/day. Everything below is DONE:
   scraper, all cinema sources, enrichment, daily automation, and a polished
   frontend (search, filters, favorites, schedule view, i18n DE/EN, calendar
   export, shareable filter URLs). See [[cinema-coverage]] for how each cinema
@@ -32,7 +32,7 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/main.py` — orchestrator: scrape every cinema (isolated failures) →
   enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
   per-cinema language corrections (Filmpalette, Kinopolis).
-- `scraper/cinemas.json` — the 17 cinemas: kinoheld IDs, `website`, `price_page`,
+- `scraper/cinemas.json` — the 21 cinemas: kinoheld IDs, `website`, `price_page`,
   `source` (`kinoheld`, `custom` or `kinopolis`), the CineOrder shop coordinates
   where there is one (`cineorder_api`, `cineorder_center_oid`,
   `family_max_adults`), and notes. Read the `_note` fields.
@@ -80,7 +80,7 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/language.py` — OV/OmU/DE classifier from show text/flags. **Careful
   with the OV markers: they are short and they collide with ordinary words.** A
   bare `\bOF\b` (Originalfassung) matched the English "of" in every single case
-  it fired across all 17 feeds — "BEST OF CINEMA - Rocky", "Insidious: Out of
+  it fired across all feeds — "BEST OF CINEMA - Rocky", "Insidious: Out of
   the Further", and twice on a screening the cinema had itself labelled "D".
   It now only counts in brackets or behind a language abbreviation. Measure any
   new marker against the real feeds before adding it; a false OV is exactly the
@@ -148,8 +148,8 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     `Intl.DisplayNames` so an unmapped code never shows raw. `PINNED_LANGS`
     (currently `ko`) stays on offer even with nothing playing, marked with a
     dashed border and a `0` — the user asked for a permanent Korean button.
-- `web/src/prices.js` — the price model: a hand-curated price table for **all 17
-  cinemas** (each with its own day tiers, tickets, family rule, surcharges,
+- `web/src/prices.js` — the price model: a hand-curated price table for **18 of
+  the 21 cinemas** (each with its own day tiers, tickets, family rule, surcharges,
   offers and a `checked` date the UI shows) **plus** the calculator that prefers
   the cinema's own per-screening prices from `data/prices.json` and falls back to
   the table. Adding a cinema = one more entry keyed by its exact name in
@@ -192,7 +192,7 @@ present first").
 
 ## Performance notes
 
-The page ships ~250 films and ~1 550 screenings in one 710 KB JSON, so the
+The page ships ~280 films and ~1 500 screenings in one 710 KB JSON, so the
 frontend is deliberately built to keep that cheap:
 
 - `index.html` starts `fetch('data/movies.json')` into `window.__movies` before
@@ -206,7 +206,7 @@ frontend is deliberately built to keep that cheap:
   when the Favoriten filter is actually on (`favKey`).
 - `data/prices.json` is still lazy-loaded on first use of a price panel.
 
-## Prices (family price finder — all 17 cinemas since 2026-07-30)
+## Prices (family price finder — 18 of the 21 cinemas)
 
 A 💶 chip in the toolbar and a "💶 ab X €" button on each cinema row in the
 film page open a price panel: the visitor sets how many adults / kids under 12
@@ -220,11 +220,13 @@ Two sources feed it, and they are not equal:
 | | cinemas | what it is |
 |---|---|---|
 | exact | Kinopolis Bad Godesberg, Cinedom | the cinema's own till, per screening (`data/prices.json`) |
-| table | the other 15 | the printed price list, typed by hand into `web/src/prices.js` |
+| table | 16 more | the printed price list, typed by hand into `web/src/prices.js` |
+| none | Residenz Astor Film Lounge, Filmforum NRW, SION Sommerkino | they publish no price list at all — see the Woki rule below |
 
-Coverage on 2026-07-30: every cinema prices 100 % of its screenings, except the
-Woki (13 %, on purpose — see below). Of Cinedom's 337 screenings 318 are exact,
-Kinopolis 318 of 318; the rest fall back to the table with an "≈ geschätzt" mark.
+Coverage on 2026-08-01: every cinema with a table prices 100 % of its screenings,
+except the Woki (18 %, on purpose — see below); the three houses above price none
+because they publish nothing. Of Cinedom's 251 screenings 209 are exact,
+Kinopolis 228 of 228; the rest fall back to the table with an "≈ geschätzt" mark.
 `npm run check:coverage` in `web/` prints that table from the live data, and
 `npm run check:prices` asserts the model against the figures on the price pages
 — run both after touching prices.
@@ -313,6 +315,21 @@ Programme strands we cannot identify from our data (Kinemathek Kids-Veranstaltun
 Weisshaus KidsKino, Kalk's Kinder- & Jugendprogramm, Cinenova Kinderfilme) are
 listed under `displayOnly` and never auto-picked — showing the regular price is
 only ever too high, which the "≈ geschätzt" mark already covers.
+
+**Coverage audit 2026-08-01.** kinoheld's own directory was swept by GPS radius
+around both cities (`cinemas(proximity:{location,distance})`, 15 km) and checked
+against kino.de's city lists; every venue we did not have was probed for a live
+programme. That added four: Residenz Astor Film Lounge (id 1085 — the real gap,
+76 screenings, a 3-hall first-run house), Filmforum NRW (507), Arthaus-Kino im
+LandesMuseum (1461, the Kinemathek's second screen) and SION Sommerkino (2196,
+seasonal open air). Everything else in both cities is either covered or carries
+no bookable programme at all (Filmclub Akasava, Passage Kino, Institut Français,
+Japanisches Kulturinstitut, Alte Feuerwache, Turistarama, both drive-ins, Kino im
+Kunstmuseum Bonn, and the open-airs MAKK / Olympia / Fort X / Gebäude 9 /
+Bonner Sommerkino / Bundeskunsthalle / Friesi / Arkadenhof). **Filmclub 813**
+(Hahnenstr. 6, ~19 screenings a month on 35mm) is a real cinema with no feed —
+own site only, box-office tickets, summer break until 2026-10-02 — so it needs a
+custom scraper like Metropolis, deferred by the user to October.
 
 **The Woki publishes no standard price at all** ("Klicke auf die Vorstellungszeit
 und suche Dir einen Sitzplatz aus. So kannst Du sehen, was Deine Karte kostet.").
