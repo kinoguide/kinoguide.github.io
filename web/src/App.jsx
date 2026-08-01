@@ -86,11 +86,29 @@ const T = {
     ticketsTitle: 'Tickets beim Kino kaufen',
     contact: 'Kontakt & Impressum',
     contactBtn: 'Feedback & Impressum',
-    contactIntro: 'Kinoguide Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
+    contactIntro: 'Kino Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung. Schreib mir einfach eine Mail.',
+    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung. Schreib einfach hier — ganz ohne eigenes Mailprogramm.',
     feedbackHint: 'Hilfreich ist: Kino, Film, Datum und was stattdessen richtig wäre.',
     mailBtn: '✉ E-Mail schreiben',
+    fbLabel: 'Deine Nachricht',
+    fbPlaceholder: 'Was ist falsch, was fehlt, was wünschst du dir?',
+    fbNext: 'Weiter',
+    fbEmpty: 'Bitte schreib zuerst eine Nachricht.',
+    fbAskTitle: 'Möchtest du eine Antwort?',
+    fbAskText: 'Dann hinterlass deine E-Mail-Adresse — sonst geht die Nachricht anonym raus. Die Adresse wird nur für die Antwort benutzt.',
+    fbEmailPh: 'deine@adresse.de (optional)',
+    fbEmailBad: 'Diese E-Mail-Adresse sieht nicht richtig aus.',
+    fbSendAnon: 'Anonym senden',
+    fbSendReply: 'Mit E-Mail senden',
+    fbBack: '← Nachricht ändern',
+    fbSending: 'Wird gesendet …',
+    fbDone: 'Danke! Deine Nachricht ist angekommen. 🧡',
+    fbDoneReply: 'Ich melde mich, sobald ich dazu komme.',
+    fbAgain: 'Noch eine Nachricht schreiben',
+    fbFail: 'Das hat leider nicht geklappt. Versuch es später noch einmal — oder schreib direkt an:',
+    fbService: 'Das Formular läuft über den Dienst FormSubmit (formsubmit.co), der die Nachricht an mich weiterleitet. Ohne E-Mail-Adresse bleibt sie anonym.',
+    fbOwnMail: 'Lieber im eigenen Mailprogramm?',
     imprintTitle: 'Impressum',
     imprintLaw: 'Angaben gemäß § 5 DDG',
     imprintResp: 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV',
@@ -98,7 +116,7 @@ const T = {
     disclaimerTitle: 'Haftung für Inhalte & Links',
     disclaimerText: 'Alle Programm-, Preis- und Filmangaben werden automatisch von den Seiten der Kinos sowie von TMDB, OMDb und Letterboxd übernommen und ohne Gewähr angezeigt. Verbindlich ist immer das Kino selbst. Für die Inhalte verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.',
     privacyTitle: 'Datenschutz',
-    privacyText: 'Diese Seite setzt keine Cookies und bindet keine Analyse- oder Werbedienste ein. Favoriten, Sprache und die Angaben im Preisrechner bleiben ausschließlich in deinem Browser (localStorage) und werden nirgendwohin übertragen. Gehostet wird die Seite bei GitHub Pages (GitHub Inc.); beim Aufruf verarbeitet GitHub technisch notwendige Zugriffsdaten wie deine IP-Adresse.',
+    privacyText: 'Diese Seite setzt keine Cookies und bindet keine Analyse- oder Werbedienste ein. Favoriten, Sprache und die Angaben im Preisrechner bleiben ausschließlich in deinem Browser (localStorage) und werden nirgendwohin übertragen. Gehostet wird die Seite bei GitHub Pages (GitHub Inc.); beim Aufruf verarbeitet GitHub technisch notwendige Zugriffsdaten wie deine IP-Adresse. Wenn du das Feedback-Formular abschickst, wird deine Nachricht — und nur falls du sie angibst, deine E-Mail-Adresse — über den Dienst FormSubmit (formsubmit.co) an mein Postfach weitergeleitet. Ohne Adresse ist die Nachricht anonym; gespeichert wird sie sonst nirgends.',
     creditsTitle: 'Daten & Quellen',
     creditsText: 'Filmdaten und Poster von TMDB, Bewertungen von IMDb/Metascore (via OMDb) und Letterboxd. Spielzeiten von den Kinos und ihren Ticketshops. Dieses Projekt wird weder von TMDB noch von einem der Kinos betrieben oder unterstützt.',
     addCal: 'Zum Kalender hinzufügen',
@@ -224,11 +242,29 @@ const T = {
     ticketsTitle: 'Buy tickets at the cinema',
     contact: 'Contact & legal notice',
     contactBtn: 'Feedback & legal notice',
-    contactIntro: 'Kinoguide Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
+    contactIntro: 'Kino Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it. Just send me an email.',
+    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it. Just write to me right here — no mail program needed.',
     feedbackHint: 'Helpful to include: cinema, film, date, and what the site says versus what it should say.',
     mailBtn: '✉ Write an email',
+    fbLabel: 'Your message',
+    fbPlaceholder: 'What is wrong, what is missing, what would you like to see?',
+    fbNext: 'Continue',
+    fbEmpty: 'Please write a message first.',
+    fbAskTitle: 'Would you like a reply?',
+    fbAskText: 'Then leave your email address — otherwise the message is sent anonymously. The address is only used to answer you.',
+    fbEmailPh: 'you@example.com (optional)',
+    fbEmailBad: 'That email address does not look right.',
+    fbSendAnon: 'Send anonymously',
+    fbSendReply: 'Send with my email',
+    fbBack: '← Edit message',
+    fbSending: 'Sending …',
+    fbDone: 'Thank you! Your message got through. 🧡',
+    fbDoneReply: 'I will get back to you as soon as I can.',
+    fbAgain: 'Write another message',
+    fbFail: 'Sorry, that did not work. Please try again later — or write directly to:',
+    fbService: 'The form is handled by FormSubmit (formsubmit.co), which forwards the message to me. Without an email address it stays anonymous.',
+    fbOwnMail: 'Prefer your own mail program?',
     imprintTitle: 'Legal notice (Impressum)',
     imprintLaw: 'Information pursuant to § 5 DDG',
     imprintResp: 'Responsible for the content under § 18 (2) MStV',
@@ -236,7 +272,7 @@ const T = {
     disclaimerTitle: 'Liability for content & links',
     disclaimerText: 'All programme, price and film information is collected automatically from the cinemas\' own websites and from TMDB, OMDb and Letterboxd, and is shown without warranty. The cinema itself is always authoritative. The operators of linked sites are solely responsible for their content.',
     privacyTitle: 'Privacy',
-    privacyText: 'This site sets no cookies and embeds no analytics or advertising services. Favourites, language and the price-calculator settings stay in your browser (localStorage) and are never transmitted anywhere. The site is hosted on GitHub Pages (GitHub Inc.); when you load it, GitHub processes technically necessary access data such as your IP address.',
+    privacyText: 'This site sets no cookies and embeds no analytics or advertising services. Favourites, language and the price-calculator settings stay in your browser (localStorage) and are never transmitted anywhere. The site is hosted on GitHub Pages (GitHub Inc.); when you load it, GitHub processes technically necessary access data such as your IP address. When you submit the feedback form, your message — and your email address only if you choose to give one — is forwarded to my inbox by the service FormSubmit (formsubmit.co). Without an address the message is anonymous; it is not stored anywhere else.',
     creditsTitle: 'Data & sources',
     creditsText: 'Film data and posters from TMDB, ratings from IMDb/Metascore (via OMDb) and Letterboxd. Showtimes from the cinemas and their ticket shops. This project is neither run nor endorsed by TMDB or by any of the cinemas.',
     addCal: 'Add to calendar',
@@ -738,6 +774,111 @@ const CONTACT_USER = 'kinokoelnbonn'
 const CONTACT_HOST = 'gmail.com'
 const CONTACT_MAIL = `${CONTACT_USER}@${CONTACT_HOST}`
 
+// The feedback form. The site is static (GitHub Pages), so there is no server
+// of ours to post to: FormSubmit (formsubmit.co) takes the POST and forwards it
+// to CONTACT_MAIL. Chosen by the user 2026-08-01 over Web3Forms/Formspree
+// because it needs no account — the address is public in the Impressum anyway.
+// The endpoint is assembled at runtime from the two address halves for the same
+// anti-harvesting reason as CONTACT_MAIL itself.
+//
+// Two-step on purpose: write the message first, and only *at* the send do we
+// ask whether the visitor wants an answer. Leaving the field empty sends
+// anonymously — that is the default, not an opt-out.
+function FeedbackForm({ t, mailto }) {
+  const [step, setStep] = useState('write')   // write · ask · sending · done · fail
+  const [msg, setMsg] = useState('')
+  const [email, setEmail] = useState('')
+  // the error is kept as a key, not as text: switching DE/EN with an error on
+  // screen must translate it, and a stored string would stay in the old language
+  const [err, setErr] = useState('')          // '' · 'fbEmpty' · 'fbEmailBad'
+  const [honey, setHoney] = useState('')      // bots fill it, humans never see it
+  const [replied, setReplied] = useState(false)
+
+  const toAsk = () => {
+    if (!msg.trim()) { setErr('fbEmpty'); return }
+    setErr(''); setStep('ask')
+  }
+
+  const send = async () => {
+    const addr = email.trim()
+    if (addr && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(addr)) { setErr('fbEmailBad'); return }
+    if (honey) { setStep('done'); return }     // silently swallow the bot
+    setErr(''); setStep('sending')
+    try {
+      const r = await fetch(`https://formsubmit.co/ajax/${CONTACT_MAIL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          message: msg.trim(),
+          // FormSubmit uses a field called "email" as the Reply-To
+          email: addr || undefined,
+          _subject: `Kino Köln Bonn — Feedback${addr ? '' : ' (anonym)'}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+      const j = await r.json().catch(() => ({}))
+      if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status)
+      setReplied(!!addr); setMsg(''); setEmail(''); setStep('done')
+    } catch (e) {
+      console.error('feedback send failed', e)
+      setStep('fail')
+    }
+  }
+
+  if (step === 'done') return (
+    <div className="fb-done">
+      <p className="fb-thanks">{t.fbDone}</p>
+      {replied && <p className="info-hint">{t.fbDoneReply}</p>}
+      <button className="fb-link" onClick={() => { setReplied(false); setStep('write') }}>{t.fbAgain}</button>
+    </div>
+  )
+
+  if (step === 'fail') return (
+    <div className="fb-done">
+      <p>{t.fbFail} <a href={mailto}>{CONTACT_MAIL}</a></p>
+      <button className="fb-link" onClick={() => setStep('write')}>{t.fbBack}</button>
+    </div>
+  )
+
+  return (
+    <div className="fb-form">
+      {step === 'write' ? (
+        <>
+          <label className="fb-label" htmlFor="fb-msg">{t.fbLabel}</label>
+          <textarea id="fb-msg" className="fb-text" rows={6} value={msg}
+            placeholder={t.fbPlaceholder}
+            onChange={(e) => { setMsg(e.target.value); if (err) setErr('') }} />
+          <div className="fb-row">
+            <button className="fb-send" onClick={toAsk}>{t.fbNext}</button>
+          </div>
+        </>
+      ) : (
+        <>
+          <p className="fb-ask">{t.fbAskTitle}</p>
+          <p className="info-hint">{t.fbAskText}</p>
+          <input className="fb-email" type="email" inputMode="email" autoComplete="email"
+            value={email} placeholder={t.fbEmailPh} aria-label={t.fbEmailPh}
+            disabled={step === 'sending'}
+            onChange={(e) => { setEmail(e.target.value); if (err) setErr('') }} />
+          <div className="fb-row">
+            <button className="fb-send" onClick={send} disabled={step === 'sending'}>
+              {step === 'sending' ? t.fbSending : (email.trim() ? t.fbSendReply : t.fbSendAnon)}
+            </button>
+            <button className="fb-link" onClick={() => { setErr(''); setStep('write') }}
+              disabled={step === 'sending'}>{t.fbBack}</button>
+          </div>
+        </>
+      )}
+      {/* honeypot: off-screen, not hidden — some bots skip display:none fields */}
+      <input className="fb-honey" tabIndex={-1} autoComplete="off" aria-hidden="true"
+        value={honey} onChange={(e) => setHoney(e.target.value)} />
+      {err && <p className="fb-err" role="alert">{t[err]}</p>}
+      <p className="info-hint fb-note">{t.fbService}</p>
+    </div>
+  )
+}
+
 // Feedback + Impressum, on its own URL (?seite=kontakt) with its own history
 // entry, exactly like a film page — so the ✉ button in the header and the
 // browser's Back button behave the same way everywhere.
@@ -748,7 +889,7 @@ function ContactPage({ onBack, t }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [onBack])
 
-  const mailto = `mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('Kinoguide Köln · Bonn')}`
+  const mailto = `mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('Kino Köln · Bonn')}`
 
   return (
     <article className="info-page">
@@ -763,6 +904,8 @@ function ContactPage({ onBack, t }) {
         <h2>{t.feedbackTitle}</h2>
         <p>{t.feedbackText}</p>
         <p className="info-hint">{t.feedbackHint}</p>
+        <FeedbackForm t={t} mailto={mailto} />
+        <p className="info-hint fb-own">{t.fbOwnMail}</p>
         <a className="info-mail" href={mailto}>{t.mailBtn}</a>
         <p className="info-addr">{CONTACT_MAIL}</p>
       </section>
@@ -1624,10 +1767,10 @@ export default function App() {
   // should read as
   useEffect(() => {
     document.title = selected
-      ? `${displayTitle(selected, ui)} · Kinoguide Köln Bonn`
+      ? `${displayTitle(selected, ui)} · Kino Köln Bonn`
       : page === 'kontakt'
-      ? `${t.contact} · Kinoguide Köln Bonn`
-      : 'Kinoguide Köln Bonn'
+      ? `${t.contact} · Kino Köln Bonn`
+      : 'Kino Köln Bonn'
   }, [selected, page, ui, t])
 
   const toggleGenre = (g) =>
@@ -1682,12 +1825,17 @@ export default function App() {
   return (
     <div className="page">
       <header className="topbar">
-        <button className="brand" onClick={resetAll} title={t.backHome}>Kinoguide <span>Köln · Bonn</span></button>
+        {/* the DE/EN switch sits at the very left edge of the header, ahead of
+            the logo — asked for 2026-08-01 because it read as "in the middle"
+            while it was the first item of the right-hand group */}
+        <div className="lang-switch" role="group" aria-label="Sprache / Language">
+          <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
+          <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
+        </div>
+        {/* "Kino", not "Kinoguide" (2026-08-01): the long word wrapped the logo
+            onto two lines on every phone and cost a whole header row */}
+        <button className="brand" onClick={resetAll} title={t.backHome}>Kino <span>Köln · Bonn</span></button>
         <div className="topbar-right">
-          <div className="lang-switch" role="group" aria-label="Sprache / Language">
-            <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
-            <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
-          </div>
           {data && <div className="stand">{t.stand} {new Date(data.generated_at).toLocaleDateString(t.locale)}</div>}
           {/* drawn rather than the ✉ emoji: the emoji renders hairline-thin in
               most fonts and the orange barely registered against the navy */}

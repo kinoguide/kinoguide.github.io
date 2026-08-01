@@ -103,6 +103,19 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     and a footer link). Both are folded into one `route` string, and that is what
     the push/replace and scroll-restore logic keys on; add a page by extending
     `page`, not by inventing a second mechanism.
+  - **The feedback form** (`FeedbackForm`, added 2026-08-01). Posts to
+    **FormSubmit** (`https://formsubmit.co/ajax/<CONTACT_MAIL>`), which forwards
+    the message to kinokoelnbonn@gmail.com: a static site has no back end of its
+    own, and the user picked FormSubmit over Web3Forms/Formspree because it needs
+    no account and the address is public in the Impressum anyway. Message first,
+    **then** the question "möchtest du eine Antwort?" — an empty mail field sends
+    anonymously, and that is the default, not an opt-out. Gotcha: FormSubmit
+    ignores a form until it is activated once by clicking the link in the mail
+    that its first submission triggers (sent 2026-08-01); before that it answers
+    `success:false` and the visitor gets the fail screen, which offers the plain
+    mailto as a fallback. The DE/EN switch is the first element of the topbar —
+    on phones the logo takes the whole line, so a ≤640px `order` rule puts the
+    switch hard left on the second row with the date + ✉ opposite it.
   - **Filter organisation** (chosen by the user 2026-07-29): one bar with
     search + Datum + Stadt + Sortierung + a single `⚙ Filter` button with a
     count badge + the `💶 Preise` button (moved up out of the results row on

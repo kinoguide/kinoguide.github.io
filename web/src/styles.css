@@ -66,13 +66,14 @@ body {
 }
 .stand { color: var(--muted); font-size: 14px; }
 
-/* topbar right side: language switch + stand */
+/* topbar right side: "Stand" date + the ✉ button */
 /* margin-left:auto keeps this block on the right even after the topbar wraps
    onto a second line, which is where phones put it */
 .topbar-right { display: flex; align-items: center; gap: 14px; margin-left: auto; justify-content: flex-end; }
+/* the language switch is the first thing in the header, left of the logo */
 .lang-switch {
   display: inline-flex; background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 999px; padding: 3px; gap: 2px;
+  border-radius: 999px; padding: 3px; gap: 2px; margin-right: 4px;
 }
 .lang-switch button {
   background: none; border: none; color: var(--muted); font-size: 14px; font-weight: 700;
@@ -390,6 +391,39 @@ input[type=range] {
 }
 .info-mail:hover { background: var(--accent2); border-color: var(--accent2); }
 .info-addr { font-size: 14px; color: var(--muted); }
+
+/* --- feedback form (contact page) --- */
+.fb-form { margin: 14px 0 6px; }
+.fb-label { display: block; font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.fb-text, .fb-email {
+  width: 100%; background: var(--bg2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 12px 14px; font: inherit; font-size: 16px; /* 16px: iOS zooms into anything smaller */
+  resize: vertical;
+}
+.fb-text::placeholder, .fb-email::placeholder { color: var(--muted); }
+.fb-text:focus, .fb-email:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px rgba(224,134,54,.18); }
+.fb-ask { color: var(--text) !important; font-weight: 700; margin-bottom: 4px !important; }
+.fb-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 12px; }
+.fb-send {
+  background: var(--accent); border: 1px solid var(--accent); color: #fff;
+  border-radius: 999px; padding: 11px 24px; font: inherit; font-size: 15px; font-weight: 700;
+  cursor: pointer;
+}
+.fb-send:hover:not(:disabled) { background: var(--accent2); border-color: var(--accent2); }
+.fb-send:disabled { opacity: .6; cursor: default; }
+.fb-link {
+  background: none; border: none; padding: 0; cursor: pointer;
+  color: var(--accent2); font: inherit; font-size: 14px; text-decoration: underline;
+}
+.fb-link:disabled { opacity: .5; cursor: default; }
+.fb-err { color: #ff9d84 !important; font-size: 14px; margin: 10px 0 0 !important; }
+.fb-note { margin-top: 12px !important; }
+.fb-done { margin: 14px 0 6px; }
+.fb-thanks { color: var(--text) !important; font-size: 17px; font-weight: 700; }
+.fb-own { margin-top: 18px !important; }
+/* honeypot — parked off-screen rather than display:none, which some bots skip */
+.fb-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* --- film page --- */
 .film-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
@@ -734,6 +768,12 @@ footer a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 640px) {
+  /* the logo alone fills a phone line, so the switch would push the header to
+     three rows. Reorder instead: logo on top, then DE/EN hard left with the
+     date + ✉ opposite it — same height as before, still fully left */
+  .brand { order: 1; width: 100%; }
+  .lang-switch { order: 2; margin-right: auto; }
+  .topbar-right { order: 3; }
   .grid2 { grid-template-columns: 1fr; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
   .card { contain-intrinsic-size: auto 290px; }
