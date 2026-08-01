@@ -84,6 +84,8 @@ const T = {
     thanksPost: 'für Berlin — danke! 🧡',
     tickets: 'Tickets',
     ticketsTitle: 'Tickets beim Kino kaufen',
+    info: 'Infos',
+    infoTitle: 'Zur Seite des Kinos — dort steht, wie du reinkommst',
     contact: 'Kontakt & Impressum',
     contactBtn: 'Feedback & Impressum',
     contactIntro: 'Kino Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
@@ -240,6 +242,8 @@ const T = {
     thanksPost: 'for Berlin — thank you! 🧡',
     tickets: 'Tickets',
     ticketsTitle: 'Buy tickets at the cinema',
+    info: 'Info',
+    infoTitle: "To the cinema's own page — it says there how to get in",
     contact: 'Contact & legal notice',
     contactBtn: 'Feedback & legal notice',
     contactIntro: 'Kino Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
@@ -586,6 +590,20 @@ function Rating({ value, label, emoji, href, title }) {
   )
 }
 
+// Per-cinema facts that come with the program rather than from prices.js —
+// city, website, and whether the cinema sells tickets online at all. Filled once
+// from movies.json as it arrives, before anything renders, so the screening
+// boxes can read it without every component passing the map down.
+let CINEMA_META = {}
+
+// A venue marked ticketing: "info" has no ticket shop we can link into: the
+// Kinemathek's two open-airs sell through their own event page, and the
+// Stummfilmtage sell nothing at all because entry is free. Their screenings get
+// an "Infos" link of exactly the same size as the Tickets button — the same
+// affordance, without claiming you can buy there.
+const isInfoOnly = (cinema) => CINEMA_META[cinema]?.ticketing === 'info'
+const ticketNote = (cinema, ui) => CINEMA_META[cinema]?.ticket_note?.[ui]
+
 // The screening list of one film, grouped by cinema and then by day.
 function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
   const byCinema = {}
@@ -606,6 +624,7 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
         // total for the visitor's party across this film's screenings there
         const cfg = CINEMA_PRICES[times[0].cinema]
         const cheap = cfg && cheapestTotal(cfg, movie, times, party, { threeD }, live)
+        const note = ticketNote(times[0].cinema, ui)
         return (
           <div className="cinema-row" key={cinema}>
             <div className="cinema-head">
@@ -616,6 +635,8 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
                 </button>
               )}
             </div>
+            {/* how you actually get in, where that isn't "click Tickets" */}
+            {note && <p className="cinema-note">{note}</p>}
             {Object.keys(byDay).sort().map((d) => (
               <div className="day-times" key={d}>
                 <span className="day-label">{fmtDayShort(d, t)}</span>
@@ -632,8 +653,13 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
                       </div>
                       <div className="showbox-acts">
                         {tm.booking_url && (
-                          <a className="show-tix" href={tm.booking_url} target="_blank" rel="noreferrer"
-                            title={t.ticketsTitle}>🎟️ {t.tickets}</a>
+                          isInfoOnly(tm.cinema) ? (
+                            <a className="show-tix show-info" href={tm.booking_url}
+                              target="_blank" rel="noreferrer" title={t.infoTitle}>ℹ️ {t.info}</a>
+                          ) : (
+                            <a className="show-tix" href={tm.booking_url} target="_blank" rel="noreferrer"
+                              title={t.ticketsTitle}>🎟️ {t.tickets}</a>
+                          )
                         )}
                         <a className="cal-btn" href={icsHref(movie, tm, ui)}
                           download={`${displayTitle(movie, ui).replace(/[^\w äöüÄÖÜß-]/g, '')}.ics`}
@@ -1210,8 +1236,13 @@ function DayPlan({ items, onOpen, t, ui }) {
                 <span className={`lang-tag plan-lang lang-${s.language.toLowerCase()}`}>{s.language}</span>
                 <span className="plan-cinema">{s.cinema} · {s.city}</span>
                 {s.booking_url && (
-                  <a className="plan-ticket" href={s.booking_url} target="_blank" rel="noreferrer"
-                    title={t.ticketsTitle}>🎟️ {t.tickets}</a>
+                  isInfoOnly(s.cinema) ? (
+                    <a className="plan-ticket plan-info" href={s.booking_url} target="_blank"
+                      rel="noreferrer" title={t.infoTitle}>ℹ️ {t.info}</a>
+                  ) : (
+                    <a className="plan-ticket" href={s.booking_url} target="_blank" rel="noreferrer"
+                      title={t.ticketsTitle}>🎟️ {t.tickets}</a>
+                  )
                 )}
               </div>
             ))}
@@ -1550,7 +1581,8 @@ export default function App() {
         if (!r.ok) throw new Error(`HTTP ${r.status}`)
         return r.json()
       })
-    req.then(setData).catch((e) => setError(String(e)))
+    req.then((d) => { CINEMA_META = d.cinemas || {}; setData(d) })
+      .catch((e) => setError(String(e)))
   }, [])
 
   // original languages present in the data, most common first, for the

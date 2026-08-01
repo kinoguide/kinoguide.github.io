@@ -13,7 +13,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-from sources import kinoheld, custom, kinopolis, cineorder
+from sources import kinoheld, custom, kinopolis, cineorder, kinemathek, stummfilmtage
 from enrich import tmdb, omdb, letterboxd
 from language import clean_title
 
@@ -38,7 +38,10 @@ def load_env() -> None:
 load_env()
 
 SOURCES = {"kinoheld": kinoheld.fetch_shows, "custom": custom.fetch_shows,
-           "kinopolis": kinopolis.fetch_shows}
+           "kinopolis": kinopolis.fetch_shows,
+           # venues with no ticket feed of their own — see cinemas.json
+           "kinemathek": kinemathek.fetch_shows,
+           "stummfilmtage": stummfilmtage.fetch_shows}
 
 
 def load_cinemas() -> list[dict]:
@@ -186,7 +189,15 @@ def main() -> None:
 
     result.sort(key=lambda m: m["ratings"]["imdb"] or 0, reverse=True)
     # static per-cinema facts for the frontend
-    cinema_info = {c["name"]: {"city": c["city"], "website": c.get("website")}
+    # "ticketing" and "ticket_note" are what let the frontend tell a bookable
+    # screening from one you simply turn up to: "info" swaps the Tickets button
+    # for an Infos link and prints the note on the cinema's row.
+    cinema_info = {c["name"]: {k: v for k, v in
+                               (("city", c["city"]),
+                                ("website", c.get("website")),
+                                ("ticketing", c.get("ticketing")),
+                                ("ticket_note", c.get("ticket_note")))
+                               if v is not None}
                    for c in load_cinemas()}
     payload = {"generated_at": datetime.now(timezone.utc).isoformat(),
                "cinemas": cinema_info,

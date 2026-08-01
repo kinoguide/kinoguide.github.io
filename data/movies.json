@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-01T20:23:49.019970+00:00",
+ "generated_at": "2026-08-01T21:43:03.957456+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -24,6 +24,33 @@
   "Stern Lichtspiele": {
    "city": "Bonn",
    "website": "https://www.cinestar.de/kino-bonn-sternlichtspiele"
+  },
+  "Open Air Bundeskunsthalle": {
+   "city": "Bonn",
+   "website": "https://www.bonnerkinemathek.de/programm/open-air-kino-auf-dem-dach-der-bundeskunsthalle/",
+   "ticketing": "info",
+   "ticket_note": {
+    "de": "Karten gibt es über die Seite des Kinos (cinetixx). Einlass 19.30 Uhr, Beginn 20.30 Uhr — bei schlechtem Wetter läuft der Film im Forum der Bundeskunsthalle.",
+    "en": "Tickets are sold through the cinema's own page (cinetixx). Doors 7.30 pm, start 8.30 pm — in bad weather the film moves into the Forum of the Bundeskunsthalle."
+   }
+  },
+  "Open Air Friesdorfer Freibad": {
+   "city": "Bonn",
+   "website": "https://www.bonnerkinemathek.de/programm/",
+   "ticketing": "info",
+   "ticket_note": {
+    "de": "Karten gibt es über die Seite des Kinos (cinetixx). Einlass ab 19 Uhr, Schwimmbadnutzung bis 21.10 Uhr, Beginn 21.30 Uhr.",
+    "en": "Tickets are sold through the cinema's own page (cinetixx). Doors from 7 pm, the pool stays open until 9.10 pm, film starts 9.30 pm."
+   }
+  },
+  "Stummfilmtage Bonn": {
+   "city": "Bonn",
+   "website": "https://www.internationale-stummfilmtage.de",
+   "ticketing": "info",
+   "ticket_note": {
+    "de": "Eintritt frei — es gibt keine Tickets. Einlass ab 19 Uhr in den Arkadenhof der Universität, Plätze der Reihe nach; um eine Spende wird gebeten.",
+    "en": "Free admission — there are no tickets at all. Doors from 7 pm in the university's Arkadenhof, seats first come first served; donations welcome."
+   }
   },
   "Arthaus-Kino im LandesMuseum": {
    "city": "Bonn",
@@ -705,6 +732,13 @@
      "datetime": "2026-09-03T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870737"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-03T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/verflucht-normal-6/"
     }
    ]
   },
@@ -2105,6 +2139,13 @@
      "datetime": "2026-08-28T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870749"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-08-28T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/die-odyssee/"
     }
    ]
   },
@@ -2238,6 +2279,13 @@
      "datetime": "2026-09-05T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870731"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-05T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/der-astronaut-project-hail-mary-5/"
     }
    ]
   },
@@ -2527,6 +2575,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=126827367"
     },
     {
+     "cinema": "Open Air Friesdorfer Freibad",
+     "city": "Bonn",
+     "datetime": "2026-08-08T21:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/filmnaechte-im-friesdorfer-freibad-der-weisse-hai/"
+    },
+    {
      "cinema": "Filmforum NRW",
      "city": "Köln",
      "datetime": "2026-08-12T20:30:00+02:00",
@@ -2539,6 +2594,45 @@
      "datetime": "2026-08-16T19:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127754003"
+    }
+   ]
+  },
+  {
+   "id": "tt0441473",
+   "title_de": "Schatten der Weltstadt",
+   "title_original": "Schatten der Weltstadt",
+   "year": 1925,
+   "release_date": "1925-11-16",
+   "runtime": 108,
+   "poster": "https://image.tmdb.org/t/p/w342/bvXsxAyppNPL1mgkrajrj9oS2vR.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": "deutscher Spielfilm",
+   "overview_en": "An unscrupulous husband exploits his beautiful wife to advance his own career. When he dies under mysterious circumstances, she is accused of murder. To clear her name, the widow ventures into the Parisian underworld in search of the real killer.",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Willi Wolff"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 8.1,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-17T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/schatten-der-weltstadt-de"
     }
    ]
   },
@@ -2695,7 +2789,7 @@
      "cinema": "Cinedom",
      "city": "Köln",
      "datetime": "2026-08-01T23:10:00+02:00",
-     "language": "OV",
+     "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=F4E71000023RFGKYDT"
     },
     {
@@ -3726,6 +3820,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870753"
     },
     {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-08-31T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/das-fluestern-der-waelder/"
+    },
+    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-12-02T14:30:00+01:00",
@@ -4019,6 +4120,13 @@
      "datetime": "2026-08-29T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870725"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-08-29T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/one-battle-after-another-14/"
     }
    ]
   },
@@ -4102,6 +4210,47 @@
      "datetime": "2026-08-10T21:30:00+02:00",
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/koeln/cinenova-kino-koeln/vorstellungen?showId=127583687"
+    }
+   ]
+  },
+  {
+   "id": "tt0053472",
+   "title_de": "Außer Atem",
+   "title_original": "À bout de souffle",
+   "year": 1960,
+   "release_date": "1960-03-16",
+   "runtime": 87,
+   "poster": "https://image.tmdb.org/t/p/w342/D1YIS8ljrSxCZvru88OVTgIjid.jpg",
+   "genres": [
+    "Drama",
+    "Krimi",
+    "Liebesfilm"
+   ],
+   "age_rating": 16,
+   "overview_de": "Michel Poiccard – ein Gauner, Rebell, Draufgänger auf der Jagd nach seinem Vergnügen. In einer gestohlenen Luxuslimousine ist er auf dem Weg nach Paris. Weil er bei einer Baustelle die zulässige Höchstgeschwindigkeit überschritt, verfolgen ihn zwei Polizisten auf Motorrädern und halten ihn an. Ein Polizist erkennt und stellt ihn – und wird von Michel kaltblütig erschossen. In Paris sucht er einen Komplizen auf, bei dem ein Kuvert für ihn deponiert ist. Aber der Verrechnungsscheck, den er daraus hervorzieht, hilft ihm nicht weiter. Auf der Flucht vor dem Gesetz taucht er bei Patricia, einer Zeitungsverkäuferin, die Journalistin werden will, unter. Zwischen beiden entbrennt eine heftige Leidenschaft. Er versucht Geld für die gemeinsame Flucht nach Italien zu beschaffen. Aber der Kreis der Polizei wird immer enger. Patricia wird verhört und sie muss sich entscheiden: Karriere oder Liebhaber?",
+   "overview_en": "A small-time thief steals a car and impulsively murders a motorcycle policeman. Wanted by the authorities, he attempts to persuade a girl to run away to Italy with him.",
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "Jean-Luc Godard"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=UoICuMPOWrk",
+   "ratings": {
+    "imdb": 7.6,
+    "metascore": 96,
+    "letterboxd": 3.89
+   },
+   "showtimes": [
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-06T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/ausser-atem-4/"
     }
    ]
   },
@@ -5050,11 +5199,60 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=126827373"
     },
     {
+     "cinema": "Open Air Friesdorfer Freibad",
+     "city": "Bonn",
+     "datetime": "2026-08-07T21:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/filmnaechte-im-friesdorfer-freibad-glennkill-ein-schafskrimi/"
+    },
+    {
      "cinema": "Arthaus-Kino im LandesMuseum",
      "city": "Bonn",
      "datetime": "2026-08-11T19:30:00+02:00",
      "language": "DE",
      "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=2613000330&showId=3577887438&bgswitch=false&resize=false"
+    }
+   ]
+  },
+  {
+   "id": "tt30319823",
+   "title_de": "Gaucho Gaucho",
+   "title_original": "Gaucho Gaucho",
+   "year": 2024,
+   "release_date": "2024-10-25",
+   "runtime": 84,
+   "poster": "https://image.tmdb.org/t/p/w342/5fsF07O35i1PNPbp1Np62cJs36d.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": null,
+   "overview_de": "\"Gaucho Gaucho\" beginnt mit einer makellos gerahmten, üppig monochromen Aufnahme von etwas, das nur auf den ersten Blick als ein nicht identifiziertes liegendes Objekt beschrieben werden kann. Auf einer flachen, verfilzten Wiese, unter einem weiten Himmel, zentriert die Kamera einen grossen, dunklen Klumpen, bei dem es sich um Felsen, Erde oder tierisches Material handeln könnte. Schliesslich bewegt er sich und enthüllt die Falten seiner Zusammensetzung. Ein Mann erhebt sich aus seinem Schlummer, gekleidet in hohe Stiefel, einen breitkrempigen Hut und Schichten von strapazierfähigem Stoff; dann taucht der Kopf eines Pferdes aus der Masse auf, schüttelt und schnaubt und kehrt unbeholfen auf seine Füsse zurück. Es ist eine treffende visuelle Darstellung der engen Verwandtschaft zwischen Mensch, Tier und Landschaft, die die argentinische Cowboy-Gemeinschaft ausmacht.",
+   "overview_en": "A celebration of a community of Argentine cowboys and cowgirls, known as Gauchos, living beyond the boundaries of the modern world.",
+   "original_language": "es",
+   "countries": [
+    "AR",
+    "GR",
+    "US"
+   ],
+   "directors": [
+    "Michael Dweck",
+    "Gregory Kershaw"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=hYdu9yJWWvQ",
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 7.5,
+    "metascore": null,
+    "letterboxd": 3.62
+   },
+   "showtimes": [
+    {
+     "cinema": "OFF Broadway",
+     "city": "Köln",
+     "datetime": "2026-08-18T20:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=126732423"
     }
    ]
   },
@@ -5662,6 +5860,13 @@
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870747"
     },
     {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-08-27T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/vaterland-vorpremiere-vor-dem-kino-start/"
+    },
+    {
      "cinema": "Weisshaus Kino",
      "city": "Köln",
      "datetime": "2026-09-01T14:30:00+02:00",
@@ -5674,6 +5879,87 @@
      "datetime": "2026-09-01T19:00:00+02:00",
      "language": "DE",
      "booking_url": "https://t.rausgegangen.de/tickets/vaterland-award-winner"
+    }
+   ]
+  },
+  {
+   "id": "tt0014872",
+   "title_de": "Zwischenspiel",
+   "title_original": "Entr'acte",
+   "year": 1924,
+   "release_date": "1924-12-04",
+   "runtime": 22,
+   "poster": "https://image.tmdb.org/t/p/w342/AjgQQsO9e1R9fU0wepy6OASuaVt.jpg",
+   "genres": [
+    "Komödie",
+    "Fantasy"
+   ],
+   "age_rating": null,
+   "overview_de": "Der Kurzfilm wurde als Zwischenspiel für die Ballets-Suédois-Produktion Relâche im Pariser Théâtre des Champs-Élysées uraufgeführt",
+   "overview_en": "Stop-motion photography blends with extreme slow-motion in Clair's first and most dada film, composed of a series of zany, interconnected scenes. We witness a rooftop chess match between Marcel Duchamp and Man Ray, a hearse pulled by a camel (and chased by its pallbearers) and a dizzying roller coaster finale. A film of contradictions and agreements.",
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "René Clair"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 7.3,
+    "metascore": null,
+    "letterboxd": 3.7
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-14T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/entracte-de"
+    }
+   ]
+  },
+  {
+   "id": "tt29002950",
+   "title_de": "Resurrection",
+   "title_original": "狂野时代",
+   "year": 2025,
+   "release_date": "2025-11-22",
+   "runtime": 159,
+   "poster": "https://image.tmdb.org/t/p/w342/7d6WuKV5foUTfp1vHkR3luXVP1S.jpg",
+   "genres": [
+    "Science Fiction",
+    "Drama"
+   ],
+   "age_rating": 16,
+   "overview_de": "In einer Welt, in der die Menschheit zugunsten des ewigen Lebens das Träumen aufgegeben hat, begibt sich ein junger Namenloser auf eine fantastische Odyssee durch Zeit und Raum, um die Träume vor dem Vergessen zu bewahren.  Mit seinem dritten Film RESURRECTION hat Ausnahmeregisseur Bi Gan (LONG DAY'S JOURNEY INTO NIGHT) ein bildgewaltiges Werk von rauschhafter Fantasie erschaffen, wie es das Kino nur selten wagt – eine Sinnesreise durch die tiefsten Sehnsüchte des Menschseins, deren Bilder noch lange nachhallen. Bi Gan ist ein vom Kino Besessener, so wie sein Protagonist ein vom Träumen Besessener ist, und wurde für RESURRECTION bei den Filmfestspielen von Cannes mit dem Spezialpreis der Jury ausgezeichnet. In den Hauptrollen: Der chinesische Superstar Jackson Yee und die unvergleichliche Shu Qi (THE ASSASSIN).",
+   "overview_en": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+   "original_language": "zh",
+   "countries": [
+    "CN",
+    "FR"
+   ],
+   "directors": [
+    "毕赣"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=citJNWcWEqg",
+   "trailer_en": "https://www.youtube.com/watch?v=ZIJezWgFUEY",
+   "ratings": {
+    "imdb": 7.3,
+    "metascore": 86,
+    "letterboxd": 4.07
+   },
+   "showtimes": [
+    {
+     "cinema": "Lichtspiele Kalk",
+     "city": "Köln",
+     "datetime": "2026-08-01T17:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellungen?showId=127817749"
     }
    ]
   },
@@ -6128,6 +6414,85 @@
    ]
   },
   {
+   "id": "tt0131461",
+   "title_de": "The Life and Death of 9413: A Hollywood Extra",
+   "title_original": "The Life and Death of 9413: A Hollywood Extra",
+   "year": 1928,
+   "release_date": "1928-06-16",
+   "runtime": 14,
+   "poster": "https://image.tmdb.org/t/p/w342/vkAztjmoLCYB2wEHleN8SYaCww4.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "This short experimental film tells the story of a man who comes to Hollywood to become a star, only to fail and be dehumanized. He is identified by the number 9413 written on his forehead.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Robert Florey",
+    "Slavko Vorkapich"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 7.1,
+    "metascore": null,
+    "letterboxd": 3.73
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-19T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/the-life-and-death-of-9413-a-hollywood-extra-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0017414",
+   "title_de": "Soldier Man",
+   "title_original": "Soldier Man",
+   "year": 1926,
+   "release_date": "1926-05-01",
+   "runtime": 31,
+   "poster": "https://image.tmdb.org/t/p/w342/3o6Lv7vPiqxr3VQCMS8ZUd057jQ.jpg",
+   "genres": [
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "After the armistice of WW1, one U.S. soldier remains unaccounted for. He's wandering the fields of fictional Balkan state Bomania, hungry, thinking the war is still on. To his detriment, the unpopular king of Bomania bears a striking resemblance to him.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Harry Edwards"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 7.1,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-22T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/soldier-man-de"
+    }
+   ]
+  },
+  {
    "id": "tt0100405",
    "title_de": "Pretty Woman",
    "title_original": "Pretty Woman",
@@ -6336,6 +6701,46 @@
    ]
   },
   {
+   "id": "tt0017028",
+   "title_de": "Fünf Minuten Angst",
+   "title_original": "Kid Boots",
+   "year": 1926,
+   "release_date": "1926-10-03",
+   "runtime": 71,
+   "poster": "https://image.tmdb.org/t/p/w342/h0Q7KwGfa1eXdhOw9DDL1ufLr1n.jpg",
+   "genres": [
+    "Komödie",
+    "Liebesfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "A salesman is helped out of a jam with an angry customer by a wealthy playboy. In return, he agrees to help the playboy get a divorce from his wife, only to find himself falling for the girlfriend of the customer who got him in trouble in the first place.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Frank Tuttle"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 7.0,
+    "metascore": null,
+    "letterboxd": 3.43
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-15T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/kid-boots"
+    }
+   ]
+  },
+  {
    "id": "tt32909489",
    "title_de": "Jeunes mères - Junge Mütter",
    "title_original": "Jeunes mères",
@@ -6514,47 +6919,6 @@
    ]
   },
   {
-   "id": "tt3104988",
-   "title_de": "Crazy Rich",
-   "title_original": "Crazy Rich Asians",
-   "year": 2018,
-   "release_date": "2018-08-15",
-   "runtime": 121,
-   "poster": "https://image.tmdb.org/t/p/w342/pqn162738WCeYqyFkvwH3aHFgyg.jpg",
-   "genres": [
-    "Komödie",
-    "Liebesfilm"
-   ],
-   "age_rating": 6,
-   "overview_de": "In „Crazy Rich“ begleitet die geborene New Yorkerin Rachel Chu ihren langjährigen Lebensgefährten Nick Young zur Hochzeit seines besten Freundes nach Singapur. Rachel freut sich riesig auf ihre erste Asienreise, doch die Begegnung mit Nicks Familie steht ihr sehr bevor. Völlig unvorbereitet erfährt sie nun etliche Einzelheiten aus Nicks Leben, die er ihr bisher vorenthalten hat: Wie sich herausstellt, ist er nicht nur der Spross einer der reichsten Familien des Landes, sondern auch einer der begehrtesten Junggesellen. Weil Rachel an Nicks Seite auftaucht, gerät sie sofort ins Visier eifersüchtiger Schickeria-Typen. Und was noch schlimmer ist: Nicks eigene Mutter ist mit Rachel nicht einverstanden und nimmt sie entsprechend aufs Korn. Bald wird überdeutlich, dass man mit Geld zwar keine Liebe kaufen kann – aber komplizierter wird sie dadurch auf jeden Fall.",
-   "overview_en": "An American-born Chinese economics professor accompanies her boyfriend to Singapore for his best friend's wedding, only to get thrust into the lives of Asia's rich and famous.",
-   "original_language": "en",
-   "countries": [
-    "US",
-    "HK"
-   ],
-   "directors": [
-    "Jon M. Chu"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=SAAl_kFAt1s",
-   "trailer_en": "https://www.youtube.com/watch?v=ZQ-YX-5bAs0",
-   "ratings": {
-    "imdb": 6.9,
-    "metascore": 74,
-    "letterboxd": 3.54
-   },
-   "showtimes": [
-    {
-     "cinema": "Filmforum NRW",
-     "city": "Köln",
-     "datetime": "2026-08-14T18:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellungen?showId=126314775"
-    }
-   ]
-  },
-  {
    "id": "tt30825738",
    "title_de": "Star Wars: The Mandalorian and Grogu",
    "title_original": "The Mandalorian and Grogu",
@@ -6676,6 +7040,87 @@
      "datetime": "2026-09-01T20:30:00+02:00",
      "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/DFF65000023GNFNDWF"
+    }
+   ]
+  },
+  {
+   "id": "tt0014218",
+   "title_de": "Eine abenteuerliche Seereise",
+   "title_original": "The Love Nest",
+   "year": 1923,
+   "release_date": "1923-03-01",
+   "runtime": 24,
+   "poster": "https://image.tmdb.org/t/p/w342/7a9i1jw1BE87l5yjZXsyCztoUh4.jpg",
+   "genres": [
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": "Um seinem Leben und seiner verlorenen Liebe zu entfliehen, setzt Buster in seinem kleinen Boot Amor die Segel, stößt aber auf den Walfänger \"The Love Nest\". Der Kapitän ist ein gnadenloser Kerl, der seine Mannschaft schon für das kleinste Vergehen bestraft.  Nachdem der Steward ihm eine Tasse heißen Tee über die Hand gegossen hat, wirft er ihn kurzerhand über Bord und ersetzt ihn durch Buster. Trotz einer Reihe von Missgeschicken gelingt es Buster schließlich, dem Schicksal der anderen Besatzungsmitglieder zu entgehen.",
+   "overview_en": "In an attempt to forget his lost sweetheart, Buster takes a long trip at sea where he boards a whaling ship with a strict captain.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Buster Keaton",
+    "Edward F. Cline"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.8,
+    "metascore": null,
+    "letterboxd": 3.44
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-16T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/the-love-nest-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0018927",
+   "title_de": "The Garden of Eden",
+   "title_original": "The Garden of Eden",
+   "year": 1928,
+   "release_date": "1928-02-04",
+   "runtime": 76,
+   "poster": "https://image.tmdb.org/t/p/w342/oLidwiRfjqjgEs4fjv0DQHbN6Rm.jpg",
+   "genres": [
+    "Drama",
+    "Komödie",
+    "Liebesfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Toni Le Brun, a beautiful Viennese singer, becomes the ward of the wardrobe mistress of a Monte Carlo nightclub. Her benefactor, however, is actually a baroness incognito. Toni falls in love with the handsome Richard, but as they prepare to marry, she comes to believe he is only after the wealth accompanying her new noble status. But truth, like true love, will not be kept secret long.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Lewis Milestone"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.8,
+    "metascore": null,
+    "letterboxd": 3.46
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-21T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/der-garten-eden-de"
     }
    ]
   },
@@ -7540,6 +7985,86 @@
    ]
   },
   {
+   "id": "tt0017378",
+   "title_de": "Der Mantel",
+   "title_original": "Шинель",
+   "year": 1926,
+   "release_date": "1926-05-10",
+   "runtime": 63,
+   "poster": "https://image.tmdb.org/t/p/w342/kWHtSfrcMzGOgfevPyGaXJBMhNa.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Soviet film based on \"Nevsky Prospekt\" and \"The Overcoat\" by Nikolai Gogol.",
+   "original_language": "ru",
+   "countries": [
+    "SU"
+   ],
+   "directors": [
+    "Григорий Козинцев",
+    "Леонид Трауберг"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.6,
+    "metascore": null,
+    "letterboxd": 3.35
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-15T22:45:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/sinel-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0018394",
+   "title_de": "Sollten Männer nach Hause laufen?",
+   "title_original": "Should Men Walk Home?",
+   "year": 1927,
+   "release_date": "1927-01-29",
+   "runtime": 27,
+   "poster": "https://image.tmdb.org/t/p/w342/p5fH61sX6HgwCRP28RRSEUyPbMM.jpg",
+   "genres": [
+    "Komödie",
+    "Krimi"
+   ],
+   "age_rating": null,
+   "overview_de": "Unwiderstehliche Taschendiebin trifft beim Trampen auf einen Juwelendieb, der sie zu einem gemeinsamen Raubzug überredet.",
+   "overview_en": "Mabel plays an out-and-out crook, a Girl Bandit, no less. And she quickly hooks up with a male partner in crime, in this case a Gentleman Crook played by perpetually grinning Creighton Hale. Mabel seems a little livelier in this film than in some of her other late works. In the very first scene we find her hitch-hiking, and she's forced to make a mad dash for cover when Hale's car nearly hits her. Soon they team up and crash a swanky party in a mansion to steal a jewel from the host's safe.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Leo McCarey"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.6,
+    "metascore": null,
+    "letterboxd": 3.44
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-17T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/should-men-walk-home-de"
+    }
+   ]
+  },
+  {
    "id": "tt8667404",
    "title_de": "The Chronology of Water",
    "title_original": "The Chronology of Water",
@@ -7941,6 +8466,86 @@
    ]
   },
   {
+   "id": "tt0020941",
+   "title_de": "Die große Sehnsucht",
+   "title_original": "Die große Sehnsucht",
+   "year": 1930,
+   "release_date": "1930-08-24",
+   "runtime": 100,
+   "poster": "https://image.tmdb.org/t/p/w342/zkkCUJqTt8qQqoHfRV4m3cZlZBT.jpg",
+   "genres": [
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": "In einem Filmatelier wird ein großer Film mit vielen prominenten Stars vorbereitet. Der Regisseur ist auf der Suche nach einem Ersatz für seine bisherige Hauptdarstellerin, und da sein Blick dabei zufällig auf die Komparsin Eva fällt, nimmt diese all ihren Mut zusammen und bewirbt sich für die Rolle. Tatsächlich erhält sie eine Chance, übt mit ihrem Freund Paul, wird zu Proben mit Fritz Kortner eingeladen und für die Hauptrolle engagiert. Es kommen Gerüchte über eine Affäre mit dem Regisseur auf, die schließlich zum Bruch mit Paul führen. Eva beschließt, sich voll und ganz auf ihre Karriere zu konzentrieren.",
+   "overview_en": "A young woman leaves behind her job, home and family to try to make it in the movie business. Features cameos from about three dozen German film stars of the era.",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Steve Sekely"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.4,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-19T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/die-grosse-sehnsucht-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0443474",
+   "title_de": "Crazy",
+   "title_original": "Crazy",
+   "year": 2008,
+   "release_date": "2008-03-02",
+   "runtime": 106,
+   "poster": "https://image.tmdb.org/t/p/w342/yzUc0Z0S2Rclvf4nVMey7mZOpy0.jpg",
+   "genres": [
+    "Musik",
+    "Drama",
+    "Liebesfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Crazy is the story of a legendary guitar player who emerged from Nashville in the 1950s. Blessed with incomparable, natural talent, Hank Garland quickly established his reputation as the finest sessions player in Nashville.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "Rick Bieber"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=AagayQ8oc_Y",
+   "ratings": {
+    "imdb": 6.4,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Filmforum NRW",
+     "city": "Köln",
+     "datetime": "2026-08-14T18:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellungen?showId=126314775"
+    }
+   ]
+  },
+  {
    "id": "tt28650488",
    "title_de": "Der Super Mario Galaxy Film",
    "title_original": "The Super Mario Galaxy Movie",
@@ -8330,47 +8935,6 @@
    ]
   },
   {
-   "id": "tt0118583",
-   "title_de": "Alien - Die Wiedergeburt",
-   "title_original": "Alien Resurrection",
-   "year": 1997,
-   "release_date": "1997-11-12",
-   "runtime": 109,
-   "poster": "https://image.tmdb.org/t/p/w342/sY6kHvQoRpDFPaV7LcspGSoCCN2.jpg",
-   "genres": [
-    "Science Fiction",
-    "Horror",
-    "Action"
-   ],
-   "age_rating": 16,
-   "overview_de": "200 Jahre nach ihrem Tod wird Ellen Ripley von skrupellosen Militär-Wissenschaftlern an Bord des terranischen Raumkreuzers U.S.M. Auriga wieder zum Leben erweckt: In einer Testreihe werden die Gene ihrer Überreste so oft geklont, bis es gelingt, sie und die Alien-Königin in ihrem Körper lebensfähig zu halten. Wider Erwarten überlebt sie den Eingriff, bei dem die Königin operativ aus dem Körper entfernt wird. Die Wissenschaftler wollen die xenomorphen Aliens für den militärischen Einsatz weiterzüchten. Zu diesem Zweck benötigen sie Wirtskörper, die ihnen von Weltraumpiraten in Form von entführten Kolonisten geliefert werden. Bald schon schlüpfen die ersten Aliens, die in vermeintlich ausbruchsicheren Käfigen untergebracht werden.",
-   "overview_en": "Two hundred years after Lt. Ripley died, a group of scientists clone her, hoping to breed the ultimate weapon. But the new Ripley is full of surprises … as are the new aliens. Ripley must team with a band of smugglers to keep the creatures from reaching Earth.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Jean-Pierre Jeunet"
-   ],
-   "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=Tcv0U92BZL0",
-   "trailer_en": "https://www.youtube.com/watch?v=vu1tVYGsJ1Q",
-   "ratings": {
-    "imdb": 6.2,
-    "metascore": 62,
-    "letterboxd": 2.63
-   },
-   "showtimes": [
-    {
-     "cinema": "Lichtspiele Kalk",
-     "city": "Köln",
-     "datetime": "2026-08-01T17:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/lichtspiele-koeln-kalk/vorstellungen?showId=127817749"
-    }
-   ]
-  },
-  {
    "id": "tt8814476",
    "title_de": "Supergirl",
    "title_original": "Supergirl",
@@ -8408,6 +8972,46 @@
      "datetime": "2026-08-02T11:00:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=7ED71000023RFGKYDT"
+    }
+   ]
+  },
+  {
+   "id": "tt0205107",
+   "title_de": "Guo Feng",
+   "title_original": "國風",
+   "year": 1935,
+   "release_date": "1935-05-13",
+   "runtime": 104,
+   "poster": "https://image.tmdb.org/t/p/w342/fzp9Z8uxVFylGiK50pswtjbsCw.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "In 1930, two sisters from the countryside, the serious Zhang Lan and the frivolous Zhang Tao graduate from secondary school where their mother Zhang Jie serves as principal. They both love their cousin Zuo, but have ambitions other than marriage. Their lives change dramatically when both attend university in Shanghai and encounter modern urban life and rapidly changing society. The film also depicts the emergence of Chiang Kai-shek's 1934 New Life Movement. Lianhua Film Studio did the film to appease the Nationalist Party which accused it of primarily presenting left-wing films, which was true.",
+   "original_language": "zh",
+   "countries": [
+    "CN"
+   ],
+   "directors": [
+    "Ming-Yau Lo",
+    "Zhu Shilin"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 5.9,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-18T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/guo-feng-de"
     }
    ]
   },
@@ -8602,70 +9206,6 @@
    ]
   },
   {
-   "id": "tt39751309",
-   "title_de": "18th Rose",
-   "title_original": "18th Rose",
-   "year": 2026,
-   "release_date": "2026-04-09",
-   "runtime": 131,
-   "poster": "https://image.tmdb.org/t/p/w342/6pUwaXT6tdA6sek8o6SdFYudJDj.jpg",
-   "genres": [
-    "Drama",
-    "Liebesfilm",
-    "Komödie"
-   ],
-   "age_rating": null,
-   "overview_de": "Eine Teenagerin, die vom perfekten Debüt träumt, schließt einen Pakt mit einem Neuling. Doch unerwartete Gefühle und Enthüllungen bedrohen ihre Pläne.",
-   "overview_en": "A spirited teen dreaming of the perfect debut makes a deal with a lonely newcomer, but unexpected feelings and revelations may shatter their plans.",
-   "original_language": "tl",
-   "countries": [
-    "PH"
-   ],
-   "directors": [
-    "Dolly Dulu"
-   ],
-   "tags": [
-    "women_directed"
-   ],
-   "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=7ocRU1SGX7E",
-   "ratings": {
-    "imdb": 5.6,
-    "metascore": null,
-    "letterboxd": 2.89
-   },
-   "showtimes": [
-    {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-08-01T17:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127804421"
-    },
-    {
-     "cinema": "Weisshaus Kino",
-     "city": "Köln",
-     "datetime": "2026-08-04T17:20:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127804451"
-    },
-    {
-     "cinema": "Bonner Kinemathek",
-     "city": "Bonn",
-     "datetime": "2026-09-01T20:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870729"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-09-07T19:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
-    }
-   ]
-  },
-  {
    "id": "tt2186566",
    "title_de": "Das kleine Gespenst",
    "title_original": "Das kleine Gespenst",
@@ -8825,47 +9365,6 @@
      "datetime": "2026-08-13T19:00:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/filmforum-nrw-im-museum-ludwig/vorstellungen?showId=126314765"
-    }
-   ]
-  },
-  {
-   "id": "tt0024050",
-   "title_de": "Gay Gaucho",
-   "title_original": "Gay Gaucho",
-   "year": 1933,
-   "release_date": "1933-11-02",
-   "runtime": 7,
-   "poster": "https://image.tmdb.org/t/p/w342/imC533cWflo35WFu79PChluEdnu.jpg",
-   "genres": [
-    "Animation",
-    "Komödie"
-   ],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": "Cubby the Bear as a young, dapper Gaucho and his adventures as a South American cowboy.",
-   "original_language": "en",
-   "countries": [
-    "US"
-   ],
-   "directors": [
-    "Rollin Hamilton",
-    "Thomas McKimson"
-   ],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": 5.4,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "OFF Broadway",
-     "city": "Köln",
-     "datetime": "2026-08-18T20:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellungen?showId=126732423"
     }
    ]
   },
@@ -9280,13 +9779,6 @@
      "datetime": "2026-08-01T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=E3E71000023RFGKYDT"
-    },
-    {
-     "cinema": "Kinopolis Bad Godesberg",
-     "city": "Bonn",
-     "datetime": "2026-08-01T22:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/40B75000023GNFNDWF"
     },
     {
      "cinema": "Cinedom",
@@ -13846,6 +14338,74 @@
    ]
   },
   {
+   "id": "tt25399154",
+   "title_de": "Rose",
+   "title_original": "Rose",
+   "year": 2026,
+   "release_date": "2026-04-17",
+   "runtime": 94,
+   "poster": "https://image.tmdb.org/t/p/w342/9xxcGE5NOtiC5qnNuWwqKqE3iIQ.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": 12,
+   "overview_de": "In den Wirren des 30-jährigen Krieges erscheint ein mysteriöser Soldat in einem abgeschiedenen protestantischen Dorf. Schweigsam, schmal, das Gesicht durch eine Narbe entstellt. Der Fremde behauptet, Erbe eines seit langem verlassenen Gutshofs zu sein, und kann ein Dokument vorlegen, das seinen Anspruch bestätigt. Zum großen Missfallen der Dorfgemeinde. Allerdings setzt der Fremde alles daran, hier sein Glück zu finden. Sein Streben nach Anerkennung und Akzeptanz werden aber durch sein Geheimnis erschwert: Unter falscher Identität, unter falschem Namen und unter Vortäuschung eines falschen Geschlechts hat der Soldat seinen Weg in das Dorf genommen. Doch um seine Ziele zu erreichen, wird er auch nicht vor der Unmöglichkeit einer arrangierten Ehe mit der Tochter eines Großbauern zurückschrecken. Denn wer so weit gekommen ist, hält bald alles für möglich.",
+   "overview_en": "In the turmoil of the Thirty-Years' War, a mysterious soldier appears in a secluded Protestant village claiming to be heir to a long-abandoned manor. His quest for recognition and acceptance are complicated by his secret: under a false identity, false name, and pretense of a false gender, he has made his way to the village. But to achieve her goals, Rose, as the soldier is actually called, will stop at nothing.",
+   "original_language": "de",
+   "countries": [
+    "AT",
+    "DE"
+   ],
+   "directors": [
+    "Markus Schleinzer"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=Lg6bapVHxLc",
+   "trailer_en": "https://www.youtube.com/watch?v=80xR3G5eowo",
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": 3.87
+   },
+   "showtimes": [
+    {
+     "cinema": "Weisshaus Kino",
+     "city": "Köln",
+     "datetime": "2026-08-01T17:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127804421"
+    },
+    {
+     "cinema": "Weisshaus Kino",
+     "city": "Köln",
+     "datetime": "2026-08-04T17:20:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/weisshaus-kino-koeln/vorstellungen?showId=127804451"
+    },
+    {
+     "cinema": "Bonner Kinemathek",
+     "city": "Bonn",
+     "datetime": "2026-09-01T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870729"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-01T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/rose-2/"
+    },
+    {
+     "cinema": "Kinopolis Bad Godesberg",
+     "city": "Bonn",
+     "datetime": "2026-09-07T19:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E1275000023GNFNDWF"
+    }
+   ]
+  },
+  {
    "id": "tt32588798",
    "title_de": "Practical Magic 2 - Zauberhafte Schwestern",
    "title_original": "Practical Magic 2",
@@ -15356,6 +15916,13 @@
      "datetime": "2026-09-02T20:30:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/bonn/bonner-kinemathek-brotfabrik/vorstellungen?showId=127870733"
+    },
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-02T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/ein-kuchen-fuer-den-praesidenten-15/"
     }
    ]
   },
@@ -15674,6 +16241,510 @@
      "datetime": "2026-10-06T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://koeln.premiumkino.de/vorstellung/pans-labyrinth-best-of-cinema/20261006/2015/7MfI0zrLbnQ-_elTSU4bO5_Uzd2aoP6tL3H2HSEZ66E~"
+    }
+   ]
+  },
+  {
+   "id": "ach diese lücke, diese entsetzliche lücke",
+   "title_de": "ACH DIESE LÜCKE, DIESE ENTSETZLICHE LÜCKE",
+   "title_original": "ACH DIESE LÜCKE, DIESE ENTSETZLICHE LÜCKE",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-08-30T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/ach-diese-luecke-diese-entsetzliche-luecke-11/"
+    }
+   ]
+  },
+  {
+   "id": "kurze filme für hohe dächer",
+   "title_de": "KURZE FILME FÜR HOHE DÄCHER",
+   "title_original": "KURZE FILME FÜR HOHE DÄCHER",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Open Air Bundeskunsthalle",
+     "city": "Bonn",
+     "datetime": "2026-09-04T20:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.bonnerkinemathek.de/programm/kurzfilmprogramm-kurze-filme-fuer-hohe-daecher-6/"
+    }
+   ]
+  },
+  {
+   "id": "gösta berling teil 1",
+   "title_de": "Gösta Berling Teil 1",
+   "title_original": "Gösta Berling Teil 1",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-13T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/gosta-berlings-saga-de"
+    }
+   ]
+  },
+  {
+   "id": "gösta berling teil 2",
+   "title_de": "Gösta Berling Teil 2",
+   "title_original": "Gösta Berling Teil 2",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-14T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/gosta-berlings-saga-teil-2"
+    }
+   ]
+  },
+  {
+   "id": "mach mit: stummfilme selbst vertonen!",
+   "title_de": "Mach mit: Stummfilme selbst vertonen!",
+   "title_original": "Mach mit: Stummfilme selbst vertonen!",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-16T11:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/rahmenprogramm-2"
+    }
+   ]
+  },
+  {
+   "id": "buchvorstellung und filmvorführung: der aberglaube",
+   "title_de": "Buchvorstellung und Filmvorführung: Der Aberglaube",
+   "title_original": "Buchvorstellung und Filmvorführung: Der Aberglaube",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-16T14:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/buchvorstellung-und-filmvorfuhrung-der-aberglaube-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0013789",
+   "title_de": "Wonders of the Sea",
+   "title_original": "Wonders of the Sea",
+   "year": 1922,
+   "release_date": "1922-10-14",
+   "runtime": 60,
+   "poster": "https://image.tmdb.org/t/p/w342/hf5MgUlt6vsC3MUedRw5vtXSW0k.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "The ocean depths are explored with the aid of a submarine chamber of Williamson's invention and a few hardy souls. The construction of the device is examined; but most of the footage is given to plant and animal life, a girl swimming among the coral growths, and two divers who encounter a moray and an octopus.",
+   "original_language": "en",
+   "countries": [
+    "US"
+   ],
+   "directors": [
+    "J. Ernest Williamson"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-16T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/wonders-of-the-sea"
+    }
+   ]
+  },
+  {
+   "id": "bubis locken",
+   "title_de": "Bubis Locken",
+   "title_original": "Bubis Locken",
+   "year": 1919,
+   "release_date": "1919-01-01",
+   "runtime": 27,
+   "poster": "https://image.tmdb.org/t/p/w342/2sZ5NjtnFuk3Tq13DKcRLMA8qmZ.jpg",
+   "genres": [
+    "Familie",
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "The end of the school year before summer break. When Bubi is promoted to seventh grade, a few things have to change - starting with his curls. His girlfriend Lotte, whose older sister, Evi, is in love with Bubi’s brother Kurt, is anything but thrilled. To make matters worse, a prank pulled by Bubi causes trouble between Evi and Kurt. Will Bubi be able to set things right?",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Hanna Henning"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-18T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/bubis-locken-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0390893",
+   "title_de": "Béhula",
+   "title_original": "Béhula",
+   "year": 1921,
+   "release_date": "1921-08-20",
+   "runtime": 55,
+   "poster": "https://image.tmdb.org/t/p/w342/z5fAvwt0KAYB7op7JIjVFEEoZo8.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "The merchant Chand Sadagar is a faithful devotee of Chandi, and Manasa attempts to attract him. Rejected by him, Manasa condemns his son, Lakhindar, to perish on the night of his marriage to the beautiful Béhula.",
+   "original_language": "fr",
+   "countries": [
+    "FR",
+    "IN"
+   ],
+   "directors": [
+    "Camille Legrand"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-20T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/behula-de"
+    }
+   ]
+  },
+  {
+   "id": "die göttliche komödie nach dante alighieri",
+   "title_de": "Die Göttliche Komödie nach Dante Alighieri",
+   "title_original": "Die Göttliche Komödie nach Dante Alighieri",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-20T22:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/die-gottliche-komodie-nach-dante-alighieri-de"
+    }
+   ]
+  },
+  {
+   "id": "tt0278899",
+   "title_de": "Adam a Eva",
+   "title_original": "Adam a Eva",
+   "year": 1922,
+   "release_date": "1922-07-22",
+   "runtime": 73,
+   "poster": "https://image.tmdb.org/t/p/w342/a1GbtoVLut4IUjJfRLOOCHGk6ek.jpg",
+   "genres": [
+    "Komödie"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Twins Adam and Eva are so alike, it is impossible to tell them apart, which enables the malicious Eva to get away with all sorts of naughty tricks and leave the blame to fall on Adam. The pair grows up and Adam decides to pay Eva back for the tricks she played on him in the past. When he discovers that the handsome Dr. Prokop Novotný is interested in Eva, he dresses up as Eva and startles the suitor.",
+   "original_language": "cs",
+   "countries": [
+    "XC"
+   ],
+   "directors": [
+    "Václav Binovec"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-21T23:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/das-madel-mit-dem-mannertyp-de"
+    }
+   ]
+  },
+  {
+   "id": "tt21294710",
+   "title_de": "Sam sobi Robinzon",
+   "title_original": "Сам собі Робінзон",
+   "year": 1929,
+   "release_date": "1929-01-01",
+   "runtime": 58,
+   "poster": "https://image.tmdb.org/t/p/w342/1ZZUwVNRvV8LoNTngrVVrRyyC0T.jpg",
+   "genres": [
+    "Abenteuer",
+    "Komödie",
+    "Familie"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Vasja, a bookworm, is constantly lost in daydreams. Inspired by novels like Robinson Crusoe, he experiences the wildest adventures in his imagination. When Vasja embarks on a real-life adventure one day, he is forced to face the sobering realization that real life is very different.",
+   "original_language": "uk",
+   "countries": [
+    "SU"
+   ],
+   "directors": [
+    "Лазар Френкель"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-22T14:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/rahmenprogramm-sam-sobi-robinzon"
+    }
+   ]
+  },
+  {
+   "id": "buchvorstellung und filmvorführung: weimar, weiblich: restaurierte kurzfilme von regisseurinnen",
+   "title_de": "Buchvorstellung und Filmvorführung: Weimar, weiblich: Restaurierte Kurzfilme von Regisseurinnen",
+   "title_original": "Buchvorstellung und Filmvorführung: Weimar, weiblich: Restaurierte Kurzfilme von Regisseurinnen",
+   "year": null,
+   "release_date": null,
+   "runtime": null,
+   "poster": null,
+   "genres": [],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": null,
+   "original_language": null,
+   "countries": [],
+   "directors": [],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-22T16:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/rahmenprogramm-sam-sobi-robinzon-copy"
+    }
+   ]
+  },
+  {
+   "id": "tt0017827",
+   "title_de": "Dr. Bessels Verwandlung",
+   "title_original": "Dr. Bessels Verwandlung",
+   "year": 1927,
+   "release_date": "1927-12-08",
+   "runtime": 70,
+   "poster": "https://image.tmdb.org/t/p/w342/gCraLesSndKXhljIoabNjFwML8i.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": null,
+   "overview_de": "deutscher Spielfilm",
+   "overview_en": "Alexander Bessel is a young man in a failing marriage. His wife cheats on him, and so the outbreak of WW1 comes in handy for a change. When a young French soldier dies right in front of him, Bessel seizes the opportunity, assuming his identity.",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Richard Oswald"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": null,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Stummfilmtage Bonn",
+     "city": "Bonn",
+     "datetime": "2026-08-22T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.internationale-stummfilmtage.de/filmsammlung/dr-bessels-verwandlung-de"
     }
    ]
   },

@@ -558,6 +558,9 @@ input[type=range] {
   background: var(--accent); border: 1px solid var(--accent); color: #fff;
   border-radius: 999px; padding: 9px 14px; white-space: nowrap;
   font-size: 14.5px; font-weight: 800; line-height: 1;
+  /* "ℹ️ Infos" is a shorter word than "🎟️ Tickets"; the min-width keeps the
+     two boxes exactly the same size instead of letting the label decide */
+  min-width: 7.2em;
 }
 .show-tix:hover { background: var(--accent2); border-color: var(--accent2); }
 
@@ -604,7 +607,8 @@ input[type=range] {
    the cinema's shop, so it is a full solid button rather than a small glyph.
    Shared by the schedule view and the price panel. */
 .plan-ticket, .pr-ticket {
-  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  white-space: nowrap; min-width: 7.2em;
   background: var(--accent); border: 1px solid var(--accent); color: #fff;
   border-radius: 999px; padding: 10px 20px;
   font-size: 16px; font-weight: 800; letter-spacing: .02em;
@@ -612,6 +616,24 @@ input[type=range] {
 }
 .plan-ticket:hover, .pr-ticket:hover {
   background: var(--accent2); border-color: var(--accent2); text-decoration: none;
+}
+
+/* "ℹ️ Infos" — venues with no ticket shop to link into (the Kinemathek's
+   open-airs sell on their own event page, the Stummfilmtage sell nothing
+   because entry is free). Deliberately the SAME box as the Tickets button, so
+   a screening never looks smaller or half-broken; only the fill is dropped, so
+   the orange solid keeps meaning "you can buy this here". */
+.show-info, .plan-info {
+  background: transparent; border-color: var(--accent); color: var(--accent2);
+}
+.show-info:hover, .plan-info:hover {
+  background: rgba(224,134,54,.16); border-color: var(--accent2); color: var(--accent2);
+}
+
+/* the one line that says how you actually get in */
+.cinema-note {
+  margin: 2px 0 10px; color: var(--muted); font-size: 14px; line-height: 1.45;
+  border-left: 2px solid var(--border2); padding-left: 10px;
 }
 
 @media (max-width: 640px) {

@@ -483,7 +483,7 @@
   }
  },
  "tt29002950": {
-  "ts": 1784615179.368949,
+  "ts": 1785620551.6058438,
   "ratings": {
    "imdb": 7.3,
    "metascore": 86
@@ -2342,6 +2342,146 @@
   "ratings": {
    "imdb": 7.9,
    "metascore": 49
+  }
+ },
+ "tt25399154": {
+  "ts": 1785620492.9348416,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt0053472": {
+  "ts": 1785620511.2357156,
+  "ratings": {
+   "imdb": 7.6,
+   "metascore": 96
+  }
+ },
+ "tt0014872": {
+  "ts": 1785620513.3320603,
+  "ratings": {
+   "imdb": 7.3,
+   "metascore": null
+  }
+ },
+ "tt0017028": {
+  "ts": 1785620515.0432081,
+  "ratings": {
+   "imdb": 7.0,
+   "metascore": null
+  }
+ },
+ "tt0017378": {
+  "ts": 1785620516.4774182,
+  "ratings": {
+   "imdb": 6.6,
+   "metascore": null
+  }
+ },
+ "tt0014218": {
+  "ts": 1785620518.1005626,
+  "ratings": {
+   "imdb": 6.8,
+   "metascore": null
+  }
+ },
+ "tt0013789": {
+  "ts": 1785620519.5672996,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt0018394": {
+  "ts": 1785620520.9735434,
+  "ratings": {
+   "imdb": 6.6,
+   "metascore": null
+  }
+ },
+ "tt0441473": {
+  "ts": 1785620522.4539418,
+  "ratings": {
+   "imdb": 8.1,
+   "metascore": null
+  }
+ },
+ "tt0205107": {
+  "ts": 1785620524.4485056,
+  "ratings": {
+   "imdb": 5.9,
+   "metascore": null
+  }
+ },
+ "tt0131461": {
+  "ts": 1785620525.8988197,
+  "ratings": {
+   "imdb": 7.1,
+   "metascore": null
+  }
+ },
+ "tt0020941": {
+  "ts": 1785620527.3659835,
+  "ratings": {
+   "imdb": 6.4,
+   "metascore": null
+  }
+ },
+ "tt0390893": {
+  "ts": 1785620528.8459425,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt0018927": {
+  "ts": 1785620530.6157084,
+  "ratings": {
+   "imdb": 6.8,
+   "metascore": null
+  }
+ },
+ "tt0278899": {
+  "ts": 1785620532.1201916,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt21294710": {
+  "ts": 1785620533.5817149,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt0017414": {
+  "ts": 1785620535.0960402,
+  "ratings": {
+   "imdb": 7.1,
+   "metascore": null
+  }
+ },
+ "tt0017827": {
+  "ts": 1785620536.67912,
+  "ratings": {
+   "imdb": null,
+   "metascore": null
+  }
+ },
+ "tt30319823": {
+  "ts": 1785620545.6286678,
+  "ratings": {
+   "imdb": 7.5,
+   "metascore": null
+  }
+ },
+ "tt0443474": {
+  "ts": 1785620573.1723137,
+  "ratings": {
+   "imdb": 6.4,
+   "metascore": null
   }
  }
 }

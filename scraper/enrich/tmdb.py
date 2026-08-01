@@ -32,29 +32,51 @@ def _years(hint) -> set[int]:
     return out
 
 
-def _pick(results: list[dict], hint) -> dict | None:
-    """Choose which search hit is the film, preferring the right vintage.
+def _norm_title(text: str | None) -> str:
+    """Fold a title to letters and digits so punctuation can't split a match."""
+    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
 
-    TMDB's own ranking is usually right, but it goes badly wrong on classics a
-    cinema re-releases under a series name: "Der Herr der Ringe 2" ranks the
-    1978 animated film above "Die zwei Türme" (2002). When the source told us
-    what year(s) the film belongs to, the hit that matches wins.
 
-    If no hit matches we return nothing rather than TMDB's first guess: a film
-    of the wrong vintage is a different film, and a card with no poster is
-    better than a card with someone else's. That is what keeps the MET's live
-    opera relays from borrowing the cover of some other house's recording of
-    the same opera. Without a hint we have nothing to check, so TMDB's order
-    stands.
+def _pick(results: list[dict], hint, query: str | None = None) -> dict | None:
+    """Choose which search hit is the film.
+
+    Two signals beat TMDB's own ranking, which is popularity-driven and goes
+    badly wrong on small films:
+
+    1. **An exact title match.** Searching "Gaucho Gaucho" put the 7-minute
+       short "Gay Gaucho" (1933) first and the documentary actually playing at
+       the OFF Broadway ("Gaucho Gaucho", 2024) third — reported from the live
+       site 2026-08-01. A hit whose title *is* the query is far better evidence
+       than one that merely shares a word, so those hits are considered first.
+    2. **The right vintage**, when the source told us one: "Der Herr der Ringe
+       2" ranks the 1978 animated film above "Die zwei Türme" (2002).
+
+    If a year hint finds nothing we return nothing rather than TMDB's first
+    guess: a film of the wrong vintage is a different film, and a card with no
+    poster is better than a card with someone else's. That is what keeps the
+    MET's live opera relays from borrowing the cover of some other house's
+    recording of the same opera.
     """
     want = _years(hint)
+    wanted_title = _norm_title(query)
+    exact = [r for r in results
+             if wanted_title and wanted_title in {_norm_title(r.get("title")),
+                                                  _norm_title(r.get("original_title"))}]
+
+    def by_year(pool: list[dict]) -> dict | None:
+        for r in pool:
+            got = (r.get("release_date") or "")[:4]
+            if got.isdigit() and any(abs(int(got) - w) <= 1 for w in want):
+                return r
+        return None
+
     if not want:
-        return results[0]
-    for r in results:
-        got = (r.get("release_date") or "")[:4]
-        if got.isdigit() and any(abs(int(got) - w) <= 1 for w in want):
-            return r
-    return None
+        # no vintage to check — an exact title match, else TMDB's order
+        return (exact or results)[0]
+    # with a hint, the year rules; among equals an exact title still wins, and
+    # a title that only matches loosely but has the right year is still better
+    # than nothing (German releases often carry a different title entirely).
+    return by_year(exact) or by_year(results)
 
 
 def _has_latin(text: str) -> bool:
@@ -86,7 +108,7 @@ def lookup(title: str, year=None) -> dict | None:
     if not results:
         return None
 
-    best = _pick(results, year)
+    best = _pick(results, year, title)
     if not best:
         return None
     detail = requests.get(

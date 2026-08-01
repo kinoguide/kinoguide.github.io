@@ -21,7 +21,7 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - **Repo:** https://github.com/kinoguide/kinoguide.github.io — owned by the
   **kinoguide** org (GitHub account `chris-geller` is org admin). Local `origin`
   points here. See the [[deployment]] memory for the org-permissions gotcha.
-- **21 cinemas** across Köln & Bonn, ~280 films/day. Everything below is DONE:
+- **24 cinemas** across Köln & Bonn, ~300 films/day. Everything below is DONE:
   scraper, all cinema sources, enrichment, daily automation, and a polished
   frontend (search, filters, favorites, schedule view, i18n DE/EN, calendar
   export, shareable filter URLs). See [[cinema-coverage]] for how each cinema
@@ -32,7 +32,7 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/main.py` — orchestrator: scrape every cinema (isolated failures) →
   enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
   per-cinema language corrections (Filmpalette, Kinopolis).
-- `scraper/cinemas.json` — the 21 cinemas: kinoheld IDs, `website`, `price_page`,
+- `scraper/cinemas.json` — the 24 cinemas: kinoheld IDs, `website`, `price_page`,
   `source` (`kinoheld`, `custom` or `kinopolis`), the CineOrder shop coordinates
   where there is one (`cineorder_api`, `cineorder_center_oid`,
   `family_max_adults`), and notes. Read the `_note` fields.
@@ -70,6 +70,11 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     When no hit matches, `lookup()` returns None rather than TMDB's first
     guess: a film of the wrong vintage is a different film, and the user's
     rule is that no poster beats someone else's poster.
+  - **Exact titles beat TMDB's ranking.** `_pick()` prefers a hit whose title
+    *is* the query before falling back to TMDB's order, which is popularity-
+    driven: searching "Gaucho Gaucho" put the 7-minute short "Gay Gaucho" (1933)
+    first and the documentary actually playing third, and the site showed the
+    wrong film until a user spotted it (2026-08-01).
   - `is_film: False` — a slot with no film behind it, which skips TMDB
     entirely. Kinopolis sets it for the Sneak preview (no productionYear) and
     for live opera/ballet relays (MET live im Kino, Opéra national de Paris,
@@ -154,6 +159,21 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   the cinema's own per-screening prices from `data/prices.json` and falls back to
   the table. Adding a cinema = one more entry keyed by its exact name in
   `movies.json`. See "Prices" below.
+- `scraper/sources/kinemathek.py` — the Bonner Kinemathek's own programme page,
+  which publishes **four** venues at once. Two of them (Brotfabrik, LandesMuseum)
+  we take from kinoheld; this module exists for the other two, the open-airs on
+  the **Bundeskunsthalle roof** and at the **Friesdorfer Freibad**, which appear
+  nowhere else. A cinema entry picks its venue with `venue_match`. Do **not**
+  switch it to their events.ics: that feed stamps DTSTART "Z" but writes local
+  time minus an hour (verified 2026-08-01 against both the page and kinoheld's
+  times for the LandesMuseum), so every showtime would be an hour early.
+- `scraper/sources/stummfilmtage.py` — the Internationale Stummfilmtage
+  (13.–22.8.), Bonn's open-air silent film festival in the Arkadenhof. A Webflow
+  site with one tab per festival day; the tab labels carry only a day number, so
+  the month comes from the festival's own date line and is then **checked against
+  the weekday in each label** — a mismatch raises rather than shifting the whole
+  programme onto wrong dates. Every real film prints a production year, so
+  `is_film` follows that: workshops and book launches get no TMDB lookup.
 - `scraper/sources/cineorder.py` — the CineOrder ticket-shop client: one daily
   call per cinema that yields the program, the exact price of every screening
   (→ `data/prices.json`) and its OV/OmU version. Kinopolis takes all three from
@@ -206,7 +226,7 @@ frontend is deliberately built to keep that cheap:
   when the Favoriten filter is actually on (`favKey`).
 - `data/prices.json` is still lazy-loaded on first use of a price panel.
 
-## Prices (family price finder — 18 of the 21 cinemas)
+## Prices (family price finder — 18 of the 24 cinemas)
 
 A 💶 chip in the toolbar and a "💶 ab X €" button on each cinema row in the
 film page open a price panel: the visitor sets how many adults / kids under 12
@@ -221,7 +241,7 @@ Two sources feed it, and they are not equal:
 |---|---|---|
 | exact | Kinopolis Bad Godesberg, Cinedom | the cinema's own till, per screening (`data/prices.json`) |
 | table | 16 more | the printed price list, typed by hand into `web/src/prices.js` |
-| none | Residenz Astor Film Lounge, Filmforum NRW, SION Sommerkino | they publish no price list at all — see the Woki rule below |
+| none | Residenz Astor Film Lounge, Filmforum NRW, SION Sommerkino, and the three info-only venues | they publish no price list at all — see the Woki rule below |
 
 Coverage on 2026-08-01: every cinema with a table prices 100 % of its screenings,
 except the Woki (18 %, on purpose — see below); the three houses above price none
@@ -345,6 +365,20 @@ When touching a curated table: re-read the cinema's price page, keep the column
 spans straight (several are colspan-based — e.g. Kinopolis' child price still
 holds on Fridays while adult evening prices already jump), take the LOWER end of
 any printed range (the UI says "ab X €"), bump `checked`, and run both checks.
+
+### Venues you cannot book online (`ticketing: "info"`)
+
+Three venues have no ticket shop we can deep-link into: the Kinemathek's two
+open-airs sell through their own event page (cinetixx), and the Stummfilmtage
+sell nothing at all because **admission is free**. Rather than leave them out —
+the user's call 2026-08-01 — they carry `"ticketing": "info"` plus a researched
+`ticket_note` (de/en) in `cinemas.json`, both of which main.py passes through in
+the top-level `cinemas` map. The frontend then swaps the orange `🎟️ Tickets`
+button for an outlined `ℹ️ Infos` link of **exactly the same size** (a `min-width`
+on `.show-tix`/`.plan-ticket` keeps the shorter word from shrinking the box) and
+prints the note on the cinema's row. Deliberately *not* a separate section: the
+point is that someone filtering for OmU on a Saturday finds these screenings
+among the rest. Solid orange keeps meaning "you can buy this here".
 
 ## Conventions
 
