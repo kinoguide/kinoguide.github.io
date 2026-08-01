@@ -115,7 +115,12 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     `success:false` and the visitor gets the fail screen, which offers the plain
     mailto as a fallback. The DE/EN switch is the first element of the topbar —
     on phones the logo takes the whole line, so a ≤640px `order` rule puts the
-    switch hard left on the second row with the date + ✉ opposite it.
+    switch hard left on the second row with the date + ✉ opposite it. Since
+    2026-08-01 it shows flags instead of the letters, and they are **drawn SVG**:
+    Windows ships no flag glyphs, so 🇩🇪/🇬🇧 degrade to a box reading "DE"/"GB"
+    in every browser on the user's own OS. Both sit in the same 3:2 box (the
+    Union Jack is built in a 60×40 viewBox for it); the inactive one is greyed
+    so the orange pill alone carries the state.
   - **Filter organisation** (chosen by the user 2026-07-29): one bar with
     search + Datum + Stadt + Sortierung + a single `⚙ Filter` button with a
     count badge + the `💶 Preise` button (moved up out of the results row on

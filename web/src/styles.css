@@ -76,11 +76,20 @@ body {
   border-radius: 999px; padding: 3px; gap: 2px; margin-right: 4px;
 }
 .lang-switch button {
+  display: inline-flex; align-items: center;
   background: none; border: none; color: var(--muted); font-size: 14px; font-weight: 700;
-  padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  padding: 6px 10px; border-radius: 999px; cursor: pointer;
 }
 .lang-switch button:hover { color: var(--text); }
 .lang-switch button.on { background: var(--accent); color: #fff; }
+/* the inactive flag is greyed down so the orange pill alone says which language
+   is on — two full-colour flags side by side read as decoration, not a state */
+.lang-switch .flag {
+  display: block; width: 25px; height: 16.67px; border-radius: 2px;
+  filter: grayscale(.8); opacity: .6; transition: filter .15s, opacity .15s;
+}
+.lang-switch button:hover .flag { filter: grayscale(.3); opacity: .85; }
+.lang-switch button.on .flag { filter: none; opacity: 1; box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
 
 /* the envelope that leads to feedback + Impressum — deliberately large and
    heavy-stroked: it is the only way anyone reaches the contact page */

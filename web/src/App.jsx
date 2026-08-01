@@ -88,7 +88,7 @@ const T = {
     contactBtn: 'Feedback & Impressum',
     contactIntro: 'Kino Köln · Bonn ist ein privates, nicht-kommerzielles Hobbyprojekt: keine Werbung, keine Tracker, keine Cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung. Schreib einfach hier — ganz ohne eigenes Mailprogramm.',
+    feedbackText: 'Fehlt ein Kino? Ist eine Uhrzeit oder eine Fassung (OV/OmU) falsch? Stimmt ein Preis nicht, oder fehlt eine Funktion? Ich freue mich über jede Rückmeldung. Schreib einfach hier: anonym oder unter Angabe deiner Mail, wenn du eine Antwort möchtest.',
     feedbackHint: 'Hilfreich ist: Kino, Film, Datum und was stattdessen richtig wäre.',
     mailBtn: '✉ E-Mail schreiben',
     fbLabel: 'Deine Nachricht',
@@ -244,7 +244,7 @@ const T = {
     contactBtn: 'Feedback & legal notice',
     contactIntro: 'Kino Köln · Bonn is a private, non-commercial hobby project: no ads, no trackers, no cookies.',
     feedbackTitle: 'Feedback',
-    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it. Just write to me right here — no mail program needed.',
+    feedbackText: 'Is a cinema missing? Is a showtime or a version (OV/OmU) wrong? Is a price off, or is a feature missing? I\'d love to hear about it. Just write to me right here: anonymously or with your mail if you want me to respond.',
     feedbackHint: 'Helpful to include: cinema, film, date, and what the site says versus what it should say.',
     mailBtn: '✉ Write an email',
     fbLabel: 'Your message',
@@ -1828,9 +1828,35 @@ export default function App() {
         {/* the DE/EN switch sits at the very left edge of the header, ahead of
             the logo — asked for 2026-08-01 because it read as "in the middle"
             while it was the first item of the right-hand group */}
+        {/* Flags are drawn, not the 🇩🇪/🇬🇧 emoji: Windows ships no flag glyphs
+            at all, so the emoji degrades to the bare letters "DE"/"GB" in a box
+            on every Windows browser. Both are given the same 3:2 box so the two
+            buttons match — the Union Jack is built in a 60×40 viewBox for it. */}
         <div className="lang-switch" role="group" aria-label="Sprache / Language">
-          <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}>DE</button>
-          <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}>EN</button>
+          <button className={ui === 'de' ? 'on' : ''} onClick={() => setUi('de')}
+            aria-pressed={ui === 'de'} title="Deutsch" aria-label="Deutsch">
+            <svg className="flag" viewBox="0 0 3 2" aria-hidden="true" focusable="false">
+              <rect width="3" height="2" fill="#000" />
+              <rect y="0.6667" width="3" height="1.3333" fill="#dd0000" />
+              <rect y="1.3333" width="3" height="0.6667" fill="#ffce00" />
+            </svg>
+          </button>
+          <button className={ui === 'en' ? 'on' : ''} onClick={() => setUi('en')}
+            aria-pressed={ui === 'en'} title="English" aria-label="English">
+            <svg className="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+              {/* the counterchange: the red diagonals only show in two opposite
+                  quadrants, which is what this clip carves out */}
+              <clipPath id="uj-quarters">
+                <path d="M30,20 h30 v20 z v20 h-30 z h-30 v-20 z v-20 h30 z" />
+              </clipPath>
+              <rect width="60" height="40" fill="#00247d" />
+              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" strokeWidth="8" />
+              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#cf142b" strokeWidth="5"
+                clipPath="url(#uj-quarters)" />
+              <path d="M30,0 v40 M0,20 h60" stroke="#fff" strokeWidth="13" />
+              <path d="M30,0 v40 M0,20 h60" stroke="#cf142b" strokeWidth="8" />
+            </svg>
+          </button>
         </div>
         {/* "Kino", not "Kinoguide" (2026-08-01): the long word wrapped the logo
             onto two lines on every phone and cost a whole header row */}
