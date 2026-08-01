@@ -606,8 +606,13 @@ input[type=range] {
 }
 
 @media (max-width: 640px) {
-  .plan-row { grid-template-columns: 50px 1fr auto; }
-  .plan-cinema { grid-column: 2 / 3; grid-row: 2; }
+  /* minmax(0,…) and the wrap belong together: .plan-cinema is nowrap by
+     default, and a long name ("Kinopolis Bad Godesberg · Bonn") then blew the
+     1fr column past the viewport and carried 🎟️ Tickets off the right edge of
+     the phone — 314 of 1209 rows did it. The name now breaks over two lines
+     inside its column instead, and the button stays put. */
+  .plan-row { grid-template-columns: 50px minmax(0, 1fr) auto; }
+  .plan-cinema { grid-column: 2 / 3; grid-row: 2; white-space: normal; min-width: 0; }
   .plan-ticket { grid-column: 3; grid-row: 2; justify-self: end; padding: 8px 15px; font-size: 15px; }
 
   /* A phone has no room for a column of boxes beside a day label: the boxes
@@ -627,6 +632,9 @@ input[type=range] {
 
 /* the narrowest phones still in use (iPhone SE, 320px) */
 @media (max-width: 370px) {
+  /* buy the cinema name back the ~25px that keep it on two lines here */
+  .plan-row { gap: 8px; }
+  .plan-ticket { padding: 8px 12px; font-size: 14px; }
   .showbox { padding: 9px 10px; gap: 8px; }
   .showbox-acts { gap: 5px; }
   .show-time { font-size: 17.5px; }
