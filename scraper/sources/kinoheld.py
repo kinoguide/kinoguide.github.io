@@ -64,6 +64,7 @@ query FetchProgramByMovie($cinemaIds: [ID!]!, $first: Int, $page: Int) {
         shows {
           data {
             id
+            urlSlug
             name
             beginning
             deeplink
@@ -165,8 +166,8 @@ def _title_for(show_name: str | None, movie_title: str) -> str:
 
 def _booking_url(show: dict) -> str:
     """Prefer the API's deeplink when it points at a specific show; fall back
-    to the canonical per-show page (pattern verified live 2026-07-07):
-      https://www.kinoheld.de/kino/{city}/{cinema}/vorstellung/{showId}
+    to the site's own per-show ticket page:
+      https://www.kinoheld.de/kino/{city}/{cinema}/vorstellung/{urlSlug}
 
     Some cinemas set a generic deeplink (e.g. Bonner Kinemathek points at
     their homepage) — a URL with no path and no query identifies nothing,
@@ -181,14 +182,22 @@ def _booking_url(show: dict) -> str:
     cinema = show.get("cinema") or {}
     city_slug = (cinema.get("city") or {}).get("urlSlug")
     cinema_slug = cinema.get("urlSlug")
-    show_id = show.get("id")
-    if city_slug and cinema_slug and show_id:
-        # the program listing with the show pre-selected, NOT the deep
-        # /vorstellung/<id> page — that page component crashes with a JS
-        # error ("can't access lexical declaration before initialization")
-        # in real browsers (reported for Odeon, 2026-07-08)
+    # kinoheld runs TWO id spaces and only one of them appears in URLs:
+    # show.id (127807113) is the API's, show.urlSlug (50892) is the site's.
+    # Feeding the API id to /vorstellung/<id> is what produced the 500 that
+    # made us fall back to "?showId=" in July 2026 — the page was fine, the id
+    # was wrong, and the fallback dropped the visitor at the top of the
+    # cinema's whole program to hunt for their screening. With the slug the
+    # link opens that one screening's ticket page (verified 2026-08-02: the
+    # Woki's /vorstellung/50892 server-renders Spider-Man 13:00).
+    slug = show.get("urlSlug")
+    if city_slug and cinema_slug and slug:
         return (f"https://www.kinoheld.de/kino/{city_slug}/{cinema_slug}"
-                f"/vorstellungen?showId={show_id}")
+                f"/vorstellung/{slug}")
+    # no slug: the program listing is still better than nothing
+    if city_slug and cinema_slug and show.get("id"):
+        return (f"https://www.kinoheld.de/kino/{city_slug}/{cinema_slug}"
+                f"/vorstellungen?showId={show['id']}")
     return ""
 
 

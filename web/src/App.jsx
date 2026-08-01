@@ -1285,17 +1285,24 @@ function Menu({ label, on, title, menuClass = '', children }) {
     }
     // it is pinned to the viewport, so anything that moves the button (page
     // scroll, the row scrolling sideways, a resize) closes it instead of
-    // leaving it floating somewhere wrong
+    // leaving it floating somewhere wrong. The listener is on capture, which
+    // means it also sees the menu's OWN list scrolling — and closed the menu
+    // the moment anyone tried to scroll down the list of days. Scrolls that
+    // start inside the menu move nothing, so they are ignored.
+    const onScroll = (e) => {
+      if (menuRef.current?.contains(e.target)) return
+      setOpen(false)
+    }
     const close = () => setOpen(false)
     const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
     document.addEventListener('mousedown', onDoc)
     document.addEventListener('keydown', onKey)
-    window.addEventListener('scroll', close, true)
+    window.addEventListener('scroll', onScroll, true)
     window.addEventListener('resize', close)
     return () => {
       document.removeEventListener('mousedown', onDoc)
       document.removeEventListener('keydown', onKey)
-      window.removeEventListener('scroll', close, true)
+      window.removeEventListener('scroll', onScroll, true)
       window.removeEventListener('resize', close)
     }
   }, [open])

@@ -38,7 +38,13 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   `family_max_adults`), and notes. Read the `_note` fields.
 - `scraper/sources/kinoheld.py` — kinoheld GraphQL client (endpoint
   `next-live.kinoheld.de/graphql`, op `FetchProgramByMovie`). Builds exact
-  per-show booking links (`…/vorstellungen?showId=<id>`). `_title_for()` guards
+  per-show booking links (`…/vorstellung/<urlSlug>`). **kinoheld runs two id
+  spaces and only one of them appears in URLs:** `show.id` (127807113) is the
+  API's, `show.urlSlug` (50892) is the site's. Feeding the API id to
+  `/vorstellung/<id>` 500s, which in July 2026 was misread as the page being
+  broken; the fallback we then used (`…/vorstellungen?showId=<id>`) ignores the
+  parameter entirely and drops the visitor at the top of the cinema's whole
+  programme to hunt for their screening. Fixed 2026-08-02 after a user noticed. `_title_for()` guards
   against kinoheld mis-grouping films under a wrong entry.
 - `scraper/sources/kinopolis.py` — Kinopolis showtimes from their own CineOrder
   ticket shop (same one request as the prices, see below). Since 2026-07-25
