@@ -43,10 +43,35 @@ def classify(*texts: str) -> str:
 
 
 def clean_title(title: str) -> str:
-    """Strip version markers so TMDB matching works on the bare title."""
+    """Strip version markers so TMDB matching works on the bare title.
+
+    Only *known* decorations are removed, never brackets in general: plenty of
+    real titles carry them, and a title cut short matches the wrong film, which
+    is worse than not matching at all.
+
+    The re-release and anniversary markers are the ones distributors bolt on and
+    the cinemas paste straight into their programme —
+    'LA HAINE (30TH ANNIVERSARY)(WA:2025)', 'AMORES PERROS (RE 2026)',
+    'Der Mondbär (WA:2022)'. TMDB finds nothing for any of them, so the film
+    shipped with no poster and no description until a user noticed (2026-08-02).
+    The year inside such a marker is deliberately *not* passed on as a year
+    hint: 'WA:2025' is when the print was reissued, while the film is from 1995,
+    and feeding the wrong vintage to tmdb._pick() empties the result set.
+    """
     t = title
     t = re.sub(r"\((OV|OF|OmU|OmdU|OmeU|OmengU)\)", "", t, flags=re.IGNORECASE)
     t = re.sub(r"\b(engl\.?\s*)?(OV|OF|OmU|OmdU|OmeU)\b", "", t)
     t = re.sub(r"\b(3D|IMAX|4DX|Dolby Atmos)\b", "", t, flags=re.IGNORECASE)
+    # re-release: (WA:2025) Wiederaufführung, (RE 2026) reissue
+    t = re.sub(r"\(\s*(WA|RE)\s*[:.]?\s*(19|20)\d{2}\s*\)", "", t, flags=re.IGNORECASE)
+    # anniversary editions, with or without brackets
+    t = re.sub(r"\(?\s*\d{1,3}\s*(st|nd|rd|th)\s+anniversary\s*\)?", "", t, flags=re.IGNORECASE)
+    # (Extended Version) / (Ext. Version) — the existing rule only caught the
+    # dash-separated form, and these arrive in brackets
+    t = re.sub(r"\(\s*(ext\.?|extended)\s+version\s*\)", "", t, flags=re.IGNORECASE)
+    # a bare year in brackets, e.g. 'Kusama: Infinity (2018)'
+    t = re.sub(r"\(\s*(19|20)\d{2}\s*\)", "", t)
     t = re.sub(r"[-–—]\s*(Director'?s Cut|Extended.*)$", "", t, flags=re.IGNORECASE)
+    # a bracket left hanging by a truncated feed title
+    t = re.sub(r"[(\[]\s*$", "", t)
     return re.sub(r"\s{2,}", " ", t).strip(" -–—:")

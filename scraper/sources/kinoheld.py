@@ -148,9 +148,17 @@ def _title_for(show_name: str | None, movie_title: str) -> str:
     ticket page for a film other than the one on the card. When the show's
     own name shares (almost) no words with the entry title, the show name is
     the one that matches what the ticket page sells — use it.
+
+    But a show name is only worth preferring if it is a *title*. Cinemas run
+    these fields by hand and their till sometimes writes its own reference into
+    it: OFF Broadway's 20:00 screening of 'Das Gewicht der Welt' on 2026-08-04
+    was named '294164'. Sharing no words with the entry, that beat the real
+    title, split the screening off as a film of its own, and shipped a card with
+    a number for a name, no poster and no description — which is how the user
+    found it. A name with no letters in it is never a film.
     """
     clean = lambda s: _LANG_SUFFIX.sub("", _FSK_SUFFIX.sub("", s)).strip(" -–·")
-    if not show_name:
+    if not show_name or not _re.search(r"[^\W\d_]", show_name):
         return movie_title
     if not movie_title:
         return clean(show_name)
