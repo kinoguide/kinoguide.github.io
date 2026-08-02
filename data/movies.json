@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-02T01:04:32.110701+00:00",
+ "generated_at": "2026-08-02T06:31:12.641080+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
@@ -2083,11 +2083,39 @@
    },
    "showtimes": [
     {
+     "cinema": "Stern Lichtspiele",
+     "city": "Bonn",
+     "datetime": "2026-10-06T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71314"
+    },
+    {
+     "cinema": "Cineplex Köln",
+     "city": "Köln",
+     "datetime": "2026-10-06T19:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://tickets.cineplex.de/checkout/351/14A2CB00023FWBXJYB"
+    },
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-10-06T20:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=7B371000023RFGKYDT"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-10-06T20:15:00+02:00",
      "language": "DE",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/EFF65000023GNFNDWF"
+    },
+    {
+     "cinema": "Residenz Astor Film Lounge",
+     "city": "Köln",
+     "datetime": "2026-10-06T20:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://koeln.premiumkino.de/vorstellung/pans-labyrinth-best-of-cinema/20261006/2015/7MfI0zrLbnQ-_elTSU4bO5_Uzd2aoP6tL3H2HSEZ66E~"
     },
     {
      "cinema": "Rex am Ring",
@@ -3747,8 +3775,8 @@
     "US"
    ],
    "directors": [
-    "Jonathan Dayton",
-    "Valerie Faris"
+    "Valerie Faris",
+    "Jonathan Dayton"
    ],
    "tags": [
     "women_directed"
@@ -6067,8 +6095,8 @@
     "US"
    ],
    "directors": [
-    "Robert Florey",
-    "Slavko Vorkapich"
+    "Slavko Vorkapich",
+    "Robert Florey"
    ],
    "tags": [],
    "trailer_de": null,
@@ -6416,8 +6444,8 @@
     "FR"
    ],
    "directors": [
-    "Luc Dardenne",
-    "Jean-Pierre Dardenne"
+    "Jean-Pierre Dardenne",
+    "Luc Dardenne"
    ],
    "tags": [],
    "trailer_de": "https://www.youtube.com/watch?v=2q7ckaUKqac",
@@ -6711,8 +6739,8 @@
     "US"
    ],
    "directors": [
-    "Buster Keaton",
-    "Edward F. Cline"
+    "Edward F. Cline",
+    "Buster Keaton"
    ],
    "tags": [],
    "trailer_de": null,
@@ -8415,8 +8443,8 @@
    ],
    "directors": [
     "Thomas Bodenstein",
-    "Hubert Weiland",
-    "Mike Maurus"
+    "Mike Maurus",
+    "Hubert Weiland"
    ],
    "tags": [],
    "trailer_de": null,
@@ -13326,8 +13354,8 @@
     "AU"
    ],
    "directors": [
-    "Jon Lucas",
-    "Scott Moore"
+    "Scott Moore",
+    "Jon Lucas"
    ],
    "tags": [],
    "trailer_de": null,
@@ -14883,60 +14911,6 @@
      "datetime": "2026-09-30T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71569"
-    }
-   ]
-  },
-  {
-   "id": "pans labyrinth - best of cinema",
-   "title_de": "Pans Labyrinth - Best of Cinema",
-   "title_original": "Pans Labyrinth - Best of Cinema",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Stern Lichtspiele",
-     "city": "Bonn",
-     "datetime": "2026-10-06T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://webticketing3.cinestar.de/?cinemaId=32374&movieSessionId=71314"
-    },
-    {
-     "cinema": "Cineplex Köln",
-     "city": "Köln",
-     "datetime": "2026-10-06T19:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://tickets.cineplex.de/checkout/351/14A2CB00023FWBXJYB"
-    },
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-10-06T20:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=7B371000023RFGKYDT"
-    },
-    {
-     "cinema": "Residenz Astor Film Lounge",
-     "city": "Köln",
-     "datetime": "2026-10-06T20:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://koeln.premiumkino.de/vorstellung/pans-labyrinth-best-of-cinema/20261006/2015/7MfI0zrLbnQ-_elTSU4bO5_Uzd2aoP6tL3H2HSEZ66E~"
     }
    ]
   },
@@ -17475,7 +17449,7 @@
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-12T19:30:00+02:00",
-     "language": "OmU",
+     "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/7B89DB00023FWBXJYB"
     },
     {
@@ -17489,7 +17463,7 @@
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-15T17:15:00+02:00",
-     "language": "OmU",
+     "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/AB89DB00023FWBXJYB"
     },
     {
@@ -17785,24 +17759,25 @@
    ]
   },
   {
-   "id": "disney channel mitmachkino",
-   "title_de": "Disney Channel Mitmachkino",
-   "title_original": "Disney Channel Mitmachkino",
-   "year": 2023,
-   "release_date": "2023-02-25",
+   "id": "disney channel mitmachkino 2024",
+   "title_de": "Disney Channel Mitmachkino 2024",
+   "title_original": "Disney Channel Mitmachkino 2024",
+   "year": 2024,
+   "release_date": "2024-09-07",
    "runtime": 60,
-   "poster": "https://image.tmdb.org/t/p/w342/y01Qvr62t13ZLO15EPbyn8mOc8U.jpg",
+   "poster": "https://image.tmdb.org/t/p/w342/k7WEtMoRj3wYfK0MpVfHt01wEKG.jpg",
    "genres": [
-    "Animation"
+    "Animation",
+    "Familie"
    ],
-   "age_rating": null,
-   "overview_de": "Die Helden des Disney Channel präsentieren sich auf der großen Leinwand und fordern ihr Publikum zu allerlei lustigen Aktionen heraus.",
-   "overview_en": null,
+   "age_rating": 0,
+   "overview_de": "Auf der großen Leinwand führt Micky Maus als animierter Gastgeber die Kinobesucher durch das kunterbunte Programm, das auf die kleinsten Zuschauer im Vorschulalter ausgerichtet ist und ca. 60 Minuten kindgerechtes Mitmach-Kino bietet:  Mitfiebern: Für Spannung sorgen noch nie im Fernsehen gezeigte Folgen von Spidey und seine Super-Freunde, Disney Junior Arielle, Waustelle – alle Pfoten packen an und Bluey.  Mittanzen: Musikvideos laden zum Mittanzen und Mitsingen ein und sorgen für Bewegung zwischen den Episoden.  Mitraten: Bei kleinen Ratespielen rund um die Disney Channel Vorschul-Serien können die kleinen Besucher ihr Rätseltalent unter Beweis stellen.",
+   "overview_en": "Cinema means lights out, silence and sitting still? Not at the DISNEY CHANNEL PARTICIPATION CINEMA! Here children can sing along loudly for an hour, dance, clap and do puzzles - anything but be quiet! On the big screen, Mickey Mouse, as an animated host, guides cinema-goers through the colorful program, which is aimed at the youngest preschool-age viewers and offers around 60 minutes of child-friendly participatory cinema.",
    "original_language": "de",
    "countries": [],
    "directors": [],
    "tags": [],
-   "trailer_de": "https://www.youtube.com/watch?v=gUBB4COZOfg",
+   "trailer_de": null,
    "trailer_en": null,
    "ratings": {
     "imdb": null,
@@ -17824,7 +17799,8 @@
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/8BB9DB00023FWBXJYB"
     }
-   ]
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "batman - triple",
@@ -18326,27 +18302,27 @@
    ]
   },
   {
-   "id": "tt28741059",
-   "title_de": "Your Cologne",
-   "title_original": "Your Cologne",
-   "year": 2023,
-   "release_date": "2023-08-25",
-   "runtime": 11,
-   "poster": "https://image.tmdb.org/t/p/w342/u1Q7Idh1rkMiFPpYWsELyDVRd7a.jpg",
+   "id": "vlog - cologne",
+   "title_de": "Vlog - Cologne",
+   "title_original": "Vlog - Cologne",
+   "year": 2025,
+   "release_date": "2025-05-06",
+   "runtime": 0,
+   "poster": "https://image.tmdb.org/t/p/w342/dfPbWNhVL9JJZm7lM0V4sMX7qa6.jpg",
    "genres": [
-    "Drama"
+    "Dokumentarfilm"
    ],
    "age_rating": null,
    "overview_de": null,
-   "overview_en": "No matter how many hours Ava (Charlotte King) sits working away with her guitar and notebook, or how each day is another day closer to the deadline, she just can’t seem to beat writer’s block. Nothing is coming to her, and her boyfriend Matt’s (Luke Martin) attempts at helping only succeed in exasperating her more. ‘Your Cologne’ is a snapshot into what it’s like to live as or with an artist, and the joys and heartbreaks that entails.",
-   "original_language": "en",
+   "overview_en": "Trip to Cologne, April 12-13, 2025.",
+   "original_language": "fr",
    "countries": [],
    "directors": [
-    "Henry Fox"
+    "Elie Guitton"
    ],
    "tags": [],
    "trailer_de": null,
-   "trailer_en": "https://www.youtube.com/watch?v=dhaPa5c_buo",
+   "trailer_en": null,
    "ratings": {
     "imdb": null,
     "metascore": null,
@@ -18360,7 +18336,8 @@
      "language": "DE",
      "booking_url": "https://koeln.premiumkino.de/vorstellung/cologne-knits/20260926/1400/lkfxsua8_kjESx0FSe9_zgIT7HkdID8fHP4ryVqulw4~"
     }
-   ]
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "cosi fan tutte - mozart (met 2026/27)",
