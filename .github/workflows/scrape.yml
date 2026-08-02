@@ -33,6 +33,12 @@ jobs:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
         run: |
           pip install -r requirements.txt
+          # the data guard protects every step below it, so prove it still
+          # works before relying on it (no API keys or network needed)
+          python test_guard.py
+          # main.py exits 1 if this scrape lost a cinema, posters, ratings or
+          # ticket links — the job then stops here, nothing is committed, and
+          # the site keeps serving the last good deployment
           python main.py
 
       - name: Commit updated data
