@@ -11,8 +11,10 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from datetime import datetime, timezone
 
+import guard
 from sources import kinoheld, custom, kinopolis, cineorder, kinemathek, stummfilmtage
 from enrich import tmdb, omdb, letterboxd
 from language import clean_title
@@ -72,7 +74,16 @@ def fix_metropolis_ov(showtimes: list[dict], original_language: str | None) -> N
             s["language"] = "OmU"
 
 
-def main() -> None:
+def load_json(path: str) -> dict | None:
+    """Yesterday's data, for guard.py to compare against. Missing is fine."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
+
+def main(force: bool = False) -> None:
     movies: dict[str, dict] = {}  # keyed by cleaned title
 
     for cinema in load_cinemas():
@@ -219,6 +230,9 @@ def main() -> None:
     cinema_info = {c["name"]: {k: v for k, v in
                                (("city", c["city"]),
                                 ("website", c.get("website")),
+                                ("address", c.get("address")),
+                                ("lat", c.get("lat")),
+                                ("lon", c.get("lon")),
                                 ("ticketing", c.get("ticketing")),
                                 ("ticket_note", c.get("ticket_note")))
                                if v is not None}
@@ -226,6 +240,44 @@ def main() -> None:
     payload = {"generated_at": datetime.now(timezone.utc).isoformat(),
                "cinemas": cinema_info,
                "movies": result}
+
+    # Last gate before anything is written: a cinema that silently disappeared
+    # (or posters/ratings/ticket links that collapsed) must not reach the site.
+    # See guard.py — the old file is the yesterday-vs-today baseline.
+    previous = load_json(OUT_PATH)
+
+    # When a film first turned up in the programme, so the frontend can offer a
+    # "Neu" filter. Carried forward from yesterday's file rather than derived
+    # from release_date: what makes a film new *here* is that this region is now
+    # showing it, which is a different date from its cinema release (a
+    # re-release, a festival print or a late-arriving arthouse title can be
+    # decades old and still be new in Köln this Thursday).
+    # A film already in yesterday's file but without the field predates the
+    # tracking, and gets NO date rather than yesterday's: dating it "yesterday"
+    # would put all 296 films inside the frontend's "new in the last two days"
+    # window and announce the entire programme as new, exactly once, which is
+    # the failure this backfill exists to avoid. No date simply means not new.
+    # Same reasoning when there is no previous file at all.
+    today = datetime.now().strftime("%Y-%m-%d")
+    if previous:
+        prev_first = {m["id"]: m.get("first_seen") for m in previous.get("movies", [])}
+        for m in result:
+            if m["id"] not in prev_first:
+                m["first_seen"] = today          # genuinely new in the programme
+            elif prev_first[m["id"]]:
+                m["first_seen"] = prev_first[m["id"]]   # carried forward
+
+    problems = guard.check(payload, previous)
+    if not problems:
+        print("\nData check: nothing lost against the previous scrape."
+              if previous else "\nData check: skipped (no previous scrape).")
+    if problems and not force:
+        guard.report(problems)
+        raise SystemExit(1)
+    if problems:
+        guard.say("\n[--force] shipping anyway despite:")
+        for p in problems:
+            guard.say(f"  * {p}")
 
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
@@ -237,10 +289,15 @@ def main() -> None:
     # the frontend falls back to its curated price table.
     prices = cineorder.collect(load_cinemas())
     if prices["cinemas"]:
+        # A shop that stops answering only costs us the exact prices — the
+        # frontend falls back to the curated table and marks it "≈ geschätzt" —
+        # so this warns instead of stopping the run.
+        for note in guard.price_warnings(prices, load_json(PRICES_PATH)):
+            guard.say(f"  [warn] {note}")
         with open(PRICES_PATH, "w", encoding="utf-8") as f:
             json.dump(prices, f, indent=1, ensure_ascii=False)
         print(f"Wrote prices for {len(prices['cinemas'])} cinema(s) to {PRICES_PATH}")
 
 
 if __name__ == "__main__":
-    main()
+    main(force="--force" in sys.argv)

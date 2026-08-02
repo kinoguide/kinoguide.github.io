@@ -142,7 +142,7 @@ const T = {
     forParty: (n) => `für ${n} ${n === 1 ? 'Person' : 'Personen'}`,
     familyHint: 'Family Ticket: alle zahlen den Kinderpreis',
     noPriceShows: 'Keine Vorstellungen mit Preisangaben in den aktuellen Filtern.',
-    priceCinemaHint: 'Preise gibt es für alle 17 Kinos. Bei Kinopolis Bad Godesberg und dem Cinedom kommen sie pro Vorstellung direkt aus der Kinokasse, sonst aus der Preisliste des Kinos.',
+    priceCinemaHint: 'Preise gibt es für 18 der 24 Kinos. Bei Kinopolis Bad Godesberg und dem Cinedom kommen sie pro Vorstellung direkt aus der Kinokasse, sonst aus der Preisliste des Kinos.',
     priceListLabel: 'Komplette Preisliste',
     surchargesLabel: 'Zuschläge',
     offersLabel: 'Angebote & Kombitickets',
@@ -163,6 +163,34 @@ const T = {
     menuHint: 'Kinder-Menü: Ticket + 0,3 l Softdrink + Kinder-Popcorn + Überraschungstüte',
     roles: { adult: 'Erwachsene', child: 'Kind unter 12', reduced: 'Ermäßigt', family: 'Family Ticket' },
     priceListNote: 'Das ist die allgemeine Preisliste des Kinos. Pro Film kommt teils ein Zuschlag dazu — in den Preisen oben ist er enthalten, sofern sie direkt vom Kino kommen.',
+    // cinema pages and the two new quick filters
+    ending: '⌛ Letzte Chance',
+    endingTitle: 'Filme, die in den nächsten Tagen aus dem Programm laufen',
+    endingBadge: 'Letzte Chance',
+    endingLast: (d) => `nur noch bis ${d}`,
+    endingToday: 'nur noch heute',
+    fresh: '✨ Neu im Programm',
+    freshTitle: 'Filme, die neu ins Kinoprogramm gekommen sind',
+    freshBadge: 'Neu',
+    cinemasPage: 'Kinos',
+    cinemasTitle: 'Alle Kinos in Köln & Bonn',
+    cinemasIntro: (n) => `${n} Kinos — mit Adresse, Programm und Preisen.`,
+    cinemaPageTitle: (c) => `${c} — Programm & Infos`,
+    nearMe: '📍 Nächste zuerst',
+    nearMeOff: '📍 Entfernung aus',
+    nearMeAsking: 'Standort wird ermittelt…',
+    nearMeDenied: 'Ohne Standortfreigabe können wir die Entfernung nicht berechnen. Der Standort bleibt im Browser und wird nirgendwo hingeschickt.',
+    kmAway: (v) => `${v} km entfernt`,
+    mapLink: 'Auf der Karte ↗',
+    cinemaSite: 'Website des Kinos ↗',
+    cinemaProgram: 'Ganzes Programm dieses Kinos',
+    cinemaToday: 'Heute',
+    cinemaUpcoming: 'Demnächst',
+    cinemaNoShows: 'Für dieses Kino haben wir gerade kein Programm.',
+    cinemaFilms: (n) => `${n} ${n === 1 ? 'Film' : 'Filme'} im Programm`,
+    cinemaShows: (n) => `${n} ${n === 1 ? 'Vorstellung' : 'Vorstellungen'}`,
+    backToCinemas: '← Alle Kinos',
+    cinemaOf: 'Kino',
   },
   en: {
     locale: 'en-GB',
@@ -300,7 +328,7 @@ const T = {
     forParty: (n) => `for ${n} ${n === 1 ? 'person' : 'people'}`,
     familyHint: 'Family ticket: everyone pays the child price',
     noPriceShows: 'No screenings with price data match the current filters.',
-    priceCinemaHint: 'Prices are available for all 17 cinemas. For Kinopolis Bad Godesberg and the Cinedom they come per screening straight from the box office; elsewhere from the cinema’s price list.',
+    priceCinemaHint: 'Prices are available for 18 of the 24 cinemas. For Kinopolis Bad Godesberg and the Cinedom they come per screening straight from the box office; elsewhere from the cinema’s price list.',
     priceListLabel: 'Full price list',
     surchargesLabel: 'Surcharges',
     offersLabel: 'Offers & combi tickets',
@@ -321,6 +349,33 @@ const T = {
     menuHint: 'Kids menu: ticket + 0.3 l soft drink + kids popcorn + surprise bag',
     roles: { adult: 'Adults', child: 'Under 12', reduced: 'Reduced', family: 'Family ticket' },
     priceListNote: "This is the cinema's general price list. Individual films can carry a surcharge — it is included in the prices above wherever they come straight from the cinema.",
+    ending: '⌛ Last chance',
+    endingTitle: 'Films leaving the programme within the next few days',
+    endingBadge: 'Last chance',
+    endingLast: (d) => `only until ${d}`,
+    endingToday: 'today only',
+    fresh: '✨ New in cinemas',
+    freshTitle: 'Films that have just entered the programme',
+    freshBadge: 'New',
+    cinemasPage: 'Cinemas',
+    cinemasTitle: 'All cinemas in Cologne & Bonn',
+    cinemasIntro: (n) => `${n} cinemas — with address, programme and prices.`,
+    cinemaPageTitle: (c) => `${c} — programme & info`,
+    nearMe: '📍 Nearest first',
+    nearMeOff: '📍 Distance off',
+    nearMeAsking: 'Finding your location…',
+    nearMeDenied: "Without location access we can't work out the distance. Your location stays in the browser and is never sent anywhere.",
+    kmAway: (v) => `${v} km away`,
+    mapLink: 'Show on map ↗',
+    cinemaSite: "Cinema's website ↗",
+    cinemaProgram: "This cinema's full programme",
+    cinemaToday: 'Today',
+    cinemaUpcoming: 'Coming up',
+    cinemaNoShows: "We have no programme for this cinema right now.",
+    cinemaFilms: (n) => `${n} ${n === 1 ? 'film' : 'films'} playing`,
+    cinemaShows: (n) => `${n} ${n === 1 ? 'screening' : 'screenings'}`,
+    backToCinemas: '← All cinemas',
+    cinemaOf: 'Cinema',
   },
 }
 
@@ -447,6 +502,14 @@ function matchTopic(m, tag) {
   return (m.tags || []).includes(tag)
 }
 
+// ?seite=… → which sub-page we are on. Unknown values fall back to the list
+// rather than rendering a blank page, so an old or hand-edited link still works.
+const parsePage = (v) =>
+  v === 'kontakt' || v === 'kinos' || (v && v.startsWith('kino:') && v.length > 5) ? v : null
+
+// the cinema named by a 'kino:<name>' page, or null
+const pageCinema = (page) => (page && page.startsWith('kino:') ? page.slice(5) : null)
+
 function dayKey(iso) {
   return iso.slice(0, 10)
 }
@@ -529,7 +592,7 @@ const BADGE_METRICS = {
 // memo: with ~250 cards on screen, re-rendering all of them on every keystroke
 // or filter click is the single biggest source of jank. All props are stable
 // (t/ui/sort are primitives or module constants, the callbacks are hoisted).
-const Card = memo(function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort }) {
+const Card = memo(function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort, flag }) {
   const langs = [...new Set(movie.showtimes.map((s) => s.language))]
   const metricKey = BADGE_METRICS[sort] ? sort : 'imdb'
   const metric = BADGE_METRICS[metricKey]
@@ -557,7 +620,17 @@ const Card = memo(function Card({ movie, onOpen, isFav, onToggleFav, t, ui, sort
           {langs.includes('OmU') && <LangBadge lang="OmU" t={t} />}
           {langs.includes('DE') && <LangBadge lang="DE" t={t} />}
         </div>
-        {movie.age_rating != null && <span className="badge-fsk">FSK {movie.age_rating}</span>}
+        {/* all four poster corners are already taken (FSK, rating, versions,
+            heart), so the flag claims the top left and pushes FSK below it */}
+        {movie.age_rating != null && (
+          <span className={`badge-fsk${flag ? ' badge-fsk-low' : ''}`}>FSK {movie.age_rating}</span>
+        )}
+        {/* at most one of the two — a film cannot be both new and finishing */}
+        {flag && (
+          <span className={`badge-flag badge-${flag}`}>
+            {flag === 'ending' ? t.endingBadge : t.freshBadge}
+          </span>
+        )}
         <button
           className={`fav-btn ${isFav ? 'on' : ''}`}
           onClick={(e) => { e.stopPropagation(); onToggleFav(movie.id) }}
@@ -608,8 +681,42 @@ const isInfoOnly = (show) =>
   show.info === true || CINEMA_META[show.cinema]?.ticketing === 'info'
 const ticketNote = (cinema, ui) => CINEMA_META[cinema]?.ticket_note?.[ui]
 
+// --- where a cinema is -------------------------------------------------------
+// Address and coordinates come from cinemas.json (19 from kinoheld's own
+// directory, 5 researched by hand) and ride along in the `cinemas` map.
+const cinemaAddress = (cinema) => CINEMA_META[cinema]?.address || null
+
+// The link carries the real street address, not the coordinates: that is what
+// a visitor reads, checks and can hand to any map or journey planner. The
+// address stored per cinema is already the *venue's* — the one trap it had to
+// survive was the Impressum of Metropolis and Rex am Ring, which prints their
+// operator's Wuppertal seat alongside the cinema's own; cinemas.json holds the
+// cinema's, and scraper/check_addresses.py keeps it that way.
+// The name goes in front so an ambiguous house number still lands on the venue.
+const mapsHref = (cinema) => {
+  const addr = CINEMA_META[cinema]?.address
+  if (!addr) return null
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${cinema}, ${addr}`)}`
+}
+
+// Straight-line km. Not a route — it orders "which of these is nearest", which
+// is all it is used for, and it needs no map service and no request.
+const distanceKm = (here, cinema) => {
+  const c = CINEMA_META[cinema]
+  if (!here || !c || c.lat == null) return null
+  const toRad = (d) => (d * Math.PI) / 180
+  const dLat = toRad(c.lat - here.lat)
+  const dLon = toRad(c.lon - here.lon)
+  const a = Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(here.lat)) * Math.cos(toRad(c.lat)) * Math.sin(dLon / 2) ** 2
+  return 6371 * 2 * Math.asin(Math.sqrt(a))
+}
+
+const fmtKm = (km, t) => t.kmAway(km < 10 ? km.toFixed(1) : Math.round(km))
+
+
 // The screening list of one film, grouped by cinema and then by day.
-function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
+function Showtimes({ movie, shows, onPrices, onCinema, here, party, threeD, live, t, ui }) {
   const byCinema = {}
   for (const s of shows) {
     const key = `${s.cinema} · ${s.city}`
@@ -629,16 +736,30 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
         const cfg = CINEMA_PRICES[times[0].cinema]
         const cheap = cfg && cheapestTotal(cfg, movie, times, party, { threeD }, live)
         const note = ticketNote(times[0].cinema, ui)
+        const name = times[0].cinema
+        const addr = cinemaAddress(name)
+        const km = distanceKm(here, name)
         return (
           <div className="cinema-row" key={cinema}>
             <div className="cinema-head">
-              <span className="cinema-name">{cinema}</span>
+              {/* the cinema's name is the way to its own page — address,
+                  prices and everything else it is playing */}
+              <button className="cinema-name cinema-link" onClick={() => onCinema(name)}
+                title={t.cinemaPageTitle(name)}>{cinema}</button>
               {cfg && (
                 <button className="cinema-price" onClick={onPrices} title={t.pricesBtnTitle}>
                   💶 {cheap != null ? t.priceFrom(fmtEur(cheap, t.locale)) : t.prices}
                 </button>
               )}
             </div>
+            {addr && (
+              <p className="cinema-addr">
+                {mapsHref(name)
+                  ? <a href={mapsHref(name)} target="_blank" rel="noreferrer">📍 {addr}</a>
+                  : <>📍 {addr}</>}
+                {km != null && <span className="cinema-km">· {fmtKm(km, t)}</span>}
+              </p>
+            )}
             {/* how you actually get in, where that isn't "click Tickets" */}
             {note && <p className="cinema-note">{note}</p>}
             {Object.keys(byDay).sort().map((d) => (
@@ -684,8 +805,8 @@ function Showtimes({ movie, shows, onPrices, party, threeD, live, t, ui }) {
 // A film gets its own page (own URL, own browser-history entry) rather than a
 // popup: it can be linked to and shared, and the back button returns to the
 // list at the exact scroll position it was left at.
-function FilmPage({ movie, shows, allShows, onBack, onPrices, party, threeD, live,
-                    isFav, onToggleFav, t, ui }) {
+function FilmPage({ movie, shows, allShows, onBack, onPrices, onCinema, here,
+                    party, threeD, live, isFav, onToggleFav, t, ui }) {
   // showing every screening we have is a click away when the filters hide some
   const [showAll, setShowAll] = useState(false)
   const hidden = allShows.length - shows.length
@@ -786,13 +907,211 @@ function FilmPage({ movie, shows, allShows, onBack, onPrices, party, threeD, liv
       <h2 className="film-h2">{t.showtimesLabel}</h2>
       {listed.length === 0
         ? <p className="empty">{t.noShowsHere}</p>
-        : <Showtimes movie={movie} shows={listed} onPrices={onPrices}
-            party={party} threeD={threeD} live={live} t={t} ui={ui} />}
+        : <Showtimes movie={movie} shows={listed} onPrices={onPrices} onCinema={onCinema}
+            here={here} party={party} threeD={threeD} live={live} t={t} ui={ui} />}
       {hidden > 0 && (
         <button className="film-allshows" onClick={() => setShowAll((v) => !v)}>
           {showAll ? t.hiddenShowsOff : t.hiddenShows(hidden)}
         </button>
       )}
+    </article>
+  )
+}
+
+// A compact screening chip for the cinema pages: the same two facts as a
+// showbox (when, which version) but linking straight out to the ticket, because
+// on a cinema page the visitor has already chosen the where.
+function TimeChip({ movie, show, t, ui }) {
+  const info = isInfoOnly(show)
+  const cls = `tchip lang-${show.language.toLowerCase()}`
+  const body = (
+    <>
+      <span className="tchip-time">{fmtTime(show.datetime, t)}</span>
+      <span className="lang-tag">{show.language}</span>
+    </>
+  )
+  return show.booking_url
+    ? <a className={cls} href={show.booking_url} target="_blank" rel="noreferrer"
+        title={info ? t.infoTitle : t.ticketsTitle}>{body}</a>
+    : <span className={cls}>{body}</span>
+}
+
+// One cinema as its own page: where it is, how to get in, what is on. People
+// search for the cinema at least as often as for the film, and until now the
+// only thing the site could do with a cinema was filter by it.
+function CinemaPage({ cinema, movies, onBack, onOpenFilm, onProgram, here, t, ui }) {
+  const meta = CINEMA_META[cinema] || {}
+  const note = ticketNote(cinema, ui)
+  const addr = cinemaAddress(cinema)
+  const km = distanceKm(here, cinema)
+  const map = mapsHref(cinema)
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape' && !document.querySelector('.price-modal')) onBack()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onBack])
+
+  const { days, byDay, filmCount, showCount } = useMemo(() => {
+    const cutoff = Date.now() - 30 * 60000
+    const byDay = {}
+    let filmCount = 0, showCount = 0
+    for (const m of movies) {
+      let has = false
+      for (const s of m.showtimes) {
+        if (s.cinema !== cinema || new Date(s.datetime) < cutoff) continue
+        has = true
+        showCount++
+        const d = dayKey(s.datetime)
+        ;(byDay[d] = byDay[d] || []).push({ m, s })
+      }
+      if (has) filmCount++
+    }
+    return { days: Object.keys(byDay).sort(), byDay, filmCount, showCount }
+  }, [cinema, movies])
+
+  return (
+    <article className="cinema-page">
+      <div className="film-bar">
+        <button className="film-back" onClick={onBack}>{t.backToList}</button>
+        <button className="film-back" onClick={() => onOpenFilm(null)}>{t.backToCinemas}</button>
+      </div>
+
+      <header className="cinema-hero">
+        <p className="cinema-kicker">{t.cinemaOf} · {meta.city}</p>
+        <h1>{cinema}</h1>
+        <p className="cinema-facts">
+          {addr && (map
+            ? <a href={map} target="_blank" rel="noreferrer">📍 {addr}</a>
+            : <span>📍 {addr}</span>)}
+          {km != null && <span className="cinema-km">{fmtKm(km, t)}</span>}
+        </p>
+        <p className="cinema-links">
+          {meta.website && (
+            <a className="trailer-btn" href={meta.website} target="_blank" rel="noreferrer">
+              {t.cinemaSite}
+            </a>
+          )}
+          {map && (
+            <a className="trailer-btn" href={map} target="_blank" rel="noreferrer">{t.mapLink}</a>
+          )}
+          {showCount > 0 && (
+            <button className="trailer-btn" onClick={() => onProgram(cinema)}>
+              {t.cinemaProgram}
+            </button>
+          )}
+        </p>
+        {note && <p className="cinema-note">{note}</p>}
+        {showCount > 0 && (
+          <p className="cinema-count">{t.cinemaFilms(filmCount)} · {t.cinemaShows(showCount)}</p>
+        )}
+      </header>
+
+      {days.length === 0 ? (
+        <p className="empty">{t.cinemaNoShows}</p>
+      ) : (
+        <div className="cinema-days">
+          {days.map((d) => {
+            // one entry per film per day, with all its times on that day
+            const perFilm = []
+            const seen = new Map()
+            for (const { m, s } of byDay[d]) {
+              let hit = seen.get(m.id)
+              if (!hit) { hit = { m, times: [] }; seen.set(m.id, hit); perFilm.push(hit) }
+              hit.times.push(s)
+            }
+            for (const f of perFilm) f.times.sort((a, b) => a.datetime.localeCompare(b.datetime))
+            perFilm.sort((a, b) => a.times[0].datetime.localeCompare(b.times[0].datetime))
+            return (
+              <section className="cinema-day" key={d}>
+                <h2 className="cinema-daytitle">{fmtDayFull(d, t)}</h2>
+                {perFilm.map(({ m, times }) => (
+                  <div className="cinema-film" key={m.id}>
+                    <button className="cinema-filmtitle" onClick={() => onOpenFilm(m)}>
+                      {displayTitle(m, ui)}
+                    </button>
+                    <div className="cinema-times">
+                      {times.map((s, i) => <TimeChip key={i} movie={m} show={s} t={t} ui={ui} />)}
+                    </div>
+                  </div>
+                ))}
+              </section>
+            )
+          })}
+        </div>
+      )}
+    </article>
+  )
+}
+
+// The index of all cinemas. Also the only place the visitor's own position is
+// ever asked for, and it stays in the browser: the sort happens here, nothing
+// is sent anywhere (there is no server of ours to send it to).
+function CinemaIndex({ movies, onBack, onOpen, here, askHere, geoState, t, ui }) {
+  const counts = useMemo(() => {
+    const cutoff = Date.now() - 30 * 60000
+    const films = {}, shows = {}
+    for (const m of movies) {
+      const at = new Set()
+      for (const s of m.showtimes) {
+        if (new Date(s.datetime) < cutoff) continue
+        shows[s.cinema] = (shows[s.cinema] || 0) + 1
+        at.add(s.cinema)
+      }
+      for (const c of at) films[c] = (films[c] || 0) + 1
+    }
+    return { films, shows }
+  }, [movies])
+
+  const list = useMemo(() => {
+    const names = Object.keys(CINEMA_META)
+    if (here) {
+      return names
+        .map((n) => ({ n, km: distanceKm(here, n) }))
+        .sort((a, b) => (a.km ?? 1e9) - (b.km ?? 1e9))
+    }
+    // no position: by city, then alphabetically — a stable, predictable order
+    return names
+      .map((n) => ({ n, km: null }))
+      .sort((a, b) => (CINEMA_META[a.n].city || '').localeCompare(CINEMA_META[b.n].city || '')
+        || a.n.localeCompare(b.n, 'de'))
+    // `movies` is in here because CINEMA_META is a module variable filled when
+    // the data lands — without it this list is computed once, while the map is
+    // still empty, and the page reads "0 Kinos" forever
+  }, [here, movies])
+
+  return (
+    <article className="cinema-index">
+      <div className="film-bar">
+        <button className="film-back" onClick={onBack}>{t.backToList}</button>
+      </div>
+      <h1 className="cinema-indextitle">{t.cinemasTitle}</h1>
+      <p className="cinema-indexintro">{t.cinemasIntro(list.length)}</p>
+      <p className="cinema-links">
+        <button className={`trailer-btn${here ? ' on' : ''}`} onClick={askHere}>
+          {geoState === 'asking' ? t.nearMeAsking : here ? t.nearMeOff : t.nearMe}
+        </button>
+      </p>
+      {geoState === 'denied' && <p className="cinema-note">{t.nearMeDenied}</p>}
+      <div className="cinema-list">
+        {list.map(({ n, km }) => (
+          <button className="cinema-card" key={n} onClick={() => onOpen(n)}>
+            <span className="cinema-cardname">{n}</span>
+            <span className="cinema-cardmeta">
+              {CINEMA_META[n].city}
+              {cinemaAddress(n) && <> · {cinemaAddress(n)}</>}
+            </span>
+            <span className="cinema-cardfoot">
+              {km != null && <span className="cinema-km">{fmtKm(km, t)}</span>}
+              {counts.films[n]
+                ? <span>{t.cinemaFilms(counts.films[n])}</span>
+                : <span className="cinema-cardnone">{t.cinemaNoShows}</span>}
+            </span>
+          </button>
+        ))}
+      </div>
     </article>
   )
 }
@@ -1494,11 +1813,18 @@ export default function App() {
   const [topics, setTopics] = useState(() => csv('themen'))
   const [origLangs, setOrigLangs] = useState(() => csv('sprachen'))
   const [lastMinute, setLastMinute] = useState(() => p0.get('lm') === '1')
+  const [ending, setEnding] = useState(() => p0.get('letzte') === '1')
+  const [fresh, setFresh] = useState(() => p0.get('neu') === '1')
   const [view, setView] = useState(() => (p0.get('ansicht') === 'plan' ? 'plan' : 'grid'))
   // which film's page we're on (?film=…) — null means the overview
   const [filmId, setFilmId] = useState(() => p0.get('film') || null)
-  // the static sub-pages (?seite=kontakt); they route exactly like a film page
-  const [page, setPage] = useState(() => (p0.get('seite') === 'kontakt' ? 'kontakt' : null))
+  // The sub-pages (?seite=…): 'kontakt', the cinema index 'kinos', and one
+  // cinema as 'kino:<name>'. They route exactly like a film page — the whole
+  // point of folding them into `page` rather than inventing a second mechanism
+  // is that the Back button and the scroll restore below already handle them.
+  // ?kino= is NOT free for this: it is the cinema *filter* and has been in
+  // shared links since the filters became URL-backed.
+  const [page, setPage] = useState(() => parsePage(p0.get('seite')))
   // one key for "which page are we on", so the history and scroll logic below
   // treat a film page and a static page the same way
   const route = filmId ? `film:${filmId}` : page ? `seite:${page}` : null
@@ -1524,6 +1850,8 @@ export default function App() {
     if (topics.length) sp.set('themen', topics.join(','))
     if (origLangs.length) sp.set('sprachen', origLangs.join(','))
     if (lastMinute) sp.set('lm', '1')
+    if (ending) sp.set('letzte', '1')
+    if (fresh) sp.set('neu', '1')
     if (view !== 'grid') sp.set('ansicht', view)
     if (filmId) sp.set('film', filmId)
     if (page) sp.set('seite', page)
@@ -1536,7 +1864,7 @@ export default function App() {
     if (navigated && !fromPop.current) window.history.pushState(null, '', url)
     else window.history.replaceState(null, '', url)
     fromPop.current = false
-  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, view, filmId, page, route])
+  }, [q, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, topics, origLangs, lastMinute, ending, fresh, view, filmId, page, route])
 
   // Back/Forward: adopt whatever page the URL now points at
   useEffect(() => {
@@ -1544,7 +1872,7 @@ export default function App() {
       fromPop.current = true
       const sp = new URLSearchParams(window.location.search)
       setFilmId(sp.get('film') || null)
-      setPage(sp.get('seite') === 'kontakt' ? 'kontakt' : null)
+      setPage(parsePage(sp.get('seite')))
     }
     window.addEventListener('popstate', onPop)
     return () => window.removeEventListener('popstate', onPop)
@@ -1645,6 +1973,76 @@ export default function App() {
     return [...set].sort()
   }, [data])
 
+  // --- Letzte Chance ---------------------------------------------------------
+  // The trap: cinemas run a Thursday-to-Wednesday week, so on a Sunday the
+  // published programme simply stops on Wednesday and *every* film looks like
+  // it is about to end. A film is only ending if its last screening falls
+  // before its cinema's own last programmed day — i.e. that cinema keeps
+  // showing other films after this one stops. Films playing at several cinemas
+  // must be finishing at all of them.
+  const endingIds = useMemo(() => {
+    const out = new Set()
+    if (!data) return out
+    const horizon = {}
+    for (const m of data.movies) {
+      for (const s of m.showtimes) {
+        const d = dayKey(s.datetime)
+        if (d > (horizon[s.cinema] || '')) horizon[s.cinema] = d
+      }
+    }
+    const cutoff = Date.now() - 30 * 60000
+    // "within the next few days" — beyond that it isn't a last chance yet
+    const limit = dayKey(new Date(Date.now() + 2 * 86400e3).toISOString())
+    for (const m of data.movies) {
+      const last = {}
+      let overall = ''
+      for (const s of m.showtimes) {
+        if (new Date(s.datetime) < cutoff) continue
+        const d = dayKey(s.datetime)
+        if (d > (last[s.cinema] || '')) last[s.cinema] = d
+        if (d > overall) overall = d
+      }
+      if (!overall || overall > limit) continue
+      if (Object.entries(last).every(([c, d]) => (horizon[c] || '') > d)) out.add(m.id)
+    }
+    return out
+  }, [data])
+
+  // --- Neu im Programm -------------------------------------------------------
+  // first_seen is written by the scraper (the day the film entered *our*
+  // programme, which is not its release date — a re-release or a late arthouse
+  // print is new here without being a new film). Measured against the data's
+  // own date, so a day-old file doesn't quietly empty the filter.
+  const freshIds = useMemo(() => {
+    const out = new Set()
+    if (!data) return out
+    const ref = (data.generated_at || '').slice(0, 10)
+    if (!ref) return out
+    const since = dayKey(new Date(Date.parse(ref) - 2 * 86400e3).toISOString())
+    for (const m of data.movies) {
+      if (m.first_seen && m.first_seen > since) out.add(m.id)
+    }
+    return out
+  }, [data])
+
+  // The visitor's position, for "nearest first". Asked for only on the cinema
+  // index, never on load, and it never leaves the browser — the site is static
+  // and has nowhere to send it even if it wanted to.
+  const [here, setHere] = useState(null)
+  const [geoState, setGeoState] = useState('idle')  // idle · asking · denied
+  const askHere = () => {
+    if (here) { setHere(null); setGeoState('idle'); return }
+    if (!navigator.geolocation) { setGeoState('denied'); return }
+    setGeoState('asking')
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setHere({ lat: pos.coords.latitude, lon: pos.coords.longitude })
+        setGeoState('idle')
+      },
+      () => setGeoState('denied'),
+      { timeout: 10000, maximumAge: 5 * 60000 })
+  }
+
   // showtimes of a movie that pass the when/where/version filters
   const showsFor = (m) => m.showtimes.filter((s) => {
     // hide screenings that ended: data refreshes only each morning, but
@@ -1704,6 +2102,8 @@ export default function App() {
     const out = []
     for (const m of data.movies) {
       if (favSet && !favSet.has(m.id)) continue
+      if (ending && !endingIds.has(m.id)) continue
+      if (fresh && !freshIds.has(m.id)) continue
       if ((m.ratings.imdb ?? 0) < minImdb) continue
       if (kidsOnly && !isKidsFilm(m)) continue
       if (genres.length && !(m.genres || []).some((g) => genres.includes(g))) continue
@@ -1738,7 +2138,7 @@ export default function App() {
       })
     // favKey, not favs: hearting a film must not re-filter the whole list
     // unless the "Favoriten" filter is actually on
-  }, [data, qLive, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favKey, topics, origLangs, lastMinute, ui, t.locale])
+  }, [data, qLive, city, lang, sort, minImdb, genres, kidsOnly, cinema, date, timeFrom, timeTo, favsOnly, favKey, topics, origLangs, lastMinute, ending, fresh, endingIds, freshIds, ui, t.locale])
 
   // screenings the price panel works on: one film's, or every filtered
   // screening at a cinema we have prices for
@@ -1774,6 +2174,18 @@ export default function App() {
     if (!route) listScroll.current = window.scrollY
     setFilmId(null); setPriceView(null); setPage(p)
   }
+  const openCinema = (name) => openPage(`kino:${name}`)
+
+  // "everything this cinema is playing" = the normal list, filtered to it.
+  // Deliberately not a second list implementation on the cinema page: the
+  // filters, the sort and the schedule view all already exist over there.
+  const openProgram = (name) => {
+    resetFilters()
+    setCinema(name)
+    setFilmId(null); setPage(null); setPriceView(null)
+    window.scrollTo(0, 0)
+  }
+
   const backToList = () => {
     // prefer real history so Back/Forward stay consistent with the buttons
     if (window.history.length > 1) window.history.back()
@@ -1813,6 +2225,10 @@ export default function App() {
       ? `${displayTitle(selected, ui)} · Kino Köln Bonn`
       : page === 'kontakt'
       ? `${t.contact} · Kino Köln Bonn`
+      : page === 'kinos'
+      ? `${t.cinemasPage} · Kino Köln Bonn`
+      : pageCinema(page)
+      ? `${pageCinema(page)} · Kino Köln Bonn`
       : 'Kino Köln Bonn'
   }, [selected, page, ui, t])
 
@@ -1828,7 +2244,7 @@ export default function App() {
   const resetFilters = () => {
     setQ(''); setCity('Alle'); setLang('alle'); setMinImdb(0); setGenres([])
     setKidsOnly(false); setCinema('Alle'); setDate('Alle'); setTimeFrom(0); setTimeTo(24)
-    setTopics([]); setOrigLangs([]); setLastMinute(false)
+    setTopics([]); setOrigLangs([]); setLastMinute(false); setEnding(false); setFresh(false)
   }
 
   // full reset to the fresh-landing state (keeps language + saved favorites):
@@ -1847,6 +2263,8 @@ export default function App() {
   const chip = (key, label, clear) => activeChips.push({ key, label, clear })
   if (q) chip('q', `„${q}“`, () => setQ(''))
   if (lastMinute) chip('lm', t.lastMinute, () => setLastMinute(false))
+  if (ending) chip('ending', t.ending, () => setEnding(false))
+  if (fresh) chip('fresh', t.fresh, () => setFresh(false))
   if (kidsOnly) chip('kids', t.kids, () => setKidsOnly(false))
   for (const tg of topics) chip(`topic-${tg}`, t.topics[tg], () => toggleTopic(tg))
   if (lang !== 'alle') chip('lang', LANGS.find((l) => l.id === lang)?.labelKey
@@ -1924,6 +2342,23 @@ export default function App() {
 
       {page === 'kontakt' ? (
         <ContactPage onBack={backToList} t={t} />
+      ) : page === 'kinos' ? (
+        <CinemaIndex movies={data ? data.movies : []} onBack={backToList}
+          onOpen={openCinema} here={here} askHere={askHere} geoState={geoState}
+          t={t} ui={ui} />
+      ) : pageCinema(page) ? (
+        // a link can name a cinema we no longer carry — say so instead of
+        // rendering an empty shell
+        data && !CINEMA_META[pageCinema(page)] ? (
+          <p className="empty">
+            {t.notFound}
+            <br /><button className="film-back" onClick={backToList}>{t.backToList}</button>
+          </p>
+        ) : (
+          <CinemaPage cinema={pageCinema(page)} movies={data ? data.movies : []}
+            onBack={backToList} onOpenFilm={(m) => (m ? openMovie(m) : openPage('kinos'))}
+            onProgram={openProgram} here={here} t={t} ui={ui} />
+        )
       ) : filmId ? (
         selected ? (
           <FilmPage
@@ -1932,6 +2367,7 @@ export default function App() {
             allShows={selected.showtimes.filter((s) => new Date(s.datetime) >= Date.now() - 30 * 60000)}
             onBack={backToList}
             onPrices={() => setPriceView({ movie: selected })}
+            onCinema={openCinema} here={here}
             party={party} threeD={threeD} live={livePrices}
             isFav={favs.includes(selected.id)} onToggleFav={toggleFav}
             t={t} ui={ui} />
@@ -1965,6 +2401,9 @@ export default function App() {
               is a thing people go looking for, not a property of the result set */}
           <button className="chip price-chip" onClick={() => setPriceView({ movie: null })}
             title={t.pricesBtnTitle}>💶 {t.prices}</button>
+          {/* same reasoning as the price button: a destination, not a filter */}
+          <button className="chip price-chip" onClick={() => openPage('kinos')}
+            title={t.cinemasTitle}>🎦 {t.cinemasPage}</button>
         </ScrollRow>
       </div>
 
@@ -1978,6 +2417,10 @@ export default function App() {
             <div className="pills">
               <button className={`pill ${lastMinute ? 'on' : ''}`} onClick={() => setLastMinute((v) => !v)}
                 title={t.lastMinuteTitle}>{t.lastMinute}</button>
+              <button className={`pill ${fresh ? 'on' : ''}`} onClick={() => setFresh((v) => !v)}
+                title={t.freshTitle}>{t.fresh}</button>
+              <button className={`pill ${ending ? 'on' : ''}`} onClick={() => setEnding((v) => !v)}
+                title={t.endingTitle}>{t.ending}</button>
               <button className={`pill ${kidsOnly ? 'on' : ''}`} onClick={() => setKidsOnly((v) => !v)}
                 title={t.kidsTitle}>{t.kids}</button>
               {TOPIC_IDS.map((tg) => (
@@ -2105,7 +2548,8 @@ export default function App() {
           <div className="grid">
             {movies.map(({ m }, i) => (
               <Card key={`${m.id}-${i}`} movie={m} onOpen={openMovie}
-                isFav={favs.includes(m.id)} onToggleFav={toggleFav} t={t} ui={ui} sort={sort} />
+                isFav={favs.includes(m.id)} onToggleFav={toggleFav} t={t} ui={ui} sort={sort}
+                flag={freshIds.has(m.id) ? 'fresh' : endingIds.has(m.id) ? 'ending' : null} />
             ))}
           </div>
         )}
@@ -2132,6 +2576,8 @@ export default function App() {
         </p>
         <p>{t.footer}</p>
         <p>
+          <button className="footer-link" onClick={() => openPage('kinos')}>{t.cinemasPage}</button>
+          {' · '}
           <button className="footer-link" onClick={() => openPage('kontakt')}>{t.contact}</button>
         </p>
       </footer>

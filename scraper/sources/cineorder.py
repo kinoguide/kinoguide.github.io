@@ -171,7 +171,18 @@ def fetch_prices(center_oid: str, api: str = DEFAULT_API, timeout: int = 45) -> 
     return shows
 
 
-_PERFORMANCE_RE = re.compile(r"[?&]performance=([A-Z0-9]{16,})")
+# The two shops carry the performance id differently: Kinopolis in the path
+# (…/vorstellung/<id>), Cinedom in a query parameter (…?performance=<id>) that
+# reaches us through kinoheld's deeplink. Same key, two shapes — prices.js
+# showId() matches the same pair on the frontend side.
+# The 16-character floor matters: kinoheld's own /vorstellung/<urlSlug> links
+# carry a short numeric slug (50892), and those must not be read as shop ids.
+_PERFORMANCE_RE = re.compile(r"(?:[?&]performance=|/vorstellung/)([A-Z0-9]{16,})")
+
+
+def performance_id(url: str) -> str | None:
+    m = _PERFORMANCE_RE.search(url or "")
+    return m.group(1) if m else None
 
 
 def apply_languages(shows: list[dict], cinema: dict) -> int:
@@ -204,10 +215,10 @@ def apply_languages(shows: list[dict], cinema: dict) -> int:
 
     changed = 0
     for show in shows:
-        m = _PERFORMANCE_RE.search(show.get("booking_url") or "")
-        if not m or m.group(1) not in by_id:
+        pid = performance_id(show.get("booking_url") or "")
+        if not pid or pid not in by_id:
             continue
-        lang = classify(by_id[m.group(1)])
+        lang = classify(by_id[pid])
         if lang != show.get("language"):
             show["language"] = lang
             changed += 1

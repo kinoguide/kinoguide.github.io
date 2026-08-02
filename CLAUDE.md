@@ -32,10 +32,40 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
 - `scraper/main.py` — orchestrator: scrape every cinema (isolated failures) →
   enrich → write `data/movies.json` (+ a top-level `cinemas` map). Also applies
   per-cinema language corrections (Filmpalette, Kinopolis).
+- `scraper/cinemas.json` — every cinema also carries `address` + `lat`/`lon`
+  (added 2026-08-02), which main.py passes through in the `cinemas` map and the
+  frontend uses for the map links, the cinema pages and "nearest first". 19 came
+  from kinoheld's own directory (`cinemas(ids:){data{street postcode{postcode}
+  latitude longitude}}` — note `Postcode.postcode`, not `.code`), the other five
+  from each venue's Impressum, geocoded once via OpenStreetMap and then frozen.
+  **Do not take these from an Impressum blindly:** Metropolis and Rex am Ring
+  both print their operator's Wuppertal address there and the cinema's own
+  under a separate "Adresse Kino", so the obvious read puts both houses 50 km
+  away. Bonn's two open-airs are the *venue's* address (Bundeskunsthalle,
+  Freibad Friesdorf), not the Kinemathek office that programmes them — what
+  matters is where the film is shown, because that is where people are going.
+  The **map links use the address, not the coordinates**; lat/lon exist only for
+  the "Nächste zuerst" distance sort. `scraper/check_addresses.py` (run after
+  touching any of them) asserts the postcode is inside Köln 50667–51149 or Bonn
+  53111–53229 and that the coordinate geocodes back to within 400 m of its own
+  address. **kinoheld's coordinates are not automatically right:** that check
+  caught the Arthaus-Kino im LandesMuseum sitting 1.1 km off its own
+  Colmantstraße address, corrected 2026-08-02.
 - `scraper/cinemas.json` — the 24 cinemas: kinoheld IDs, `website`, `price_page`,
   `source` (`kinoheld`, `custom` or `kinopolis`), the CineOrder shop coordinates
   where there is one (`cineorder_api`, `cineorder_center_oid`,
   `family_max_adults`), and notes. Read the `_note` fields.
+- `scraper/language.py` `clean_title()` also strips the decorations distributors
+  bolt onto a re-release and the cinemas paste straight into their programme:
+  `(WA:2025)`, `(RE 2026)`, `(30th Anniversary)`, `(Extended Version)`, a bare
+  `(2018)`. TMDB finds **nothing** for any title carrying them, so those films
+  shipped with no poster and no description until a user spotted La Haine
+  (2026-08-02); cleaned, they resolve correctly — LA HAINE → "Hass" (1995),
+  AMORES PERROS → 2000, Terminator 2 → 1991. Only *known* decorations are
+  stripped, never brackets in general: a title cut short matches the wrong film,
+  which is worse than not matching. The year inside a `WA:`/`RE` marker is
+  deliberately not reused as a year hint — it is when the print was reissued,
+  not when the film was made, and the wrong vintage empties `tmdb._pick()`.
 - `scraper/sources/kinoheld.py` — kinoheld GraphQL client (endpoint
   `next-live.kinoheld.de/graphql`, op `FetchProgramByMovie`). Builds exact
   per-show booking links (`…/vorstellung/<urlSlug>`). **kinoheld runs two id
@@ -57,6 +87,24 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   `_booking_url()` returns nothing for them and main.py falls back to the
   cinema's own site. For the Kinemathek the real per-show cinetixx links are
   then joined on from its own programme (`own_ticket_links`).
+- `scraper/guard.py` — the last gate before `movies.json` is written. main.py
+  isolates a failing cinema so the run survives; the cost is that the cinema
+  just *vanishes* from the site and the page looks completely normal without it.
+  So the new payload is diffed against the file already on disk (yesterday's
+  committed data) and the run **exits 1 without writing** if a cinema lost >50 %
+  of its screenings (or all of them), the whole programme lost >25 %, or the
+  share of films with a poster / with an IMDb rating / of screenings with a
+  ticket link fell >12 points — i.e. an expired TMDB or OMDb key, or a repeat of
+  the two booking-link bugs, all of which produced perfectly well-formed data.
+  Counts are compared **over the same set of dates** (the days from today on
+  that the old file already had): cinemas run a Do–Mi week and publish the next
+  one on Mon/Tue, so raw totals shrink by a day every day and would false-alarm.
+  Small sources are exempt below 6 screenings. `python main.py --force` ships
+  anyway, for the day a cinema really does close. `scraper/test_guard.py` builds
+  its fixtures out of the live data (no hard-coded date or cinema, so it can't
+  rot) and asserts both directions — half its cases assert the guard stays
+  *quiet*, because a watchdog that cries wolf gets switched off. It runs in the
+  workflow before the scrape.
 - `scraper/check_links.py` — fetches a sample of ticket links per cinema and
   asserts the page is a booking step, because both link bugs above looked
   perfectly fine in the data. Run it after touching anything that builds a
@@ -66,7 +114,13 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   (scripts are stripped before scanning), and Cineplex 403s every non-browser
   agent while the SPA shops return empty HTML — those are listed as
   unverifiable rather than silently passing. `_title_for()` guards
-  against kinoheld mis-grouping films under a wrong entry.
+  against kinoheld mis-grouping films under a wrong entry — and, since
+  2026-08-02, against the opposite failure: cinemas fill the per-show name field
+  by hand and their till sometimes writes its own reference into it, so OFF
+  Broadway's 20:00 screening of "Das Gewicht der Welt" was named `294164`.
+  Sharing no words with the entry, that beat the real title and shipped a card
+  named after a number, with no poster and no description. A show name with no
+  letters in it is never a film.
 - `scraper/sources/kinopolis.py` — Kinopolis showtimes from their own CineOrder
   ticket shop (same one request as the prices, see below). Since 2026-07-25
   this replaces kinoheld for them: kinoheld was missing 10 screenings, almost
@@ -130,11 +184,37 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
     `history.scrollRestoration` must stay `'manual'` or the browser undoes the
     restore. The film is looked up in the full `data.movies`, so a shared link
     opens even when the recipient's filters would hide it. Static sub-pages ride
-    the same machinery under `?seite=<name>` — currently only `?seite=kontakt`
-    (`ContactPage`: feedback + Impressum, reached by the ✉ button in the header
-    and a footer link). Both are folded into one `route` string, and that is what
-    the push/replace and scroll-restore logic keys on; add a page by extending
-    `page`, not by inventing a second mechanism.
+    the same machinery under `?seite=<name>`: `?seite=kontakt` (`ContactPage`:
+    feedback + Impressum, reached by the ✉ button in the header and a footer
+    link), `?seite=kinos` (`CinemaIndex` — all 24 with address, plus an optional
+    "Nächste zuerst" that asks for the browser's location and keeps it there) and
+    `?seite=kino:<name>` (`CinemaPage`: address, map link, ticket note, and
+    everything that house is playing, by day). **The cinema page cannot live at
+    `?kino=`** — that is the cinema *filter* and has been in shared links since
+    the filters became URL-backed. All of them fold into one `route` string, and
+    that is what the push/replace and scroll-restore logic keys on; add a page by
+    extending `page`, not by inventing a second mechanism. "Ganzes Programm
+    dieses Kinos" deliberately just sets the `kino` filter and returns to the
+    list instead of reimplementing a filtered list on the cinema page.
+    Anything reading the `cinemas` map inside a `useMemo` must depend on the
+    loaded data: `CINEMA_META` is a module variable filled when the fetch lands,
+    so a memo keyed only on its own inputs runs once against an empty map —
+    that is exactly what made the cinema index read "0 Kinos".
+  - **"Letzte Chance" / "Neu im Programm"** (2026-08-02), both in Schnellfilter.
+    The trap in "Letzte Chance": cinemas run a Thursday–Wednesday week, so on a
+    Sunday the published programme simply stops on Wednesday and *every* film
+    looks like it is ending. A film therefore only counts if its last screening
+    falls before **its cinema's own last programmed day** — that cinema keeps
+    showing other films afterwards — at every cinema it plays at, and within two
+    days. 33 of 296 films on 2026-08-02; if a change makes that number approach
+    "all of them", the horizon logic is broken.
+    "Neu" reads `first_seen`, written by main.py as the day a film entered *our*
+    programme — not `release_date`, because a re-release or a late arthouse print
+    is new here without being a new film. Films already present when the field
+    was introduced get **no** date rather than yesterday's: dating them yesterday
+    would drop all 296 into the two-day window and announce the entire programme
+    as new, exactly once. The filter is therefore legitimately empty until the
+    first scrape after the field shipped.
   - **The feedback form** (`FeedbackForm`, added 2026-08-01). Posts to
     **FormSubmit** (`https://formsubmit.co/ajax/<CONTACT_MAIL>`), which forwards
     the message to kinokoelnbonn@gmail.com: a static site has no back end of its
@@ -207,13 +287,18 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   it; Cinedom keeps kinoheld's showtimes (kinoheld has *more* of them — it still
   lists today's after the shop drops them from sale) but takes prices and
   languages from the shop via `apply_languages()`, joined on the performance id
-  in the booking link.
+  in the booking link (`performance_id()` matches both shapes: Kinopolis puts it
+  in the path, Cinedom in a query parameter — the 16-char floor is what keeps
+  kinoheld's own short `/vorstellung/<slug>` ids from being read as shop ids).
 
 ## Run / deploy
 
 - Scrape locally: `cd scraper && python main.py` (reads keys from repo-root
   `.env`, gitignored — NEVER commit it). Then
-  `cp data/movies.json web/public/data/movies.json`.
+  `cp data/movies.json web/public/data/movies.json`. A run that ends in
+  "STOPPED: this scrape lost data" wrote nothing on purpose — see `guard.py`.
+- A failed scrape in Actions means no commit and no deploy, so the live site
+  keeps serving the last good programme. Stale beats wrong; fix the source.
 - Frontend dev: preview via the Browser-pane tools (launch config `web`), or
   `cd web && npm run dev`. Build: `npm run build`.
 - Deploy = just `git push` to `origin main` (or the daily cron). The workflow
