@@ -1,25 +1,40 @@
 {
- "generated_at": "2026-08-01T22:46:54.042002+00:00",
+ "generated_at": "2026-08-02T00:55:03.470486+00:00",
  "cinemas": {
   "Woki": {
    "city": "Bonn",
-   "website": "https://www.woki.de"
+   "website": "https://www.woki.de",
+   "address": "Bertha-von-Suttner-Platz 1-7, 53111 Bonn",
+   "lat": 50.737591,
+   "lon": 7.10178
   },
   "Rex Lichtspieltheater": {
    "city": "Bonn",
-   "website": "https://www.rex-filmbuehne.de"
+   "website": "https://www.rex-filmbuehne.de",
+   "address": "Frongasse 9, 53121 Bonn",
+   "lat": 50.727535,
+   "lon": 7.074641
   },
   "Neue Filmbühne": {
    "city": "Bonn",
-   "website": "https://www.rex-filmbuehne.de"
+   "website": "https://www.rex-filmbuehne.de",
+   "address": "Friedrich-Breuer-Straße 68-70, 53225 Bonn",
+   "lat": 50.73933,
+   "lon": 7.120926
   },
   "Kinopolis Bad Godesberg": {
    "city": "Bonn",
-   "website": "https://www.kinopolis.de/bn"
+   "website": "https://www.kinopolis.de/bn",
+   "address": "Moltkestraße 7, 53173 Bonn",
+   "lat": 50.685902,
+   "lon": 7.155815
   },
   "Bonner Kinemathek": {
    "city": "Bonn",
    "website": "https://www.bonnerkinemathek.de/programm/",
+   "address": "Kreuzstr. 16, 53225 Bonn",
+   "lat": 50.740845,
+   "lon": 7.123046,
    "ticket_note": {
     "de": "Karten verkauft die Kinemathek über ihre eigene Seite. Wo wir die Vorstellung dort wiederfinden, führt der Link direkt zum Ticketkauf — sonst zum Programm.",
     "en": "The Kinemathek sells tickets on its own site. Where we can find the screening there the link goes straight to the checkout, otherwise to the programme."
@@ -27,11 +42,17 @@
   },
   "Stern Lichtspiele": {
    "city": "Bonn",
-   "website": "https://www.cinestar.de/kino-bonn-sternlichtspiele"
+   "website": "https://www.cinestar.de/kino-bonn-sternlichtspiele",
+   "address": "Markt 8, 53111 Bonn",
+   "lat": 50.735596,
+   "lon": 7.102489
   },
   "Open Air Bundeskunsthalle": {
    "city": "Bonn",
    "website": "https://www.bonnerkinemathek.de/programm/open-air-kino-auf-dem-dach-der-bundeskunsthalle/",
+   "address": "Bundeskunsthalle, Helmut-Kohl-Allee 4, 53113 Bonn",
+   "lat": 50.714182,
+   "lon": 7.122022,
    "ticketing": "info",
    "ticket_note": {
     "de": "Karten gibt es über die Seite des Kinos (cinetixx). Einlass 19.30 Uhr, Beginn 20.30 Uhr — bei schlechtem Wetter läuft der Film im Forum der Bundeskunsthalle.",
@@ -41,6 +62,9 @@
   "Open Air Friesdorfer Freibad": {
    "city": "Bonn",
    "website": "https://www.bonnerkinemathek.de/programm/",
+   "address": "Freibad Friesdorf, Margaretenstraße 14, 53175 Bonn",
+   "lat": 50.697482,
+   "lon": 7.124163,
    "ticketing": "info",
    "ticket_note": {
     "de": "Karten gibt es über die Seite des Kinos (cinetixx). Einlass ab 19 Uhr, Schwimmbadnutzung bis 21.10 Uhr, Beginn 21.30 Uhr.",
@@ -50,6 +74,9 @@
   "Stummfilmtage Bonn": {
    "city": "Bonn",
    "website": "https://www.internationale-stummfilmtage.de",
+   "address": "Arkadenhof der Universität, Regina-Pacis-Weg 1, 53113 Bonn",
+   "lat": 50.732798,
+   "lon": 7.102312,
    "ticketing": "info",
    "ticket_note": {
     "de": "Eintritt frei — es gibt keine Tickets. Einlass ab 19 Uhr in den Arkadenhof der Universität, Plätze der Reihe nach; um eine Spende wird gebeten.",
@@ -58,55 +85,94 @@
   },
   "Arthaus-Kino im LandesMuseum": {
    "city": "Bonn",
-   "website": "https://www.bonnerkinemathek.de"
+   "website": "https://www.bonnerkinemathek.de",
+   "address": "Colmantstraße 14-16, 53115 Bonn",
+   "lat": 50.732062,
+   "lon": 7.092622
   },
   "Metropolis": {
    "city": "Köln",
-   "website": "https://www.metropolis-koeln.de"
+   "website": "https://www.metropolis-koeln.de",
+   "address": "Ebertplatz 19, 50668 Köln",
+   "lat": 50.951268,
+   "lon": 6.958207
   },
   "Odeon": {
    "city": "Köln",
-   "website": "https://www.odeon-koeln.de"
+   "website": "https://www.odeon-koeln.de",
+   "address": "Severinstraße 81, 50678 Köln",
+   "lat": 50.92522,
+   "lon": 6.958283
   },
   "Filmpalette": {
    "city": "Köln",
-   "website": "http://www.filmpalette-koeln.de"
+   "website": "http://www.filmpalette-koeln.de",
+   "address": "Lübecker Straße 15, 50668 Köln",
+   "lat": 50.949654,
+   "lon": 6.955183
   },
   "OFF Broadway": {
    "city": "Köln",
-   "website": "https://www.off-broadway.de"
+   "website": "https://www.off-broadway.de",
+   "address": "Zülpicher Straße 24, 50674 Köln",
+   "lat": 50.929668,
+   "lon": 6.937917
   },
   "Rex am Ring": {
    "city": "Köln",
-   "website": "https://rex-koeln.de"
+   "website": "https://rex-koeln.de",
+   "address": "Hohenzollernring 60, 50672 Köln",
+   "lat": 50.940028,
+   "lon": 6.940215
   },
   "Weisshaus Kino": {
    "city": "Köln",
-   "website": "https://www.weisshaus-kino.de"
+   "website": "https://www.weisshaus-kino.de",
+   "address": "Luxemburger Straße 253, 50939 Köln",
+   "lat": 50.91687,
+   "lon": 6.929142
   },
   "Lichtspiele Kalk": {
    "city": "Köln",
-   "website": "https://www.lichtspiele-kalk.de"
+   "website": "https://www.lichtspiele-kalk.de",
+   "address": "Kalk-Mülheimer-Straße 130-132, 51103 Köln",
+   "lat": 50.94276,
+   "lon": 7.001688
   },
   "Cinenova": {
    "city": "Köln",
-   "website": "https://www.cinenova.de"
+   "website": "https://www.cinenova.de",
+   "address": "Herbrandstraße 11, 50825 Köln",
+   "lat": 50.951408,
+   "lon": 6.911531
   },
   "Kölner Filmhaus": {
    "city": "Köln",
-   "website": "https://filmhaus-koeln.de"
+   "website": "https://filmhaus-koeln.de",
+   "address": "Maybachstraße 111, 50670 Köln",
+   "lat": 50.949036,
+   "lon": 6.94967
   },
   "Cineplex Köln": {
    "city": "Köln",
-   "website": "https://www.cineplex.de/koeln"
+   "website": "https://www.cineplex.de/koeln",
+   "address": "Hohenzollernring 22, 50672 Köln",
+   "lat": 50.93787,
+   "lon": 6.939688
   },
   "Residenz Astor Film Lounge": {
    "city": "Köln",
-   "website": "https://koeln.premiumkino.de"
+   "website": "https://koeln.premiumkino.de",
+   "address": "Kaiser-Wilhelm-Ring 30, 50672 Köln",
+   "lat": 50.943844,
+   "lon": 6.942179
   },
   "Filmforum NRW": {
    "city": "Köln",
    "website": "https://www.filmforumnrw.de",
+   "address": "Bischofsgartenstraße 1, 50667 Köln",
+   "lat": 50.940636,
+   "lon": 6.959758,
    "ticketing": "info",
    "ticket_note": {
     "de": "Karten laufen über rausgegangen.de — die Seite des Kinos verlinkt die Tickets zur jeweiligen Reihe.",
@@ -115,11 +181,17 @@
   },
   "SION Sommerkino": {
    "city": "Köln",
-   "website": "http://www.openairkino.de/koeln"
+   "website": "http://www.openairkino.de/koeln",
+   "address": "Harry-Blum-Platz 1, 50670 Köln",
+   "lat": 50.925301,
+   "lon": 6.96556
   },
   "Cinedom": {
    "city": "Köln",
-   "website": "https://cinedom.de"
+   "website": "https://cinedom.de",
+   "address": "Im Mediapark 1, 50670 Köln",
+   "lat": 50.947891,
+   "lon": 6.944845
   }
  },
  "movies": [
@@ -524,6 +596,13 @@
      "datetime": "2026-08-28T20:00:00+02:00",
      "language": "DE",
      "booking_url": "https://tickets.cineplex.de/checkout/351/7B30EB00023FWBXJYB"
+    },
+    {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-28T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100849"
     },
     {
      "cinema": "Kinopolis Bad Godesberg",
@@ -2402,6 +2481,46 @@
    ]
   },
   {
+   "id": "tt0113247",
+   "title_de": "Hass",
+   "title_original": "La Haine",
+   "year": 1995,
+   "release_date": "1995-05-31",
+   "runtime": 98,
+   "poster": "https://image.tmdb.org/t/p/w342/4ykGwjwa7Md3tnFpnoS5hwFMukd.jpg",
+   "genres": [
+    "Drama"
+   ],
+   "age_rating": 12,
+   "overview_de": "In den tristen Sozialbausiedlungen der Pariser Vororte brechen Unruhen aus, nachdem ein 16-jähriger Araber von der Polizei fast zu Tode geprügelt wurde. Nach einer Nacht voller Gewalt zwischen Jugendlichen und der Polizei herrscht Ausnahmezustand. Getrieben von Hass gegen das System stehen die Freunde Hubert, Saïd und Vinz an vorderster Front, an einem Tag, der ihr Leben verändern wird.",
+   "overview_en": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
+   "original_language": "fr",
+   "countries": [
+    "FR"
+   ],
+   "directors": [
+    "Mathieu Kassovitz"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=9bMF84iQ41s",
+   "trailer_en": "https://www.youtube.com/watch?v=FKwcXt3JIaU",
+   "ratings": {
+    "imdb": 8.1,
+    "metascore": null,
+    "letterboxd": 4.51
+   },
+   "showtimes": [
+    {
+     "cinema": "Filmpalette",
+     "city": "Köln",
+     "datetime": "2026-08-02T21:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3602919774&bgswitch=false&resize=false"
+    }
+   ],
+   "first_seen": "2026-08-02"
+  },
+  {
    "id": "tt0096283",
    "title_de": "Mein Nachbar Totoro",
    "title_original": "となりのトトロ",
@@ -2656,6 +2775,47 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/E6A75000023GNFNDWF"
     }
    ]
+  },
+  {
+   "id": "tt0245712",
+   "title_de": "Amores perros",
+   "title_original": "Amores perros",
+   "year": 2000,
+   "release_date": "2000-06-16",
+   "runtime": 155,
+   "poster": "https://image.tmdb.org/t/p/w342/3lnl0VlkncxaH7uSsijNrWqO9OC.jpg",
+   "genres": [
+    "Drama",
+    "Thriller"
+   ],
+   "age_rating": 16,
+   "overview_de": "Ein Teenager setzt alles aufs Spiel, um mit der Frau seines Bruders durchzubrennen. Ein Model verliert den Halt, nachdem sie mit ihrem Geliebten zusammenzieht. Ein Obdachloser stellt sich den Geistern seiner Vergangenheit. Während ihre Geschichten sich entfalten, treten menschliche Wirrungen, Grausamkeit und Zärtlichkeit ans Licht – und zeigen, dass sie mehr verbindet, als es zunächst den Anschein hat.  Nach 25 Jahren kehrt Alejandro González Iñárritus legendärer Debütfilm in einer atemberaubenden Restauration auf die Kinoleinwand zurück.",
+   "overview_en": "A fatalistic car crash in Mexico city sets off a chain of events in the lives of three people: a supermodel, a young man wanting to run off with his sister-in-law, and a homeless man.",
+   "original_language": "es",
+   "countries": [
+    "MX"
+   ],
+   "directors": [
+    "Alejandro G. Iñárritu"
+   ],
+   "tags": [],
+   "trailer_de": "https://www.youtube.com/watch?v=y47aYSMULGA",
+   "trailer_en": "https://www.youtube.com/watch?v=_P29GF_NbDc",
+   "ratings": {
+    "imdb": 8.0,
+    "metascore": 83,
+    "letterboxd": 4.18
+   },
+   "showtimes": [
+    {
+     "cinema": "Filmpalette",
+     "city": "Köln",
+     "datetime": "2026-08-05T20:45:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3602919553&bgswitch=false&resize=false"
+    }
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "tt3783958",
@@ -5249,6 +5409,56 @@
    ]
   },
   {
+   "id": "tt1893269",
+   "title_de": "Kusama: Infinity",
+   "title_original": "Kusama: Infinity",
+   "year": 2018,
+   "release_date": "2018-09-07",
+   "runtime": 80,
+   "poster": "https://image.tmdb.org/t/p/w342/o1gZE9QqU9F9ogNaoFO0lsa3EUP.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": null,
+   "overview_de": null,
+   "overview_en": "Now one of the world’s most celebrated artists, Yayoi Kusama broke free of the rigid society in which she was raised, and overcame sexism, racism, and mental illness to bring her artistic vision to the world stage. At 88 she lives in a mental hospital and continues to create art.",
+   "original_language": "en",
+   "countries": [
+    "JP",
+    "US"
+   ],
+   "directors": [
+    "Heather Lenz"
+   ],
+   "tags": [
+    "women_directed"
+   ],
+   "trailer_de": null,
+   "trailer_en": "https://www.youtube.com/watch?v=x8mdIB1WxHI",
+   "ratings": {
+    "imdb": 7.3,
+    "metascore": 71,
+    "letterboxd": 3.64
+   },
+   "showtimes": [
+    {
+     "cinema": "Odeon",
+     "city": "Köln",
+     "datetime": "2026-08-02T12:00:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185285?mode=widget"
+    },
+    {
+     "cinema": "Rex Lichtspieltheater",
+     "city": "Bonn",
+     "datetime": "2026-08-02T12:40:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380182?mode=widget"
+    }
+   ],
+   "first_seen": "2026-08-02"
+  },
+  {
    "id": "tt0317219",
    "title_de": "Cars",
    "title_original": "Cars",
@@ -6005,6 +6215,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/78A75000023GNFNDWF"
     },
     {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-03T18:20:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100776"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-03T21:45:00+02:00",
@@ -6026,6 +6243,13 @@
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/88A75000023GNFNDWF"
     },
     {
+     "cinema": "Woki",
+     "city": "Bonn",
+     "datetime": "2026-08-04T23:15:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50956?mode=widget"
+    },
+    {
      "cinema": "Cineplex Köln",
      "city": "Köln",
      "datetime": "2026-08-05T17:00:00+02:00",
@@ -6033,11 +6257,25 @@
      "booking_url": "https://tickets.cineplex.de/checkout/351/F60FDB00023FWBXJYB"
     },
     {
+     "cinema": "Rex am Ring",
+     "city": "Köln",
+     "datetime": "2026-08-05T18:20:00+02:00",
+     "language": "OmU",
+     "booking_url": "https://kinotickets.express/rex-koeln/booking/100777"
+    },
+    {
      "cinema": "Kinopolis Bad Godesberg",
      "city": "Bonn",
      "datetime": "2026-08-05T21:45:00+02:00",
      "language": "OV",
      "booking_url": "https://www.kinopolis.de/bn/programm/vorstellung/96A75000023GNFNDWF"
+    },
+    {
+     "cinema": "Woki",
+     "city": "Bonn",
+     "datetime": "2026-08-05T23:00:00+02:00",
+     "language": "DE",
+     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50957?mode=widget"
     }
    ]
   },
@@ -6473,8 +6711,8 @@
     "US"
    ],
    "directors": [
-    "Buster Keaton",
-    "Edward F. Cline"
+    "Edward F. Cline",
+    "Buster Keaton"
    ],
    "tags": [],
    "trailer_de": null,
@@ -8155,6 +8393,49 @@
      "booking_url": "https://t.rausgegangen.de/tickets/fur-immer-ein-teil-von-dir-hdi-special"
     }
    ]
+  },
+  {
+   "id": "tt1278099",
+   "title_de": "Der Mondbär: Das Große Kinoabenteuer",
+   "title_original": "Der Mondbär: Das Große Kinoabenteuer",
+   "year": 2008,
+   "release_date": "2008-10-16",
+   "runtime": 71,
+   "poster": "https://image.tmdb.org/t/p/w342/uITXJTKrvLXL6Hb5mYSaG77RsO8.jpg",
+   "genres": [
+    "Animation",
+    "Familie"
+   ],
+   "age_rating": 0,
+   "overview_de": "Große Aufregung im Wald! Der Mond ist vom Himmel verschwunden! Es ist stockdunkel und Dachs, Frosch, Ente und Marienkäfer stolpern umher. Wo kann der Mond nur sein? Gemeinsam mit anderen Tieren machen sie sich auf die Suche. Plötzlich entdekcken sie, dass in Mondbärs Haus ein helles Licht strahlt. Ja, gibt's denn sowas? Mondbär und Mond sitzen einträchtig am Tisch und spielen Dame. Die Tiere sind ratlos: Der Mond muss an den Himmel zurück und zwar sofort - nur wie? Und es kommt noch schlimmer: Jetzt ist der Mond auch noch tief und fest eingeschlafen ...",
+   "overview_en": "The Moonbear and his friends experience funny and exciting adventures in their forest.",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Thomas Bodenstein",
+    "Hubert Weiland",
+    "Mike Maurus"
+   ],
+   "tags": [],
+   "trailer_de": null,
+   "trailer_en": null,
+   "ratings": {
+    "imdb": 6.2,
+    "metascore": null,
+    "letterboxd": null
+   },
+   "showtimes": [
+    {
+     "cinema": "Cinedom",
+     "city": "Köln",
+     "datetime": "2026-09-06T10:30:00+02:00",
+     "language": "DE",
+     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C2071000023RFGKYDT"
+    }
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "tt8814476",
@@ -10588,46 +10869,6 @@
    ]
   },
   {
-   "id": "backrooms: everything must go (ext. version)",
-   "title_de": "Backrooms: Everything Must Go (Ext. Version)",
-   "title_original": "Backrooms: Everything Must Go (Ext. Version)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Woki",
-     "city": "Bonn",
-     "datetime": "2026-08-04T23:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50956?mode=widget"
-    },
-    {
-     "cinema": "Woki",
-     "city": "Bonn",
-     "datetime": "2026-08-05T23:00:00+02:00",
-     "language": "DE",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/woki/vorstellung/50957?mode=widget"
-    }
-   ]
-  },
-  {
    "id": "tt29356163",
    "title_de": "PAW Patrol: Der Dino Film",
    "title_original": "PAW Patrol: The Dino Movie",
@@ -10876,9 +11117,9 @@
    ]
   },
   {
-   "id": "exhibition on screen: david hockney in der royal academy arts (",
-   "title_de": "EXHIBITION ON SCREEN: DAVID HOCKNEY IN DER ROYAL ACADEMY ARTS (",
-   "title_original": "EXHIBITION ON SCREEN: DAVID HOCKNEY IN DER ROYAL ACADEMY ARTS (",
+   "id": "exhibition on screen: david hockney in der royal academy arts",
+   "title_de": "EXHIBITION ON SCREEN: DAVID HOCKNEY IN DER ROYAL ACADEMY ARTS",
+   "title_original": "EXHIBITION ON SCREEN: DAVID HOCKNEY IN DER ROYAL ACADEMY ARTS",
    "year": null,
    "release_date": null,
    "runtime": null,
@@ -10913,47 +11154,8 @@
      "language": "OmU",
      "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604379791?mode=widget"
     }
-   ]
-  },
-  {
-   "id": "kusama: infinity (2018)",
-   "title_de": "Kusama: Infinity (2018)",
-   "title_original": "Kusama: Infinity (2018)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Odeon",
-     "city": "Köln",
-     "datetime": "2026-08-02T12:00:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/koeln/odeon-lichtspieltheater-koeln/vorstellung/3602185285?mode=widget"
-    },
-    {
-     "cinema": "Rex Lichtspieltheater",
-     "city": "Bonn",
-     "datetime": "2026-08-02T12:40:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://www.kinoheld.de/kino/bonn/rex-lichtspieltheater-bonn/vorstellung/3604380182?mode=widget"
-    }
-   ]
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "tt41692123",
@@ -15630,39 +15832,6 @@
    ]
   },
   {
-   "id": "la haine (30th anniversary)(wa:2025)",
-   "title_de": "LA HAINE (30TH ANNIVERSARY)(WA:2025)",
-   "title_original": "LA HAINE (30TH ANNIVERSARY)(WA:2025)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Filmpalette",
-     "city": "Köln",
-     "datetime": "2026-08-02T21:15:00+02:00",
-     "language": "DE",
-     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3602919774&bgswitch=false&resize=false"
-    }
-   ]
-  },
-  {
    "id": "tt41072606",
    "title_de": "Saving Spoonie",
    "title_original": "Saving Spoonie",
@@ -15883,39 +16052,6 @@
    ]
   },
   {
-   "id": "amores perros (re 2026)",
-   "title_de": "AMORES PERROS (RE 2026)",
-   "title_original": "AMORES PERROS (RE 2026)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Filmpalette",
-     "city": "Köln",
-     "datetime": "2026-08-05T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://booking.cinetixx.de/frontend/index.html?cinemaId=1332363123&showId=3602919553&bgswitch=false&resize=false"
-    }
-   ]
-  },
-  {
    "id": "tt33023305",
    "title_de": "Strange River",
    "title_original": "Estrany riu",
@@ -16034,22 +16170,28 @@
    ]
   },
   {
-   "id": "294164",
-   "title_de": "294164",
-   "title_original": "294164",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
+   "id": "tt41373111",
+   "title_de": "Das Gewicht der Welt",
+   "title_original": "Das Gewicht der Welt",
+   "year": 2026,
+   "release_date": "2026-05-07",
+   "runtime": 95,
+   "poster": "https://image.tmdb.org/t/p/w342/4TQ9iZJCALzs5tHIrb9Km2zoEXm.jpg",
+   "genres": [
+    "Dokumentarfilm"
+   ],
+   "age_rating": 0,
+   "overview_de": "Wissenschaft soll sachlich sein: Fakten statt Gefühle. Aber eine neue Generation Naturwissenschaftler:innen erlebt, wie ihre Forschung durch den Klimawandel aus den Fugen gerät. Statt die Wunder der Natur zu entdecken, sind Maria, Doktorin der Glaziologie, Sebastian, Professor für Physikalische Chemie, und Nana, Molekularbiologin, Chronisten einer untergehenden Welt. Aber niemand hört auf sie. Was tun? Statt sich frustriert in den Elfenbeinturm ihrer Forschung zurückzuziehen, verlassen Maria, Sebastian und Nana das Labor und werden zu Aktivist:innen, denn sie tragen auf ihren Schultern das Gewicht der Welt.",
+   "overview_en": "Models, calculations, samples: the facts about climate change are on the table, but politicians refuse to acknowledge them. Faced with this dilemma, three scientists decide to leave the laboratory and become activists. Maria, Sebastian, and Nana use their knowledge to maintain integrity between emotion and reason.",
+   "original_language": "de",
+   "countries": [
+    "DE"
+   ],
+   "directors": [
+    "Florian Heinzen-Ziob"
+   ],
    "tags": [],
-   "trailer_de": null,
+   "trailer_de": "https://www.youtube.com/watch?v=lRuzwJSEIJ0",
    "trailer_en": null,
    "ratings": {
     "imdb": null,
@@ -16064,7 +16206,8 @@
      "language": "DE",
      "booking_url": "https://www.kinoheld.de/kino/koeln/off-broadway-kino-koeln/vorstellung/09E71000023MHWBOTF?mode=widget"
     }
-   ]
+   ],
+   "first_seen": "2026-08-02"
   },
   {
    "id": "w.wednesday prev.:teenage sex and death at camp mi",
@@ -16309,46 +16452,6 @@
    ]
   },
   {
-   "id": "backrooms: everything must go (extended version)",
-   "title_de": "Backrooms: Everything Must Go (Extended Version)",
-   "title_original": "Backrooms: Everything Must Go (Extended Version)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-03T18:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100776"
-    },
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-05T18:20:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100777"
-    }
-   ]
-  },
-  {
    "id": "25 jahre the fast and the furious",
    "title_de": "25 Jahre The Fast and the Furious",
    "title_original": "25 Jahre The Fast and the Furious",
@@ -16378,39 +16481,6 @@
      "datetime": "2026-09-04T20:45:00+02:00",
      "language": "OmU",
      "booking_url": "https://kinotickets.express/rex-koeln/booking/99010"
-    }
-   ]
-  },
-  {
-   "id": "terminator 2: tag der abrechnung 35th anniversary",
-   "title_de": "Terminator 2: Tag der Abrechnung 35th Anniversary",
-   "title_original": "Terminator 2: Tag der Abrechnung 35th Anniversary",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Rex am Ring",
-     "city": "Köln",
-     "datetime": "2026-08-28T20:45:00+02:00",
-     "language": "OmU",
-     "booking_url": "https://kinotickets.express/rex-koeln/booking/100849"
     }
    ]
   },
@@ -18757,39 +18827,6 @@
      "datetime": "2026-08-30T14:30:00+02:00",
      "language": "DE",
      "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=20A71000023RFGKYDT"
-    }
-   ]
-  },
-  {
-   "id": "der mondbär - das große abenteuer (wa:2022)",
-   "title_de": "Der Mondbär - Das große Abenteuer (WA:2022)",
-   "title_original": "Der Mondbär - Das große Abenteuer (WA:2022)",
-   "year": null,
-   "release_date": null,
-   "runtime": null,
-   "poster": null,
-   "genres": [],
-   "age_rating": null,
-   "overview_de": null,
-   "overview_en": null,
-   "original_language": null,
-   "countries": [],
-   "directors": [],
-   "tags": [],
-   "trailer_de": null,
-   "trailer_en": null,
-   "ratings": {
-    "imdb": null,
-    "metascore": null,
-    "letterboxd": null
-   },
-   "showtimes": [
-    {
-     "cinema": "Cinedom",
-     "city": "Köln",
-     "datetime": "2026-09-06T10:30:00+02:00",
-     "language": "DE",
-     "booking_url": "https://shop.cinedom.de/landingpage?center=9DD10000014AKQLNRG&language=DE&page=seatingplan&performance=C2071000023RFGKYDT"
     }
    ]
   },
