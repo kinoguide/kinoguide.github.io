@@ -31,7 +31,7 @@ _counts = collections.Counter(
     s["cinema"] for m in REAL["movies"] for s in m["showtimes"])
 BIG = _counts.most_common(1)[0][0]                  # a house that must be missed
 BIG2 = _counts.most_common(2)[1][0]
-TINY = min(_counts, key=_counts.get)                # too small to conclude from
+TINY = min(_counts, key=_counts.get)                # the day's smallest house
 
 failures = 0
 
@@ -58,6 +58,23 @@ def thin(cinema: str, keep: float = 0.0) -> dict:
             else:
                 n += 1
                 if n % 100 < keep * 100:
+                    left.append(s)
+        m["showtimes"] = left
+    return p
+
+
+def cap(cinema: str, keep: int) -> dict:
+    """A copy of the data with at most `keep` of one cinema's screenings."""
+    p = copy.deepcopy(REAL)
+    n = 0
+    for m in p["movies"]:
+        left = []
+        for s in m["showtimes"]:
+            if s["cinema"] != cinema:
+                left.append(s)
+            else:
+                n += 1
+                if n <= keep:
                     left.append(s)
         m["showtimes"] = left
     return p
@@ -90,7 +107,13 @@ for m in older["movies"]:
 case("one day rolled off the horizon", older, False)
 
 case(f"{BIG} loses 20% (cancellations)", thin(BIG, keep=0.8), False)
-case(f"{TINY} vanishes (below the baseline)", thin(TINY), False)
+# A source under the guard's baseline may vanish without a word. Which house is
+# the smallest changes with the programme, and it is not necessarily *below* the
+# baseline: on 2026-08-15 the smallest had exactly MIN_BASELINE screenings, the
+# guard rightly fired, and this case failed the daily run. So the fixture puts
+# the cinema under the line itself instead of hoping one of them is.
+case(f"{TINY} vanishes (below the baseline)", thin(TINY), False,
+     old=cap(TINY, guard.MIN_BASELINE - 1))
 
 # --- must fire -------------------------------------------------------------
 case(f"{BIG}'s scraper dies", thin(BIG), True)
