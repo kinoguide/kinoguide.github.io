@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T17:51:44.410336+00:00",
+ "generated_at": "2026-08-15T17:56:26.216261+00:00",
  "cinemas": {
   "Kinopolis Bad Godesberg": {
    "source": "https://www.kinopolis.de/bn/preise",
@@ -1432,42 +1432,6 @@
    "source": "https://cinedom.de/kinobesuch-planen/preise/",
    "fee_included": true,
    "shows": {
-    "F2081000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "43081000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "53081000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "6FF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "13081000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "7FF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "23081000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "8FF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "33081000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
     "48081000023RFGKYDT": {
      "adult": 10.0
     },
@@ -2225,6 +2189,38 @@
      "child": 7.0
     },
     "2E081000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "43081000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "53081000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "6FF71000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "13081000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "7FF71000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "23081000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "8FF71000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "33081000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
