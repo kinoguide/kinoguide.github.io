@@ -101,10 +101,15 @@ Vite/React frontend in `web/` displays it with rich filters. GitHub Actions
   one on Mon/Tue, so raw totals shrink by a day every day and would false-alarm.
   Small sources are exempt below 6 screenings. `python main.py --force` ships
   anyway, for the day a cinema really does close. `scraper/test_guard.py` builds
-  its fixtures out of the live data (no hard-coded date or cinema, so it can't
-  rot) and asserts both directions — half its cases assert the guard stays
+  its fixtures out of the live data (no hard-coded date or cinema) and asserts
+  both directions — half its cases assert the guard stays
   *quiet*, because a watchdog that cries wolf gets switched off. It runs in the
-  workflow before the scrape.
+  workflow before the scrape — **so a broken case stops the daily run before it
+  starts**, which is what happened on 2026-08-15: the "small cinema may vanish"
+  case took the day's *smallest* house, and that house had grown to exactly
+  MIN_BASELINE screenings, so the guard rightly fired and the test called it a
+  failure. Fixtures for a threshold must set the threshold themselves, not hope
+  the programme still happens to sit on the right side of it.
 - `scraper/check_links.py` — fetches a sample of ticket links per cinema and
   asserts the page is a booking step, because both link bugs above looked
   perfectly fine in the data. Run it after touching anything that builds a
