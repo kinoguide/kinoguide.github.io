@@ -1,11 +1,36 @@
 {
- "generated_at": "2026-08-17T04:39:30.133106+00:00",
+ "generated_at": "2026-08-18T04:33:02.633994+00:00",
  "cinemas": {
   "Kinopolis Bad Godesberg": {
    "source": "https://www.kinopolis.de/bn/preise",
    "fee_included": true,
    "shows": {
-    "F1C75000023GNFNDWF": {
+    "F7D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "C8D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "D8D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "E8D75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
@@ -32,19 +57,80 @@
      "menu_family": 12.49,
      "menu_holiday": 13.49
     },
+    "88D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "98D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "A8D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "B8D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
     "A5C75000023GNFNDWF": {
      "adult": 10.99,
      "reduced": 8.99
     },
-    "B3C75000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99,
-     "format": "D-BOX"
+    "2DC75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "9DC75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "3DC75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "ADC75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
     },
     "C3C75000023GNFNDWF": {
      "adult": 9.99,
@@ -66,20 +152,7 @@
      "menu_holiday": 13.99,
      "format": "D-BOX"
     },
-    "01C75000023GNFNDWF": {
-     "adult": 10.99,
-     "reduced": 8.99
-    },
-    "31C75000023GNFNDWF": {
-     "adult": 10.99,
-     "reduced": 8.99,
-     "format": "OV"
-    },
-    "11C75000023GNFNDWF": {
-     "adult": 10.99,
-     "reduced": 8.99
-    },
-    "0EC75000023GNFNDWF": {
+    "97D75000023GNFNDWF": {
      "adult": 9.99,
      "child": 7.99,
      "reduced": 7.99,
@@ -88,7 +161,42 @@
      "menu_family": 12.99,
      "menu_holiday": 13.99
     },
-    "7EC75000023GNFNDWF": {
+    "A7D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "87D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 8.99,
+     "reduced": 9.99,
+     "family": 8.99,
+     "menu_child": 13.99,
+     "menu_family": 13.99
+    },
+    "C7D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "D7D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "E7D75000023GNFNDWF": {
      "adult": 9.99,
      "child": 7.99,
      "reduced": 7.99,
@@ -133,29 +241,81 @@
      "menu_family": 12.99,
      "menu_holiday": 13.99
     },
+    "E2D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "F2D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "03D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 8.99,
+     "reduced": 10.99,
+     "family": 8.99,
+     "menu_child": 13.99,
+     "menu_family": 13.99
+    },
+    "C1D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 8.99,
+     "reduced": 9.99,
+     "family": 8.99,
+     "menu_child": 13.99,
+     "menu_family": 13.99,
+     "format": "D-BOX"
+    },
+    "13D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 8.99,
+     "reduced": 10.99,
+     "family": 8.99,
+     "menu_child": 13.99,
+     "menu_family": 13.99
+    },
+    "23D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "33D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
+    "43D75000023GNFNDWF": {
+     "adult": 9.99,
+     "child": 7.99,
+     "reduced": 7.99,
+     "family": 7.99,
+     "menu_child": 12.99,
+     "menu_family": 12.99,
+     "menu_holiday": 13.99
+    },
     "02975000023GNFNDWF": {
      "adult": 5.0,
      "child": 5.0,
      "reduced": 5.0,
      "format": "3D D-BOX"
-    },
-    "ABC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "0CC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
     },
     "BBC75000023GNFNDWF": {
      "adult": 9.49,
@@ -193,91 +353,520 @@
      "menu_family": 12.49,
      "menu_holiday": 13.49
     },
+    "2ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "8ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "3ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "9ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "4ED75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "AED75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "53D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 8.49,
+     "reduced": 9.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "FED75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "BED75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "5ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "CED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "6ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "DED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "7ED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "EED75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
     "08C75000023GNFNDWF": {
      "adult": 5.99,
      "child": 5.99,
      "reduced": 5.99
     },
-    "01975000023GNFNDWF": {
-     "adult": 15.99,
-     "child": 13.49,
+    "F8D75000023GNFNDWF": {
+     "adult": 5.99,
+     "child": 5.99,
+     "reduced": 5.99
+    },
+    "57575000023GNFNDWF": {
+     "adult": 3.99
+    },
+    "61B75000023GNFNDWF": {
+     "adult": 16.99,
      "format": "OmU Spezial"
     },
-    "1DC75000023GNFNDWF": {
+    "81975000023GNFNDWF": {
+     "adult": 15.99,
+     "format": "4K OmU"
+    },
+    "A1975000023GNFNDWF": {
+     "adult": 15.99,
+     "format": "4K OmU"
+    },
+    "E7575000023GNFNDWF": {
+     "adult": 15.99
+    },
+    "08575000023GNFNDWF": {
+     "adult": 15.99,
+     "format": "OmU"
+    },
+    "44D75000023GNFNDWF": {
+     "adult": 15.99
+    },
+    "82A75000023GNFNDWF": {
+     "adult": 15.99
+    },
+    "92A75000023GNFNDWF": {
+     "adult": 15.99,
+     "format": "OmU"
+    },
+    "31B75000023GNFNDWF": {
+     "adult": 9.49,
+     "format": "OmU Spezial"
+    },
+    "56675000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "Preview"
+    },
+    "A0975000023GNFNDWF": {
+     "adult": 14.99,
+     "child": 9.99,
+     "reduced": 12.99,
+     "family": 9.99,
+     "format": "Preview"
+    },
+    "ECD75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "6FD75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "31C75000023GNFNDWF": {
+     "adult": 10.99,
+     "reduced": 8.99,
+     "format": "OV"
+    },
+    "11C75000023GNFNDWF": {
+     "adult": 10.99,
+     "reduced": 8.99
+    },
+    "6AD75000023GNFNDWF": {
+     "adult": 13.49,
+     "reduced": 11.49
+    },
+    "7AD75000023GNFNDWF": {
+     "adult": 13.49,
+     "reduced": 11.49
+    },
+    "5AC75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
      "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
      "menu_holiday": 13.49
     },
-    "8DC75000023GNFNDWF": {
+    "E7C75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
      "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "2DC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "9DC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "3DC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "ADC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "A1C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
      "menu_holiday": 13.49,
-     "format": "Atmos"
+     "format": "D-BOX"
     },
-    "B9C75000023GNFNDWF": {
+    "CAC75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "6AC75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "F7C75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "D-BOX"
+    },
+    "DAC75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "32D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "8AD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "FAD75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "0FD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "9AD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "0BD75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "4FD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "AAD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "1BD75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "A2D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 8.49,
+     "family": 8.49,
+     "format": "OV D-BOX"
+    },
+    "5FD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "BAD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "2BD75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "1FD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "CAD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "3BD75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "2FD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "DAD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "4BD75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "3FD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "EAD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "5BD75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "19D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "menu_holiday": 16.49
+    },
+    "89D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "menu_holiday": 16.49
+    },
+    "29D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "menu_holiday": 16.49
+    },
+    "99D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "menu_holiday": 16.49
+    },
+    "39D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "A9D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "09D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "49D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "B9D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "59D75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
      "family": 7.49,
      "menu_child": 12.49,
      "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "Atmos D-BOX"
+     "menu_holiday": 13.49
     },
-    "EEC75000023GNFNDWF": {
+    "C9D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "69D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "D9D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "79D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "E9D75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
@@ -345,6 +934,213 @@
      "menu_family": 12.49,
      "menu_holiday": 13.49
     },
+    "7BD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos"
+    },
+    "D3D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "63D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "8BD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos"
+    },
+    "E3D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "73D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "9BD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos"
+    },
+    "F3D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "83D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "6BD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 8.49,
+     "reduced": 9.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos"
+    },
+    "ABD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos"
+    },
+    "04D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "93D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "menu_child": 13.49,
+     "menu_family": 13.49
+    },
+    "BBD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos"
+    },
+    "14D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "A3D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "CBD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos"
+    },
+    "24D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "B3D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49
+    },
+    "DBD75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos"
+    },
+    "34D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
+    "C3D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_child": 12.49,
+     "menu_family": 12.49,
+     "menu_holiday": 13.49,
+     "format": "Atmos D-BOX"
+    },
     "B1975000023GNFNDWF": {
      "adult": 5.0,
      "child": 5.0,
@@ -357,96 +1153,154 @@
      "reduced": 5.0,
      "format": "D-BOX"
     },
-    "4AC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "D7C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49,
-     "format": "D-BOX"
-    },
-    "BAC75000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.49,
-     "reduced": 8.99
-    },
-    "5AC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "E7C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49,
-     "format": "D-BOX"
-    },
-    "CAC75000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.49,
-     "reduced": 8.99
-    },
-    "6AC75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "F7C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49,
-     "format": "D-BOX"
-    },
-    "DAC75000023GNFNDWF": {
-     "adult": 10.99,
-     "child": 8.49,
-     "reduced": 8.99
-    },
-    "58C75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 9.49,
-     "reduced": 9.49,
-     "family": 9.49,
-     "menu_holiday": 15.49
-    },
-    "9CC75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 9.49,
-     "reduced": 9.49,
-     "family": 9.49,
-     "menu_holiday": 15.49,
-     "format": "D-BOX"
-    },
-    "59C75000023GNFNDWF": {
+    "7CD75000023GNFNDWF": {
      "adult": 12.99,
-     "child": 10.49,
-     "reduced": 10.99
-    },
-    "C8C75000023GNFNDWF": {
-     "adult": 12.99,
-     "child": 10.49,
-     "reduced": 10.99
-    },
-    "A2C75000023GNFNDWF": {
-     "adult": 12.99,
-     "child": 10.49,
      "reduced": 10.99,
+     "menu_holiday": 16.99,
+     "format": "D-BOX"
+    },
+    "0CD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "8CD75000023GNFNDWF": {
+     "adult": 12.99,
+     "reduced": 10.99,
+     "menu_holiday": 16.99,
+     "format": "D-BOX"
+    },
+    "F9D75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
      "format": "OV"
+    },
+    "1CD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "FCD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "EBD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99
+    },
+    "4AD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "OV"
+    },
+    "9CD75000023GNFNDWF": {
+     "adult": 12.99,
+     "reduced": 10.99,
+     "format": "D-BOX"
+    },
+    "0AD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "OV"
+    },
+    "2CD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "0DD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "5AD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "OV"
+    },
+    "FBD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99
+    },
+    "ACD75000023GNFNDWF": {
+     "adult": 12.99,
+     "reduced": 10.99,
+     "format": "D-BOX"
+    },
+    "1AD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "OV"
+    },
+    "3CD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "1DD75000023GNFNDWF": {
+     "adult": 13.99,
+     "reduced": 11.99,
+     "format": "D-BOX"
+    },
+    "BCD75000023GNFNDWF": {
+     "adult": 9.99,
+     "reduced": 7.99,
+     "menu_holiday": 13.99,
+     "format": "D-BOX"
+    },
+    "2AD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "OV"
+    },
+    "4CD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "D-BOX"
+    },
+    "2DD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "D-BOX"
+    },
+    "CCD75000023GNFNDWF": {
+     "adult": 9.99,
+     "reduced": 7.99,
+     "menu_holiday": 13.99,
+     "format": "D-BOX"
+    },
+    "3AD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "OV"
+    },
+    "5CD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "D-BOX"
+    },
+    "DCD75000023GNFNDWF": {
+     "adult": 9.99,
+     "reduced": 7.99,
+     "menu_holiday": 13.99,
+     "format": "D-BOX"
+    },
+    "6CD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "D-BOX"
+    },
+    "4DD75000023GNFNDWF": {
+     "adult": 11.49,
+     "reduced": 9.49,
+     "format": "D-BOX"
+    },
+    "E1975000023GNFNDWF": {
+     "adult": 5.0,
+     "child": 5.0,
+     "reduced": 5.0,
+     "format": "D-BOX"
     },
     "68C75000023GNFNDWF": {
      "adult": 11.49,
@@ -505,6 +1359,185 @@
      "child": 10.49,
      "reduced": 10.99
     },
+    "BDD75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49,
+     "format": "D-BOX"
+    },
+    "16D75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49
+    },
+    "E6D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "96D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "CDD75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49,
+     "format": "D-BOX"
+    },
+    "26D75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49
+    },
+    "B2D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49,
+     "format": "OV"
+    },
+    "A6D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "17D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "DDD75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.49,
+     "reduced": 12.49,
+     "family": 10.49,
+     "format": "D-BOX"
+    },
+    "36D75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.49,
+     "reduced": 12.49,
+     "family": 10.49
+    },
+    "F6D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "B6D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "27D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "EDD75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.49,
+     "reduced": 12.49,
+     "family": 10.49,
+     "format": "D-BOX"
+    },
+    "46D75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.49,
+     "reduced": 12.49,
+     "family": 10.49
+    },
+    "C2D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49,
+     "format": "OV"
+    },
+    "C6D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.99,
+     "reduced": 13.49
+    },
+    "FDD75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49,
+     "format": "D-BOX"
+    },
+    "56D75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49
+    },
+    "07D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "D6D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "0ED75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49,
+     "format": "D-BOX"
+    },
+    "66D75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49
+    },
+    "37D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "1ED75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49,
+     "format": "D-BOX"
+    },
+    "76D75000023GNFNDWF": {
+     "adult": 11.49,
+     "child": 9.49,
+     "reduced": 9.49,
+     "family": 9.49,
+     "menu_holiday": 15.49
+    },
+    "86D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99
+    },
+    "D2D75000023GNFNDWF": {
+     "adult": 12.99,
+     "child": 10.49,
+     "reduced": 10.99,
+     "format": "OV"
+    },
     "4FC75000023GNFNDWF": {
      "adult": 5.0,
      "child": 5.0,
@@ -514,18 +1547,6 @@
      "adult": 5.0,
      "child": 5.0,
      "reduced": 5.0
-    },
-    "55C75000023GNFNDWF": {
-     "adult": 10.49,
-     "child": 8.49,
-     "reduced": 8.49,
-     "family": 8.49,
-     "menu_holiday": 14.49
-    },
-    "E4C75000023GNFNDWF": {
-     "adult": 11.99,
-     "child": 9.49,
-     "reduced": 9.99
     },
     "65C75000023GNFNDWF": {
      "adult": 10.49,
@@ -551,65 +1572,93 @@
      "child": 9.49,
      "reduced": 9.99
     },
-    "33C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49,
-     "format": "OV D-BOX"
-    },
-    "D6C75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "42C75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 10.49,
-     "reduced": 10.49,
-     "family": 10.49,
-     "menu_holiday": 16.49,
-     "format": "3D/OV Atmos"
-    },
-    "F5C75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 10.49,
-     "reduced": 10.49,
-     "family": 10.49,
-     "menu_holiday": 16.49,
-     "format": "3D Atmos D-BOX"
-    },
-    "47C75000023GNFNDWF": {
-     "adult": 10.99,
+    "41D75000023GNFNDWF": {
+     "adult": 10.49,
      "child": 8.49,
-     "reduced": 8.99
+     "reduced": 8.49,
+     "family": 8.49,
+     "menu_holiday": 14.49
     },
-    "24C75000023GNFNDWF": {
-     "adult": 13.99,
-     "child": 11.49,
-     "reduced": 11.99,
-     "format": "3D/OV D-BOX"
+    "11D75000023GNFNDWF": {
+     "adult": 11.99,
+     "child": 9.49,
+     "reduced": 9.99
     },
-    "66C75000023GNFNDWF": {
-     "adult": 13.99,
-     "child": 11.49,
-     "reduced": 11.99,
-     "format": "3D Atmos D-BOX"
-    },
-    "2BC75000023GNFNDWF": {
-     "adult": 10.99,
+    "51D75000023GNFNDWF": {
+     "adult": 10.49,
      "child": 8.49,
-     "reduced": 8.99,
-     "format": "D-BOX"
+     "reduced": 8.49,
+     "family": 8.49,
+     "menu_holiday": 14.49
     },
-    "94C75000023GNFNDWF": {
-     "adult": 6.99,
-     "child": 6.99,
-     "reduced": 6.99,
-     "format": "OV"
+    "D0D75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.99,
+     "reduced": 12.49
+    },
+    "61D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.49,
+     "reduced": 11.49,
+     "family": 9.49
+    },
+    "E0D75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.99,
+     "reduced": 12.49
+    },
+    "31D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.49,
+     "reduced": 11.49,
+     "family": 9.49
+    },
+    "71D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.49,
+     "reduced": 11.49,
+     "family": 9.49
+    },
+    "F0D75000023GNFNDWF": {
+     "adult": 14.49,
+     "child": 10.99,
+     "reduced": 12.49
+    },
+    "81D75000023GNFNDWF": {
+     "adult": 10.49,
+     "child": 8.49,
+     "reduced": 8.49,
+     "family": 8.49,
+     "menu_holiday": 14.49
+    },
+    "01D75000023GNFNDWF": {
+     "adult": 11.99,
+     "child": 9.49,
+     "reduced": 9.99
+    },
+    "91D75000023GNFNDWF": {
+     "adult": 10.49,
+     "child": 8.49,
+     "reduced": 8.49,
+     "family": 8.49,
+     "menu_holiday": 14.49
+    },
+    "B1D75000023GNFNDWF": {
+     "adult": 11.99,
+     "child": 9.49,
+     "reduced": 9.99
+    },
+    "A1D75000023GNFNDWF": {
+     "adult": 10.49,
+     "child": 8.49,
+     "reduced": 8.49,
+     "family": 8.49,
+     "menu_holiday": 14.49
+    },
+    "21D75000023GNFNDWF": {
+     "adult": 11.99,
+     "child": 9.49,
+     "reduced": 9.99
     },
     "43C75000023GNFNDWF": {
      "adult": 9.49,
@@ -723,6 +1772,389 @@
      "reduced": 6.99,
      "format": "OV"
     },
+    "D1D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "OV D-BOX"
+    },
+    "85D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "5DD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D/OV Atmos"
+    },
+    "54D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "60D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "D-BOX"
+    },
+    "18D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "OV"
+    },
+    "B4D75000023GNFNDWF": {
+     "adult": 13.99,
+     "child": 11.49,
+     "reduced": 11.99,
+     "format": "3D Atmos D-BOX"
+    },
+    "15D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "E1D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "OV D-BOX"
+    },
+    "95D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "6DD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D/OV Atmos"
+    },
+    "64D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "70D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "D-BOX"
+    },
+    "28D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "OV"
+    },
+    "C4D75000023GNFNDWF": {
+     "adult": 16.49,
+     "child": 12.99,
+     "reduced": 14.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "25D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "47D75000023GNFNDWF": {
+     "adult": 16.49,
+     "child": 12.99,
+     "reduced": 14.49,
+     "format": "3D"
+    },
+    "78D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "OV"
+    },
+    "F1D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49,
+     "format": "OV D-BOX"
+    },
+    "A5D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "7DD75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.49,
+     "reduced": 13.49,
+     "family": 11.49,
+     "format": "3D/OV Atmos"
+    },
+    "74D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.49,
+     "reduced": 13.49,
+     "family": 11.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "80D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "D-BOX"
+    },
+    "38D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "OV"
+    },
+    "F5D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "D4D75000023GNFNDWF": {
+     "adult": 16.49,
+     "child": 12.99,
+     "reduced": 14.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "35D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "57D75000023GNFNDWF": {
+     "adult": 16.49,
+     "child": 12.99,
+     "reduced": 14.49,
+     "format": "3D"
+    },
+    "08D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 8.49,
+     "family": 8.49,
+     "format": "OV"
+    },
+    "B5D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 8.49,
+     "reduced": 10.49,
+     "family": 8.49
+    },
+    "8DD75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.49,
+     "reduced": 13.49,
+     "family": 11.49,
+     "format": "3D/OV Atmos"
+    },
+    "84D75000023GNFNDWF": {
+     "adult": 15.49,
+     "child": 11.49,
+     "reduced": 13.49,
+     "family": 11.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "90D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49,
+     "format": "D-BOX"
+    },
+    "E4D75000023GNFNDWF": {
+     "adult": 16.49,
+     "child": 12.99,
+     "reduced": 14.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "45D75000023GNFNDWF": {
+     "adult": 13.49,
+     "child": 9.99,
+     "reduced": 11.49
+    },
+    "02D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "OV D-BOX"
+    },
+    "C5D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "9DD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D/OV Atmos"
+    },
+    "94D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "A0D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "D-BOX"
+    },
+    "48D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "OV"
+    },
+    "06D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "F4D75000023GNFNDWF": {
+     "adult": 13.99,
+     "child": 11.49,
+     "reduced": 11.99,
+     "format": "3D Atmos D-BOX"
+    },
+    "55D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "12D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "OV D-BOX"
+    },
+    "D5D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "A4D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D Atmos D-BOX"
+    },
+    "B0D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "D-BOX"
+    },
+    "58D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "OV"
+    },
+    "05D75000023GNFNDWF": {
+     "adult": 13.99,
+     "child": 11.49,
+     "reduced": 11.99,
+     "format": "3D Atmos D-BOX"
+    },
+    "65D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
+    "22D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49,
+     "format": "OV D-BOX"
+    },
+    "E5D75000023GNFNDWF": {
+     "adult": 9.49,
+     "child": 7.49,
+     "reduced": 7.49,
+     "family": 7.49,
+     "menu_holiday": 13.49
+    },
+    "ADD75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D/OV Atmos"
+    },
+    "77D75000023GNFNDWF": {
+     "adult": 12.49,
+     "child": 10.49,
+     "reduced": 10.49,
+     "family": 10.49,
+     "menu_holiday": 16.49,
+     "format": "3D"
+    },
+    "C0D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "D-BOX"
+    },
+    "67D75000023GNFNDWF": {
+     "adult": 13.99,
+     "child": 11.49,
+     "reduced": 11.99,
+     "format": "3D"
+    },
+    "68D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99,
+     "format": "OV"
+    },
+    "75D75000023GNFNDWF": {
+     "adult": 10.99,
+     "child": 8.49,
+     "reduced": 8.99
+    },
     "8FC75000023GNFNDWF": {
      "adult": 5.0,
      "child": 5.0,
@@ -747,57 +2179,11 @@
      "reduced": 5.0,
      "format": "4K Atmos D-BOX"
     },
-    "E7575000023GNFNDWF": {
-     "adult": 15.99
-    },
-    "08575000023GNFNDWF": {
-     "adult": 15.99,
-     "format": "OmU"
-    },
-    "61B75000023GNFNDWF": {
-     "adult": 16.99,
-     "format": "OmU Spezial"
-    },
-    "56675000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49,
-     "format": "Preview"
-    },
-    "31B75000023GNFNDWF": {
-     "adult": 9.49,
-     "format": "OmU Spezial"
-    },
-    "57575000023GNFNDWF": {
-     "adult": 3.99
-    },
-    "A0975000023GNFNDWF": {
-     "adult": 14.99,
-     "child": 9.99,
-     "reduced": 12.99,
-     "family": 9.99,
-     "format": "Preview"
-    },
-    "82A75000023GNFNDWF": {
-     "adult": 15.99
-    },
-    "92A75000023GNFNDWF": {
-     "adult": 15.99,
-     "format": "OmU"
-    },
     "24775000023GNFNDWF": {
      "adult": 13.99,
      "child": 11.49,
      "reduced": 11.99,
      "format": "Ladykino"
-    },
-    "81975000023GNFNDWF": {
-     "adult": 15.99,
-     "format": "4K OmU"
-    },
-    "A1975000023GNFNDWF": {
-     "adult": 15.99,
-     "format": "4K OmU"
     },
     "B3775000023GNFNDWF": {
      "adult": 13.49,
@@ -910,12 +2296,6 @@
      "child": 5.0,
      "reduced": 5.0,
      "format": "Preview"
-    },
-    "E1975000023GNFNDWF": {
-     "adult": 5.0,
-     "child": 5.0,
-     "reduced": 5.0,
-     "format": "D-BOX"
     },
     "12975000023GNFNDWF": {
      "adult": 5.0,
@@ -1087,45 +2467,6 @@
    "source": "https://cinedom.de/kinobesuch-planen/preise/",
    "fee_included": true,
    "shows": {
-    "AC081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5,
-     "format": "OV"
-    },
-    "0A081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "BA081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "C9081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "5B081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "59081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "1D081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5,
-     "format": "OV"
-    },
-    "7A081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5
-    },
-    "85081000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 10.5,
-     "format": "OmU"
-    },
     "BC081000023RFGKYDT": {
      "adult": 11.5,
      "child": 10.5,
@@ -1204,57 +2545,202 @@
      "child": 10.5,
      "format": "OmU"
     },
-    "34081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5
-    },
-    "67081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5,
+    "FE181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
      "format": "OV"
     },
-    "08081000023RFGKYDT": {
+    "6D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "0D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "3C181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "DC181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "D7181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "CE181000023RFGKYDT": {
      "adult": 12.5,
-     "child": 11.5,
-     "format": "3D/OV"
-    },
-    "0C081000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 9.5,
-     "format": "Atmos"
-    },
-    "74081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5
-    },
-    "06081000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 11.5,
-     "format": "3D"
-    },
-    "05081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5
-    },
-    "B5081000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 11.5,
-     "format": "3D"
-    },
-    "BB081000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 9.5,
-     "format": "Atmos"
-    },
-    "3C081000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 9.5,
-     "format": "Atmos"
-    },
-    "C6081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5,
+     "child": 10.5,
      "format": "OV"
+    },
+    "AD181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "1D181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "3F181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "6C181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "E7181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "AC181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "1C181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "DE181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "BD181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "2D181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "4F181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "7C181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "F7181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "BC181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "2C181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "EE181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "CD181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "3D181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 10.5
+    },
+    "5F181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "8C181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "08181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "CC181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 10.5
+    },
+    "0F181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "7D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "4D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "EC181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "18181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "1F181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "8D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "5D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "4C181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "FC181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "28181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OmU"
+    },
+    "2F181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OV"
+    },
+    "9D181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "9C181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "5C181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5
+    },
+    "38181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 10.5,
+     "format": "OmU"
     },
     "44081000023RFGKYDT": {
      "adult": 9.5,
@@ -1360,14 +2846,376 @@
      "child": 8.5,
      "format": "OV"
     },
-    "60081000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 9.0,
-     "family": 9.0
+    "34181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
     },
-    "CFF71000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 9.0
+    "15181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "E9181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "2E181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "DA181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "49181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "B5181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "48181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "D4181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "ED181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "D8181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "44181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "25181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "B9181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "FD181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "AA181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "59181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "85181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "A4181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "58181000023RFGKYDT": {
+     "adult": 14.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "6E181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "19181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "B8181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "F4181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "54181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "35181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "C9181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "0E181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "BA181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "69181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "95181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "B4181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "68181000023RFGKYDT": {
+     "adult": 14.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "7E181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "29181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "C8181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "05181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "24181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "64181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "45181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5
+    },
+    "D9181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "1E181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "CA181000023RFGKYDT": {
+     "adult": 13.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "79181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "A5181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "C4181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5
+    },
+    "78181000023RFGKYDT": {
+     "adult": 14.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "8E181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "39181000023RFGKYDT": {
+     "adult": 11.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "74181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "55181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "F9181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "3E181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "EA181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "89181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "C5181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "88181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "E4181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "9E181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "E8181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "84181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "65181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "0A181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "FA181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "4E181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "99181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "D5181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "98181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "AE181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "F8181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "94181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "75181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "1A181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "0B181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D/OV"
+    },
+    "5E181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "A9181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
+    },
+    "E5181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5
+    },
+    "A8181000023RFGKYDT": {
+     "adult": 12.5,
+     "child": 11.5,
+     "format": "3D"
+    },
+    "BE181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 9.5,
+     "format": "Atmos"
+    },
+    "09181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "format": "OV"
     },
     "70081000023RFGKYDT": {
      "adult": 10.0,
@@ -1387,14 +3235,35 @@
      "adult": 10.0,
      "child": 9.0
     },
-    "4EF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0,
-     "family": 7.0
+    "31181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 9.0,
+     "family": 9.0
     },
-    "5DF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
+    "01181000023RFGKYDT": {
+     "adult": 11.0,
+     "child": 9.0,
+     "family": 9.0
+    },
+    "11181000023RFGKYDT": {
+     "adult": 11.0,
+     "child": 9.0,
+     "family": 9.0
+    },
+    "51181000023RFGKYDT": {
+     "adult": 11.0,
+     "child": 9.0,
+     "family": 9.0
+    },
+    "21181000023RFGKYDT": {
+     "adult": 11.0,
+     "child": 9.0,
+     "family": 9.0
+    },
+    "41181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 9.0,
+     "family": 9.0
     },
     "5EF71000023RFGKYDT": {
      "adult": 8.0,
@@ -1414,21 +3283,76 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "1F081000023RFGKYDT": {
+    "96181000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0,
      "family": 7.0
     },
-    "0FF71000023RFGKYDT": {
-     "adult": 11.0,
-     "child": 10.0,
-     "family": 10.0,
-     "format": "3D"
+    "26181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
     },
-    "BF081000023RFGKYDT": {
+    "66181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "F5181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "76181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "06181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "D6181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "86181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "16181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "A6181000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0,
      "family": 7.0
+    },
+    "36181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "B6181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "46181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "C6181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "56181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
     },
     "2F081000023RFGKYDT": {
      "adult": 8.0,
@@ -1457,10 +3381,45 @@
      "child": 7.0,
      "family": 7.0
     },
-    "83081000023RFGKYDT": {
-     "adult": 9.5,
-     "child": 8.5,
-     "family": 8.5
+    "B2281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "82281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "92281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "F2281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "A2281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "C2281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "D2281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "E2281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
     },
     "93081000023RFGKYDT": {
      "adult": 9.5,
@@ -1472,13 +3431,35 @@
      "child": 8.5,
      "family": 8.5
     },
-    "6FF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
+    "6F181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "family": 8.5
     },
-    "13081000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
+    "9F181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "family": 8.5
+    },
+    "AF181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "family": 8.5
+    },
+    "BF181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "family": 8.5
+    },
+    "7F181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "family": 8.5
+    },
+    "8F181000023RFGKYDT": {
+     "adult": 9.5,
+     "child": 8.5,
+     "family": 8.5
     },
     "7FF71000023RFGKYDT": {
      "adult": 8.0,
@@ -1496,20 +3477,59 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "ECF71000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0,
-     "format": "OV"
-    },
-    "01081000023RFGKYDT": {
+    "F1281000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
-    "71081000023RFGKYDT": {
+    "81281000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
-    "E1081000023RFGKYDT": {
+    "02281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "91281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "12281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "A1281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "22281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "B1281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "32281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "C1281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "42281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "D1281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "52281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "E1281000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
@@ -1547,9 +3567,125 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "0E081000023RFGKYDT": {
+    "3A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "87181000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
+    },
+    "17181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "7A181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "57181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "E6181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "8A181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "67181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "F6181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "C7181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "9A181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "77181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "07181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "4A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "97181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "27181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "6A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "A7181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "37181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "5A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "B7181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "47181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "FDF71000023RFGKYDT": {
+     "adult": 6.0,
+     "format": "OmU"
+    },
+    "EDF71000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "EF181000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "CF181000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "DF181000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "FF181000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "00281000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "10281000023RFGKYDT": {
+     "adult": 6.0
     },
     "1E081000023RFGKYDT": {
      "adult": 8.0,
@@ -1559,7 +3695,31 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "BDF71000023RFGKYDT": {
+    "50281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "20281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "30281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "40281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "60281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "70281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "80281000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
@@ -1571,8 +3731,8 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "B2081000023RFGKYDT": {
-     "adult": 8.0,
+    "61181000023RFGKYDT": {
+     "adult": 9.0,
      "child": 7.0
     },
     "C2081000023RFGKYDT": {
@@ -1583,7 +3743,31 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "32081000023RFGKYDT": {
+    "4B181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "1B181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "2B181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "3B181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "5B181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "6B181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "7B181000023RFGKYDT": {
      "adult": 8.0,
      "child": 7.0
     },
@@ -1595,22 +3779,304 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "12081000023RFGKYDT": {
-     "adult": 6.0
-    },
-    "FDF71000023RFGKYDT": {
-     "adult": 6.0,
-     "format": "OmU"
-    },
-    "EDF71000023RFGKYDT": {
-     "adult": 6.0
-    },
     "A8081000023RFGKYDT": {
      "adult": 8.0
+    },
+    "AB181000023RFGKYDT": {
+     "adult": 8.0
+    },
+    "DB181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "8B181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "EB181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "9B181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "FB181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "BB181000023RFGKYDT": {
+     "adult": 8.0
+    },
+    "CB181000023RFGKYDT": {
+     "adult": 8.0
+    },
+    "C0281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "11281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "90281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "21281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "A0281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "31281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "01281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "B0281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "41281000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "D0281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "51281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "E0281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "61281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "F0281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "71281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "63181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "B3181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "33181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "C3181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "43181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "D3181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "53181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "E3181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "73181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "F3181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "83181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "A3181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "93181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "04181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "22181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "C2181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "F1181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
     },
     "1CF71000023RFGKYDT": {
      "adult": 10.5,
      "format": "Atmos"
+    },
+    "32181000023RFGKYDT": {
+     "adult": 11.5,
+     "format": "OV"
+    },
+    "92181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "B1181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "71181000023RFGKYDT": {
+     "adult": 11.5,
+     "format": "OV"
+    },
+    "03181000023RFGKYDT": {
+     "adult": 12.5,
+     "format": "Atmos"
+    },
+    "42181000023RFGKYDT": {
+     "adult": 11.5,
+     "format": "OV"
+    },
+    "A2181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "C1181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "81181000023RFGKYDT": {
+     "adult": 11.5,
+     "format": "OV"
+    },
+    "13181000023RFGKYDT": {
+     "adult": 12.5,
+     "format": "Atmos"
+    },
+    "52181000023RFGKYDT": {
+     "adult": 11.5,
+     "format": "OV"
+    },
+    "B2181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "D1181000023RFGKYDT": {
+     "adult": 11.5
+    },
+    "62181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "D2181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "E1181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "72181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "E2181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "91181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "02181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "82181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "F2181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "A1181000023RFGKYDT": {
+     "adult": 9.5
+    },
+    "12181000023RFGKYDT": {
+     "adult": 9.5,
+     "format": "OV"
+    },
+    "23181000023RFGKYDT": {
+     "adult": 10.0
+    },
+    "2A181000023RFGKYDT": {
+     "adult": 10.5
+    },
+    "0C181000023RFGKYDT": {
+     "adult": 10.5,
+     "child": 8.5,
+     "family": 8.5
+    },
+    "62281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "family": 7.0
+    },
+    "72281000023RFGKYDT": {
+     "adult": 9.0
+    },
+    "C0261000023RFGKYDT": {
+     "adult": 8.0
+    },
+    "DD181000023RFGKYDT": {
+     "adult": 6.0
+    },
+    "14181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "03281000023RFGKYDT": {
+     "adult": 15.0,
+     "child": 15.0,
+     "format": "OmU"
+    },
+    "13281000023RFGKYDT": {
+     "adult": 15.0,
+     "child": 15.0
+    },
+    "23281000023RFGKYDT": {
+     "adult": 15.0,
+     "child": 15.0
     },
     "D6D71000023RFGKYDT": {
      "adult": 15.0,
@@ -1740,9 +4206,6 @@
     "17E71000023RFGKYDT": {
      "adult": 15.0
     },
-    "C0261000023RFGKYDT": {
-     "adult": 8.0
-    },
     "C2071000023RFGKYDT": {
      "adult": 5.0,
      "child": 5.0
@@ -1802,14 +4265,6 @@
     "50E61000023RFGKYDT": {
      "adult": 18.0,
      "format": "Atmos"
-    },
-    "8CF71000023RFGKYDT": {
-     "adult": 15.0,
-     "child": 15.0
-    },
-    "9CF71000023RFGKYDT": {
-     "adult": 15.0,
-     "child": 15.0
     },
     "ACF71000023RFGKYDT": {
      "adult": 9.0,
