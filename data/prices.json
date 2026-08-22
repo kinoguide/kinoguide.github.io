@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T04:36:48.779324+00:00",
+ "generated_at": "2026-08-22T04:31:33.138439+00:00",
  "cinemas": {
   "Kinopolis Bad Godesberg": {
    "source": "https://www.kinopolis.de/bn/preise",
@@ -22,15 +22,6 @@
      "menu_family": 13.49
     },
     "E8D75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "88D75000023GNFNDWF": {
      "adult": 9.49,
      "child": 7.49,
      "reduced": 7.49,
@@ -65,15 +56,6 @@
      "menu_family": 12.49,
      "menu_holiday": 13.49
     },
-    "A7D75000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99
-    },
     "87D75000023GNFNDWF": {
      "adult": 9.99,
      "child": 8.99,
@@ -101,15 +83,6 @@
      "menu_holiday": 13.99
     },
     "E7D75000023GNFNDWF": {
-     "adult": 9.99,
-     "child": 7.99,
-     "reduced": 7.99,
-     "family": 7.99,
-     "menu_child": 12.99,
-     "menu_family": 12.99,
-     "menu_holiday": 13.99
-    },
-    "F2D75000023GNFNDWF": {
      "adult": 9.99,
      "child": 7.99,
      "reduced": 7.99,
@@ -175,24 +148,6 @@
      "child": 5.0,
      "reduced": 5.0,
      "format": "3D D-BOX"
-    },
-    "3ED75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
-    },
-    "9ED75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
     },
     "4ED75000023GNFNDWF": {
      "adult": 12.49,
@@ -317,6 +272,8 @@
     },
     "31B75000023GNFNDWF": {
      "adult": 9.49,
+     "child": 8.49,
+     "family": 8.49,
      "format": "OmU Spezial"
     },
     "A0975000023GNFNDWF": {
@@ -331,31 +288,8 @@
      "child": 9.99,
      "reduced": 11.49
     },
-    "6AD75000023GNFNDWF": {
-     "adult": 13.49,
-     "reduced": 11.49
-    },
     "7AD75000023GNFNDWF": {
      "adult": 13.49,
-     "reduced": 11.49
-    },
-    "0FD75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "9AD75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "0BD75000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
      "reduced": 11.49
     },
     "4FD75000023GNFNDWF": {
@@ -455,24 +389,6 @@
      "child": 8.49,
      "reduced": 8.99
     },
-    "29D75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 8.49,
-     "reduced": 10.49,
-     "family": 8.49,
-     "menu_child": 13.49,
-     "menu_family": 13.49,
-     "menu_holiday": 16.49
-    },
-    "99D75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 8.49,
-     "reduced": 10.49,
-     "family": 8.49,
-     "menu_child": 13.49,
-     "menu_family": 13.49,
-     "menu_holiday": 16.49
-    },
     "39D75000023GNFNDWF": {
      "adult": 12.49,
      "child": 8.49,
@@ -566,36 +482,6 @@
      "menu_child": 12.49,
      "menu_family": 12.49,
      "menu_holiday": 13.49
-    },
-    "8CD75000023GNFNDWF": {
-     "adult": 12.99,
-     "reduced": 10.99,
-     "menu_holiday": 16.99,
-     "format": "D-BOX"
-    },
-    "F9D75000023GNFNDWF": {
-     "adult": 13.99,
-     "reduced": 11.99,
-     "format": "OV"
-    },
-    "1CD75000023GNFNDWF": {
-     "adult": 13.99,
-     "reduced": 11.99,
-     "format": "D-BOX"
-    },
-    "FCD75000023GNFNDWF": {
-     "adult": 13.99,
-     "reduced": 11.99,
-     "format": "D-BOX"
-    },
-    "EBD75000023GNFNDWF": {
-     "adult": 13.99,
-     "reduced": 11.99
-    },
-    "4AD75000023GNFNDWF": {
-     "adult": 13.99,
-     "reduced": 11.99,
-     "format": "OV"
     },
     "9CD75000023GNFNDWF": {
      "adult": 12.99,
@@ -704,35 +590,6 @@
      "child": 5.0,
      "reduced": 5.0,
      "format": "D-BOX"
-    },
-    "8BD75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "Atmos"
-    },
-    "E3D75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49,
-     "format": "Atmos D-BOX"
-    },
-    "73D75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_child": 12.49,
-     "menu_family": 12.49,
-     "menu_holiday": 13.49
     },
     "9BD75000023GNFNDWF": {
      "adult": 12.49,
@@ -895,37 +752,6 @@
      "reduced": 5.0,
      "format": "D-BOX"
     },
-    "CDD75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 9.49,
-     "reduced": 9.49,
-     "family": 9.49,
-     "menu_holiday": 15.49,
-     "format": "D-BOX"
-    },
-    "26D75000023GNFNDWF": {
-     "adult": 11.49,
-     "child": 9.49,
-     "reduced": 9.49,
-     "family": 9.49,
-     "menu_holiday": 15.49
-    },
-    "B2D75000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.99,
-     "reduced": 13.49,
-     "format": "OV"
-    },
-    "A6D75000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.99,
-     "reduced": 13.49
-    },
-    "17D75000023GNFNDWF": {
-     "adult": 15.49,
-     "child": 11.99,
-     "reduced": 13.49
-    },
     "DDD75000023GNFNDWF": {
      "adult": 14.49,
      "child": 10.49,
@@ -1059,18 +885,6 @@
      "child": 5.0,
      "reduced": 5.0
     },
-    "51D75000023GNFNDWF": {
-     "adult": 10.49,
-     "child": 8.49,
-     "reduced": 8.49,
-     "family": 8.49,
-     "menu_holiday": 14.49
-    },
-    "D0D75000023GNFNDWF": {
-     "adult": 14.49,
-     "child": 10.99,
-     "reduced": 12.49
-    },
     "61D75000023GNFNDWF": {
      "adult": 13.49,
      "child": 9.49,
@@ -1134,72 +948,6 @@
      "adult": 11.99,
      "child": 9.49,
      "reduced": 9.99
-    },
-    "E1D75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49,
-     "format": "OV D-BOX"
-    },
-    "95D75000023GNFNDWF": {
-     "adult": 9.49,
-     "child": 7.49,
-     "reduced": 7.49,
-     "family": 7.49,
-     "menu_holiday": 13.49
-    },
-    "6DD75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 10.49,
-     "reduced": 10.49,
-     "family": 10.49,
-     "menu_holiday": 16.49,
-     "format": "3D/OV Atmos"
-    },
-    "64D75000023GNFNDWF": {
-     "adult": 12.49,
-     "child": 10.49,
-     "reduced": 10.49,
-     "family": 10.49,
-     "menu_holiday": 16.49,
-     "format": "3D Atmos D-BOX"
-    },
-    "70D75000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49,
-     "format": "D-BOX"
-    },
-    "28D75000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49,
-     "format": "OV"
-    },
-    "C4D75000023GNFNDWF": {
-     "adult": 16.49,
-     "child": 12.99,
-     "reduced": 14.49,
-     "format": "3D Atmos D-BOX"
-    },
-    "25D75000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49
-    },
-    "47D75000023GNFNDWF": {
-     "adult": 16.49,
-     "child": 12.99,
-     "reduced": 14.49,
-     "format": "3D"
-    },
-    "78D75000023GNFNDWF": {
-     "adult": 13.49,
-     "child": 9.99,
-     "reduced": 11.49,
-     "format": "OV"
     },
     "F1D75000023GNFNDWF": {
      "adult": 12.49,
@@ -1791,41 +1539,6 @@
    "source": "https://cinedom.de/kinobesuch-planen/preise/",
    "fee_included": true,
    "shows": {
-    "CE181000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 10.5,
-     "format": "OV"
-    },
-    "AD181000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 10.5
-    },
-    "1D181000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 10.5
-    },
-    "3F181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 10.5,
-     "format": "OV"
-    },
-    "6C181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 10.5
-    },
-    "E7181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 10.5,
-     "format": "OmU"
-    },
-    "AC181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 10.5
-    },
-    "1C181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 10.5
-    },
     "DE181000023RFGKYDT": {
      "adult": 12.5,
      "child": 10.5,
@@ -1961,66 +1674,6 @@
      "adult": 11.5,
      "child": 10.5,
      "format": "OmU"
-    },
-    "44181000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 8.5
-    },
-    "25181000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 8.5
-    },
-    "B9181000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 8.5,
-     "format": "OV"
-    },
-    "FD181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 9.5,
-     "format": "Atmos"
-    },
-    "AA181000023RFGKYDT": {
-     "adult": 13.5,
-     "child": 11.5,
-     "format": "3D/OV"
-    },
-    "59181000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 8.5,
-     "format": "OV"
-    },
-    "85181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 8.5
-    },
-    "A4181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 8.5
-    },
-    "58181000023RFGKYDT": {
-     "adult": 14.5,
-     "child": 11.5,
-     "format": "3D"
-    },
-    "6E181000023RFGKYDT": {
-     "adult": 12.5,
-     "child": 9.5,
-     "format": "Atmos"
-    },
-    "19181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 8.5,
-     "format": "OV"
-    },
-    "B8181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 8.5,
-     "format": "OV"
-    },
-    "F4181000023RFGKYDT": {
-     "adult": 11.5,
-     "child": 8.5
     },
     "54181000023RFGKYDT": {
      "adult": 10.5,
@@ -2282,16 +1935,6 @@
      "child": 8.5,
      "format": "OV"
     },
-    "66181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "family": 7.0
-    },
-    "F5181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "family": 7.0
-    },
     "76181000023RFGKYDT": {
      "adult": 9.0,
      "child": 7.0,
@@ -2344,11 +1987,6 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "9F181000023RFGKYDT": {
-     "adult": 10.5,
-     "child": 8.5,
-     "family": 8.5
-    },
     "AF181000023RFGKYDT": {
      "adult": 10.5,
      "child": 8.5,
@@ -2369,9 +2007,6 @@
      "child": 8.5,
      "family": 8.5
     },
-    "CF181000023RFGKYDT": {
-     "adult": 6.0
-    },
     "DF181000023RFGKYDT": {
      "adult": 6.0
     },
@@ -2383,11 +2018,6 @@
     },
     "10281000023RFGKYDT": {
      "adult": 6.0
-    },
-    "01181000023RFGKYDT": {
-     "adult": 11.0,
-     "child": 9.0,
-     "family": 9.0
     },
     "11181000023RFGKYDT": {
      "adult": 11.0,
@@ -2408,11 +2038,6 @@
      "adult": 10.0,
      "child": 9.0,
      "family": 9.0
-    },
-    "82281000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "family": 7.0
     },
     "92281000023RFGKYDT": {
      "adult": 9.0,
@@ -2443,15 +2068,6 @@
      "adult": 8.0,
      "child": 7.0,
      "family": 7.0
-    },
-    "90281000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "family": 7.0
-    },
-    "21281000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
     },
     "A0281000023RFGKYDT": {
      "adult": 9.0,
@@ -2503,31 +2119,6 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "20281000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0
-    },
-    "40281000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0
-    },
-    "60281000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "70281000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "7A181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "family": 7.0
-    },
-    "C3181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
     "30281000023RFGKYDT": {
      "adult": 9.0,
      "child": 7.0,
@@ -2563,10 +2154,69 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "33181000023RFGKYDT": {
+    "8A181000023RFGKYDT": {
      "adult": 9.0,
      "child": 7.0,
      "format": "OV"
+    },
+    "67181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "F6181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "C7181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "9A181000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "77181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "07181000023RFGKYDT": {
+     "adult": 10.0,
+     "child": 7.0
+    },
+    "97181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "27181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "6A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "A7181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "37181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "5A181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0,
+     "format": "OV"
+    },
+    "B7181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "47181000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
     },
     "43181000023RFGKYDT": {
      "adult": 9.0,
@@ -2592,24 +2242,6 @@
      "adult": 8.0,
      "child": 7.0,
      "format": "OV"
-    },
-    "32181000023RFGKYDT": {
-     "adult": 11.5,
-     "format": "OV"
-    },
-    "92181000023RFGKYDT": {
-     "adult": 11.5
-    },
-    "B1181000023RFGKYDT": {
-     "adult": 11.5
-    },
-    "71181000023RFGKYDT": {
-     "adult": 11.5,
-     "format": "OV"
-    },
-    "03181000023RFGKYDT": {
-     "adult": 12.5,
-     "format": "Atmos"
     },
     "42181000023RFGKYDT": {
      "adult": 11.5,
@@ -2677,84 +2309,6 @@
      "adult": 9.5,
      "format": "OV"
     },
-    "57181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "E6181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "8A181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "format": "OV"
-    },
-    "67181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "F6181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "C7181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0
-    },
-    "9A181000023RFGKYDT": {
-     "adult": 9.0,
-     "child": 7.0,
-     "format": "OV"
-    },
-    "77181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "07181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "97181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "27181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "6A181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0,
-     "format": "OV"
-    },
-    "A7181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "37181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "5A181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0,
-     "format": "OV"
-    },
-    "B7181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "47181000023RFGKYDT": {
-     "adult": 8.0,
-     "child": 7.0
-    },
-    "DB181000023RFGKYDT": {
-     "adult": 10.0
-    },
-    "8B181000023RFGKYDT": {
-     "adult": 10.0
-    },
     "EB181000023RFGKYDT": {
      "adult": 10.0
     },
@@ -2769,14 +2323,6 @@
     },
     "CB181000023RFGKYDT": {
      "adult": 8.0
-    },
-    "02281000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
-    "91281000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
     },
     "12281000023RFGKYDT": {
      "adult": 10.0,
@@ -2818,10 +2364,6 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "1B181000023RFGKYDT": {
-     "adult": 10.0,
-     "child": 7.0
-    },
     "2B181000023RFGKYDT": {
      "adult": 10.0,
      "child": 7.0
@@ -2842,9 +2384,6 @@
      "adult": 8.0,
      "child": 7.0
     },
-    "23181000023RFGKYDT": {
-     "adult": 10.0
-    },
     "2A181000023RFGKYDT": {
      "adult": 10.5
     },
@@ -2864,6 +2403,18 @@
     },
     "72281000023RFGKYDT": {
      "adult": 9.0
+    },
+    "40281000023RFGKYDT": {
+     "adult": 9.0,
+     "child": 7.0
+    },
+    "60281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
+    },
+    "70281000023RFGKYDT": {
+     "adult": 8.0,
+     "child": 7.0
     },
     "DD181000023RFGKYDT": {
      "adult": 6.0
